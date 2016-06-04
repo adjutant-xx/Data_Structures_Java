@@ -140,8 +140,7 @@ public class LinkedList {
 
     public void remove(){
         if(root != null) {
-            Node newRoot = root.next;
-            root = newRoot;
+            root = root.next;
         }
     }
 
@@ -185,5 +184,3 @@ public class LinkedList {
         }
     }
 }
-
-//test commit
