@@ -16,23 +16,28 @@ public class Queue {
         q.traverse();
         System.out.println("-------------\n");
 
-        //Enqueue a value to the end of the queue, and traverse:
+        //Enqueue a value to the rear of the queue, and traverse:
         q.enqueue('e');
         q.traverse();
         System.out.println("-------------\n");
 
-        //Dequeue a value from the front of the queue, and traverse:
-        q.dequeue();
+        //Dequeue a value from the front of the queue, print the value (to prove it's being returned properly), and traverse:
+        Node f = q.dequeue();
+        System.out.println("front value: [" + f.value + "]\n");
+        q.traverse();
+        System.out.println("-------------\n");
+
+        //Traverse the final list:
         q.traverse();
         System.out.println("-------------\n");
     }
 
-    private Node root;
-    private Node tail;
+    private Node front;
+    private Node rear;
 
     public Queue(){
-        root = null;
-        tail = null;
+        front = null;
+        rear = null;
     }
 
     public void printValue(Object value){
@@ -40,10 +45,10 @@ public class Queue {
     }
 
     public void traverse(){
-        Node tempTail = tail;
-        Node tempRoot = root;
+        Node tempTail = rear;
+        Node tempRoot = front;
         if(tempTail != null){
-            while(tempTail != root){
+            while(tempTail != front){
                 printValue(tempTail.getValue());
                 tempTail = tempTail.next;
             }
@@ -52,25 +57,30 @@ public class Queue {
     }
 
     public void enqueue(Object value){
-        if(root == null) {
-            root = new Node(value);
-            tail = root;
+        if(front == null) {
+            front = new Node(value);
+            rear = front;
         }
         else{
-            Node oldTail = tail;
-            tail = new Node(value);
-            tail.next = oldTail;
+            Node oldTail = rear;
+            rear = new Node(value);
+            rear.next = oldTail;
         }
     }
 
-    public void dequeue(){
-        Node tempRoot = root;
-        Node tempTail = tail;
+    public Node dequeue(){
+        Node tempRoot = front;
+        Node tempRear = rear;
         if(tempRoot != null){
-            while(tempTail.next.next != null){
-                tempTail = tempTail.next;
+            while(tempRear.next.next != null) {
+                tempRear = tempRear.next;
             }
-            root = tempTail;
+            Node item = tempRear.next;
+            front = tempRear;
+            return item;
+        }
+        else{
+            return null;
         }
     }
 
