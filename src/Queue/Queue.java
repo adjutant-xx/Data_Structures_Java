@@ -6,7 +6,7 @@ public class Queue {
     {
         Queue q = new Queue();
 
-        //Populate new list:
+        //Populate new queue:
         q.enqueue('a');
         q.enqueue('b');
         q.enqueue('c');
