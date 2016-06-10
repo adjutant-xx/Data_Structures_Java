@@ -60,7 +60,6 @@ public class BinarySearchTree {
     }
 
     private Node insert(Object value, Node current){
-
         if(current == null){
             current = new Node(value);
         }
@@ -70,11 +69,6 @@ public class BinarySearchTree {
         else if((Integer)value > (Integer)current.getValue()){
             current.right = insert(value, current.right);
         }
-
         return current;
     }
-
-
-
-
 }
