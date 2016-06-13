@@ -55,6 +55,25 @@ public class BinarySearchTree {
         printValue(current.getValue());
     }
 
+    public boolean contains(Object value){
+        return contains(value, root);
+    }
+
+    private boolean contains(Object value, Node current){
+        if(current == null) {
+            return false;
+        }
+        else if((Integer)value < (Integer)current.getValue()){
+                return contains(value, current.left);
+            }
+        else if((Integer)value > (Integer)current.getValue()){
+            return contains(value, current.right);
+        }
+        else {
+            return true;
+        }
+    }
+
     public void insert(Object value){
         root = insert(value, root);
     }
@@ -70,5 +89,59 @@ public class BinarySearchTree {
             current.right = insert(value, current.right);
         }
         return current;
+    }
+
+    public void remove(Object value){
+        root = remove(value, root);
+    }
+
+    private Node remove(Object value, Node current){
+        if(current == null){
+            return null;
+        }
+
+        if((Integer)value < (Integer)current.getValue()){
+            remove(value, current.left);
+        }
+        else if((Integer)value > (Integer)current.getValue()){
+            remove(value, current.right);
+        }
+        else if(current.left != null && current.right != null){
+            current = findMin(current.right);
+            remove(current.getValue(), current.right);
+        }
+        else{
+            //Node oldNode = current;
+            current = (current.left != null) ? current.left : current.right;
+        }
+        return current;
+    }
+
+    public Node findMin(){
+        return findMin(root);
+    }
+
+    private Node findMin(Node current){
+        if(current == null){
+            return null;
+        }
+        if(current.left == null){
+            return current;
+        }
+        return findMin(current.left);
+    }
+
+    public Node findMax(){
+        return findMax(root);
+    }
+
+    private Node findMax(Node current){
+        if(current == null){
+            return null;
+        }
+        if(current.right == null){
+            return current;
+        }
+        return findMax(current.right);
     }
 }

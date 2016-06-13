@@ -30,5 +30,32 @@ public class Main {
         bst.insert(0);
         bst.traverseInOrderCall();
         System.out.println("-------------\n");
+
+        //Check to see if tree contains a certain value (expecting true):
+        boolean isPresentTrue = bst.contains(1115);
+        bst.printValue(isPresentTrue);
+        System.out.println("-------------\n");
+
+        //Check to see if tree contains a certain value (expecting false):
+        boolean isPresentFalse = bst.contains(117);
+        bst.printValue(isPresentFalse);
+        System.out.println("-------------\n");
+
+        //Find the smallest value in the tree:
+        Node min = bst.findMin();
+        bst.printValue(min.getValue());
+        System.out.println("-------------\n");
+
+        //Find the largest value in the tree:
+        Node max = bst.findMax();
+        bst.printValue(max.getValue());
+        System.out.println("-------------\n");
+
+        //Remove a node from the tree, and traverse using Inorder Traversal:
+        bst.remove(555);
+        bst.traverseInOrderCall();
+        System.out.println("-------------\n");
+
+
     }
 }
