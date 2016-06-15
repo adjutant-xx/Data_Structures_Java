@@ -55,7 +55,5 @@ public class Main {
         bst.remove(555);
         bst.traverseInOrderCall();
         System.out.println("-------------\n");
-
-
     }
 }

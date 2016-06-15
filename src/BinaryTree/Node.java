@@ -14,4 +14,8 @@ public class Node {
     public Object getValue(){
         return value;
     }
+
+    public void setValue(Object v){
+        value = v;
+    }
 }

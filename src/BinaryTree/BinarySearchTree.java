@@ -97,21 +97,19 @@ public class BinarySearchTree {
 
     private Node remove(Object value, Node current){
         if(current == null){
-            return null;
+            return current;
         }
-
         if((Integer)value < (Integer)current.getValue()){
-            remove(value, current.left);
+            current.left = remove(value, current.left);
         }
-        else if((Integer)value > (Integer)current.getValue()){
-            remove(value, current.right);
+        else if((Integer) value > (Integer)current.getValue()){
+            current.right = remove(value, current.right);
         }
         else if(current.left != null && current.right != null){
-            current = findMin(current.right);
-            remove(current.getValue(), current.right);
+            current.setValue(findMin(current.right).getValue());
+            current.right = remove(current.getValue(), current.right);
         }
         else{
-            //Node oldNode = current;
             current = (current.left != null) ? current.left : current.right;
         }
         return current;
