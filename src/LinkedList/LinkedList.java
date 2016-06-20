@@ -1,55 +1,6 @@
 package LinkedList;
 
 public class LinkedList {
-    public static void main(String[] args){
-
-        LinkedList ll = new LinkedList();
-
-        //Populate a new list:
-        ll.insert(1);
-        ll.insert(125);
-        ll.insert(555847);
-        ll.insert(325);
-
-        //Traverse the list:
-        ll.traverse();
-        System.out.println("-------------\n");
-
-        //Add a new node to the front of the list, and traverse:
-        ll.insert(50);
-        ll.traverse();
-        System.out.println("-------------\n");
-
-        //Add a new node to the end of the list, and traverse:
-        ll.insertEnd(500);
-        ll.traverse();
-        System.out.println("-------------\n");
-
-        //Add a new node at a specific index, and traverse:
-        ll.insertAt(117, 2);
-        ll.traverse();
-        System.out.println("-------------\n");
-
-        //Get the size of the linked list:
-        int size = ll.getSize();
-        System.out.println("Size: [" + size + "]");
-        System.out.println("-------------\n");
-
-        //Remove a node from the front of the list, and traverse:
-        ll.remove();
-        ll.traverse();
-        System.out.println("-------------\n");
-
-        //Remove a node from the end of the list, and traverse:
-        ll.removeEnd();
-        ll.traverse();
-        System.out.println("-------------\n");
-
-        //Remove a node from a specific index, and traverse:
-        ll.removeAt(3);
-        ll.traverse();
-        System.out.println("-------------\n");
-    }
 
     private Node root;
 
@@ -168,19 +119,6 @@ public class LinkedList {
                     i++;
                 }
             }
-        }
-    }
-
-    static class Node {
-        private Object value;
-        private Node next;
-
-        public Node(Object v) {
-            value = v;
-        }
-
-        public Object getValue() {
-            return value;
         }
     }
 }

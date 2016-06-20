@@ -1,36 +1,6 @@
-package Queue;
+package LinkedList;
 
 public class Queue {
-
-    public static void main(String[] args)
-    {
-        Queue q = new Queue();
-
-        //Populate new queue:
-        q.enqueue('a');
-        q.enqueue('b');
-        q.enqueue('c');
-        q.enqueue('d');
-
-        //Traverse the queue:
-        q.traverse();
-        System.out.println("-------------\n");
-
-        //Enqueue a value to the rear of the queue, and traverse:
-        q.enqueue('e');
-        q.traverse();
-        System.out.println("-------------\n");
-
-        //Dequeue a value from the front of the queue, print the value (to prove it's being returned properly), and traverse:
-        Node f = q.dequeue();
-        System.out.println("front value: [" + f.value + "]\n");
-        q.traverse();
-        System.out.println("-------------\n");
-
-        //Traverse the final list:
-        q.traverse();
-        System.out.println("-------------\n");
-    }
 
     private Node front;
     private Node rear;
@@ -81,20 +51,6 @@ public class Queue {
         }
         else{
             return null;
-        }
-    }
-
-    public class Node{
-
-        private Object value;
-        private Node next;
-
-        public Node(Object v){
-            value = v;
-        }
-
-        public Object getValue(){
-            return value;
         }
     }
 }

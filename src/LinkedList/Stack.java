@@ -1,37 +1,6 @@
-package Stack;
-
+package LinkedList;
 
 public class Stack {
-
-    public static void main(String[] args){
-
-        Stack s = new Stack();
-
-        //Populate a new stack:
-        s.push("dog");
-        s.push("cat");
-        s.push("fish");
-        s.push("bunny");
-
-        //Traverse the stack:
-        s.traverse();
-        System.out.println("-------------\n");
-
-        //Push a new value onto the stack, and traverse:
-        s.push("zebra");
-        s.traverse();
-        System.out.println("-------------\n");
-
-        //Pop off the top value of the stack, and traverse:
-        s.pop();
-        s.traverse();
-        System.out.println("-------------\n");
-
-        //Get the size of the stack:
-        int size = s.getSize();
-        System.out.println("Size: [" + size + "]");
-        System.out.println("-------------\n");
-    }
 
     private Node root;
 
@@ -67,10 +36,10 @@ public class Stack {
         Node temp = root;
         if(temp != null){
             while(temp.next != null){
-                printValue(temp.value);
+                printValue(temp.getValue());
                 temp = temp.next;
             }
-            printValue(temp.value);
+            printValue(temp.getValue());
         }
     }
 
@@ -88,20 +57,6 @@ public class Stack {
     public void pop(){
         if(root != null){
             root = root.next;
-        }
-    }
-
-    static class Node{
-
-        private Object value;
-        private Node next;
-
-        public Node(Object v){
-            value = v;
-        }
-
-        public Object getValue(){
-            return value;
         }
     }
 }
