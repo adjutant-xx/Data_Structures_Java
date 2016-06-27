@@ -61,8 +61,10 @@ public class Main {
         System.out.println("Red-Black Tree");
         System.out.println("-------------\n");
 
+        final int RED = 0, BLACK = 1;
+
         //Instantiate a new RBT structure, while passing a default root node value:
-        RedBlackTree redBlackTree = new RedBlackTree(117);
+        RedBlackTree redBlackTree = new RedBlackTree();
 
         //Populate the new RBT:
         redBlackTree.insert(25);
