@@ -55,5 +55,26 @@ public class Main {
         bst.remove(555);
         bst.traverseInOrderCall();
         System.out.println("-------------\n");
+
+        //Run tests for Red-Black Tree:
+        System.out.println("--------------------------\n");
+        System.out.println("Red-Black Tree");
+        System.out.println("-------------\n");
+
+        //Instantiate a new RBT structure, while passing a default root node value:
+        RedBlackTree redBlackTree = new RedBlackTree(117);
+
+        //Populate the new RBT:
+        redBlackTree.insert(25);
+        redBlackTree.insert(3005);
+        redBlackTree.insert(99);
+        redBlackTree.insert(0);
+        redBlackTree.insert(1);
+        redBlackTree.insert(5);
+        redBlackTree.insert(12);
+
+        //Traverse the newly-populated RBT:
+        redBlackTree.traverseInOrderCall();
+
     }
 }

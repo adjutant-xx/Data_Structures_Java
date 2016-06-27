@@ -11,10 +11,6 @@ public class RedBlackTree extends BinarySearchTree {
     private RedBlackNode grand;
     private RedBlackNode great;
 
-//    public void insert(Object value){
-//        root = insert(value, root);
-//    }
-
     public RedBlackTree(Object rootValue){
         root = new RedBlackNode(rootValue);
         root.left = null;
@@ -45,10 +41,6 @@ public class RedBlackTree extends BinarySearchTree {
         handleReorient(value);
         //return current;
     }
-
-//    public void handleReorient(Object value){
-//        root = handleReorient(value, root);
-//    }
 
     private void handleReorient(Object value){
         current.setColor(RED);
@@ -102,7 +94,7 @@ public class RedBlackTree extends BinarySearchTree {
         RedBlackNode right;
         private int value;
         private int color;
-        
+
         public int getColor(){
             return color;
         }
