@@ -43,6 +43,24 @@ public class LinkedList {
         }
     }
 
+    public boolean contains(Object searchValue){
+        Node temp = root;
+        if(temp != null){
+            while(temp.next != null){
+                if(temp.getValue() == searchValue){
+                    return true;
+                }
+                else {
+                    temp = temp.next;
+                }
+            }
+            return false;
+        }
+        else{
+            return false;
+        }
+    }
+
     public void insert(Object value){
         if(root == null){
             root = new Node(value);
