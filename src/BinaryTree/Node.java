@@ -1,6 +1,6 @@
 package BinaryTree;
 
-public class Node {
+public class Node<T> {
 
     public Node(){
         value = null;
@@ -8,19 +8,19 @@ public class Node {
         right = null;
     }
 
-    public Node(Object v){
+    public Node(T v){
         value = v;
     }
 
-    private Object value;
-    public Node left;
-    public Node right;
+    private T value;
+    public Node<T> left;
+    public Node<T> right;
 
-    public Object getValue(){
+    public T getValue(){
         return value;
     }
 
-    public void setValue(Object v){
+    public void setValue(T v){
         value = v;
     }
 }

@@ -1,23 +1,25 @@
 package LinkedList;
 
-public class LinkedList {
+public class LinkedList<T> {
 
-    private Node root;
+
 
     public LinkedList(){
         root = null;
     }
 
+    private Node<T> root;
+
     public void printValue(Object value){
         System.out.println("[" + value + "]" + "\n");
     }
 
-    public Node getRoot(){
+    public Node<T> getRoot(){
         return root;
     }
 
     public int getSize(){
-        Node temp = root;
+        Node<T> temp = root;
         int count = 0;
         if(temp == null){
             return count;
@@ -33,7 +35,7 @@ public class LinkedList {
     }
 
     public void traverse(){
-        Node temp = root;
+        Node<T> temp = root;
         if(temp != null){
             while(temp.next != null){
                 printValue(temp.getValue());
@@ -43,8 +45,8 @@ public class LinkedList {
         }
     }
 
-    public boolean contains(Object searchValue){
-        Node temp = root;
+    public boolean contains(T searchValue){
+        Node<T> temp = root;
         if(temp != null){
             while(temp.next != null){
                 if(temp.getValue() == searchValue){
@@ -61,40 +63,40 @@ public class LinkedList {
         }
     }
 
-    public void insert(Object value){
+    public void insert(T value){
         if(root == null){
-            root = new Node(value);
+            root = new Node<T>(value);
         }
         else{
-            Node newNode = new Node(value);
+            Node<T> newNode = new Node<T>(value);
             newNode.next = root;
             root = newNode;
         }
     }
 
-    public void insertEnd(Object value){
-        Node temp = root;
+    public void insertEnd(T value){
+        Node<T> temp = root;
         if(temp == null){
-            temp = new Node(value);
+            temp = new Node<T>(value);
         }
         else{
             while(temp.next != null){
                 temp = temp.next;
             }
-            temp.next = new Node(value);
+            temp.next = new Node<T>(value);
         }
     }
 
-    public void insertAt(Object value, int index){
-        Node temp = root;
+    public void insertAt(T value, int index){
+        Node<T> temp = root;
         if(temp == null){
-            temp = new Node(value);
+            temp = new Node<T>(value);
         }
         else{
             int i = 0;
             while(temp.next != null){
                 if(i == index - 1){
-                    Node newNode = new Node(value);
+                    Node<T> newNode = new Node<T>(value);
                     newNode.next = temp.next;
                     temp.next = newNode;
                     break;
@@ -114,7 +116,7 @@ public class LinkedList {
     }
 
     public void removeEnd(){
-        Node temp = root;
+        Node<T> temp = root;
         if(temp != null){
             while(temp.next.next != null){
                 temp = temp.next;
@@ -124,7 +126,7 @@ public class LinkedList {
     }
 
     public void removeAt(int index){
-        Node temp = root;
+        Node<T> temp = root;
         if(temp != null){
             int i = 0;
             while(temp.next != null){

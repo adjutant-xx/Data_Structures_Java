@@ -1,14 +1,14 @@
 package LinkedList;
 
-public class Node {
-    private Object value;
-    public Node next;
+public class Node<T> {
+    private T value;
+    public Node<T> next;
 
-    public Node(Object v) {
+    public Node(T v) {
         value = v;
     }
 
-    public Object getValue() {
+    public T getValue() {
         return value;
     }
 }

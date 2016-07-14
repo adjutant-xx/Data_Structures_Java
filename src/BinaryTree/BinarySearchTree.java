@@ -1,18 +1,18 @@
 package BinaryTree;
 
-public class BinarySearchTree {
+public class BinarySearchTree<T> {
 
-    private Node root;
+    private Node<T> root;
 
     public BinarySearchTree(){
         root = null;
     }
 
-    public Node getRoot(){
+    public Node<T> getRoot(){
         return root;
     }
 
-    public void printValue(Object value){
+    public void printValue(T value){
         System.out.println("[" + value + "]" + "\n");
     }
 
@@ -20,7 +20,7 @@ public class BinarySearchTree {
         traverseInOrder(root);
     }
 
-    private void traverseInOrder(Node current){
+    private void traverseInOrder(Node<T> current){
         if(current == null){
             return;
         }
@@ -33,7 +33,7 @@ public class BinarySearchTree {
         traversePreOrder(root);
     }
 
-    private void traversePreOrder(Node current){
+    private void traversePreOrder(Node<T> current){
         if(current == null){
             return;
         }
@@ -46,7 +46,7 @@ public class BinarySearchTree {
         traversePostOrder(root);
     }
 
-    private void traversePostOrder(Node current){
+    private void traversePostOrder(Node<T> current){
         if(current == null){
             return;
         }
@@ -55,11 +55,11 @@ public class BinarySearchTree {
         printValue(current.getValue());
     }
 
-    public boolean contains(Object value){
+    public boolean contains(T value){
         return contains(value, root);
     }
 
-    private boolean contains(Object value, Node current){
+    private boolean contains(T value, Node<T> current){
         if(current == null) {
             return false;
         }
@@ -74,13 +74,13 @@ public class BinarySearchTree {
         }
     }
 
-    public void insert(Object value){
+    public void insert(T value){
         root = insert(value, root);
     }
 
-    private Node insert(Object value, Node current){
+    private Node<T> insert(T value, Node<T> current){
         if(current == null){
-            current = new Node(value);
+            current = new Node<T>(value);
         }
         else if((Integer)value < (Integer)current.getValue()){
             current.left = insert(value, current.left);
@@ -91,11 +91,11 @@ public class BinarySearchTree {
         return current;
     }
 
-    public void remove(Object value){
+    public void remove(T value){
         root = remove(value, root);
     }
 
-    private Node remove(Object value, Node current){
+    private Node<T> remove(T value, Node<T> current){
         if(current == null){
             return current;
         }
@@ -115,11 +115,11 @@ public class BinarySearchTree {
         return current;
     }
 
-    public Node findMin(){
+    public Node<T> findMin(){
         return findMin(root);
     }
 
-    private Node findMin(Node current){
+    private Node<T> findMin(Node<T> current){
         if(current == null){
             return null;
         }
@@ -129,11 +129,11 @@ public class BinarySearchTree {
         return findMin(current.left);
     }
 
-    public Node findMax(){
+    public Node<T> findMax(){
         return findMax(root);
     }
 
-    private Node findMax(Node current){
+    private Node<T> findMax(Node<T> current){
         if(current == null){
             return null;
         }
