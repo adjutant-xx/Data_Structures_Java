@@ -5,20 +5,26 @@ public class Main {
 
         //Run tests for Hash Table:
         System.out.println("--------------------------\n");
-        System.out.println("Linked List");
+        System.out.println("Hash Table");
         System.out.println("-------------\n");
 
         //Instantiate a new hash table of a given size:
-        int tableSize = 128;
+        final int HASH_TABLE_SIZE = 12;
+        int tableSize = HASH_TABLE_SIZE;
         HashTable hashTable = new HashTable(tableSize);
 
         //Populate the newly-created hash table:
         //NOTE: key-value pairs in this case are people's names (key), with their corresponding ages (value).
-        hashTable.insert("Matthew", 25);
-        hashTable.insert("Mark", 55);
-        hashTable.insert("Luke", 24);
-        hashTable.insert("John", 999);
-
-
+        HashEntry[] hashEntries = {
+                new HashEntry("Matthew", 25),
+                new HashEntry("Mark", 55),
+                new HashEntry("Luke", 24),
+                new HashEntry("John", 999)
+        };
+        for(HashEntry entry : hashEntries){
+            if(hashTable.insert(entry)){
+                System.out.println("Hash entry with key: [" + entry.getKey() + "] added to hash table successfully.");
+            }
+        }
     }
 }

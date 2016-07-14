@@ -1,20 +1,20 @@
 package HashTable;
 
-public class HashEntry {
+public class HashEntry<T, V> {
 
-    public HashEntry(Object v, String k){
-        value = v;
+    public HashEntry(T k, V v){
         key = k;
+        value = v;
     }
 
-    private Object value;
-    private String key; //Assumes that keys will be represented by String variables
+    private T key;
+    private V value;
 
-    public Object getValue(){
+    public V getValue(){
         return value;
     }
 
-    public Object getKey() {
+    public T getKey() {
         return key;
     }
 }
