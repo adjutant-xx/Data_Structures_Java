@@ -1,23 +1,23 @@
 package LinkedList;
 
-public class Stack {
+public class Stack<T> {
 
-    private Node root;
+    private Node<T> root;
 
     public Stack(){
         root = null;
     }
 
-    public void printValue(Object value){
+    public void printValue(T value){
         System.out.println("[" + value + "]" + "\n");
     }
 
-    public Node getRoot(){
+    public Node<T> getRoot(){
         return root;
     }
 
     public int getSize(){
-        Node temp = root;
+        Node<T> temp = root;
         int count = 0;
         if(temp == null){
             return count;
@@ -33,7 +33,7 @@ public class Stack {
     }
 
     public void traverse(){
-        Node temp = root;
+        Node<T> temp = root;
         if(temp != null){
             while(temp.next != null){
                 printValue(temp.getValue());
@@ -43,12 +43,12 @@ public class Stack {
         }
     }
 
-    public void push(Object value){
+    public void push(T value){
         if(root == null){
-            root = new Node(value);
+            root = new Node<T>(value);
         }
         else{
-            Node newNode = new Node(value);
+            Node<T> newNode = new Node<T>(value);
             newNode.next = root;
             root = newNode;
         }

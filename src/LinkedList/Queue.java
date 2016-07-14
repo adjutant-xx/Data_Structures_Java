@@ -1,22 +1,22 @@
 package LinkedList;
 
-public class Queue {
+public class Queue<T> {
 
-    private Node front;
-    private Node rear;
+    private Node<T> front;
+    private Node<T> rear;
 
     public Queue(){
         front = null;
         rear = null;
     }
 
-    public void printValue(Object value){
+    public void printValue(T value){
         System.out.println("[" + value + "]" + "\n");
     }
 
     public void traverse(){
-        Node tempTail = rear;
-        Node tempRoot = front;
+        Node<T> tempTail = rear;
+        Node<T> tempRoot = front;
         if(tempTail != null){
             while(tempTail != front){
                 printValue(tempTail.getValue());
@@ -26,26 +26,26 @@ public class Queue {
         }
     }
 
-    public void enqueue(Object value){
+    public void enqueue(T value){
         if(front == null) {
-            front = new Node(value);
+            front = new Node<T>(value);
             rear = front;
         }
         else{
-            Node oldTail = rear;
+            Node<T> oldTail = rear;
             rear = new Node(value);
             rear.next = oldTail;
         }
     }
 
-    public Node dequeue(){
-        Node tempRoot = front;
-        Node tempRear = rear;
+    public Node<T> dequeue(){
+        Node<T> tempRoot = front;
+        Node<T> tempRear = rear;
         if(tempRoot != null){
             while(tempRear.next.next != null) {
                 tempRear = tempRear.next;
             }
-            Node item = tempRear.next;
+            Node<T> item = tempRear.next;
             front = tempRear;
             return item;
         }

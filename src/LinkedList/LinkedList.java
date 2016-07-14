@@ -66,6 +66,7 @@ public class LinkedList<T> {
     public void insert(T value){
         if(root == null){
             root = new Node<T>(value);
+            return;
         }
         else{
             Node<T> newNode = new Node<T>(value);
