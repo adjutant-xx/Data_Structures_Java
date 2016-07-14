@@ -2,8 +2,6 @@ package LinkedList;
 
 public class LinkedList<T> {
 
-
-
     public LinkedList(){
         root = null;
     }
@@ -63,83 +61,131 @@ public class LinkedList<T> {
         }
     }
 
-    public void insert(T value){
-        if(root == null){
-            root = new Node<T>(value);
-            return;
-        }
-        else{
-            Node<T> newNode = new Node<T>(value);
-            newNode.next = root;
-            root = newNode;
-        }
-    }
-
-    public void insertEnd(T value){
-        Node<T> temp = root;
-        if(temp == null){
-            temp = new Node<T>(value);
-        }
-        else{
-            while(temp.next != null){
-                temp = temp.next;
+    public boolean insert(T value){
+        try {
+            if(root == null){
+                root = new Node<T>(value);
+                return true;
             }
-            temp.next = new Node<T>(value);
+            else{
+                Node<T> newNode = new Node<T>(value);
+                newNode.next = root;
+                root = newNode;
+                return true;
+            }
+        }
+        catch(Exception ex){
+            return false;
         }
     }
 
-    public void insertAt(T value, int index){
-        Node<T> temp = root;
-        if(temp == null){
-            temp = new Node<T>(value);
-        }
-        else{
-            int i = 0;
-            while(temp.next != null){
-                if(i == index - 1){
-                    Node<T> newNode = new Node<T>(value);
-                    newNode.next = temp.next;
-                    temp.next = newNode;
-                    break;
-                }
-                else{
+    //NOTE: This method is not saving insertions, check into this later...
+    public boolean insertEnd(T value){
+        try{
+            Node<T> temp = root;
+            if(temp == null){
+                temp = new Node<T>(value);
+                return true;
+            }
+            else{
+                while(temp.next != null){
                     temp = temp.next;
-                    i++;
                 }
+                temp.next = new Node<T>(value);
+                return true;
             }
         }
-    }
-
-    public void remove(){
-        if(root != null) {
-            root = root.next;
+        catch(Exception ex){
+            return false;
         }
     }
 
-    public void removeEnd(){
-        Node<T> temp = root;
-        if(temp != null){
-            while(temp.next.next != null){
-                temp = temp.next;
+    public boolean insertAt(T value, int index){
+        try{
+            Node<T> temp = root;
+            if(temp == null){
+                temp = new Node<T>(value);
+                return true;
             }
-            temp.next = null;
+            else{
+                int i = 0;
+                while(temp.next != null){
+                    if(i == index - 1){
+                        Node<T> newNode = new Node<T>(value);
+                        newNode.next = temp.next;
+                        temp.next = newNode;
+                        break;
+                    }
+                    else{
+                        temp = temp.next;
+                        i++;
+                    }
+                }
+                return true;
+            }
+        }
+        catch(Exception ex){
+            return false;
         }
     }
 
-    public void removeAt(int index){
-        Node<T> temp = root;
-        if(temp != null){
-            int i = 0;
-            while(temp.next != null){
-                if(i == index - 1){
-                    temp.next = temp.next.next;
-                    break;
-                }
-                else{
+    public boolean remove(){
+        try{
+            if(root != null) {
+                root = root.next;
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch(Exception ex){
+            return false;
+        }
+    }
+
+    public boolean removeEnd(){
+        try{
+            Node<T> temp = root;
+            if(temp != null){
+                while(temp.next.next != null){
                     temp = temp.next;
-                    i++;
                 }
+                temp.next = null;
+                return true;
             }
+            else{
+                return false;
+            }
+        }
+        catch(Exception ex){
+            return false;
+        }
+    }
+
+    public boolean removeAt(int index){
+        try{
+            Node<T> temp = root;
+            if(temp != null){
+                int i = 0;
+                while(temp.next != null){
+                    if(i == index - 1){
+                        temp.next = temp.next.next;
+                        break;
+                    }
+                    else{
+                        temp = temp.next;
+                        i++;
+                    }
+                }
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        catch(Exception ex){
+            return false;
         }
     }
 }
