@@ -79,19 +79,17 @@ public class LinkedList<T> {
         }
     }
 
-    //NOTE: This method is not saving insertions, check into this later...
     public boolean insertEnd(T value){
         try{
-            Node<T> temp = root;
-            if(temp == null){
-                temp = new Node<T>(value);
+            if(root == null){
+                root = new Node<T>(value);
                 return true;
             }
             else{
-                while(temp.next != null){
-                    temp = temp.next;
+                while(root.next != null){
+                    root = root.next;
                 }
-                temp.next = new Node<T>(value);
+                root.next = new Node<T>(value);
                 return true;
             }
         }
@@ -102,22 +100,21 @@ public class LinkedList<T> {
 
     public boolean insertAt(T value, int index){
         try{
-            Node<T> temp = root;
-            if(temp == null){
-                temp = new Node<T>(value);
+            if(root == null){
+                root = new Node<T>(value);
                 return true;
             }
             else{
                 int i = 0;
-                while(temp.next != null){
+                while(root.next != null){
                     if(i == index - 1){
                         Node<T> newNode = new Node<T>(value);
-                        newNode.next = temp.next;
-                        temp.next = newNode;
+                        newNode.next = root.next;
+                        root.next = newNode;
                         break;
                     }
                     else{
-                        temp = temp.next;
+                        root = root.next;
                         i++;
                     }
                 }
