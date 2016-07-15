@@ -43,20 +43,34 @@ public class Stack<T> {
         }
     }
 
-    public void push(T value){
-        if(root == null){
-            root = new Node<T>(value);
+    public boolean push(T value){
+        try{
+            if(root == null){
+                root = new Node<T>(value);
+                return true;
+            }
+            else{
+                Node<T> newNode = new Node<T>(value);
+                newNode.next = root;
+                root = newNode;
+                return true;
+            }
         }
-        else{
-            Node<T> newNode = new Node<T>(value);
-            newNode.next = root;
-            root = newNode;
+        catch(Exception ex){
+            return false;
         }
     }
 
-    public void pop(){
-        if(root != null){
-            root = root.next;
+    public boolean pop(){
+        try{
+            if(root != null){
+                root = root.next;
+                return true;
+            }
+            return false;
+        }
+        catch(Exception ex) {
+            return false;
         }
     }
 }
