@@ -26,31 +26,44 @@ public class Queue<T> {
         }
     }
 
-    public void enqueue(T value){
-        if(front == null) {
-            front = new Node<T>(value);
-            rear = front;
+    public boolean enqueue(T value){
+        try{
+            if(front == null) {
+                front = new Node<T>(value);
+                rear = front;
+                return true;
+            }
+            else{
+                Node<T> oldTail = rear;
+                rear = new Node(value);
+                rear.next = oldTail;
+                return true;
+            }
         }
-        else{
-            Node<T> oldTail = rear;
-            rear = new Node(value);
-            rear.next = oldTail;
+        catch(Exception ex) {
+            return false;
         }
     }
 
     public Node<T> dequeue(){
-        Node<T> tempRoot = front;
-        Node<T> tempRear = rear;
-        if(tempRoot != null){
-            while(tempRear.next.next != null) {
-                tempRear = tempRear.next;
+        try{
+            Node<T> tempRoot = front;
+            Node<T> tempRear = rear;
+            if(tempRoot != null){
+                while(tempRear.next.next != null) {
+                    tempRear = tempRear.next;
+                }
+                Node<T> item = tempRear.next;
+                front = tempRear;
+                return item;
             }
-            Node<T> item = tempRear.next;
-            front = tempRear;
-            return item;
+            else{
+                return null;
+            }
         }
-        else{
+        catch(Exception ex){
             return null;
         }
+
     }
 }
