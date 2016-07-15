@@ -41,7 +41,7 @@ public class Main {
         System.out.println("-------------\n");
 
         //Remove a node from the front of the list, and traverse:
-        linkedList.remove();
+        linkedList.removeFront();
         linkedList.traverse();
         System.out.println("-------------\n");
 

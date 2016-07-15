@@ -54,10 +54,33 @@ public class LinkedList<T> {
                     temp = temp.next;
                 }
             }
+            if(temp.getValue() == searchValue){
+                return true;
+            }
             return false;
         }
         else{
             return false;
+        }
+    }
+
+    public int find(T searchValue){
+        Node<T> temp = root;
+        if(temp != null){
+            int index = 0;
+            while(temp.next != null){
+                if(temp.getValue() == searchValue){
+                    return index;
+                }
+                else {
+                    temp = temp.next;
+                    index++;
+                }
+            }
+            return -1;
+        }
+        else{
+            return -1;
         }
     }
 
@@ -126,7 +149,34 @@ public class LinkedList<T> {
         }
     }
 
-    public boolean remove(){
+    public boolean remove(T value){
+        try{
+            if(root != null){
+                while(root.next != null){
+                    if(root.getValue() == value){
+                        root.next = root.next.next;
+                        return true;
+                    }
+                    else{
+                        root = root.next;
+                    }
+                }
+                if(root.getValue() == value){
+                    root = root.next;
+                    return true;
+                }
+                return false;
+            }
+            else{
+                return false;
+            }
+        }
+        catch(Exception ex){
+            return false;
+        }
+    }
+
+    public boolean removeFront(){
         try{
             if(root != null) {
                 root = root.next;

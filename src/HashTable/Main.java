@@ -26,5 +26,37 @@ public class Main {
                 System.out.println("Hash entry with key: [" + entry.getKey() + "] added to hash table successfully.");
             }
         }
+        System.out.println("-------------\n");
+
+        //Check to see if the hash table contains a value that we just inserted (expecting true):
+        HashEntry searchValueContains = hashEntries[2];
+        if(hashTable.contains(searchValueContains) == true){
+            System.out.println("Hash table contains entry with key: [" + searchValueContains.getKey() + "]");
+        }
+        else{
+            System.out.println("Hash table does not contain entry with key: [" + searchValueContains.getKey() + "]");
+        }
+        System.out.println("-------------\n");
+
+        //Check to see if the hash table contains a value that is not present within the table (expecting false):
+        HashEntry searchValueMissing = new HashEntry("Damian", 49);
+        if(hashTable.contains(searchValueMissing) == true){
+            System.out.println("Hash table contains entry with key: [" + searchValueMissing.getKey() + "]");
+        }
+        else{
+            System.out.println("Hash table does not contain entry with key: [" + searchValueMissing.getKey() + "]");
+        }
+        System.out.println("-------------\n");
+
+        //Remove an entry from the hash table, and subsequently check to see if that entry still exists or not (expecting false):
+        HashEntry removal = hashEntries[1];
+        hashTable.remove(removal);
+        if(hashTable.contains(removal)){
+            System.out.println("Hash table contains entry with key: [" + removal.getKey() + "]");
+        }
+        else{
+            System.out.println("Hash table does not contain entry with key: [" + removal.getKey() + "]");
+        }
+        System.out.println("-------------\n");
     }
 }
