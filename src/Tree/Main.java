@@ -1,4 +1,4 @@
-package BinaryTree;
+package Tree;
 
 public class Main {
     public static void main(String[] args){
@@ -42,12 +42,12 @@ public class Main {
         System.out.println("-------------\n");
 
         //Find the smallest value in the tree:
-        Node min = bst.findMin();
+        BSTNode min = bst.findMin();
         bst.printValue(min.getValue());
         System.out.println("-------------\n");
 
         //Find the largest value in the tree:
-        Node max = bst.findMax();
+        BSTNode max = bst.findMax();
         bst.printValue(max.getValue());
         System.out.println("-------------\n");
 
@@ -55,28 +55,6 @@ public class Main {
         bst.remove(555);
         bst.traverseInOrderCall();
         System.out.println("-------------\n");
-
-        //Run tests for Red-Black Tree:
-        System.out.println("--------------------------\n");
-        System.out.println("Red-Black Tree");
-        System.out.println("-------------\n");
-
-        final int RED = 0, BLACK = 1;
-
-        //Instantiate a new RBT structure, while passing a default root node value:
-        RedBlackTree redBlackTree = new RedBlackTree();
-
-        //Populate the new RBT:
-        redBlackTree.insert(25);
-        redBlackTree.insert(3005);
-        redBlackTree.insert(99);
-        redBlackTree.insert(0);
-        redBlackTree.insert(1);
-        redBlackTree.insert(5);
-        redBlackTree.insert(12);
-
-        //Traverse the newly-populated RBT:
-        redBlackTree.traverseInOrderCall();
 
     }
 }

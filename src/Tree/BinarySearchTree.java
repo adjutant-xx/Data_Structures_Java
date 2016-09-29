@@ -1,14 +1,14 @@
-package BinaryTree;
+package Tree;
 
 public class BinarySearchTree<T> {
 
-    private Node<T> root;
+    private BSTNode<T> root;
 
     public BinarySearchTree(){
         root = null;
     }
 
-    public Node<T> getRoot(){
+    public BSTNode<T> getRoot(){
         return root;
     }
 
@@ -20,7 +20,7 @@ public class BinarySearchTree<T> {
         traverseInOrder(root);
     }
 
-    private void traverseInOrder(Node<T> current){
+    private void traverseInOrder(BSTNode<T> current){
         if(current == null){
             return;
         }
@@ -33,7 +33,7 @@ public class BinarySearchTree<T> {
         traversePreOrder(root);
     }
 
-    private void traversePreOrder(Node<T> current){
+    private void traversePreOrder(BSTNode<T> current){
         if(current == null){
             return;
         }
@@ -46,7 +46,7 @@ public class BinarySearchTree<T> {
         traversePostOrder(root);
     }
 
-    private void traversePostOrder(Node<T> current){
+    private void traversePostOrder(BSTNode<T> current){
         if(current == null){
             return;
         }
@@ -59,7 +59,7 @@ public class BinarySearchTree<T> {
         return contains(value, root);
     }
 
-    private boolean contains(T value, Node<T> current){
+    private boolean contains(T value, BSTNode<T> current){
         if(current == null) {
             return false;
         }
@@ -78,9 +78,9 @@ public class BinarySearchTree<T> {
         root = insert(value, root);
     }
 
-    private Node<T> insert(T value, Node<T> current){
+    private BSTNode<T> insert(T value, BSTNode<T> current){
         if(current == null){
-            current = new Node<T>(value);
+            current = new BSTNode<T>(value);
         }
         else if((Integer)value < (Integer)current.getValue()){
             current.left = insert(value, current.left);
@@ -95,7 +95,7 @@ public class BinarySearchTree<T> {
         root = remove(value, root);
     }
 
-    private Node<T> remove(T value, Node<T> current){
+    private BSTNode<T> remove(T value, BSTNode<T> current){
         if(current == null){
             return current;
         }
@@ -115,11 +115,11 @@ public class BinarySearchTree<T> {
         return current;
     }
 
-    public Node<T> findMin(){
+    public BSTNode<T> findMin(){
         return findMin(root);
     }
 
-    private Node<T> findMin(Node<T> current){
+    private BSTNode<T> findMin(BSTNode<T> current){
         if(current == null){
             return null;
         }
@@ -129,11 +129,11 @@ public class BinarySearchTree<T> {
         return findMin(current.left);
     }
 
-    public Node<T> findMax(){
+    public BSTNode<T> findMax(){
         return findMax(root);
     }
 
-    private Node<T> findMax(Node<T> current){
+    private BSTNode<T> findMax(BSTNode<T> current){
         if(current == null){
             return null;
         }
