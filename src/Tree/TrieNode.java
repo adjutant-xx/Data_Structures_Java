@@ -4,11 +4,14 @@ public class TrieNode<T> extends Node<T> {
 
     public TrieNode(){}
 
-    public TrieNode(T v, int s){
-        this.value = v;
+    public TrieNode(T d, int s){
+        this.data = d;
         size = s;
         this.children = new Node[size];
+        terminates = false;
     }
 
-    private int size;
+    public T data;
+    public int size;
+    public boolean terminates;
 }

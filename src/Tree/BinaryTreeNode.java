@@ -1,19 +1,21 @@
 package Tree;
 
-public class BSTNode<T> {
-    public BSTNode(){
+public class BinaryTreeNode<T> {
+    public BinaryTreeNode(){
         value = null;
         left = null;
         right = null;
+        parent = null;
     }
 
-    public BSTNode(T v){
+    public BinaryTreeNode(T v){
         value = v;
     }
 
     private T value;
-    public BSTNode<T> left;
-    public BSTNode<T> right;
+    public BinaryTreeNode<T> left;
+    public BinaryTreeNode<T> right;
+    public BinaryTreeNode<T> parent;
 
     public T getValue(){
         return value;

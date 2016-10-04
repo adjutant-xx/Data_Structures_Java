@@ -5,9 +5,11 @@ public class Node<T> {
     public Node(){}
 
     public Node(T v){
-        value = v;
+        data = v;
     }
 
-    public T value;
+    public T data;
     public Node<T>[] children;
+
+
 }
