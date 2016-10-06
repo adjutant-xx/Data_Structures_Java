@@ -25,7 +25,7 @@ public class MinHeap<T> {
             current = current.right;
 
             // prop code here
-            current = propagateUp(current);
+            current = percolateUp(current);
             return current;
         }
         else if(current.left == null && current.right == null){
@@ -34,7 +34,7 @@ public class MinHeap<T> {
             current = current.left;
 
             // prop code here
-            current = propagateUp(current);
+            current = percolateUp(current);
             return current;
         }
         else{
@@ -43,31 +43,53 @@ public class MinHeap<T> {
     }
 
     private BinaryTreeNode<T> findBranch(BinaryTreeNode<T> node){
+
         while(node != null){
-            if(node.left == null && node.right == null){
+            if(node.left == null || node.right == null){
                 return node;
             }
-            else if(node.left != null && node.right == null){
-                return node;
-            }
-            else if(node.left != null && node.right != null){
-                node = node.left;
+            else{
+                //check left subtree:
+                if(node.left.left == null || node.left.right == null){
+                    node = node.left;
+                }
+                else{
+                    node = node.right;
+                }
             }
         }
+
+//        while(node != null){
+//            if(node.left == null && node.right == null) {
+//                return node;
+//            }
+//            else if(node.left != null && node.right == null){
+//                return node;
+//            }
+//            else if(node.left != null && node.right != null){
+//
+//                // put extension code here:
+//                if(node.left.left != null && node.left.right != null){
+//                    if(node.right.left != null && node.right.right != null){
+//                        node = node.left;
+//                    }
+//                    else{
+//                        node = node.right;
+//                    }
+//                }
+//
+////                if(node.left.left != null && node.left.right == null){
+////                    node = node.left;
+////                }
+////                else if(node.left.left != null && node.left.right != null){
+////                    node = node.right;
+////                }
+//            }
+//        }
         return node;
     }
 
-    private Character isLeaf(BinaryTreeNode<T> node){
-        if(node.left == null && node.right == null){
-            return 'l';
-        }
-        else if(node.left != null && node.right == null){
-            return 'r';
-        }
-        return 'c';
-    }
-
-    private BinaryTreeNode<T> propagateUp(BinaryTreeNode<T> node){
+    private BinaryTreeNode<T> percolateUp(BinaryTreeNode<T> node){
 
         //while((Integer)node.getValue() < (Integer)node.parent.getValue()){
         while(node.parent != null){

@@ -9,7 +9,7 @@ public class BinaryTreeNode<T> {
     }
 
     public BinaryTreeNode(T v){
-        value = v;
+        setValue(v);
     }
 
     private T value;
