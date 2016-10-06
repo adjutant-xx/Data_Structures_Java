@@ -61,17 +61,15 @@ public class Main {
         System.out.println("|   MIN HEAP                 |\n");
         System.out.println("| -------------------------- |\n");
 
-        //Populate a new Min Heap:
+        //Populate a new Min Heap by testing insert statements:
         MinHeap<Integer> minHeap = new MinHeap<Integer>();
         int[] inserts = {55,50,90,4,7,87};
         for(Integer item : inserts){
-            minHeap.insert(item);
+            minHeap.upHeap(item);
         }
 
-        //Test another insertion:
-        minHeap.insert(2);
-
         //Test min retrieval:
+        int testRetrieval = minHeap.downHeap();
 
     }
 }

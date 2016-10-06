@@ -8,11 +8,11 @@ public class MinHeap<T> {
         root = null;
     }
 
-    public void insert(T value){
-        root = insert(value, root);
+    public void upHeap(T value){
+        root = upHeap(value, root);
     }
 
-    private BinaryTreeNode<T> insert(T value, BinaryTreeNode<T> current){
+    private BinaryTreeNode<T> upHeap(T value, BinaryTreeNode<T> current){
         if(current == null){
             current = new BinaryTreeNode<T>(value);
             return current;
@@ -42,6 +42,14 @@ public class MinHeap<T> {
         }
     }
 
+    public T downHeap(){
+        T minimumVal = root.getValue();
+
+        //percolate down, replacing the root with the next smallest child while recursively replacing:
+
+        return minimumVal;
+    }
+
     private BinaryTreeNode<T> findBranch(BinaryTreeNode<T> node){
 
         while(node != null){
@@ -58,34 +66,6 @@ public class MinHeap<T> {
                 }
             }
         }
-
-//        while(node != null){
-//            if(node.left == null && node.right == null) {
-//                return node;
-//            }
-//            else if(node.left != null && node.right == null){
-//                return node;
-//            }
-//            else if(node.left != null && node.right != null){
-//
-//                // put extension code here:
-//                if(node.left.left != null && node.left.right != null){
-//                    if(node.right.left != null && node.right.right != null){
-//                        node = node.left;
-//                    }
-//                    else{
-//                        node = node.right;
-//                    }
-//                }
-//
-////                if(node.left.left != null && node.left.right == null){
-////                    node = node.left;
-////                }
-////                else if(node.left.left != null && node.left.right != null){
-////                    node = node.right;
-////                }
-//            }
-//        }
         return node;
     }
 
