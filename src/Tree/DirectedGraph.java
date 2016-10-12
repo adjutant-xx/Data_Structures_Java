@@ -8,11 +8,9 @@ import java.util.HashSet;
 public class DirectedGraph<T> {
 
     private HashMap<Node<T>, Node<T>> graph;
-    //private int hashKey;
 
     public DirectedGraph(){
         graph = new HashMap<Node<T>, Node<T>>();
-        //hashKey = 0;
     }
 
 
@@ -28,6 +26,21 @@ public class DirectedGraph<T> {
 
         graph.put(vertex,vertex);
 
+        return graph;
+    }
+
+    public void addEdge(Node<T> p, Node<T> c){
+        graph = addEdge(p, c, graph);
+    }
+
+    public HashMap<Node<T>, Node<T>> addEdge(Node<T> parent, Node<T> child, HashMap<Node<T>,Node<T>> graph){
+        if(graph.containsKey(parent)){ // Check to see if graph already contains the parent node
+            Node<T> parentObject = graph.get(parent);
+            if(!parentObject.children.contains(child)){ // if directed graph does not already contain an edge from parent to child, create one:
+                parentObject.children.add(child);
+                graph.put(graph.get(parent), parentObject);
+            }
+        }
         return graph;
     }
 
