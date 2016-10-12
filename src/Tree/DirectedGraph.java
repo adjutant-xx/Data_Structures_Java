@@ -1,7 +1,6 @@
 package Tree;
 
 import HashTable.HashTable;
-
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -13,7 +12,6 @@ public class DirectedGraph<T> {
         graph = new HashMap<Node<T>, Node<T>>();
     }
 
-
     public void addVertex(T value){
         Node n = new Node(value);
         graph = addVertex(n, graph);
@@ -23,9 +21,7 @@ public class DirectedGraph<T> {
         if(graph.containsKey(vertex)){
             return graph;
         }
-
         graph.put(vertex,vertex);
-
         return graph;
     }
 
@@ -43,5 +39,4 @@ public class DirectedGraph<T> {
         }
         return graph;
     }
-
 }
