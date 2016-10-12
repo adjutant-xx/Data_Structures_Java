@@ -1,5 +1,7 @@
 package Tree;
 
+import java.util.HashSet;
+
 public class Node<T> {
 
     public Node(){}
@@ -9,7 +11,7 @@ public class Node<T> {
     }
 
     public T data;
-    public Node<T>[] children;
+    public HashSet<Node<T>> children;
 
 
 }
