@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" afterPath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Main.java" afterPath="$PROJECT_DIR$/src/Tree/Main.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -81,11 +80,11 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1379">
-              <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+            <state relative-caret-position="1304">
+              <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
               <folding>
-                <element signature="e#2973#2984#0" expanded="true" />
-                <marker date="1476332394716" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
+                <element signature="e#3057#3068#0" expanded="true" />
+                <marker date="1476332904827" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
               </folding>
             </state>
           </provider>
@@ -697,7 +696,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="1744" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -768,8 +767,8 @@
         <state relative-caret-position="1400">
           <caret line="56" column="46" selection-start-line="56" selection-start-column="46" selection-end-line="56" selection-end-column="46" />
           <folding>
-            <element signature="e#2973#2984#0" expanded="true" />
-            <marker date="1476332394716" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
+            <element signature="e#3057#3068#0" expanded="true" />
+            <marker date="1476332904827" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -807,8 +806,8 @@
         <state relative-caret-position="1122">
           <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
           <folding>
-            <element signature="e#2973#2984#0" expanded="true" />
-            <marker date="1476332394716" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
+            <element signature="e#3057#3068#0" expanded="true" />
+            <marker date="1476332904827" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -874,8 +873,8 @@
         <state relative-caret-position="1122">
           <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
           <folding>
-            <element signature="e#2973#2984#0" expanded="true" />
-            <marker date="1476332394716" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
+            <element signature="e#3057#3068#0" expanded="true" />
+            <marker date="1476332904827" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -941,8 +940,8 @@
         <state relative-caret-position="1122">
           <caret line="66" column="55" selection-start-line="66" selection-start-column="55" selection-end-line="66" selection-end-column="55" />
           <folding>
-            <element signature="e#2973#2984#0" expanded="true" />
-            <marker date="1476332394716" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
+            <element signature="e#3057#3068#0" expanded="true" />
+            <marker date="1476332904827" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>
@@ -1100,11 +1099,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1379">
-          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+        <state relative-caret-position="1304">
+          <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
           <folding>
-            <element signature="e#2973#2984#0" expanded="true" />
-            <marker date="1476332394716" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
+            <element signature="e#3057#3068#0" expanded="true" />
+            <marker date="1476332904827" expanded="false" signature="2375:2384" ph="&lt;~&gt;" />
           </folding>
         </state>
       </provider>

@@ -76,13 +76,19 @@ public class Main {
         System.out.println("|   DIRECTED GRAPH                 |\n");
         System.out.println("| -------------------------- |\n");
 
-        Character[] graphInserts = {'A','B','C','D','E','F'};
-        DirectedGraph<Character> graph = new DirectedGraph<Character>();
-        for(Character item : graphInserts){
-            graph.addVertex(item);
+        //Populate a new Directed Graph by testing insert statements:
+        Character[] graphVertexInserts = {'A','B','C','D','E','F'};
+        DirectedGraph<Character> directedGraph = new DirectedGraph<Character>();
+        for(Character item : graphVertexInserts){
+            directedGraph.addVertex(item);
         }
 
-        
-
+        //Test vertex retrieval & edge inserts:
+        Character[][] graphEdgeInserts = {{'A','B'},{'B','C'},{'C','E'},{'E','D'},{'D','B'},{'E','F'}};
+        for(Character[] item : graphEdgeInserts){
+            Node<Character> parent = directedGraph.getVertex(item[0]);
+            Node<Character> child = directedGraph.getVertex(item[1]);
+            directedGraph.addEdge(parent, child);
+        }
     }
 }
