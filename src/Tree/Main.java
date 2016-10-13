@@ -73,7 +73,7 @@ public class Main {
 
         //Testing Directed Graph:
         System.out.println("| -------------------------- |\n");
-        System.out.println("|   DIRECTED GRAPH                 |\n");
+        System.out.println("|   DIRECTED GRAPH           |\n");
         System.out.println("| -------------------------- |\n");
 
         //Populate a new Directed Graph by testing insert statements:
