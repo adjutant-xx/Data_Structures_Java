@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinarySearchTree.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinarySearchTree.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinaryTreeNode.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinaryTreeNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/DirectedGraph.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/DirectedGraph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Main.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/MinHeap.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/MinHeap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Node.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" afterPath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Node.java" afterPath="$PROJECT_DIR$/src/Tree/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Main.java" afterPath="$PROJECT_DIR$/src/Tree/Main.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -78,12 +70,24 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/Tree/Node.java">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="119">
                     <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                     <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/Tree/Main.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="821">
+                    <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+                    <folding>
+                      <element signature="e#3057#3068#0" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -99,27 +103,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Tree/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-              <folding>
-                <element signature="e#3057#3068#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="220">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
                 <element signature="e#195#196#0" expanded="true" />
                 <element signature="e#244#245#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
                 <element signature="e#822#823#0" expanded="true" />
+                <element signature="e#866#867#0" expanded="true" />
+                <element signature="e#1510#1511#0" expanded="true" />
+                <element signature="e#1561#1562#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -231,9 +228,9 @@
         <option value="$PROJECT_DIR$/src/Tree/BinaryTreeNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/MinHeap.java" />
         <option value="$PROJECT_DIR$/src/Tree/GraphNode.java" />
+        <option value="$PROJECT_DIR$/src/Tree/Node.java" />
         <option value="$PROJECT_DIR$/src/Tree/Main.java" />
         <option value="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
-        <option value="$PROJECT_DIR$/src/Tree/Node.java" />
       </list>
     </option>
   </component>
@@ -743,12 +740,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Tree/Main.java</url>
-          <line>90</line>
+          <line>94</line>
           <properties />
-          <option name="timeStamp" value="42" />
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="43" />
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1119,20 +1116,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="220">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#195#196#0" expanded="true" />
             <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
             <element signature="e#822#823#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1561#1562#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="821">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
           <folding>
             <element signature="e#3057#3068#0" expanded="true" />
           </folding>

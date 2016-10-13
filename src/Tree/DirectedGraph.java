@@ -50,7 +50,7 @@ public class DirectedGraph<T> {
     }
 
     private HashMap<T,Node<T>> deleteVertex(Node<T> vertex, HashMap<T,Node<T>> graph){
-        if(graph.containsKey(vertex)){ // if graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
+        if(graph.containsKey(vertex.data)){ // if graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
             for(T key : graph.keySet()){
                 Node<T> value = graph.get(key);
                 HashSet<Node<T>> mutableChildren = value.children;
@@ -59,7 +59,7 @@ public class DirectedGraph<T> {
                     graph.put(key, value);
                 }
             }
-            graph.remove(vertex);
+            graph.remove(vertex.data);
         }
         return graph;
     }

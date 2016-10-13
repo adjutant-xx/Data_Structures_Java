@@ -90,5 +90,8 @@ public class Main {
             Node<Character> child = directedGraph.getVertex(item[1]);
             directedGraph.addEdge(parent, child);
         }
+
+        //Test vertex deletion:
+        directedGraph.deleteVertex(directedGraph.getVertex('B'));
     }
 }
