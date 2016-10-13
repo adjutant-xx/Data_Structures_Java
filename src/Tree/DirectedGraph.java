@@ -78,4 +78,14 @@ public class DirectedGraph<T> {
         }
         return graph;
     }
+
+    public boolean isAdjacent(Node<T> x, Node<T> y){ // checks to see whether a single edge exists between the two nodes, in either direction
+        if(!graph.containsKey(x.data) || !graph.containsKey(y.data)){
+            return false;
+        }
+        if(x.children.contains(y) || y.children.contains(x)){
+            return true;
+        }
+        return false;
+    }
 }

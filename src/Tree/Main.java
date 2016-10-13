@@ -99,5 +99,13 @@ public class Main {
         Node<Character> parent = directedGraph.getVertex(edge[0]);
         Node<Character> child = directedGraph.getVertex((edge[1]));
         directedGraph.removeEdge(parent, child);
+
+        //Test graph adjacencies:
+        Character[][] adjacencies = {{'A','D'},{'E','F'}};
+        for(Character[] item : adjacencies){
+            Node<Character> x = directedGraph.getVertex(item[0]);
+            Node<Character> y = directedGraph.getVertex((item[1]));
+            boolean check = directedGraph.isAdjacent(x, y);
+        }
     }
 }
