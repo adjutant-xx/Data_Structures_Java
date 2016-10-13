@@ -92,6 +92,6 @@ public class Main {
         }
 
         //Test vertex deletion:
-        directedGraph.deleteVertex(directedGraph.getVertex('B'));
+        directedGraph.removeVertex(directedGraph.getVertex('B'));
     }
 }

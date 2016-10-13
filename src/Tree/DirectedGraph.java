@@ -45,11 +45,11 @@ public class DirectedGraph<T> {
         return graph;
     }
 
-    public void deleteVertex(Node<T> vertex){
-        graph = deleteVertex(vertex, graph);
+    public void removeVertex(Node<T> vertex){
+        graph = removeVertex(vertex, graph);
     }
 
-    private HashMap<T,Node<T>> deleteVertex(Node<T> vertex, HashMap<T,Node<T>> graph){
+    private HashMap<T,Node<T>> removeVertex(Node<T> vertex, HashMap<T,Node<T>> graph){
         if(graph.containsKey(vertex.data)){ // if graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
             for(T key : graph.keySet()){
                 Node<T> value = graph.get(key);
@@ -64,11 +64,11 @@ public class DirectedGraph<T> {
         return graph;
     }
 
-    public void deleteEdge(Node<T> p, Node<T> c){
-        graph = deleteEdge(p,c, graph);
+    public void removeEdge(Node<T> p, Node<T> c){
+        graph = removeEdge(p,c, graph);
     }
 
-    private HashMap<T,Node<T>> deleteEdge(Node<T> parent, Node<T> child, HashMap<T, Node<T>> graph){
+    private HashMap<T,Node<T>> removeEdge(Node<T> parent, Node<T> child, HashMap<T, Node<T>> graph){
         if(graph.containsKey(parent.data)){
             HashSet<Node<T>> mutableChildren = graph.get(parent.data).children;
             if(mutableChildren.remove(child)){
