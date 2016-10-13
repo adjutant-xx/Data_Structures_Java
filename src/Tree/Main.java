@@ -56,20 +56,33 @@ public class Main {
 //        bst.traverseInOrderCall();
 //        System.out.println("-------------\n");
 
-        //Testing Min Heap:
+//        //Testing Min Heap:
+//        System.out.println("| -------------------------- |\n");
+//        System.out.println("|   MIN HEAP                 |\n");
+//        System.out.println("| -------------------------- |\n");
+//
+//        //Populate a new Min Heap by testing insert statements:
+//        MinHeap<Integer> minHeap = new MinHeap<Integer>();
+//        int[] minHeapInserts = {55,50,90,4,7,87};
+//        for(Integer item : minHeapInserts){
+//            minHeap.upHeap(item);
+//        }
+//
+//        //Test min retrieval:
+//        int testRetrieval = minHeap.downHeap();
+
+        //Testing Directed Graph:
         System.out.println("| -------------------------- |\n");
-        System.out.println("|   MIN HEAP                 |\n");
+        System.out.println("|   DIRECTED GRAPH                 |\n");
         System.out.println("| -------------------------- |\n");
 
-        //Populate a new Min Heap by testing insert statements:
-        MinHeap<Integer> minHeap = new MinHeap<Integer>();
-        int[] inserts = {55,50,90,4,7,87};
-        for(Integer item : inserts){
-            minHeap.upHeap(item);
+        Character[] graphInserts = {'A','B','C','D','E','F'};
+        DirectedGraph<Character> graph = new DirectedGraph<Character>();
+        for(Character item : graphInserts){
+            graph.addVertex(item);
         }
 
-        //Test min retrieval:
-        int testRetrieval = minHeap.downHeap();
+        
 
     }
 }
