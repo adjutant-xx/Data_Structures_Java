@@ -73,7 +73,7 @@ public class DirectedGraph<T> {
             HashSet<Node<T>> mutableChildren = graph.get(parent.data).children;
             if(mutableChildren.remove(child)){
                 parent.children = mutableChildren;
-                graph.put(parent.data,parent);
+                graph.put(parent.data, parent);
             }
         }
         return graph;

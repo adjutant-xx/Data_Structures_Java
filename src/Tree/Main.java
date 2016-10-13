@@ -93,5 +93,11 @@ public class Main {
 
         //Test vertex deletion:
         directedGraph.removeVertex(directedGraph.getVertex('B'));
+
+        //Test edge deletion:
+        Character[] edge = {'E','D'};
+        Node<Character> parent = directedGraph.getVertex(edge[0]);
+        Node<Character> child = directedGraph.getVertex((edge[1]));
+        directedGraph.removeEdge(parent, child);
     }
 }
