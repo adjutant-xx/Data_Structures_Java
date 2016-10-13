@@ -36,7 +36,8 @@ public class DirectedGraph<T> {
     private HashMap<T, Node<T>> addEdge(Node<T> parent, Node<T> child, HashMap<T,Node<T>> graph){
         if(graph.containsValue(parent)){ // Check to see if graph already contains the parent node
             Node<T> parentObject = graph.get(parent.data);
-            if(!parentObject.children.contains(child)){ // if directed graph does not already contain an edge from parent to child, create one:
+
+            if(parentObject.children == null || !parentObject.children.contains(child)){ // if directed graph does not already contain an edge from parent to child, create one:
                 parentObject.children.add(child);
                 graph.put(parentObject.data, parentObject);
             }

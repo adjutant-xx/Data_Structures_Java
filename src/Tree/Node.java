@@ -8,6 +8,7 @@ public class Node<T> {
 
     public Node(T v){
         data = v;
+        children = new HashSet<Node<T>>();
     }
 
     public T data;
