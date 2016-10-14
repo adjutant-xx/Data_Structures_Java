@@ -1,6 +1,8 @@
 package Tree;
 
 import HashTable.HashTable;
+import LinkedList.LinkedList;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -87,5 +89,18 @@ public class DirectedGraph<T> {
             return true;
         }
         return false;
+    }
+
+    public ArrayList<Node<T>> getNeighbors(Node<T> vertex){ // gets a list of all neighbors of a given vertex, defined as having an edge that connects the vertex to/from another neighbor
+        ArrayList<Node<T>> neighbors = new ArrayList<Node<T>>();
+        for(Node<T> item : vertex.children){ // first, add all direct neighbors from list of target vertex's children
+            neighbors.add(item);
+        }
+        for(Node<T> item : graph.values()){ // next, check all other vertices within the graph to see if they have any connection to the target vertex
+            if(item.children.contains(vertex)){
+                neighbors.add(item);
+            }
+        }
+        return neighbors;
     }
 }
