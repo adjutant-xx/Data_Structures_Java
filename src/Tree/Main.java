@@ -1,5 +1,7 @@
 package Tree;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args){
 
@@ -91,6 +93,9 @@ public class Main {
             directedGraph.addEdge(parent, child);
         }
 
+        //Test neighbor retrieval:
+        ArrayList<Node<Character>> neighbors = directedGraph.getNeighbors(directedGraph.getVertex('B'));
+
         //Test vertex deletion:
         directedGraph.removeVertex(directedGraph.getVertex('B'));
 
@@ -107,5 +112,8 @@ public class Main {
             Node<Character> y = directedGraph.getVertex((item[1]));
             boolean check = directedGraph.isAdjacent(x, y);
         }
+
+        //Test neighbor retrieval again:
+        ArrayList<Node<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex('E'));
     }
 }
