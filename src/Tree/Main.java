@@ -88,32 +88,32 @@ public class Main {
         //Test vertex retrieval & edge inserts:
         Character[][] graphEdgeInserts = {{'A','B'},{'B','C'},{'C','E'},{'E','D'},{'D','B'},{'E','F'}};
         for(Character[] item : graphEdgeInserts){
-            Node<Character> parent = directedGraph.getVertex(item[0]);
-            Node<Character> child = directedGraph.getVertex(item[1]);
+            GraphNode<Character> parent = directedGraph.getVertex(item[0]);
+            GraphNode<Character> child = directedGraph.getVertex(item[1]);
             directedGraph.addEdge(parent, child);
         }
 
         //Test neighbor retrieval:
-        ArrayList<Node<Character>> neighbors = directedGraph.getNeighbors(directedGraph.getVertex('B'));
+        ArrayList<GraphNode<Character>> neighbors = directedGraph.getNeighbors(directedGraph.getVertex('B'));
 
         //Test vertex deletion:
         directedGraph.removeVertex(directedGraph.getVertex('B'));
 
         //Test edge deletion:
         Character[] edge = {'E','D'};
-        Node<Character> parent = directedGraph.getVertex(edge[0]);
-        Node<Character> child = directedGraph.getVertex((edge[1]));
+        GraphNode<Character> parent = directedGraph.getVertex(edge[0]);
+        GraphNode<Character> child = directedGraph.getVertex((edge[1]));
         directedGraph.removeEdge(parent, child);
 
         //Test graph adjacencies:
         Character[][] adjacencies = {{'A','D'},{'E','F'}};
         for(Character[] item : adjacencies){
-            Node<Character> x = directedGraph.getVertex(item[0]);
-            Node<Character> y = directedGraph.getVertex((item[1]));
+            GraphNode<Character> x = directedGraph.getVertex(item[0]);
+            GraphNode<Character> y = directedGraph.getVertex((item[1]));
             boolean check = directedGraph.isAdjacent(x, y);
         }
 
         //Test neighbor retrieval again:
-        ArrayList<Node<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex('E'));
+        ArrayList<GraphNode<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex('E'));
     }
 }

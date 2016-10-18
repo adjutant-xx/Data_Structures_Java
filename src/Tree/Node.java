@@ -13,6 +13,4 @@ public class Node<T> {
 
     public T data;
     public HashSet<Node<T>> children;
-
-
 }
