@@ -5,27 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/DirectedGraph.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/DirectedGraph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/GraphNode.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/GraphNode.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Main.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Node.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashEntry.java" afterPath="$PROJECT_DIR$/src/HashTable/HashEntry.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashTable.java" afterPath="$PROJECT_DIR$/src/HashTable/HashTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/Main.java" afterPath="$PROJECT_DIR$/src/HashTable/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/LinkedList.java" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/Main.java" afterPath="$PROJECT_DIR$/src/LinkedList/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/Node.java" afterPath="$PROJECT_DIR$/src/LinkedList/Node.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/Queue.java" afterPath="$PROJECT_DIR$/src/LinkedList/Queue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/Stack.java" afterPath="$PROJECT_DIR$/src/LinkedList/Stack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/Tree/BinarySearchTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/BinaryTreeNode.java" afterPath="$PROJECT_DIR$/src/Tree/BinaryTreeNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" afterPath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/GraphNode.java" afterPath="$PROJECT_DIR$/src/Tree/GraphNode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Main.java" afterPath="$PROJECT_DIR$/src/Tree/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/MinHeap.java" afterPath="$PROJECT_DIR$/src/Tree/MinHeap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Node.java" afterPath="$PROJECT_DIR$/src/Tree/Node.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,20 +40,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkedList/Node.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#314#0" expanded="true" />
-                <element signature="e#283#284#0" expanded="true" />
-                <element signature="e#311#312#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -86,13 +53,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LinkedList/Queue.java">
+      <file leaf-file-name="HashEntry.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HashTable/HashEntry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="170">
+              <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
               <folding>
-                <element signature="e#0#1710#0" expanded="true" />
+                <element signature="e#0#488#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HashTable.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1513">
+              <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#3041#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Node.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tree/Node.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -209,8 +188,6 @@
         <option value="$PROJECT_DIR$/src/Tree/TrieNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/BSTNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
-        <option value="$PROJECT_DIR$/src/HashTable/HashEntry.java" />
-        <option value="$PROJECT_DIR$/src/HashTable/HashTable.java" />
         <option value="$PROJECT_DIR$/src/HashTable/Main.java" />
         <option value="$PROJECT_DIR$/src/LinkedList/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/LinkedList/Main.java" />
@@ -223,6 +200,8 @@
         <option value="$PROJECT_DIR$/src/Tree/Main.java" />
         <option value="$PROJECT_DIR$/src/Tree/MinHeap.java" />
         <option value="$PROJECT_DIR$/src/Tree/Node.java" />
+        <option value="$PROJECT_DIR$/src/HashTable/HashEntry.java" />
+        <option value="$PROJECT_DIR$/src/HashTable/HashTable.java" />
       </list>
     </option>
   </component>
@@ -973,26 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashTable/HashEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#392#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#2085#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HashTable/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1123,6 +1082,26 @@
           <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
           <folding>
             <element signature="e#0#355#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashTable/HashEntry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="87" selection-start-line="10" selection-start-column="87" selection-end-line="10" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" column="22" selection-start-line="89" selection-start-column="22" selection-end-line="89" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#3041#0" expanded="true" />
           </folding>
         </state>
       </provider>
