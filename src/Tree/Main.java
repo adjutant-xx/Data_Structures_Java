@@ -115,5 +115,9 @@ public class Main {
 
         //Test neighbor retrieval again:
         ArrayList<GraphNode<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex('E'));
+
+        //Test DFS query:
+        boolean dfsQuery = directedGraph.depthFirstSearchQuery('X');
+        boolean dfsQuery2 = directedGraph.depthFirstSearchQuery('D');
     }
 }

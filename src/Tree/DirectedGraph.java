@@ -5,6 +5,7 @@ import LinkedList.LinkedList;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Collection;
 
 public class DirectedGraph<T> {
 
@@ -104,7 +105,26 @@ public class DirectedGraph<T> {
         return neighbors;
     }
 
-    public boolean depthFirstSearch(GraphNode<T> vertex, HashMap<T, GraphNode<T>> graph){
+    public boolean depthFirstSearchQuery(T term){
+        HashMap<T, GraphNode<T>> tempGraph = graph;
+        for(GraphNode<T> node : tempGraph.values()){
+            if(depthFirstSearchQuery(term, node)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private boolean depthFirstSearchQuery(T term, GraphNode<T> node){ // return a node matching the search value, if it is present within the graph
+        if(node.data == term){
+            return true;
+        }
+        node.visited = true;
+        for(GraphNode<T> child : node.children){
+            if(child.visited == false){
+                return depthFirstSearchQuery(term, child);
+            }
+        }
         return false; // lol
     }
 }
