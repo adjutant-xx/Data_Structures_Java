@@ -1,3 +1,10 @@
+// Data_Structures_Java
+//
+// Author: Matt Paauw
+// GitHub: https://github.com/adjutant-xx
+//
+// No license, free use
+
 package LinkedList;
 
 public class Node<T> {
