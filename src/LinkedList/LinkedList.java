@@ -15,10 +15,6 @@ public class LinkedList<T> {
 
     private Node<T> root;
 
-    public void printValue(Object value){
-        System.out.println("[" + value + "]" + "\n");
-    }
-
     public Node<T> getRoot(){
         return root;
     }
@@ -43,10 +39,8 @@ public class LinkedList<T> {
         Node<T> temp = root;
         if(temp != null){
             while(temp.next != null){
-                printValue(temp.getValue());
                 temp = temp.next;
             }
-            printValue(temp.getValue());
         }
     }
 
