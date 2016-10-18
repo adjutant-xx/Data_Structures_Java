@@ -125,6 +125,6 @@ public class DirectedGraph<T> {
                 return depthFirstSearchQuery(term, child);
             }
         }
-        return false; // lol
+        return false;
     }
 }
