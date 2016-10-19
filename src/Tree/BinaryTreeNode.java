@@ -7,6 +7,9 @@
 
 package Tree;
 
+/*
+* SUMMARY:  Represents a single node to be used within a BinarySearchTree data structure.
+* */
 public class BinaryTreeNode<T> {
     public BinaryTreeNode(){
         value = null;
