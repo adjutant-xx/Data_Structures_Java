@@ -7,16 +7,26 @@
 
 package LinkedList;
 
+/*
+* SUMMARY:  Represents a Queue data structure.
+*           Utilizes an underlying Linked List structure in order to implement the Queue.
+* */
 public class Queue<T> {
 
     private LinkedListNode<T> front;
     private LinkedListNode<T> rear;
 
+    /*
+    * SUMMARY:  Default constructor, initializes both the front and back of the Queue to null.
+    * */
     public Queue(){
         front = null;
         rear = null;
     }
 
+    /*
+    * SUMMARY:  Traverses the Queue.
+    * */
     public void traverse(){
         LinkedListNode<T> tempTail = rear;
         LinkedListNode<T> tempRoot = front;
@@ -27,6 +37,9 @@ public class Queue<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Inserts a value to the end of the queue.
+    * */
     public boolean enqueue(T value){
         try{
             if(front == null) {
@@ -46,6 +59,9 @@ public class Queue<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Removes the front-most value from the queue.
+    * */
     public LinkedListNode<T> dequeue(){
         try{
             LinkedListNode<T> tempRoot = front;
