@@ -9,15 +9,15 @@ package Tree;
 
 import java.util.HashSet;
 
-public class Node<T> {
+public class TreeNode<T> {
 
-    public Node(){}
+    public TreeNode(){}
 
-    public Node(T v){
+    public TreeNode(T v){
         data = v;
-        children = new HashSet<Node<T>>();
+        children = new HashSet<TreeNode<T>>();
     }
 
     public T data;
-    public HashSet<Node<T>> children;
+    public HashSet<TreeNode<T>> children;
 }

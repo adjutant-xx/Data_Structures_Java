@@ -12,7 +12,7 @@ import java.util.HashSet;
 /*
 * SUMMARY:  Represents a single node, or vertex, within a Graph data structure.
 * */
-public class GraphNode<T> extends Node<T> {
+public class GraphNode<T> extends TreeNode<T> {
 
     public GraphNode(T v){
         data = v;
