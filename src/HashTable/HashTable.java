@@ -72,8 +72,8 @@ public class HashTable<T, V> {
 
     /*
     * SUMMARY:  A method that inserts a given entry into the HashTable.
-    * SUMMARY:  Returns true if the entry was inserted successfully, false if the entry was already present or otherwise
-    *               failed to insert.
+    *           Returns true if the entry was inserted successfully, false if the entry was already present or otherwise
+*                   failed to insert.
     * */
     public boolean insert(HashEntry<T, V> entry){
         if(!contains(entry)){
@@ -86,7 +86,7 @@ public class HashTable<T, V> {
 
     /*
     * SUMMARY:  A method that removes a given entry from the HashTable.
-    * SUMMARY:  Returns true if the entry was successfully removed, false if the entry was not found or otherwise failed
+    *           Returns true if the entry was successfully removed, false if the entry was not found or otherwise failed
     *               to be removed.
     * */
     public boolean remove(HashEntry<T, V> entry){
