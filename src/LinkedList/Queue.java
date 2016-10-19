@@ -17,19 +17,13 @@ public class Queue<T> {
         rear = null;
     }
 
-    public void printValue(T value){
-        System.out.println("[" + value + "]" + "\n");
-    }
-
     public void traverse(){
         LinkedListNode<T> tempTail = rear;
         LinkedListNode<T> tempRoot = front;
         if(tempTail != null){
             while(tempTail != front){
-                printValue(tempTail.getValue());
                 tempTail = tempTail.next;
             }
-            printValue(tempRoot.getValue());
         }
     }
 

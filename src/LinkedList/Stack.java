@@ -15,10 +15,6 @@ public class Stack<T> {
         root = null;
     }
 
-    public void printValue(T value){
-        System.out.println("[" + value + "]" + "\n");
-    }
-
     public LinkedListNode<T> getRoot(){
         return root;
     }
@@ -43,10 +39,8 @@ public class Stack<T> {
         LinkedListNode<T> temp = root;
         if(temp != null){
             while(temp.next != null){
-                printValue(temp.getValue());
                 temp = temp.next;
             }
-            printValue(temp.getValue());
         }
     }
 
