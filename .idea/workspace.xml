@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashEntry.java" afterPath="$PROJECT_DIR$/src/HashTable/HashEntry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashTable.java" afterPath="$PROJECT_DIR$/src/HashTable/HashTable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/LinkedList/Node.java" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedListNode.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/LinkedList.java" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/Main.java" afterPath="$PROJECT_DIR$/src/LinkedList/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/Queue.java" afterPath="$PROJECT_DIR$/src/LinkedList/Queue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LinkedList/Stack.java" afterPath="$PROJECT_DIR$/src/LinkedList/Stack.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,26 +31,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GraphNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/GraphNode.java">
+      <file leaf-file-name="LinkedListNode.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedListNode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="238">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
-                <element signature="e#0#390#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#4946#0" expanded="true" />
-                <element signature="imports" expanded="true" />
+                <element signature="e#0#345#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,25 +67,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-901">
-              <caret line="196" column="65" selection-start-line="196" selection-start-column="65" selection-end-line="196" selection-end-column="65" />
+            <state relative-caret-position="117">
+              <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
               <folding>
-                <element signature="e#0#8250#0" expanded="true" />
+                <element signature="e#0#8410#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#759#760#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BinaryTreeNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/BinaryTreeNode.java">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LinkedList/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="595">
+              <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
               <folding>
-                <element signature="e#0#593#0" expanded="true" />
+                <element signature="e#0#4124#0" expanded="true" />
+                <element signature="e#448#457#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkedList/Stack.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="13" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
+              <folding>
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#345#346#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LinkedList/Queue.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="589">
+              <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#1820#0" expanded="true" />
+                <element signature="e#344#345#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,18 +156,6 @@
               <folding>
                 <element signature="e#0#4786#0" expanded="true" />
                 <element signature="e#2405#2414#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#3940#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -190,10 +200,6 @@
         <option value="$PROJECT_DIR$/src/Tree/BSTNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
         <option value="$PROJECT_DIR$/src/HashTable/Main.java" />
-        <option value="$PROJECT_DIR$/src/LinkedList/Main.java" />
-        <option value="$PROJECT_DIR$/src/LinkedList/Node.java" />
-        <option value="$PROJECT_DIR$/src/LinkedList/Queue.java" />
-        <option value="$PROJECT_DIR$/src/LinkedList/Stack.java" />
         <option value="$PROJECT_DIR$/src/Tree/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/Tree/BinaryTreeNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/GraphNode.java" />
@@ -202,7 +208,12 @@
         <option value="$PROJECT_DIR$/src/Tree/Node.java" />
         <option value="$PROJECT_DIR$/src/HashTable/HashEntry.java" />
         <option value="$PROJECT_DIR$/src/HashTable/HashTable.java" />
+        <option value="$PROJECT_DIR$/src/LinkedList/LinkedListNode.java" />
+        <option value="$PROJECT_DIR$/src/LinkedList/Node.java" />
         <option value="$PROJECT_DIR$/src/LinkedList/LinkedList.java" />
+        <option value="$PROJECT_DIR$/src/LinkedList/Main.java" />
+        <option value="$PROJECT_DIR$/src/LinkedList/Queue.java" />
+        <option value="$PROJECT_DIR$/src/LinkedList/Stack.java" />
       </list>
     </option>
   </component>
@@ -390,10 +401,10 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="LinkedList.*" />
+          <option name="PATTERN" value="LinkedList.Node" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -631,14 +642,14 @@
       <item index="0" class="java.lang.String" itemvalue="Application.Stack" />
       <item index="1" class="java.lang.String" itemvalue="Application.Queue" />
       <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
       <item index="4" class="java.lang.String" itemvalue="Application.Main (2)" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Main" />
         <item index="1" class="java.lang.String" itemvalue="Application.Main (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Main (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main" />
         <item index="3" class="java.lang.String" itemvalue="Application.Queue" />
         <item index="4" class="java.lang.String" itemvalue="Application.Stack" />
       </list>
@@ -753,7 +764,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
@@ -820,7 +831,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
@@ -887,7 +898,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedListNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
@@ -959,48 +970,6 @@
           <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding>
             <element signature="e#0#2859#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#4087#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#314#0" expanded="true" />
-            <element signature="e#283#284#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#1710#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LinkedList/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#1681#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1097,12 +1066,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedListNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#345#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="196" column="65" selection-start-line="196" selection-start-column="65" selection-end-line="196" selection-end-column="65" />
+        <state relative-caret-position="117">
+          <caret line="10" column="83" selection-start-line="10" selection-start-column="83" selection-end-line="10" selection-end-column="83" />
           <folding>
-            <element signature="e#0#8250#0" expanded="true" />
+            <element signature="e#0#8410#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedList/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="43" column="49" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#1820#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedList/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="13" column="19" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="1" />
+          <folding>
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#345#346#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LinkedList/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="87" column="31" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#4124#0" expanded="true" />
+            <element signature="e#448#457#0" expanded="true" />
           </folding>
         </state>
       </provider>

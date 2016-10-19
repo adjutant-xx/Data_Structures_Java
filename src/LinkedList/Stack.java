@@ -9,7 +9,7 @@ package LinkedList;
 
 public class Stack<T> {
 
-    private Node<T> root;
+    private LinkedListNode<T> root;
 
     public Stack(){
         root = null;
@@ -19,12 +19,12 @@ public class Stack<T> {
         System.out.println("[" + value + "]" + "\n");
     }
 
-    public Node<T> getRoot(){
+    public LinkedListNode<T> getRoot(){
         return root;
     }
 
     public int getSize(){
-        Node<T> temp = root;
+        LinkedListNode<T> temp = root;
         int count = 0;
         if(temp == null){
             return count;
@@ -40,7 +40,7 @@ public class Stack<T> {
     }
 
     public void traverse(){
-        Node<T> temp = root;
+        LinkedListNode<T> temp = root;
         if(temp != null){
             while(temp.next != null){
                 printValue(temp.getValue());
@@ -53,11 +53,11 @@ public class Stack<T> {
     public boolean push(T value){
         try{
             if(root == null){
-                root = new Node<T>(value);
+                root = new LinkedListNode<T>(value);
                 return true;
             }
             else{
-                Node<T> newNode = new Node<T>(value);
+                LinkedListNode<T> newNode = new LinkedListNode<T>(value);
                 newNode.next = root;
                 root = newNode;
                 return true;

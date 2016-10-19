@@ -9,8 +9,8 @@ package LinkedList;
 
 public class Queue<T> {
 
-    private Node<T> front;
-    private Node<T> rear;
+    private LinkedListNode<T> front;
+    private LinkedListNode<T> rear;
 
     public Queue(){
         front = null;
@@ -22,8 +22,8 @@ public class Queue<T> {
     }
 
     public void traverse(){
-        Node<T> tempTail = rear;
-        Node<T> tempRoot = front;
+        LinkedListNode<T> tempTail = rear;
+        LinkedListNode<T> tempRoot = front;
         if(tempTail != null){
             while(tempTail != front){
                 printValue(tempTail.getValue());
@@ -36,13 +36,13 @@ public class Queue<T> {
     public boolean enqueue(T value){
         try{
             if(front == null) {
-                front = new Node<T>(value);
+                front = new LinkedListNode<T>(value);
                 rear = front;
                 return true;
             }
             else{
-                Node<T> oldTail = rear;
-                rear = new Node(value);
+                LinkedListNode<T> oldTail = rear;
+                rear = new LinkedListNode(value);
                 rear.next = oldTail;
                 return true;
             }
@@ -52,15 +52,15 @@ public class Queue<T> {
         }
     }
 
-    public Node<T> dequeue(){
+    public LinkedListNode<T> dequeue(){
         try{
-            Node<T> tempRoot = front;
-            Node<T> tempRear = rear;
+            LinkedListNode<T> tempRoot = front;
+            LinkedListNode<T> tempRear = rear;
             if(tempRoot != null){
                 while(tempRear.next.next != null) {
                     tempRear = tempRear.next;
                 }
-                Node<T> item = tempRear.next;
+                LinkedListNode<T> item = tempRear.next;
                 front = tempRear;
                 return item;
             }

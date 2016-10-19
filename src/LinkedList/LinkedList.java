@@ -20,13 +20,13 @@ public class LinkedList<T> {
         root = null;
     }
 
-    private Node<T> root;
+    private LinkedListNode<T> root;
 
     /*
     * SUMMARY:  Returns the root of the list.
     *           Root variable has private access within the class, requires this method in order to access.
     * */
-    public Node<T> getRoot(){
+    public LinkedListNode<T> getRoot(){
         return root;
     }
 
@@ -37,7 +37,7 @@ public class LinkedList<T> {
     *               requires iterating through the list.
     * */
     public int getSize(){
-        Node<T> temp = root;
+        LinkedListNode<T> temp = root;
         int count = 0;
         if(temp == null){
             return count;
@@ -56,7 +56,7 @@ public class LinkedList<T> {
     * SUMMARY:  Traverses through the linked list.
     * */
     public void traverse(){
-        Node<T> temp = root;
+        LinkedListNode<T> temp = root;
         if(temp != null){
             while(temp.next != null){
                 temp = temp.next;
@@ -70,7 +70,7 @@ public class LinkedList<T> {
     *               to be found.
     * */
     public boolean contains(T searchValue){
-        Node<T> temp = root;
+        LinkedListNode<T> temp = root;
         if(temp != null){
             while(temp.next != null){
                 if(temp.getValue() == searchValue){
@@ -95,7 +95,7 @@ public class LinkedList<T> {
     *           Returns -1 if the value cannot be found within the list.
     * */
     public int find(T searchValue){
-        Node<T> temp = root;
+        LinkedListNode<T> temp = root;
         if(temp != null){
             int index = 0;
             while(temp.next != null){
@@ -121,11 +121,11 @@ public class LinkedList<T> {
     public boolean insert(T value){
         try {
             if(root == null){
-                root = new Node<T>(value);
+                root = new LinkedListNode<T>(value);
                 return true;
             }
             else{
-                Node<T> newNode = new Node<T>(value);
+                LinkedListNode<T> newNode = new LinkedListNode<T>(value);
                 newNode.next = root;
                 root = newNode;
                 return true;
@@ -143,14 +143,14 @@ public class LinkedList<T> {
     public boolean insertEnd(T value){
         try{
             if(root == null){
-                root = new Node<T>(value);
+                root = new LinkedListNode<T>(value);
                 return true;
             }
             else{
                 while(root.next != null){
                     root = root.next;
                 }
-                root.next = new Node<T>(value);
+                root.next = new LinkedListNode<T>(value);
                 return true;
             }
         }
@@ -166,14 +166,14 @@ public class LinkedList<T> {
     public boolean insertAt(T value, int index){
         try{
             if(root == null){
-                root = new Node<T>(value);
+                root = new LinkedListNode<T>(value);
                 return true;
             }
             else{
                 int i = 0;
                 while(root.next != null){
                     if(i == index - 1){
-                        Node<T> newNode = new Node<T>(value);
+                        LinkedListNode<T> newNode = new LinkedListNode<T>(value);
                         newNode.next = root.next;
                         root.next = newNode;
                         break;
@@ -248,7 +248,7 @@ public class LinkedList<T> {
     * */
     public boolean removeEnd(){
         try{
-            Node<T> temp = root;
+            LinkedListNode<T> temp = root;
             if(temp != null){
                 while(temp.next.next != null){
                     temp = temp.next;
@@ -272,7 +272,7 @@ public class LinkedList<T> {
     * */
     public boolean removeAt(int index){
         try{
-            Node<T> temp = root;
+            LinkedListNode<T> temp = root;
             if(temp != null){
                 int i = 0;
                 while(temp.next != null){

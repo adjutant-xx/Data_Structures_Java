@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Linked List");
         System.out.println("-------------\n");
 
-        LinkedList linkedList = new LinkedList();
+        LinkedList<Integer> linkedList = new LinkedList<Integer>();
 
         //Populate a new list:
         linkedList.insert(1);
@@ -85,7 +85,7 @@ public class Main {
         System.out.println("-------------\n");
 
         //Dequeue a value from the front of the queue, print the value (to prove it's being returned properly), and traverse:
-        Node f = queue.dequeue();
+        LinkedListNode<Integer> f = queue.dequeue();
         System.out.println("front value: [" + f.getValue() + "]\n");
         queue.traverse();
         System.out.println("-------------\n");

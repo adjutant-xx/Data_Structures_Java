@@ -7,11 +7,12 @@
 
 package LinkedList;
 
-public class Node<T> {
-    private T value;
-    public Node<T> next;
 
-    public Node(T v) {
+public class LinkedListNode<T> {
+    private T value;
+    public LinkedListNode<T> next;
+
+    public LinkedListNode(T v) {
         value = v;
     }
 
