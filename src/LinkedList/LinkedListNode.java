@@ -7,7 +7,9 @@
 
 package LinkedList;
 
-
+/*
+* SUMMARY:  Represents a single node within a LinkedList object.
+* */
 public class LinkedListNode<T> {
     private T value;
     public LinkedListNode<T> next;

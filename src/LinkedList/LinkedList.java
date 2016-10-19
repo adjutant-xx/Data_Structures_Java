@@ -8,7 +8,7 @@
 package LinkedList;
 
 /*
-* SUMMARY:  A LinkedList class that represents a singly-linked list data structure.
+* SUMMARY:  Represents a singly-linked list data structure.
 *           Provides support for any data type.
 * */
 public class LinkedList<T> {
