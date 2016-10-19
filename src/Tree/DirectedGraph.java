@@ -150,24 +150,57 @@ public class DirectedGraph<T> {
     * NOTE:     This method is currently under construction as of 10-18-2016.
     * */
     public boolean depthFirstSearchQuery(T term){
-        HashMap<T, GraphNode<T>> tempGraph = graph;
-        for(GraphNode<T> node : tempGraph.values()){
-            if(depthFirstSearchQuery(term, node)){
-                return true;
-            }
-        }
+        return depthFirstSearchQuery(term, graph);
+    }
+    private boolean depthFirstSearchQuery(T term, HashMap<T, GraphNode<T>> graph){ // return a node matching the search value, if it is present within the graph
+
+        // DFS pseudocode:
+        // --> visit a node and iterate through all of its neighbors; exhaustively search through each neighbor's neighbors, etc, until moving onto other neighbors.
+//        void search(Node root){
+//            if(root == null){
+//                return;
+//            }
+//            visit(root);
+//            root.visited = true;
+//            for each(Node n in root.adjacent){
+//                if(n.visited == false){
+//                    search(n);
+//                }
+//            }
+//        }
+
         return false;
     }
-    private boolean depthFirstSearchQuery(T term, GraphNode<T> node){ // return a node matching the search value, if it is present within the graph
-        if(node.data == term){
-            return true;
-        }
-        node.visited = true;
-        for(GraphNode<T> child : node.children){
-            if(child.visited == false){
-                return depthFirstSearchQuery(term, child);
-            }
-        }
+
+    /*
+    * SUMMARY:  Determines whether or not a value is present within the graph by performing a breadth-first search
+    *               algorithm.
+    * NOTE:     This method is currently under construction as of 10-19-2016.
+    * */
+    public boolean breadthFirstSearchQuery(T term){
+        return breadthFirstSearchQuery(term, graph);
+    }
+    private boolean breadthFirstSearchQuery(T term, HashMap<T, GraphNode<T>> graph){
+
+        // BFS pseudocode:
+        // -->a node visits each of it's own neighbors before visiting any of it's childrens neighbors.
+//        void search(Node root){
+//            Queue queue = new Queue();
+//            root.marked = ture;
+//            queue.enqueue(root); // Add to the end of the queue.
+//
+//            while(!queue.isEmpty()){
+//                Node r = queue.dequeue(); // remove from the front of the queue
+//                visit(r);
+//                foreach(Node n in r.adjacent){
+//                    if(n.marked == false){
+//                        n.marked = true;
+//                        queue.enqueue(n);
+//                    }
+//                }
+//            }
+//        }
+
         return false;
     }
 }
