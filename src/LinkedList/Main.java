@@ -108,18 +108,12 @@ public class Main {
         stack.push("fish");
         stack.push("bunny");
 
-        //Traverse the stack:
-        stack.traverse();
-        System.out.println("-------------\n");
-
-        //Push a new value onto the stack, and traverse:
+        //Push a new value onto the stack:
         stack.push("zebra");
-        stack.traverse();
         System.out.println("-------------\n");
 
-        //Pop off the top value of the stack, and traverse:
-        stack.pop();
-        stack.traverse();
+        //Pop off the top value of the stack:
+        LinkedListNode<Integer> popped = stack.pop();
         System.out.println("-------------\n");
 
         //Get the size of the stack:

@@ -17,7 +17,7 @@ public class Queue<T> {
     private LinkedListNode<T> rear;
 
     /*
-    * SUMMARY:  Default constructor, initializes both the front and back of the Queue to null.
+    * SUMMARY:  Default constructor, initializes both the front and back of the queue to null.
     * */
     public Queue(){
         front = null;
