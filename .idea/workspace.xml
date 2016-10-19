@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" afterPath="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/GraphNode.java" afterPath="$PROJECT_DIR$/src/Tree/GraphNode.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,6 +69,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="GraphNode.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Tree/GraphNode.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#478#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="LinkedListNode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LinkedList/LinkedListNode.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -81,7 +93,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="544">
@@ -89,18 +101,6 @@
               <folding>
                 <element signature="e#0#6740#0" expanded="true" />
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#3199#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -233,7 +233,6 @@
         <option value="$PROJECT_DIR$/src/Tree/TrieNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/BSTNode.java" />
         <option value="$PROJECT_DIR$/src/HashTable/Main.java" />
-        <option value="$PROJECT_DIR$/src/Tree/GraphNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/Main.java" />
         <option value="$PROJECT_DIR$/src/Tree/MinHeap.java" />
         <option value="$PROJECT_DIR$/src/Tree/Node.java" />
@@ -249,6 +248,7 @@
         <option value="$PROJECT_DIR$/src/Tree/BinarySearchTree.java" />
         <option value="$PROJECT_DIR$/src/Tree/BinaryTreeNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/DirectedGraph.java" />
+        <option value="$PROJECT_DIR$/src/Tree/GraphNode.java" />
       </list>
     </option>
   </component>
@@ -1008,16 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/GraphNode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1160,6 +1150,16 @@
           <folding>
             <element signature="e#0#6740#0" expanded="true" />
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tree/GraphNode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#478#0" expanded="true" />
           </folding>
         </state>
       </provider>

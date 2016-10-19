@@ -9,6 +9,9 @@ package Tree;
 
 import java.util.HashSet;
 
+/*
+* SUMMARY:  Represents a single node, or vertex, within a Graph data structure.
+* */
 public class GraphNode<T> extends Node<T> {
 
     public GraphNode(T v){
