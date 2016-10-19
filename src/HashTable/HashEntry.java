@@ -8,7 +8,7 @@
 package HashTable;
 
 /*
-* A HashEntry class, representing a single 'bucket' to be used with the HashTable class
+* SUMMARY:  A HashEntry class, representing a single 'bucket' to be used with the HashTable class
 * */
 public class HashEntry<T, V> {
 

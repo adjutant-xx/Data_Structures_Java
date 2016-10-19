@@ -9,13 +9,13 @@ package HashTable;
 import LinkedList.LinkedList;
 
 /*
-* A custom HashTable class of a fixed-size. Utilizes a custom LinkedList structure of HashEntry objects, which
-*   represent individual 'buckets' within the HashTable itself.
+* SUMMARY:  A custom HashTable class of a fixed-size. Utilizes a custom LinkedList structure of HashEntry objects, which
+*               represent individual 'buckets' within the HashTable itself.
 * */
 public class HashTable<T, V> {
 
     /*
-    * Constructor used for initializing the HashTable with a fixed size
+    * SUMMARY:  Constructor used for initializing the HashTable with a fixed size
     * */
     public HashTable(int size){
         tableSize = size;
@@ -29,10 +29,10 @@ public class HashTable<T, V> {
     private LinkedList<HashEntry<T, V>>[] hashTable;
 
     /*
-    * Hash function used to populate the LinkedList of HashEntry objects through a separate-chaining technique.
-    * This particular hash function determines a hash location through use of Horner's Rule, but creating a
-    *   polynomial function of 37.
-    * Here, keys are also assumed to be Characters...may be standardized at a later date.
+    * SUMMARY:  Hash function used to populate the LinkedList of HashEntry objects through a separate-chaining technique.
+    *           This particular hash function determines a hash location through use of Horner's Rule, but creating a
+    *               polynomial function of 37.
+    *           Here, keys are also assumed to be Characters...may be standardized at a later date.
     * */
     private int hashFunction(T key){
         int hashValue = 0;
@@ -44,7 +44,7 @@ public class HashTable<T, V> {
     }
 
     /*
-    * A method to determine whether or not the HashTable contains a given value (entry).
+    * SUMMARY:  A method to determine whether or not the HashTable contains a given value (entry).
     * */
     public boolean contains(HashEntry<T, V> entry){
         for(LinkedList<HashEntry<T, V>> list : hashTable){
@@ -57,7 +57,7 @@ public class HashTable<T, V> {
 
 
     /*
-    * A method that determines which bucket contains a given hash entry
+    * SUMMARY:  A method that determines which bucket contains a given hash entry
     * */
     public int find(HashEntry<T, V> entry){
         int index = 0;
@@ -71,9 +71,9 @@ public class HashTable<T, V> {
     }
 
     /*
-    * A method that inserts a given entry into the HashTable.
-    * Returns true if the entry was inserted successfully, false if the entry was already present or otherwise
-    *   failed to insert.
+    * SUMMARY:  A method that inserts a given entry into the HashTable.
+    * SUMMARY:  Returns true if the entry was inserted successfully, false if the entry was already present or otherwise
+    *               failed to insert.
     * */
     public boolean insert(HashEntry<T, V> entry){
         if(!contains(entry)){
@@ -85,9 +85,9 @@ public class HashTable<T, V> {
     }
 
     /*
-    * A method that removes a given entry from the HashTable.
-    * Returns true if the entry was successfully removed, false if the entry was not found or otherwise failed
-    *   to be removed.
+    * SUMMARY:  A method that removes a given entry from the HashTable.
+    * SUMMARY:  Returns true if the entry was successfully removed, false if the entry was not found or otherwise failed
+    *               to be removed.
     * */
     public boolean remove(HashEntry<T, V> entry){
         int index = find(entry);

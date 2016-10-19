@@ -7,18 +7,35 @@
 
 package LinkedList;
 
+/*
+* SUMMARY:  A LinkedList class that represents a singly-linked list data structure.
+*           Provides support for any data type.
+* */
 public class LinkedList<T> {
 
+    /*
+    * SUMMARY:  Default constructor that assigns the root of the list to null, before any values are added.
+    * */
     public LinkedList(){
         root = null;
     }
 
     private Node<T> root;
 
+    /*
+    * SUMMARY:  Returns the root of the list.
+    *           Root variable has private access within the class, requires this method in order to access.
+    * */
     public Node<T> getRoot(){
         return root;
     }
 
+    /*
+    * SUMMARY:  Returns the total size of the list.
+    *
+    * NOTE:     Will rework this in a future commit to be included as a class variable, instead of a method that
+    *               requires iterating through the list.
+    * */
     public int getSize(){
         Node<T> temp = root;
         int count = 0;
@@ -35,6 +52,9 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Traverses through the linked list.
+    * */
     public void traverse(){
         Node<T> temp = root;
         if(temp != null){
@@ -44,6 +64,11 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Determines whether or not the list contains a given value
+    *           Returns true if the value is present within the list, false if it is not present or otherwise fails
+    *               to be found.
+    * */
     public boolean contains(T searchValue){
         Node<T> temp = root;
         if(temp != null){
@@ -65,6 +90,10 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Returns the first index of a given search term within the list.
+    *           Returns -1 if the value cannot be found within the list.
+    * */
     public int find(T searchValue){
         Node<T> temp = root;
         if(temp != null){
@@ -85,6 +114,10 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Inserts a given value into the front of the linked list.
+    *           Returns true if the value was successfully inserted, false if the value otherwise failed to insert.
+    * */
     public boolean insert(T value){
         try {
             if(root == null){
@@ -103,6 +136,10 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Inserts a value onto the end of the linked list.
+    *           Returns true if the value was successfully inserted, false if the value otherwise failed to insert.
+    * */
     public boolean insertEnd(T value){
         try{
             if(root == null){
@@ -122,6 +159,10 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Inserts a value at a specific index within the linked list.
+    *           Returns true if the value was successfully inserted, false if the value otherwise failed to insert.
+    * */
     public boolean insertAt(T value, int index){
         try{
             if(root == null){
@@ -150,6 +191,11 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Removes the first instance of a value from the linked list.
+    *           Returns true if the value was successfully removed, false if the list is empty, the value
+    *               was not found, or otherwise failed to remove.
+    * */
     public boolean remove(T value){
         try{
             if(root != null){
@@ -177,6 +223,10 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Removes the front-most value from the linked list.
+    *           Returns true if removal was successful, false if the list is empty or otherwise failed to remove.
+    * */
     public boolean removeFront(){
         try{
             if(root != null) {
@@ -192,6 +242,10 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Removes the trailing value from the linked list.
+    *           Returns true if the removal was successful, false if the list is empty or otherwise failed to remove.
+    * */
     public boolean removeEnd(){
         try{
             Node<T> temp = root;
@@ -211,6 +265,11 @@ public class LinkedList<T> {
         }
     }
 
+    /*
+    * SUMMARY:  Removes a node at a specific index in the linked list.
+    *           Returns true if the removal was successful, false if the list is empty, does not contain the
+    *               value, or otherwise failed to remove.
+    * */
     public boolean removeAt(int index){
         try{
             Node<T> temp = root;
