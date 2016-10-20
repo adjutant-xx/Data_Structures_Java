@@ -7,17 +7,27 @@
 
 package Tree;
 
-import java.util.HashSet;
+import java.util.ArrayList;
 
+/*
+* SUMMARY:  Represents a single TreeNode object to be used within a Tree-like data structure.
+* */
 public class TreeNode<T> {
+    private T _data;
+    protected ArrayList<TreeNode<T>> _children;
 
     public TreeNode(){}
 
-    public TreeNode(T v){
-        data = v;
-        children = new HashSet<TreeNode<T>>();
+    public TreeNode(T d){
+        _data = d;
+        _children = new ArrayList<TreeNode<T>>();
     }
 
-    public T data;
-    public HashSet<TreeNode<T>> children;
+    public void setData(T d){
+        _data = d;
+    }
+
+    public T getData(){
+        return _data;
+    }
 }

@@ -7,19 +7,28 @@
 
 package Tree;
 
-import java.util.HashSet;
+import com.sun.xml.internal.bind.annotation.OverrideAnnotationOf;
+
+import java.util.ArrayList;
 
 /*
 * SUMMARY:  Represents a single node, or vertex, within a Graph data structure.
 * */
 public class GraphNode<T> extends TreeNode<T> {
+    private ArrayList<GraphNode<T>> _children;
+    boolean _visited;
 
-    public GraphNode(T v){
-        data = v;
-        children = new HashSet<GraphNode<T>>();
-        visited = false;
+    public GraphNode(T d){
+        this.setData(d);
+        _children = new ArrayList<GraphNode<T>>();
+        _visited = false;
     }
 
-    HashSet<GraphNode<T>> children;
-    boolean visited;
+    public ArrayList<GraphNode<T>> getChildren(){
+        return _children;
+    }
+
+    public void addChild(GraphNode<T> newChild){
+        _children.add(newChild);
+    }
 }

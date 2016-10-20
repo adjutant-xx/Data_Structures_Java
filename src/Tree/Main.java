@@ -93,27 +93,27 @@ public class Main {
         }
 
         //Test vertex retrieval & edge inserts:
-        Character[][] graphEdgeInserts = {{'A','B'},{'B','C'},{'C','E'},{'E','D'},{'D','B'},{'E','F'}};
-        for(Character[] item : graphEdgeInserts){
+        Integer[][] graphEdgeInserts = {{0,1},{1,2},{2,4},{4,3},{3,2},{4,5}};
+        for(Integer[] item : graphEdgeInserts){
             GraphNode<Character> parent = directedGraph.getVertex(item[0]);
             GraphNode<Character> child = directedGraph.getVertex(item[1]);
             directedGraph.addEdge(parent, child);
         }
 
         //Test neighbor retrieval:
-        ArrayList<GraphNode<Character>> neighbors = directedGraph.getNeighbors(directedGraph.getVertex('B'));
+        ArrayList<GraphNode<Character>> neighbors = directedGraph.getNeighbors(directedGraph.getVertex(1));
 
         //Test vertex deletion:
-        directedGraph.removeVertex(directedGraph.getVertex('B'));
+        directedGraph.removeVertex(directedGraph.getVertex(1));
 
         //Test edge deletion:
-        Character[] edge = {'E','D'};
+        Integer[] edge = {4,3};
         GraphNode<Character> parent = directedGraph.getVertex(edge[0]);
         GraphNode<Character> child = directedGraph.getVertex((edge[1]));
         directedGraph.removeEdge(parent, child);
 
         //Test graph adjacencies:
-        Character[][] adjacencies = {{'A','D'},{'E','F'}};
+        Character[][] adjacencies = {{0,3},{4,5}};
         for(Character[] item : adjacencies){
             GraphNode<Character> x = directedGraph.getVertex(item[0]);
             GraphNode<Character> y = directedGraph.getVertex((item[1]));
@@ -121,10 +121,10 @@ public class Main {
         }
 
         //Test neighbor retrieval again:
-        ArrayList<GraphNode<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex('E'));
+        ArrayList<GraphNode<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex(4));
 
         //Test DFS query:
-        boolean dfsQuery = directedGraph.depthFirstSearchQuery('X');
-        boolean dfsQuery2 = directedGraph.depthFirstSearchQuery('D');
+        boolean dfsQuery = directedGraph.depthFirstSearchQuery();
+        boolean dfsQuery2 = directedGraph.depthFirstSearchQuery();
     }
 }

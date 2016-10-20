@@ -22,13 +22,20 @@ import java.util.Collection;
 * */
 public class DirectedGraph<T> {
 
-    private HashMap<T, GraphNode<T>> graph;
+    private ArrayList<GraphNode<T>> graph;
 
     /*
     * SUMMARY:  Default constructor, initializes the graph to an empty HashMap.
     * */
     public DirectedGraph(){
-        graph = new HashMap<T, GraphNode<T>>();
+        graph = new ArrayList<GraphNode<T>>();
+    }
+
+    /*
+    * SUMMARY:  Returns a vertex of the graph given a specific index
+    * */
+    public GraphNode<T> getVertex(int index){
+        return graph.get(index);
     }
 
     /*
@@ -37,22 +44,10 @@ public class DirectedGraph<T> {
     public void addVertex(T value){
         graph = addVertex(value, graph);
     }
-    private HashMap<T, GraphNode<T>> addVertex(T value, HashMap<T, GraphNode<T>> graph){
-        if(graph.containsKey(value)){ // graph can only contain one copy of a given value
-            return graph;
-        }
+    private ArrayList<GraphNode<T>> addVertex(T value, ArrayList<GraphNode<T>> graph){
         GraphNode<T> newNode = new GraphNode<T>(value);
-        graph.put(value,newNode);
+        graph.add(newNode);
         return graph;
-    }
-
-    /*
-    * SUMMARY:  Returns a vertex object tied to a given value.
-    *
-    * NOTE:     Need to refactor this method, handle a case where the graph does not contain the search term
-    * */
-    public GraphNode<T> getVertex(T value){ // return the vertex corresponding to a given value:
-        return graph.get(value);
     }
 
     /*
@@ -62,13 +57,15 @@ public class DirectedGraph<T> {
     public void addEdge(GraphNode<T> p, GraphNode<T> c){
         graph = addEdge(p, c, graph);
     }
-    private HashMap<T, GraphNode<T>> addEdge(GraphNode<T> parent, GraphNode<T> child, HashMap<T,GraphNode<T>> graph){
-        if(graph.containsValue(parent)){ // Check to see if graph already contains the parent node
-            GraphNode<T> parentObject = graph.get(parent.data);
+    private ArrayList<GraphNode<T>> addEdge(GraphNode<T> parent, GraphNode<T> child, ArrayList<GraphNode<T>> graph){
+        if(graph.contains(parent)){
+            int index = graph.lastIndexOf(parent);
+            GraphNode<T> parentObject = graph.get(index);
 
-            if(parentObject.children == null || !parentObject.children.contains(child)){ // if directed graph does not already contain an edge from parent to child, create one:
-                parentObject.children.add(child);
-                graph.put(parentObject.data, parentObject);
+            // Add edge only if parent node is either empty or does not already contain an edge to the child node
+            if(parentObject.getChildren().size() < 1 || !parentObject.getChildren().contains(child)){
+                parentObject.addChild(child);
+                graph.set(index, parentObject);
             }
         }
         return graph;
@@ -80,17 +77,15 @@ public class DirectedGraph<T> {
     public void removeVertex(GraphNode<T> vertex){
         graph = removeVertex(vertex, graph);
     }
-    private HashMap<T,GraphNode<T>> removeVertex(GraphNode<T> vertex, HashMap<T,GraphNode<T>> graph){
-        if(graph.containsKey(vertex.data)){ // if graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
-            for(T key : graph.keySet()){
-                GraphNode<T> value = graph.get(key);
-                HashSet<GraphNode<T>> mutableChildren = value.children;
-                if(mutableChildren.remove(vertex)){
-                    value.children = mutableChildren;
-                    graph.put(key, value);
+    private ArrayList<GraphNode<T>> removeVertex(GraphNode<T> vertexDelete, ArrayList<GraphNode<T>> graph){
+        // If graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
+        if(graph.contains(vertexDelete)){
+            for(GraphNode<T> node : graph){
+                if(node.getChildren().contains(vertexDelete)){
+                    node.getChildren().remove(vertexDelete);
                 }
             }
-            graph.remove(vertex.data);
+            graph.remove(vertexDelete);
         }
         return graph;
     }
@@ -101,26 +96,24 @@ public class DirectedGraph<T> {
     public void removeEdge(GraphNode<T> p, GraphNode<T> c){
         graph = removeEdge(p,c, graph);
     }
-    private HashMap<T,GraphNode<T>> removeEdge(GraphNode<T> parent, GraphNode<T> child, HashMap<T, GraphNode<T>> graph){
-        if(graph.containsKey(parent.data)){
-            HashSet<GraphNode<T>> mutableChildren = graph.get(parent.data).children;
-            if(mutableChildren.remove(child)){
-                parent.children = mutableChildren;
-                graph.put(parent.data, parent);
+    private ArrayList<GraphNode<T>> removeEdge(GraphNode<T> parent, GraphNode<T> child, ArrayList<GraphNode<T>> graph){
+        if(graph.contains(parent)){
+            if(parent.getChildren().contains(child)){
+                parent.getChildren().remove(child);
             }
         }
         return graph;
     }
 
     /*
-    * SUMMARY:  Determines if two vertices are adjacent to eachother, via either an upstream or downstream edge.
+    * SUMMARY:  Determines if two vertices are adjacent to each other, via either an upstream or downstream edge.
     *           Returns true if the vertices are neighbors, false if they are not or cannot be found within the graph.
     * */
     public boolean isAdjacent(GraphNode<T> x, GraphNode<T> y){ // checks to see whether a single edge exists between the two nodes, in either direction
-        if(!graph.containsKey(x.data) || !graph.containsKey(y.data)){
+        if(!graph.contains(x) || !graph.contains(y)){
             return false;
         }
-        if(x.children.contains(y) || y.children.contains(x)){
+        if(x.getChildren().contains(y) || y.getChildren().contains(x)){
             return true;
         }
         return false;
@@ -133,12 +126,12 @@ public class DirectedGraph<T> {
     * */
     public ArrayList<GraphNode<T>> getNeighbors(GraphNode<T> vertex){ // gets a list of all neighbors of a given vertex, defined as having an edge that connects the vertex to/from another neighbor
         ArrayList<GraphNode<T>> neighbors = new ArrayList<GraphNode<T>>();
-        for(GraphNode<T> item : vertex.children){ // first, add all direct neighbors from list of target vertex's children
-            neighbors.add(item);
+        for(GraphNode<T> node : vertex.getChildren()){ // first, add all direct neighbors from list of target vertex's children
+            neighbors.add(node);
         }
-        for(GraphNode<T> item : graph.values()){ // next, check all other vertices within the graph to see if they have any connection to the target vertex
-            if(item.children.contains(vertex)){
-                neighbors.add(item);
+        for(GraphNode<T> node : graph){ // next, check all other vertices within the graph to see if they have any connection to the target vertex
+            if(node.getChildren().contains(vertex)){
+                neighbors.add(node);
             }
         }
         return neighbors;
@@ -149,11 +142,7 @@ public class DirectedGraph<T> {
     *               algorithm.
     * NOTE:     This method is currently under construction as of 10-18-2016.
     * */
-    public boolean depthFirstSearchQuery(T term){
-        return depthFirstSearchQuery(term, graph);
-    }
-    private boolean depthFirstSearchQuery(T term, HashMap<T, GraphNode<T>> graph){ // return a node matching the search value, if it is present within the graph
-
+    public boolean depthFirstSearchQuery(){ // return a node matching the search value, if it is present within the graph
         // DFS pseudocode:
         // --> visit a node and iterate through all of its neighbors; exhaustively search through each neighbor's neighbors, etc, until moving onto other neighbors.
 //        void search(Node root){
@@ -168,7 +157,6 @@ public class DirectedGraph<T> {
 //                }
 //            }
 //        }
-
         return false;
     }
 
@@ -177,11 +165,7 @@ public class DirectedGraph<T> {
     *               algorithm.
     * NOTE:     This method is currently under construction as of 10-19-2016.
     * */
-    public boolean breadthFirstSearchQuery(T term){
-        return breadthFirstSearchQuery(term, graph);
-    }
-    private boolean breadthFirstSearchQuery(T term, HashMap<T, GraphNode<T>> graph){
-
+    public boolean breadthFirstSearchQuery(){
         // BFS pseudocode:
         // -->a node visits each of it's own neighbors before visiting any of it's childrens neighbors.
 //        void search(Node root){
@@ -200,7 +184,6 @@ public class DirectedGraph<T> {
 //                }
 //            }
 //        }
-
         return false;
     }
 }
