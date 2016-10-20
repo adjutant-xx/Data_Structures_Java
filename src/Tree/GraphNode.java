@@ -32,11 +32,11 @@ public class GraphNode<T> extends TreeNode<T> {
         _children.add(newChild);
     }
 
-    public boolean getState(){
+    public boolean getVisitState(){
         return _visited;
     }
 
-    public void setState(boolean state){
+    public void setVisitState(boolean state){
         _visited = state;
     }
 }

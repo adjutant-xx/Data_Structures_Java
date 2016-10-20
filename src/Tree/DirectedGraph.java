@@ -192,7 +192,9 @@ public class DirectedGraph<T> {
             temp = queue.dequeue();
             if(temp != null){
                 for(GraphNode<T> child : temp.getChildren()){
+                    if(child.getVisitState() == false){
 
+                    }
                 }
             }
         }
