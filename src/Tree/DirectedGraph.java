@@ -23,14 +23,15 @@ import java.util.Collection;
 * */
 public class DirectedGraph<T> {
 
-    private ArrayList<GraphNode<T>> graph;
+    private ArrayList<GraphNode<T>> _graph;
     private int _size;
 
     /*
     * SUMMARY:  Default constructor, initializes the graph to an empty HashMap.
     * */
     public DirectedGraph(){
-        graph = new ArrayList<GraphNode<T>>();
+        _graph = new ArrayList<GraphNode<T>>();
+        _size = 0;
     }
 
     /*
@@ -44,14 +45,14 @@ public class DirectedGraph<T> {
     * SUMMARY:  Returns a vertex of the graph given a specific index
     * */
     public GraphNode<T> getVertex(int index){
-        return graph.get(index);
+        return _graph.get(index);
     }
 
     /*
     * SUMMARY:  Inserts a new vertex and it's associated value into the graph.
     * */
     public void addVertex(T value){
-        graph = addVertex(value, graph);
+        _graph = addVertex(value, _graph);
     }
     private ArrayList<GraphNode<T>> addVertex(T value, ArrayList<GraphNode<T>> graph){
         GraphNode<T> newNode = new GraphNode<T>(value);
@@ -64,7 +65,7 @@ public class DirectedGraph<T> {
     *           Edge is only added to the graph if the parent vertex can be found (edges are single-directional).
     * */
     public void addEdge(GraphNode<T> p, GraphNode<T> c){
-        graph = addEdge(p, c, graph);
+        _graph = addEdge(p, c, _graph);
     }
     private ArrayList<GraphNode<T>> addEdge(GraphNode<T> parent, GraphNode<T> child, ArrayList<GraphNode<T>> graph){
         if(graph.contains(parent)){
@@ -84,7 +85,7 @@ public class DirectedGraph<T> {
     * SUMMARY:  Removes a vertex from the graph, if it can be found within the graph.
     * */
     public void removeVertex(GraphNode<T> vertex){
-        graph = removeVertex(vertex, graph);
+        _graph = removeVertex(vertex, _graph);
     }
     private ArrayList<GraphNode<T>> removeVertex(GraphNode<T> vertexDelete, ArrayList<GraphNode<T>> graph){
         // If graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
@@ -103,7 +104,7 @@ public class DirectedGraph<T> {
     * SUMMARY:  Removes an edge from the graph, if the graph contains both parent and child vertices.
     * */
     public void removeEdge(GraphNode<T> p, GraphNode<T> c){
-        graph = removeEdge(p,c, graph);
+        _graph = removeEdge(p,c, _graph);
     }
     private ArrayList<GraphNode<T>> removeEdge(GraphNode<T> parent, GraphNode<T> child, ArrayList<GraphNode<T>> graph){
         if(graph.contains(parent)){
@@ -119,7 +120,7 @@ public class DirectedGraph<T> {
     *           Returns true if the vertices are neighbors, false if they are not or cannot be found within the graph.
     * */
     public boolean isAdjacent(GraphNode<T> x, GraphNode<T> y){ // checks to see whether a single edge exists between the two nodes, in either direction
-        if(!graph.contains(x) || !graph.contains(y)){
+        if(!_graph.contains(x) || !_graph.contains(y)){
             return false;
         }
         if(x.getChildren().contains(y) || y.getChildren().contains(x)){
@@ -138,7 +139,7 @@ public class DirectedGraph<T> {
         for(GraphNode<T> node : vertex.getChildren()){ // first, add all direct neighbors from list of target vertex's children
             neighbors.add(node);
         }
-        for(GraphNode<T> node : graph){ // next, check all other vertices within the graph to see if they have any connection to the target vertex
+        for(GraphNode<T> node : _graph){ // next, check all other vertices within the graph to see if they have any connection to the target vertex
             if(node.getChildren().contains(vertex)){
                 neighbors.add(node);
             }
@@ -175,7 +176,7 @@ public class DirectedGraph<T> {
     * NOTE:     This method is currently under construction as of 10-19-2016.
     * */
     public boolean breadthFirstSearch(GraphNode<T> a, GraphNode<T> b){
-        return breadthFirstSearch(a, b, graph);
+        return breadthFirstSearch(a, b, _graph);
     }
     private boolean breadthFirstSearch(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){
         // BFS pseudocode:
