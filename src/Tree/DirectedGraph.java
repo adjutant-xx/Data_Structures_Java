@@ -158,7 +158,10 @@ public class DirectedGraph<T> {
     *               two nodes.
     * NOTE:     This method is currently under construction as of 10-18-2016.
     * */
-    public boolean depthFirstSearch(){ // return a node matching the search value, if it is present within the graph
+    public boolean depthFirstSearchPath(GraphNode<T> a, GraphNode<T> b){
+        return depthFirstSearchPath(a, b, _graph);
+    }
+    private boolean depthFirstSearchPath(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){ // return a node matching the search value, if it is present within the graph
         // DFS pseudocode:
         // --> visit a node and iterate through all of its neighbors; exhaustively search through each neighbor's neighbors, etc, until moving onto other neighbors.
 //        void search(Node root){
@@ -173,6 +176,15 @@ public class DirectedGraph<T> {
 //                }
 //            }
 //        }
+
+        if(!graph.contains(a) || !graph.contains(b)){
+            return false;
+        }
+        if(a == b){
+            return true;
+        }
+
+
         return false;
     }
 
@@ -181,28 +193,10 @@ public class DirectedGraph<T> {
     *               two nodes.
     * NOTE:     This method is currently under construction as of 10-19-2016.
     * */
-    public boolean breadthFirstSearch(GraphNode<T> a, GraphNode<T> b){
-        return breadthFirstSearch(a, b, _graph);
+    public boolean breadthFirstSearchPath(GraphNode<T> a, GraphNode<T> b){
+        return breadthFirstSearchPath(a, b, _graph);
     }
-    private boolean breadthFirstSearch(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){
-        // BFS pseudocode:
-        // -->a node visits each of it's own neighbors before visiting any of it's childrens neighbors.
-//        void search(Node root){
-//            Queue queue = new Queue();
-//            root.marked = true;
-//            queue.enqueue(root); // Add to the end of the queue.
-//
-//            while(!queue.isEmpty()){
-//                Node r = queue.dequeue(); // remove from the front of the queue
-//                visit(r);
-//                foreach(Node n in r.adjacent){
-//                    if(n.marked == false){
-//                        n.marked = true;
-//                        queue.enqueue(n);
-//                    }
-//                }
-//            }
-//        }
+    private boolean breadthFirstSearchPath(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){
         if(!graph.contains(a) || !graph.contains(b)){
             return false;
         }
@@ -212,9 +206,8 @@ public class DirectedGraph<T> {
 
         Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
         queue.enqueue(a);
-        GraphNode<T> temp;
         while(!queue.isEmpty()) {
-            temp = queue.dequeue();
+            GraphNode<T> temp = queue.dequeue();
             if (temp != null) {
                 for (GraphNode<T> child : temp.getChildren()) {
                     if (child.getVisitState() == false) {
@@ -232,135 +225,3 @@ public class DirectedGraph<T> {
         return false;
     }
 }
-
-// NOTE: CtCI Graph/GraphNode/BFS code for reference:
-//package Test;
-//
-//        import javafx.util.Pair;
-//
-//        import java.io.*;
-//        import java.lang.reflect.Array;
-//
-//        import java.util.*;
-//
-//public class Main {
-//
-//    public static void main(String[] args) {
-//
-//        Graph g = createNewGraph();
-//        Node[] n = g.getNodes();
-//        Node start = n[3];
-//        Node end = n[5];
-//        System.out.println(search(g, start, end));
-//
-//    }
-//
-//    public static boolean search(Graph g,Node start,Node end) {
-//        LinkedList<Node> q = new LinkedList<Node>();
-//        for (Node u : g.getNodes()) {
-//            u.state = State.Unvisited;
-//        }
-//        start.state = State.Visiting;
-//        q.add(start);
-//        Node u;
-//        while(!q.isEmpty()) {
-//            u = q.removeFirst();
-//            if (u != null) {
-//                for (Node v : u.getAdjacent()) {
-//                    if (v.state == State.Unvisited) {
-//                        if (v == end) {
-//                            return true;
-//                        } else {
-//                            v.state = State.Visiting;
-//                            q.add(v);
-//                        }
-//                    }
-//                }
-//                u.state = State.Visited;
-//            }
-//        }
-//        return false;
-//    }
-//
-//
-//    public static class Graph {
-//        public int MAX_VERTICES = 6;
-//        private Node vertices[];
-//        public int count;
-//        public Graph() {
-//            vertices = new Node[MAX_VERTICES];
-//            count = 0;
-//        }
-//
-//        public void addNode(Node x) {
-//            if (count < vertices.length) {
-//                vertices[count] = x;
-//                count++;
-//            } else {
-//                System.out.print("Graph full");
-//            }
-//        }
-//
-//        public Node[] getNodes() {
-//            return vertices;
-//        }
-//    }
-//
-//    public static class Node {
-//        private Node adjacent[];
-//        public int adjacentCount;
-//        private String vertex;
-//        public State state;
-//        public Node(String vertex, int adjacentLength) {
-//            this.vertex = vertex;
-//            adjacentCount = 0;
-//            adjacent = new Node[adjacentLength];
-//        }
-//
-//        public void addAdjacent(Node x) {
-//            if (adjacentCount < adjacent.length) {
-//                this.adjacent[adjacentCount] = x;
-//                adjacentCount++;
-//            } else {
-//                System.out.print("No more adjacent can be added");
-//            }
-//        }
-//        public Node[] getAdjacent() {
-//            return adjacent;
-//        }
-//        public String getVertex() {
-//            return vertex;
-//        }
-//    }
-//
-//    public enum State {
-//        Unvisited, Visited, Visiting;
-//    }
-//
-//    public static Graph createNewGraph()
-//    {
-//        Graph g = new Graph();
-//        Node[] temp = new Node[6];
-//
-//        temp[0] = new Node("a", 3);
-//        temp[1] = new Node("b", 0);
-//        temp[2] = new Node("c", 0);
-//        temp[3] = new Node("d", 1);
-//        temp[4] = new Node("e", 1);
-//        temp[5] = new Node("f", 0);
-//
-//        temp[0].addAdjacent(temp[1]);
-//        temp[0].addAdjacent(temp[2]);
-//        temp[0].addAdjacent(temp[3]);
-//        temp[3].addAdjacent(temp[4]);
-//        temp[4].addAdjacent(temp[5]);
-//        for (int i = 0; i < 6; i++) {
-//            g.addNode(temp[i]);
-//        }
-//        return g;
-//    }
-//
-//}
-
-
-
