@@ -206,6 +206,9 @@ public class DirectedGraph<T> {
         if(!graph.contains(a) || !graph.contains(b)){
             return false;
         }
+        if(a == b){
+            return true;
+        }
 
         Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
         queue.enqueue(a);
