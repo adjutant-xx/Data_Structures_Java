@@ -7,6 +7,8 @@
 
 package LinkedList;
 
+import java.util.NoSuchElementException;
+
 /*
 * SUMMARY:  Represents a Queue data structure.
 *           Utilizes an underlying Linked List structure in order to implement the Queue.
@@ -64,22 +66,15 @@ public class Queue<T> {
     * */
     public T dequeue(){
         try{
-            LinkedListNode<T> tempFront = front;
-            LinkedListNode<T> tempRear = rear;
-            if(tempFront != null){
-                if(!(tempFront == tempRear)){
-                    while(tempRear.next.next != null) {
-                        tempRear = tempRear.next;
-                    }
-                }
-                T returnItem = tempRear.next.getValue();
-                front = tempRear;
-                size--;
-                return returnItem;
+            if(front == null){
+                throw new NoSuchElementException();
             }
-            else{
-                return null;
+            T returnValue = front.getValue();
+            front = front.next;
+            if(front == null){
+                rear = null;
             }
+            return returnValue;
         }
         catch(Exception ex){
             return null;
