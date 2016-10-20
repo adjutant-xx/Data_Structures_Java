@@ -43,8 +43,12 @@ public class DirectedGraph<T> {
 
     /*
     * SUMMARY:  Returns a vertex of the graph given a specific index
+    *           The 'index' parameter is zero-based.
     * */
     public GraphNode<T> getVertex(int index){
+        if(index < 0 || (index - 1) > _size){
+            return null;
+        }
         return _graph.get(index);
     }
 
@@ -57,6 +61,7 @@ public class DirectedGraph<T> {
     private ArrayList<GraphNode<T>> addVertex(T value, ArrayList<GraphNode<T>> graph){
         GraphNode<T> newNode = new GraphNode<T>(value);
         graph.add(newNode);
+        _size++;
         return graph;
     }
 
@@ -95,6 +100,7 @@ public class DirectedGraph<T> {
                     node.getChildren().remove(vertexDelete);
                 }
             }
+            _size--;
             graph.remove(vertexDelete);
         }
         return graph;
