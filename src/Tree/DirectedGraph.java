@@ -190,6 +190,11 @@ public class DirectedGraph<T> {
         GraphNode<T> temp;
         while(!queue.isEmpty()){
             temp = queue.dequeue();
+            if(temp != null){
+                for(GraphNode<T> child : temp.getChildren()){
+
+                }
+            }
         }
         //while(!queue.)
 

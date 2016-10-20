@@ -16,7 +16,7 @@ import java.util.ArrayList;
 * */
 public class GraphNode<T> extends TreeNode<T> {
     private ArrayList<GraphNode<T>> _children;
-    boolean _visited;
+    private boolean _visited;
 
     public GraphNode(T d){
         this.setData(d);
@@ -30,5 +30,13 @@ public class GraphNode<T> extends TreeNode<T> {
 
     public void addChild(GraphNode<T> newChild){
         _children.add(newChild);
+    }
+
+    public boolean getState(){
+        return _visited;
+    }
+
+    public void setState(boolean state){
+        _visited = state;
     }
 }
