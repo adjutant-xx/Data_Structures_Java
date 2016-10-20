@@ -66,7 +66,7 @@ public class Queue<T> {
     /*
     * SUMMARY:  Removes the front-most value from the queue.
     * */
-    public LinkedListNode<T> dequeue(){
+    public T dequeue(){
         try{
             LinkedListNode<T> tempRoot = front;
             LinkedListNode<T> tempRear = rear;
@@ -74,10 +74,10 @@ public class Queue<T> {
                 while(tempRear.next.next != null) {
                     tempRear = tempRear.next;
                 }
-                LinkedListNode<T> item = tempRear.next;
+                T returnItem = tempRear.next.getValue();
                 front = tempRear;
                 size--;
-                return item;
+                return returnItem;
             }
             else{
                 return null;

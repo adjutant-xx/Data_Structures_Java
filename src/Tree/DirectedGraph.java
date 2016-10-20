@@ -187,6 +187,10 @@ public class DirectedGraph<T> {
         Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
         GraphNode<T> start = graph.get(0);
         queue.enqueue(start);
+        GraphNode<T> temp;
+        while(!queue.isEmpty()){
+            temp = queue.dequeue();
+        }
         //while(!queue.)
 
         return false;

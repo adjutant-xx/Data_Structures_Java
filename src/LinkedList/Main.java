@@ -67,7 +67,7 @@ public class Main {
         System.out.println("Queue");
         System.out.println("-------------\n");
 
-        Queue queue = new Queue();
+        Queue<Character> queue = new Queue<Character>();
 
         //Populate new queue:
         queue.enqueue('a');
@@ -85,8 +85,8 @@ public class Main {
         System.out.println("-------------\n");
 
         //Dequeue a value from the front of the queue, print the value (to prove it's being returned properly), and traverse:
-        LinkedListNode<Integer> f = queue.dequeue();
-        System.out.println("front value: [" + f.getValue() + "]\n");
+        Character f = queue.dequeue();
+        System.out.println("front value: [" + f + "]\n");
         queue.traverse();
         System.out.println("-------------\n");
 
