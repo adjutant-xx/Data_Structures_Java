@@ -44,19 +44,15 @@ public class Queue<T> {
     * */
     public boolean enqueue(T value){
         try{
-            if(front == null) {
-                front = new LinkedListNode<T>(value);
-                rear = front;
-                size++;
-                return true;
+            LinkedListNode<T> newNode = new LinkedListNode<T>(value);
+            if(rear != null){
+                rear.next = newNode;
             }
-            else{
-                LinkedListNode<T> oldTail = rear;
-                rear = new LinkedListNode(value);
-                rear.next = oldTail;
-                size++;
-                return true;
+            rear = newNode;
+            if(front == null){
+                front = rear;
             }
+            return true;
         }
         catch(Exception ex) {
             return false;
@@ -68,11 +64,13 @@ public class Queue<T> {
     * */
     public T dequeue(){
         try{
-            LinkedListNode<T> tempRoot = front;
+            LinkedListNode<T> tempFront = front;
             LinkedListNode<T> tempRear = rear;
-            if(tempRoot != null){
-                while(tempRear.next.next != null) {
-                    tempRear = tempRear.next;
+            if(tempFront != null){
+                if(!(tempFront == tempRear)){
+                    while(tempRear.next.next != null) {
+                        tempRear = tempRear.next;
+                    }
                 }
                 T returnItem = tempRear.next.getValue();
                 front = tempRear;
