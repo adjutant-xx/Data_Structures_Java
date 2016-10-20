@@ -24,12 +24,20 @@ import java.util.Collection;
 public class DirectedGraph<T> {
 
     private ArrayList<GraphNode<T>> graph;
+    private int _size;
 
     /*
     * SUMMARY:  Default constructor, initializes the graph to an empty HashMap.
     * */
     public DirectedGraph(){
         graph = new ArrayList<GraphNode<T>>();
+    }
+
+    /*
+    * SUMMARY:  Returns the number of values present within the graph.
+    * */
+    public int getSize(){
+        return _size;
     }
 
     /*
