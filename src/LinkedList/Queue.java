@@ -62,7 +62,7 @@ public class Queue<T> {
     }
 
     /*
-    * SUMMARY:  Removes the front-most value from the queue.
+    * SUMMARY:  Removes the front-most value from the queue, and returns it's value.
     * */
     public T dequeue(){
         try{
