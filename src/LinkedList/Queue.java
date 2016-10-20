@@ -15,27 +15,26 @@ import java.util.NoSuchElementException;
 * */
 public class Queue<T> {
 
-    private LinkedListNode<T> front;
-    private LinkedListNode<T> rear;
-    private int size;
+    private LinkedListNode<T> _front;
+    private LinkedListNode<T> _rear;
+    private int _size;
 
     /*
     * SUMMARY:  Default constructor, initializes both the front and back of the queue to null.
     * */
     public Queue(){
-        front = null;
-        rear = null;
-        size = 0;
+        _front = null;
+        _rear = null;
+        _size = 0;
     }
 
     /*
     * SUMMARY:  Traverses the Queue.
     * */
     public void traverse(){
-        LinkedListNode<T> tempTail = rear;
-        LinkedListNode<T> tempRoot = front;
+        LinkedListNode<T> tempTail = _rear;
         if(tempTail != null){
-            while(tempTail != front){
+            while(tempTail != _front){
                 tempTail = tempTail.next;
             }
         }
@@ -47,13 +46,14 @@ public class Queue<T> {
     public boolean enqueue(T value){
         try{
             LinkedListNode<T> newNode = new LinkedListNode<T>(value);
-            if(rear != null){
-                rear.next = newNode;
+            if(_rear != null){
+                _rear.next = newNode;
             }
-            rear = newNode;
-            if(front == null){
-                front = rear;
+            _rear = newNode;
+            if(_front == null){
+                _front = _rear;
             }
+            _size++;
             return true;
         }
         catch(Exception ex) {
@@ -66,14 +66,15 @@ public class Queue<T> {
     * */
     public T dequeue(){
         try{
-            if(front == null){
+            if(_front == null){
                 throw new NoSuchElementException();
             }
-            T returnValue = front.getValue();
-            front = front.next;
-            if(front == null){
-                rear = null;
+            T returnValue = _front.getValue();
+            _front = _front.next;
+            if(_front == null){
+                _rear = null;
             }
+            _size--;
             return returnValue;
         }
         catch(Exception ex){
@@ -85,7 +86,7 @@ public class Queue<T> {
     * SUMMARY:  Determines whether or not the queue is empty.
     * */
     public boolean isEmpty(){
-        if(size < 1){
+        if(_size < 1){
             return true;
         }
         return false;
