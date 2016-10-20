@@ -46,7 +46,7 @@ public class DirectedGraph<T> {
     *           The 'index' parameter is zero-based.
     * */
     public GraphNode<T> getVertex(int index){
-        if(index < 0 || (index - 1) > _size){
+        if(index < 0 || index >= _size){
             return null;
         }
         return _graph.get(index);
@@ -203,6 +203,10 @@ public class DirectedGraph<T> {
 //                }
 //            }
 //        }
+        if(!graph.contains(a) || !graph.contains(b)){
+            return false;
+        }
+
         Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
         queue.enqueue(a);
         GraphNode<T> temp;
