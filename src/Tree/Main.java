@@ -124,7 +124,7 @@ public class Main {
         ArrayList<GraphNode<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex(4));
 
         //Test DFS query:
-        boolean dfsQuery = directedGraph.depthFirstSearchQuery();
-        boolean dfsQuery2 = directedGraph.depthFirstSearchQuery();
+        boolean dfsQuery = directedGraph.depthFirstSearch();
+        boolean dfsQuery2 = directedGraph.depthFirstSearch();
     }
 }

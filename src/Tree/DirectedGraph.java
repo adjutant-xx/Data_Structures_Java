@@ -9,6 +9,7 @@ package Tree;
 
 import HashTable.HashTable;
 import LinkedList.LinkedList;
+import LinkedList.Queue;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -138,11 +139,10 @@ public class DirectedGraph<T> {
     }
 
     /*
-    * SUMMARY:  Determines whether or not a value is present within the graph by performing a depth-first search
-    *               algorithm.
+    * SUMMARY:  Traverses the graph using a Depth First Search algorithm.
     * NOTE:     This method is currently under construction as of 10-18-2016.
     * */
-    public boolean depthFirstSearchQuery(){ // return a node matching the search value, if it is present within the graph
+    public boolean depthFirstSearch(){ // return a node matching the search value, if it is present within the graph
         // DFS pseudocode:
         // --> visit a node and iterate through all of its neighbors; exhaustively search through each neighbor's neighbors, etc, until moving onto other neighbors.
 //        void search(Node root){
@@ -161,16 +161,15 @@ public class DirectedGraph<T> {
     }
 
     /*
-    * SUMMARY:  Determines whether or not a value is present within the graph by performing a breadth-first search
-    *               algorithm.
+    * SUMMARY:  Traverses the graph using a Breadth First Search algorithm.
     * NOTE:     This method is currently under construction as of 10-19-2016.
     * */
-    public boolean breadthFirstSearchQuery(){
+    public boolean breadthFirstSearch(){
         // BFS pseudocode:
         // -->a node visits each of it's own neighbors before visiting any of it's childrens neighbors.
 //        void search(Node root){
 //            Queue queue = new Queue();
-//            root.marked = ture;
+//            root.marked = true;
 //            queue.enqueue(root); // Add to the end of the queue.
 //
 //            while(!queue.isEmpty()){
@@ -184,6 +183,12 @@ public class DirectedGraph<T> {
 //                }
 //            }
 //        }
+
+        Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
+        GraphNode<T> start = graph.get(0);
+        queue.enqueue(start);
+        //while(!queue.)
+
         return false;
     }
 }

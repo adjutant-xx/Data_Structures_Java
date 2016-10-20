@@ -15,6 +15,7 @@ public class Queue<T> {
 
     private LinkedListNode<T> front;
     private LinkedListNode<T> rear;
+    private int size;
 
     /*
     * SUMMARY:  Default constructor, initializes both the front and back of the queue to null.
@@ -22,6 +23,7 @@ public class Queue<T> {
     public Queue(){
         front = null;
         rear = null;
+        size = 0;
     }
 
     /*
@@ -45,12 +47,14 @@ public class Queue<T> {
             if(front == null) {
                 front = new LinkedListNode<T>(value);
                 rear = front;
+                size++;
                 return true;
             }
             else{
                 LinkedListNode<T> oldTail = rear;
                 rear = new LinkedListNode(value);
                 rear.next = oldTail;
+                size++;
                 return true;
             }
         }
@@ -72,6 +76,7 @@ public class Queue<T> {
                 }
                 LinkedListNode<T> item = tempRear.next;
                 front = tempRear;
+                size--;
                 return item;
             }
             else{
@@ -81,5 +86,15 @@ public class Queue<T> {
         catch(Exception ex){
             return null;
         }
+    }
+
+    /*
+    * SUMMARY:  Determines whether or not the queue is empty.
+    * */
+    public boolean isEmpty(){
+        if(size < 1){
+            return true;
+        }
+        return false;
     }
 }
