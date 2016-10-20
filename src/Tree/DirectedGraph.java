@@ -139,7 +139,8 @@ public class DirectedGraph<T> {
     }
 
     /*
-    * SUMMARY:  Traverses the graph using a Depth First Search algorithm.
+    * SUMMARY:  Traverses the graph using a Depth First Search algorithm, determines if a path exists between
+    *               two nodes.
     * NOTE:     This method is currently under construction as of 10-18-2016.
     * */
     public boolean depthFirstSearch(){ // return a node matching the search value, if it is present within the graph
@@ -161,10 +162,14 @@ public class DirectedGraph<T> {
     }
 
     /*
-    * SUMMARY:  Traverses the graph using a Breadth First Search algorithm.
+    * SUMMARY:  Traverses the graph using a Breadth First Search algorithm, determines if a path exists between
+    *               two nodes.
     * NOTE:     This method is currently under construction as of 10-19-2016.
     * */
-    public boolean breadthFirstSearch(){
+    public boolean breadthFirstSearch(GraphNode<T> a, GraphNode<T> b){
+        return breadthFirstSearch(a, b, graph);
+    }
+    private boolean breadthFirstSearch(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){
         // BFS pseudocode:
         // -->a node visits each of it's own neighbors before visiting any of it's childrens neighbors.
 //        void search(Node root){
@@ -183,23 +188,25 @@ public class DirectedGraph<T> {
 //                }
 //            }
 //        }
-
         Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
-        GraphNode<T> start = graph.get(0);
-        queue.enqueue(start);
+        queue.enqueue(a);
         GraphNode<T> temp;
-        while(!queue.isEmpty()){
+        while(!queue.isEmpty()) {
             temp = queue.dequeue();
-            if(temp != null){
-                for(GraphNode<T> child : temp.getChildren()){
-                    if(child.getVisitState() == false){
-
+            if (temp != null) {
+                for (GraphNode<T> child : temp.getChildren()) {
+                    if (child.getVisitState() == false) {
+                        if (child == b) {
+                            return true;
+                        } else {
+                            child.setVisitState(true);
+                            queue.enqueue(child);
+                        }
                     }
                 }
+                temp.setVisitState(true);
             }
         }
-        //while(!queue.)
-
         return false;
     }
 }
