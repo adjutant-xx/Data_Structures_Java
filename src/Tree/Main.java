@@ -108,7 +108,7 @@ public class Main {
         }
 
         //Test BFS:
-        boolean testBFS = directedGraph.breadthFirstSearch(directedGraph.getVertex(5), directedGraph.getVertex(2));
+        boolean testBFS = directedGraph.breadthFirstSearchPath(directedGraph.getVertex(5), directedGraph.getVertex(2));
 
         //Test neighbor retrieval:
         ArrayList<GraphNode<Character>> neighbors = directedGraph.getNeighbors(directedGraph.getVertex(1));

@@ -184,6 +184,18 @@ public class DirectedGraph<T> {
             return true;
         }
 
+        for(GraphNode<T> node : a.getChildren()){
+            if(node == null){
+                return false;
+            }
+            if(node == b){
+                return true;
+            }
+            node.setVisitState(true);
+            for(GraphNode<T> child : node.getChildren()){
+                //recursive call here
+            }
+        }
 
         return false;
     }
