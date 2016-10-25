@@ -203,7 +203,6 @@ public class DirectedGraph<T> {
     /*
     * SUMMARY:  Traverses the graph using a Breadth First Search algorithm, determines if a path exists between
     *               two nodes.
-    * NOTE:     This method is currently under construction as of 10-19-2016.
     * */
     public boolean breadthFirstSearchPath(GraphNode<T> a, GraphNode<T> b){
         return breadthFirstSearchPath(a, b, _graph);
