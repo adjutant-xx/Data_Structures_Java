@@ -110,6 +110,9 @@ public class Main {
         //Test BFS:
         boolean testBFS = directedGraph.breadthFirstSearchPath(directedGraph.getVertex(5), directedGraph.getVertex(2));
 
+        //Test DFS:
+        boolean testDFS = directedGraph.depthFirstSearchPath(directedGraph.getVertex(4), directedGraph.getVertex(1));
+
         //Test neighbor retrieval:
         ArrayList<GraphNode<Character>> neighbors = directedGraph.getNeighbors(directedGraph.getVertex(1));
 
@@ -121,9 +124,6 @@ public class Main {
         GraphNode<Character> parent = directedGraph.getVertex(edge[0]);
         GraphNode<Character> child = directedGraph.getVertex((edge[1]));
         directedGraph.removeEdge(parent, child);
-
-        //Test DFS:
-        boolean testDFS = directedGraph.depthFirstSearchPath(directedGraph.getVertex(0), directedGraph.getVertex(5));
 
         //Test graph adjacencies:
         Character[][] adjacencies = {{0,3},{4,5}};

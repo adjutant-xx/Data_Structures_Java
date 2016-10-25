@@ -158,7 +158,13 @@ public class DirectedGraph<T> {
     *               two nodes.
     * */
     public boolean depthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination){
-        return depthFirstSearchPath(source, destination, _graph);
+
+        // Use temp variables to preserve the state of the graph, since we are only conducting a search:
+        ArrayList<GraphNode<T>> tempGraph = _graph;
+        GraphNode<T> tempSource = source;
+        GraphNode<T> tempDestination = destination;
+
+        return depthFirstSearchPath(tempSource, tempDestination, tempGraph);
     }
     private boolean depthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination, ArrayList<GraphNode<T>> graph){
         if(!graph.contains(source) || !graph.contains(destination)){
@@ -168,6 +174,7 @@ public class DirectedGraph<T> {
             return true;
         }
 
+        source.setVisitState(true);
         for(GraphNode<T> node : source.getChildren()){
             if(node == null){
                 return false;
