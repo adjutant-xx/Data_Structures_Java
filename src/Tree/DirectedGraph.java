@@ -189,25 +189,25 @@ public class DirectedGraph<T> {
     * SUMMARY:  Traverses the graph using a Breadth First Search algorithm, determines if a path exists between
     *               two nodes.
     * */
-    public boolean breadthFirstSearchPath(GraphNode<T> a, GraphNode<T> b){
-        return breadthFirstSearchPath(a, b, _graph);
+    public boolean breadthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination){
+        return breadthFirstSearchPath(source, destination, _graph);
     }
-    private boolean breadthFirstSearchPath(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){
-        if(!graph.contains(a) || !graph.contains(b)){
+    private boolean breadthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination, ArrayList<GraphNode<T>> graph){
+        if(!graph.contains(source) || !graph.contains(destination)){
             return false;
         }
-        if(a == b){
+        if(source == destination){
             return true;
         }
 
         Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
-        queue.enqueue(a);
+        queue.enqueue(source);
         while(!queue.isEmpty()) {
             GraphNode<T> temp = queue.dequeue();
             if (temp != null) {
                 for (GraphNode<T> child : temp.getChildren()) {
                     if (child.getVisitState() == false) {
-                        if (child == b) {
+                        if (child == destination) {
                             return true;
                         } else {
                             child.setVisitState(true);
