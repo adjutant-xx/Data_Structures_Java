@@ -156,27 +156,11 @@ public class DirectedGraph<T> {
     /*
     * SUMMARY:  Traverses the graph using a Depth First Search algorithm, determines if a path exists between
     *               two nodes.
-    * NOTE:     This method is currently under construction as of 10-18-2016.
     * */
     public boolean depthFirstSearchPath(GraphNode<T> a, GraphNode<T> b){
         return depthFirstSearchPath(a, b, _graph);
     }
-    private boolean depthFirstSearchPath(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){ // return a node matching the search value, if it is present within the graph
-        // DFS pseudocode:
-        // --> visit a node and iterate through all of its neighbors; exhaustively search through each neighbor's neighbors, etc, until moving onto other neighbors.
-//        void search(Node root){
-//            if(root == null){
-//                return;
-//            }
-//            visit(root);
-//            root.visited = true;
-//            for each(Node n in root.adjacent){
-//                if(n.visited == false){
-//                    search(n);
-//                }
-//            }
-//        }
-
+    private boolean depthFirstSearchPath(GraphNode<T> a, GraphNode<T> b, ArrayList<GraphNode<T>> graph){
         if(!graph.contains(a) || !graph.contains(b)){
             return false;
         }
@@ -193,10 +177,11 @@ public class DirectedGraph<T> {
             }
             node.setVisitState(true);
             for(GraphNode<T> child : node.getChildren()){
-                //recursive call here
+                if(child.getVisitState() == false){
+                    return depthFirstSearchPath(child, b, graph);
+                }
             }
         }
-
         return false;
     }
 

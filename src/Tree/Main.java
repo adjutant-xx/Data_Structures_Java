@@ -117,10 +117,13 @@ public class Main {
         directedGraph.removeVertex(directedGraph.getVertex(1));
 
         //Test edge deletion:
-        Integer[] edge = {4,3};
+        Integer[] edge = {3,4};
         GraphNode<Character> parent = directedGraph.getVertex(edge[0]);
         GraphNode<Character> child = directedGraph.getVertex((edge[1]));
         directedGraph.removeEdge(parent, child);
+
+        //Test DFS:
+        boolean testDFS = directedGraph.depthFirstSearchPath(directedGraph.getVertex(0), directedGraph.getVertex(5));
 
         //Test graph adjacencies:
         Character[][] adjacencies = {{0,3},{4,5}};
@@ -132,7 +135,5 @@ public class Main {
 
         //Test neighbor retrieval again:
         ArrayList<GraphNode<Character>> neighbors2 = directedGraph.getNeighbors(directedGraph.getVertex(4));
-
-
     }
 }
