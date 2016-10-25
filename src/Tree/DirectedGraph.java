@@ -163,7 +163,6 @@ public class DirectedGraph<T> {
         ArrayList<GraphNode<T>> tempGraph = _graph;
         GraphNode<T> tempSource = source;
         GraphNode<T> tempDestination = destination;
-
         return depthFirstSearchPath(tempSource, tempDestination, tempGraph);
     }
     private boolean depthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination, ArrayList<GraphNode<T>> graph){
