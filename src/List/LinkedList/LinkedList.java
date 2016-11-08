@@ -115,7 +115,7 @@ public class LinkedList<T> {
                 }
             }*/
             while(temp != null){
-                if(temp.getValue() == searchValue){
+                if(temp.getValue().equals(searchValue)){
                     return index;
                 }
                 else{

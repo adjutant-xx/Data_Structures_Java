@@ -63,6 +63,6 @@ public class LinkedList_Test {
         boolean contains = _linkedList.contains(500);
         int insertedIndex = _linkedList.find(500);
         assert(contains);
-        assert(insertedIndex == _linkedList.getSize());
+        assert(insertedIndex == _linkedList.getSize() - 1);
     }
 }
