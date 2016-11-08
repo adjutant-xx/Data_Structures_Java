@@ -103,6 +103,5 @@ public class LinkedList_Test {
             assert(rootValuePreRemoval == listOldRoot);
             assert(rootValuePostRemoval == listNewRoot);
         }
-
     }
 }

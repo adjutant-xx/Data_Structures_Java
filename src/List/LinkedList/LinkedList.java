@@ -239,20 +239,15 @@ public class LinkedList<T> {
     *           Returns true if the removal was successful, false if the list is empty or otherwise failed to remove.
     * */
     public boolean removeEnd(){
-        try{
-            LinkedListNode<T> temp = _root;
-            if(temp != null){
-                while(temp.next.next != null){
-                    temp = temp.next;
-                }
-                temp.next = null;
-                return true;
+        LinkedListNode<T> temp = _root;
+        if(temp != null){
+            while(temp.next.next != null){
+                temp = temp.next;
             }
-            else{
-                return false;
-            }
+            temp.next = null;
+            return true;
         }
-        catch(Exception ex){
+        else{
             return false;
         }
     }
