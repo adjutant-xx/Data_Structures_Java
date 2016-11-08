@@ -35,4 +35,13 @@ public class LinkedList_Test {
         boolean traverse = _linkedList.traverse();
         assert(traverse);
     }
+
+    @Test
+    public void testContains() throws Exception{
+        testInsert();
+        boolean containsTrue = _linkedList.contains(_listElements[3]);
+        boolean containsFalse = _linkedList.contains(-9999);
+        assert(containsTrue);
+        assert(!containsFalse);
+    }
 }
