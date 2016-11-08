@@ -108,9 +108,7 @@ public class LinkedList_Test {
     @Test
     public void testRemoveEnd() throws Exception{
         testInsert();
-        int listOldTail = _listElements[0], listNewTail = _listElements[1];
-        int preRemovalTailIndex = _linkedList.find(listOldTail);
-        int size = _linkedList.getSize();
+        int listOldTail = _listElements[0], listNewTail = _listElements[1], preRemovalTailIndex = _linkedList.find(listOldTail), size = _linkedList.getSize();
         assert(preRemovalTailIndex == size - 1);
         boolean containsOldTail = _linkedList.contains(listOldTail);
         boolean containsNewTail = _linkedList.contains(listNewTail);

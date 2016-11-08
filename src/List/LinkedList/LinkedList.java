@@ -258,24 +258,23 @@ public class LinkedList<T> {
     *               value, or otherwise failed to remove.
     * */
     public boolean removeAt(int index){
-            LinkedListNode<T> temp = _root;
-            if(temp != null){
-                int i = 0;
-                while(temp.next != null){
-                    if(i == index - 1){
-                        temp.next = temp.next.next;
-                        break;
-                    }
-                    else{
-                        temp = temp.next;
-                        i++;
-                    }
+        LinkedListNode<T> temp = _root;
+        if(temp != null){
+            int i = 0;
+            while(temp.next != null){
+                if(i == index - 1){
+                    temp.next = temp.next.next;
+                    break;
                 }
-                return true;
+                else{
+                    temp = temp.next;
+                    i++;
+                }
             }
-            else{
-                return false;
-            }
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }
