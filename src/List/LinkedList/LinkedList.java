@@ -79,14 +79,15 @@ public class LinkedList<T> {
         LinkedListNode<T> temp = _root;
         if(temp != null){
             while(temp.next != null){
-                if(temp.getValue() == searchValue){
+                if(temp.getValue().equals(searchValue)){
                     return true;
                 }
                 else {
                     temp = temp.next;
                 }
             }
-            if(temp.getValue() == searchValue){
+
+            if(temp.getValue().equals(searchValue)){
                 return true;
             }
             return false;
@@ -155,30 +156,32 @@ public class LinkedList<T> {
     * SUMMARY:  Inserts a value onto the end of the linked list.
     *           Returns true if the value was successfully inserted, false if the value otherwise failed to insert.
     * */
-    public boolean insertEnd(T value){
-        try{
-            LinkedListNode<T> temp = _root;
-            if(_root == null){
-                _root = new LinkedListNode<T>(value);
-                return true;
-            }
-           /* else{
-                while(temp.next != null){
-                    temp = temp.next;
-                }
-                temp.next = new LinkedListNode<T>(value);
-                return true;
-            }*/
-           else{
-                while(_root != null){
-                    _root = _root.next;
-                }
-                _root = new LinkedListNode<T>(value);
-                return true;
-            }
+
+    /*public void insertEnd(T value){
+        _root = insertEnd(value, _root);
+    }*/
+    public void insertEnd(T value, LinkedListNode<T> header){
+        LinkedListNode<T> temp = header;
+        if(header == null){
+            temp = new LinkedListNode<T>(value);
+            _root = temp;
+            //return header;
         }
-        catch(Exception ex){
-            return false;
+       /* else{
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = new LinkedListNode<T>(value);
+            return true;
+        }*/
+       else {
+            while (header.next != null) {
+                header = header.next;
+            }
+            header.next = new LinkedListNode<T>(value);
+            //return temp;
+            _root = temp;
+
         }
     }
 

@@ -58,9 +58,11 @@ public class LinkedList_Test {
     @Test
     public void testInsertEnd() throws Exception{
         testInsert();
-        boolean isInserted = _linkedList.insertEnd(500);
+        LinkedListNode<Integer> root = _linkedList.getRoot();
+        _linkedList.insertEnd(500, root);
+        boolean contains = _linkedList.contains(500);
         int insertedIndex = _linkedList.find(500);
-        assert(isInserted);
+        assert(contains);
         assert(insertedIndex == _linkedList.getSize());
     }
 }
