@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" afterPath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
-    </list>
+    <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="" />
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -87,8 +85,8 @@
       <file leaf-file-name="LinkedList_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="495">
+              <caret line="81" column="1" selection-start-line="80" selection-start-column="5" selection-end-line="81" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -782,34 +780,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedList_Test_testContains - 2016.11.08 at 11h 33m 44s.xml">
+    <history-entry file="LinkedList_Test_testContains - 2016.11.08 at 11h 48m 20s.xml">
       <configuration name="LinkedList_Test.testContains" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testFind - 2016.11.08 at 11h 33m 47s.xml">
+    <history-entry file="LinkedList_Test_testFind - 2016.11.08 at 11h 48m 22s.xml">
       <configuration name="LinkedList_Test.testFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testGetRoot - 2016.11.08 at 11h 33m 33s.xml">
+    <history-entry file="LinkedList_Test_testFind - 2016.11.08 at 11h 48m 28s.xml">
+      <configuration name="LinkedList_Test.testFind" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedList_Test_testGetRoot - 2016.11.08 at 11h 48m 14s.xml">
       <configuration name="LinkedList_Test.testGetRoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testGetSize - 2016.11.08 at 11h 33m 37s.xml">
+    <history-entry file="LinkedList_Test_testGetSize - 2016.11.08 at 11h 48m 16s.xml">
       <configuration name="LinkedList_Test.testGetSize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testInsert - 2016.11.08 at 11h 33m 30s.xml">
+    <history-entry file="LinkedList_Test_testInsert - 2016.11.08 at 11h 48m 12s.xml">
       <configuration name="LinkedList_Test.testInsert" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 32m 33s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 32m 40s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 33m 51s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 34m 42s.xml">
       <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testTraverse - 2016.11.08 at 11h 33m 41s.xml">
+    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 48m 24s.xml">
+      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 48m 30s.xml">
+      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedList_Test_testTraverse - 2016.11.08 at 11h 48m 18s.xml">
       <configuration name="LinkedList_Test.testTraverse" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -825,7 +823,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1243,8 +1241,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+        <state relative-caret-position="495">
+          <caret line="81" column="1" selection-start-line="80" selection-start-column="5" selection-end-line="81" selection-end-column="1" />
           <folding />
         </state>
       </provider>
