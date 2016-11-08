@@ -53,4 +53,13 @@ public class LinkedList_Test {
         assert(validIndex == 5);
         assert(invalidIndex == -1);
     }
+
+    @Test
+    public void testInsertEnd() throws Exception{
+        testInsert();
+        boolean isInserted = _linkedList.insertEnd(500);
+        int insertedIndex = _linkedList.find(500);
+        assert(isInserted);
+        assert(insertedIndex == _linkedList.getSize());
+    }
 }
