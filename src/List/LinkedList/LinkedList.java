@@ -258,7 +258,6 @@ public class LinkedList<T> {
     *               value, or otherwise failed to remove.
     * */
     public boolean removeAt(int index){
-        try{
             LinkedListNode<T> temp = _root;
             if(temp != null){
                 int i = 0;
@@ -277,9 +276,6 @@ public class LinkedList<T> {
             else{
                 return false;
             }
-        }
-        catch(Exception ex){
-            return false;
         }
     }
 }
