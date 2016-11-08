@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" afterPath="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" afterPath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -28,8 +29,8 @@
             <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="812">
-                    <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+                  <state relative-caret-position="262">
+                    <caret line="132" column="60" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
                     <folding />
                   </state>
                 </provider>
@@ -49,8 +50,8 @@
       <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3350">
-              <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+            <state relative-caret-position="450">
+              <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
               <folding>
                 <element signature="e#833#834#0" expanded="true" />
                 <element signature="e#861#862#0" expanded="true" />
@@ -97,14 +98,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkedList_Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LinkedList_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="868">
-              <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
+            <state relative-caret-position="893">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
               <folding>
                 <element signature="e#142#151#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="447">
+              <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -223,8 +234,8 @@
         <option value="$PROJECT_DIR$/src/List/Stack.java" />
         <option value="$PROJECT_DIR$/src/List/Queue/Queue.java" />
         <option value="$PROJECT_DIR$/src/List/Stack/Stack.java" />
-        <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
+        <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
       </list>
     </option>
   </component>
@@ -826,14 +837,8 @@
     <history-entry file="LinkedList_Test_testFind - 2016.11.07 at 20h 17m 25s.xml">
       <configuration name="LinkedList_Test.testFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testGetRoot - 2016.11.07 at 19h 40m 20s.xml">
-      <configuration name="LinkedList_Test.testGetRoot" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testGetRoot - 2016.11.07 at 19h 40m 26s.xml">
-      <configuration name="LinkedList_Test.testGetRoot" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testGetSize - 2016.11.07 at 20h 07m 53s.xml">
-      <configuration name="LinkedList_Test.testGetSize" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testFind - 2016.11.07 at 20h 31m 43s.xml">
+      <configuration name="LinkedList_Test.testFind" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.07 at 20h 21m 02s.xml">
       <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
@@ -847,13 +852,19 @@
     <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.07 at 20h 24m 41s.xml">
       <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.07 at 20h 31m 53s.xml">
+      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.07 at 20h 35m 02s.xml">
+      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="LinkedList_Test_testTraverse - 2016.11.07 at 20h 14m 27s.xml">
       <configuration name="LinkedList_Test.testTraverse" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="1744" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -871,7 +882,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2287706" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2287706" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -935,12 +946,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java</url>
-          <line>58</line>
+          <line>59</line>
           <properties />
-          <option name="timeStamp" value="76" />
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="77" />
+      <option name="time" value="78" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1176,16 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3050">
-          <caret line="183" column="1" selection-start-line="183" selection-start-column="1" selection-end-line="183" selection-end-column="1" />
-          <folding>
-            <marker date="1478574870009" expanded="true" signature="5235:5418" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/MinHeap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2050">
@@ -1299,10 +1300,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="893">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="e#142#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="132" column="60" selection-start-line="132" selection-start-column="60" selection-end-line="132" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3350">
-          <caret line="128" column="9" selection-start-line="128" selection-start-column="9" selection-end-line="128" selection-end-column="9" />
+        <state relative-caret-position="450">
+          <caret line="53" column="42" selection-start-line="53" selection-start-column="42" selection-end-line="53" selection-end-column="42" />
           <folding>
             <element signature="e#833#834#0" expanded="true" />
             <element signature="e#861#862#0" expanded="true" />
@@ -1318,20 +1337,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="868">
-          <caret line="60" column="40" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
-          <folding>
-            <element signature="e#142#151#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+        <state relative-caret-position="447">
+          <caret line="160" column="24" selection-start-line="160" selection-start-column="24" selection-end-line="160" selection-end-column="24" />
           <folding />
         </state>
       </provider>

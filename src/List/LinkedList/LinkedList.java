@@ -104,11 +104,20 @@ public class LinkedList<T> {
         LinkedListNode<T> temp = root;
         if(temp != null){
             int index = 0;
-            while(temp.next != null){
+            /*while(temp.next != null){
                 if(temp.getValue() == searchValue){
                     return index;
                 }
                 else {
+                    temp = temp.next;
+                    index++;
+                }
+            }*/
+            while(temp != null){
+                if(temp.getValue() == searchValue){
+                    return index;
+                }
+                else{
                     temp = temp.next;
                     index++;
                 }
@@ -148,15 +157,23 @@ public class LinkedList<T> {
     * */
     public boolean insertEnd(T value){
         try{
-            if(root == null){
-                root = new LinkedListNode<T>(value);
+            LinkedListNode<T> temp = root;
+            if(temp == null){
+                temp = new LinkedListNode<T>(value);
                 return true;
             }
-            else{
-                while(root.next != null){
-                    root = root.next;
+           /* else{
+                while(temp.next != null){
+                    temp = temp.next;
                 }
-                root.next = new LinkedListNode<T>(value);
+                temp.next = new LinkedListNode<T>(value);
+                return true;
+            }*/
+           else{
+                while(temp != null){
+                    temp = temp.next;
+                }
+                temp = new LinkedListNode<T>(value);
                 return true;
             }
         }
