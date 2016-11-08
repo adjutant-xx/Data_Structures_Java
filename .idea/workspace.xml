@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" afterPath="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" afterPath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +26,8 @@
             <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1083">
-                    <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
+                  <state relative-caret-position="918">
+                    <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
                     <folding />
                   </state>
                 </provider>
@@ -88,8 +87,8 @@
       <file leaf-file-name="LinkedList_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+            <state relative-caret-position="359">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -212,8 +211,8 @@
         <option value="$PROJECT_DIR$/src/List/Queue/Queue.java" />
         <option value="$PROJECT_DIR$/src/List/Stack/Stack.java" />
         <option value="$PROJECT_DIR$/src/List/Main.java" />
-        <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
+        <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
       </list>
     </option>
   </component>
@@ -783,35 +782,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 27m 25s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testContains - 2016.11.08 at 11h 33m 44s.xml">
+      <configuration name="LinkedList_Test.testContains" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 27m 55s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testFind - 2016.11.08 at 11h 33m 47s.xml">
+      <configuration name="LinkedList_Test.testFind" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 29m 49s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testGetRoot - 2016.11.08 at 11h 33m 33s.xml">
+      <configuration name="LinkedList_Test.testGetRoot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 30m 04s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testGetSize - 2016.11.08 at 11h 33m 37s.xml">
+      <configuration name="LinkedList_Test.testGetSize" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 30m 33s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 31m 05s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 31m 12s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 32m 08s.xml">
-      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testInsert - 2016.11.08 at 11h 33m 30s.xml">
+      <configuration name="LinkedList_Test.testInsert" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 32m 33s.xml">
       <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 32m 40s.xml">
       <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 33m 51s.xml">
+      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedList_Test_testInsertEnd - 2016.11.08 at 11h 34m 42s.xml">
+      <configuration name="LinkedList_Test.testInsertEnd" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="LinkedList_Test_testTraverse - 2016.11.08 at 11h 33m 41s.xml">
+      <configuration name="LinkedList_Test.testTraverse" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -1218,14 +1217,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="117" column="53" selection-start-line="117" selection-start-column="53" selection-end-line="117" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1242,10 +1233,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="52" column="32" selection-start-line="52" selection-start-column="32" selection-end-line="52" selection-end-column="32" />
+        <state relative-caret-position="359">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
           <folding />
         </state>
       </provider>

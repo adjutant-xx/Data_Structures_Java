@@ -105,15 +105,6 @@ public class LinkedList<T> {
         LinkedListNode<T> temp = _root;
         if(temp != null){
             int index = 0;
-            /*while(temp.next != null){
-                if(temp.getValue() == searchValue){
-                    return index;
-                }
-                else {
-                    temp = temp.next;
-                    index++;
-                }
-            }*/
             while(temp != null){
                 if(temp.getValue().equals(searchValue)){
                     return index;
@@ -156,30 +147,18 @@ public class LinkedList<T> {
     * SUMMARY:  Inserts a value onto the end of the linked list.
     *           Returns true if the value was successfully inserted, false if the value otherwise failed to insert.
     * */
-
-    /*public void insertEnd(T value){
-        _root = insertEnd(value, _root);
-    }*/
     public void insertEnd(T value, LinkedListNode<T> header){
         LinkedListNode<T> temp = header;
         if(header == null){
             temp = new LinkedListNode<T>(value);
             _root = temp;
-            //return header;
         }
-       /* else{
-            while(temp.next != null){
-                temp = temp.next;
-            }
-            temp.next = new LinkedListNode<T>(value);
-            return true;
-        }*/
+
        else {
             while (header.next != null) {
                 header = header.next;
             }
             header.next = new LinkedListNode<T>(value);
-            //return temp;
             _root = temp;
 
         }
