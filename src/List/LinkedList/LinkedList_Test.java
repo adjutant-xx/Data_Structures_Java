@@ -104,4 +104,28 @@ public class LinkedList_Test {
             assert(rootValuePostRemoval == listNewRoot);
         }
     }
+
+    @Test
+    public void testRemoveEnd() throws Exception{
+        testInsert();
+        int listOldTail = _listElements[0], listNewTail = _listElements[1];
+        int preRemovalTailIndex = _linkedList.find(listOldTail);
+        int size = _linkedList.getSize();
+        assert(preRemovalTailIndex == size - 1);
+        boolean containsOldTail = _linkedList.contains(listOldTail);
+        boolean containsNewTail = _linkedList.contains(listNewTail);
+        assert(containsOldTail);
+        assert(containsNewTail);
+        boolean isEndRemoved = _linkedList.removeEnd();
+        if(isEndRemoved){
+            size = _linkedList.getSize();
+            int postRemovalTailIndex = _linkedList.find(listNewTail);
+            containsOldTail = _linkedList.contains(listOldTail);
+            containsNewTail = _linkedList.contains(listNewTail);
+            assert(isEndRemoved);
+            assert(containsNewTail);
+            assert(!containsOldTail);
+            assert(postRemovalTailIndex == size - 1);
+        }
+    }
 }
