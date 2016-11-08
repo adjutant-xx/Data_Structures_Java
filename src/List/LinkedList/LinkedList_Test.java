@@ -44,4 +44,13 @@ public class LinkedList_Test {
         assert(containsTrue);
         assert(!containsFalse);
     }
+
+    @Test
+    public void testFind() throws Exception{
+        testInsert();
+        int validIndex = _linkedList.find(_listElements[2]);
+        int invalidIndex = _linkedList.find(-9999);
+        assert(validIndex == 5);
+        assert(invalidIndex == -1);
+    }
 }
