@@ -19,7 +19,8 @@ public class LinkedList_Test {
     public void testGetRoot() throws Exception{
         testInsert();
         LinkedListNode<Integer> root = _linkedList.getRoot();
-        assert(root.getValue() == _listElements[_listElements.length - 1]);
+        //assert(root.getValue() == _listElements[_listElements.length - 1]);
+        assert(root.getValue().equals(_listElements[_listElements.length - 1]));
     }
 
     @Test
@@ -39,8 +40,9 @@ public class LinkedList_Test {
     @Test
     public void testContains() throws Exception{
         testInsert();
-        boolean containsTrue = _linkedList.contains(_listElements[3]);
-        boolean containsFalse = _linkedList.contains(-9999);
+        int containsTrueIndex = 3, containsFalseIndex = -9999;
+        boolean containsTrue = _linkedList.contains(_listElements[containsTrueIndex]);
+        boolean containsFalse = _linkedList.contains(containsFalseIndex);
         assert(containsTrue);
         assert(!containsFalse);
     }
@@ -48,20 +50,33 @@ public class LinkedList_Test {
     @Test
     public void testFind() throws Exception{
         testInsert();
-        int validIndex = _linkedList.find(_listElements[2]);
-        int invalidIndex = _linkedList.find(-9999);
-        assert(validIndex == 5);
-        assert(invalidIndex == -1);
+        int validIndex = 2, invalidIndex = -9999;
+        int validIndexLocation = _linkedList.find(_listElements[validIndex]);
+        int invalidIndexLocation = _linkedList.find(invalidIndex);
+        assert(validIndexLocation == 5);
+        assert(invalidIndexLocation == -1);
     }
 
     @Test
     public void testInsertEnd() throws Exception{
         testInsert();
+        int insertValue = 500;
         LinkedListNode<Integer> root = _linkedList.getRoot();
-        _linkedList.insertEnd(500, root);
-        boolean contains = _linkedList.contains(500);
-        int insertedIndex = _linkedList.find(500);
+        _linkedList.insertEnd(insertValue, root);
+        boolean contains = _linkedList.contains(insertValue);
+        int insertedIndex = _linkedList.find(insertValue);
         assert(contains);
         assert(insertedIndex == _linkedList.getSize() - 1);
+    }
+
+    @Test
+    public void testInsertAt() throws Exception{
+        testInsert();
+        int insertValue = 1200, insertIndexLocation = 4;
+        boolean isInserted = _linkedList.insertAt(insertValue, insertIndexLocation);
+        boolean contains = _linkedList.contains(insertValue);
+        int actualInsertedIndex = _linkedList.find(insertValue);
+        assert(contains);
+        assert(actualInsertedIndex == insertIndexLocation);
     }
 }
