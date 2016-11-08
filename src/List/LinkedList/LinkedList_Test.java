@@ -22,4 +22,10 @@ public class LinkedList_Test {
         assert(root.getValue() == _listElements[_listElements.length - 1]);
     }
 
+    @Test
+    public void testGetSize() throws Exception{
+        testInsert();
+        int size = _linkedList.getSize();
+        assert(size == _listElements.length);
+    }
 }
