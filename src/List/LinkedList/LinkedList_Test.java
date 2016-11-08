@@ -54,7 +54,6 @@ public class LinkedList_Test {
         assert(invalidIndex == -1);
     }
 
-    //NOTE: exception thrown, troubleshoot method:
     @Test
     public void testInsertEnd() throws Exception{
         testInsert();
