@@ -80,4 +80,14 @@ public class LinkedList_Test {
         assert(contains);
         assert(actualInsertedIndex == insertIndexLocation);
     }
+
+    @Test
+    public void testRemove() throws Exception{
+        testInsert();
+        int validRemoveValue = 2, invalidRemoveValue = -47;
+        boolean validRemoval = _linkedList.remove(validRemoveValue);
+        boolean invalidRemoval = _linkedList.remove(invalidRemoveValue);
+        assert(validRemoval);
+        assert(!invalidRemoval);
+    }
 }

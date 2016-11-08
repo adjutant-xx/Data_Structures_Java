@@ -198,31 +198,27 @@ public class LinkedList<T> {
     *               was not found, or otherwise failed to remove.
     * */
     public boolean remove(T value){
-        try{
-            if(_root != null){
-                while(_root.next != null){
-                    if(_root.getValue() == value){
-                        _root.next = _root.next.next;
-                        return true;
-                    }
-                    else{
-                        _root = _root.next;
-                    }
-                }
+        if(_root != null){
+            while(_root.next != null){
                 if(_root.getValue() == value){
-                    _root = _root.next;
+                    _root.next = _root.next.next;
                     return true;
                 }
-                return false;
+                else{
+                    _root = _root.next;
+                }
             }
-            else{
-                return false;
+            if(_root.getValue() == value){
+                _root = _root.next;
+                return true;
             }
+            return false;
         }
-        catch(Exception ex){
+        else{
             return false;
         }
     }
+
 
     /*
     * SUMMARY:  Removes the front-most value from the linked list.
