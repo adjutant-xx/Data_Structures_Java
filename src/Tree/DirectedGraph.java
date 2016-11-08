@@ -7,13 +7,8 @@
 
 package Tree;
 
-import HashTable.HashTable;
-import LinkedList.LinkedList;
-import LinkedList.Queue;
+import List.Queue.Queue;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Collection;
 
 /*
 * SUMMARY:  Represents a Directed Graph data structure.

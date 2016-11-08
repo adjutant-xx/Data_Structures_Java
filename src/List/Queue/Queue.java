@@ -5,7 +5,9 @@
 //
 // No license, free use
 
-package LinkedList;
+package List.Queue;
+
+import List.LinkedList.LinkedListNode;
 
 import java.util.NoSuchElementException;
 

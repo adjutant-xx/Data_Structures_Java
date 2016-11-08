@@ -5,7 +5,7 @@
 //
 // No license, free use
 
-package LinkedList;
+package List.LinkedList;
 
 /*
 * SUMMARY:  Represents a singly-linked list data structure.

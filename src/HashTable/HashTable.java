@@ -6,7 +6,7 @@
 // No license, free use
 
 package HashTable;
-import LinkedList.LinkedList;
+import List.LinkedList.LinkedList;
 
 /*
 * SUMMARY:  A custom HashTable class of a fixed-size. Utilizes a custom LinkedList structure of HashEntry objects, which

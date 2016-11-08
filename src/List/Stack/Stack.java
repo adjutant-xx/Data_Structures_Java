@@ -5,8 +5,10 @@
 //
 // No license, free use
 
-package LinkedList;
+package List.Stack;
 
+
+import List.LinkedList.LinkedListNode;
 
 /*
 * SUMMARY:  Represents a Stack data structure.

@@ -5,7 +5,12 @@
 //
 // No license, free use
 
-package LinkedList;
+package List;
+
+import List.LinkedList.LinkedList;
+import List.LinkedList.LinkedListNode;
+import List.Queue.Queue;
+import List.Stack.Stack;
 
 public class Main {
     public static void main(String[] args){
