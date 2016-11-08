@@ -28,4 +28,11 @@ public class LinkedList_Test {
         int size = _linkedList.getSize();
         assert(size == _listElements.length);
     }
+
+    @Test
+    public void testTraverse() throws Exception{
+        testInsert();
+        boolean traverse = _linkedList.traverse();
+        assert(traverse);
+    }
 }

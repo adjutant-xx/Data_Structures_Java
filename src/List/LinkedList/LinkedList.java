@@ -55,12 +55,18 @@ public class LinkedList<T> {
     /*
     * SUMMARY:  Traverses through the linked list.
     * */
-    public void traverse(){
-        LinkedListNode<T> temp = root;
-        if(temp != null){
-            while(temp.next != null){
-                temp = temp.next;
+    public boolean traverse(){
+        try{
+            LinkedListNode<T> temp = root;
+            if(temp != null){
+                while(temp.next != null){
+                    temp = temp.next;
+                }
             }
+            return true;
+        }
+        catch(Exception ex){
+            return false;
         }
     }
 
