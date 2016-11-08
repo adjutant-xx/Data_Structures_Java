@@ -225,16 +225,11 @@ public class LinkedList<T> {
     *           Returns true if removal was successful, false if the list is empty or otherwise failed to remove.
     * */
     public boolean removeFront(){
-        try{
-            if(_root != null) {
-                _root = _root.next;
-                return true;
-            }
-            else{
-                return false;
-            }
+        if(_root != null) {
+            _root = _root.next;
+            return true;
         }
-        catch(Exception ex){
+        else{
             return false;
         }
     }

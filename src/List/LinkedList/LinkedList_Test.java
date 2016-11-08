@@ -90,4 +90,19 @@ public class LinkedList_Test {
         assert(validRemoval);
         assert(!invalidRemoval);
     }
+
+    @Test
+    public void testRemoveFront() throws Exception{
+        testInsert();
+        int rootValuePreRemoval = _linkedList.getRoot().getValue(), listOldRoot = _listElements[_listElements.length - 1], listNewRoot = _listElements[_listElements.length - 2];
+        assert(listOldRoot != listNewRoot);
+        boolean isFrontRemoved = _linkedList.removeFront();
+        if(isFrontRemoved){
+            int rootValuePostRemoval = _linkedList.getRoot().getValue();
+            assert(rootValuePreRemoval != rootValuePostRemoval);
+            assert(rootValuePreRemoval == listOldRoot);
+            assert(rootValuePostRemoval == listNewRoot);
+        }
+
+    }
 }
