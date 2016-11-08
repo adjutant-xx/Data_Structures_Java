@@ -73,7 +73,8 @@ public class LinkedList_Test {
     public void testInsertAt() throws Exception{
         testInsert();
         int insertValue = 1200, insertIndexLocation = 4;
-        boolean isInserted = _linkedList.insertAt(insertValue, insertIndexLocation);
+        LinkedListNode<Integer> root = _linkedList.getRoot();
+        _linkedList.insertAt(insertValue, insertIndexLocation, root);
         boolean contains = _linkedList.contains(insertValue);
         int actualInsertedIndex = _linkedList.find(insertValue);
         assert(contains);

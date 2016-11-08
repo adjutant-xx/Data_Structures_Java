@@ -168,31 +168,27 @@ public class LinkedList<T> {
     * SUMMARY:  Inserts a value at a specific index within the linked list.
     *           Returns true if the value was successfully inserted, false if the value otherwise failed to insert.
     * */
-    public boolean insertAt(T value, int index){
-        try{
-            if(_root == null){
-                _root = new LinkedListNode<T>(value);
-                return true;
-            }
-            else{
-                int i = 0;
-                while(_root.next != null){
-                    if(i == index - 1){
-                        LinkedListNode<T> newNode = new LinkedListNode<T>(value);
-                        newNode.next = _root.next;
-                        _root.next = newNode;
-                        break;
-                    }
-                    else{
-                        _root = _root.next;
-                        i++;
-                    }
-                }
-                return true;
-            }
+    public void insertAt(T value, int index, LinkedListNode<T> header){
+        LinkedListNode<T> temp = header;
+        if(header == null){
+            temp = new LinkedListNode<T>(value);
+            _root = temp;
         }
-        catch(Exception ex){
-            return false;
+        else{
+            int i = 1;
+            while(header.next != null){
+                if(i == index){
+                    LinkedListNode<T> newNode = new LinkedListNode<T>(value);
+                    newNode.next = header.next;
+                    header.next = newNode;
+                    break;
+                }
+                else{
+                    header = header.next;
+                    i++;
+                }
+            }
+            _root = temp;
         }
     }
 
