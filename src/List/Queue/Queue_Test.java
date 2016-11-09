@@ -51,4 +51,22 @@ public class Queue_Test {
         }
         assert(_queue.isEmpty());
     }
+
+    @Test
+    public void testGetSize() throws Exception{
+        testEnqueue();
+        assert(_queue.getSize() == _queueElements.length);
+        int removalCount = 0;
+        while(!_queue.isEmpty()){
+            _queue.dequeue();
+            removalCount++;
+            assert(_queue.getSize() == _queueElements.length - removalCount);
+        }
+        int insertionCount = 0;
+        for(Integer item : _queueElements){
+            _queue.enqueue(item);
+            insertionCount++;
+            assert(_queue.getSize() == insertionCount);
+        }
+    }
 }
