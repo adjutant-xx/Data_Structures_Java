@@ -22,4 +22,16 @@ public class Queue_Test {
         assert(isTraversed);
     }
 
+    @Test
+    public void testDequeue() throws Exception{
+        testEnqueue();
+        int listFrontElement = _queueElements[0];
+        int dequeueValue = _queue.dequeue();
+        assert(listFrontElement == dequeueValue);
+        while(!_queue.isEmpty()){
+            _queue.dequeue();
+        }
+        assert(_queue.dequeue() == null);
+    }
+
 }

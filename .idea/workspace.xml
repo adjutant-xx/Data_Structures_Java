@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Queue/Queue.java" afterPath="$PROJECT_DIR$/src/List/Queue/Queue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" afterPath="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -49,8 +48,8 @@
             <file leaf-file-name="Queue.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="561">
-                    <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                  <state relative-caret-position="124">
+                    <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
                     <folding />
                   </state>
                 </provider>
@@ -70,8 +69,8 @@
       <file leaf-file-name="Queue_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="403">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
               <folding>
                 <element signature="e#117#126#0" expanded="true" />
               </folding>
@@ -149,8 +148,8 @@
         <option value="$PROJECT_DIR$/src/List/Main.java" />
         <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
         <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
-        <option value="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" />
         <option value="$PROJECT_DIR$/src/List/Queue/Queue.java" />
+        <option value="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" />
       </list>
     </option>
   </component>
@@ -321,33 +320,7 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Queue_Test.testTraverse">
-    <configuration default="false" name="LinkedList_Test.testRemoveFront" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="List.LinkedList.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Data_Structures_Java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="List.LinkedList" />
-      <option name="MAIN_CLASS_NAME" value="List.LinkedList.LinkedList_Test" />
-      <option name="METHOD_NAME" value="testRemoveFront" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.Queue_Test.testDequeue">
     <configuration default="false" name="LinkedList_Test.testRemoveEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -439,6 +412,32 @@
       <option name="PACKAGE_NAME" value="List.Queue" />
       <option name="MAIN_CLASS_NAME" value="List.Queue.Queue_Test" />
       <option name="METHOD_NAME" value="testTraverse" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Queue_Test.testDequeue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="List.Queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Data_Structures_Java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="List.Queue" />
+      <option name="MAIN_CLASS_NAME" value="List.Queue.Queue_Test" />
+      <option name="METHOD_NAME" value="testDequeue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -650,19 +649,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveFront" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveEnd" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveAt" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Queue_Test.testTraverse" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveEnd" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveAt" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Queue_Test.testTraverse" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Queue_Test.testDequeue" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Queue_Test.testTraverse" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveAt" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveEnd" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveFront" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Queue_Test.testDequeue" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Queue_Test.testTraverse" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveAt" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveEnd" />
       </list>
     </recent_temporary>
   </component>
@@ -683,14 +682,14 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 24m 22s.xml">
-      <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 25m 27s.xml">
       <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 25m 42s.xml">
       <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 49m 17s.xml">
+      <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Queue_Test_testEnqueue - 2016.11.08 at 18h 31m 42s.xml">
       <configuration name="Queue_Test.testEnqueue" configurationId="JUnit" />
@@ -725,7 +724,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20572917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -733,7 +732,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4503171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4503171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1123,16 +1122,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+        <state relative-caret-position="124">
+          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="403">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
           <folding>
             <element signature="e#117#126#0" expanded="true" />
           </folding>
