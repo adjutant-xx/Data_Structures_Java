@@ -99,4 +99,11 @@ public class Queue<T> {
         }
         return false;
     }
+
+    /*
+    * SUMMARY: Returns a value indicating the size of the queue.
+    * */
+    public int getSize(){
+        return _size;
+    }
 }

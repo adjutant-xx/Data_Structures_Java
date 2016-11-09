@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Queue/Queue.java" afterPath="$PROJECT_DIR$/src/List/Queue/Queue.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" afterPath="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -48,9 +49,12 @@
             <file leaf-file-name="Queue.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="124">
-                    <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-                    <folding />
+                  <state relative-caret-position="821">
+                    <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+                    <folding>
+                      <element signature="e#2444#2445#0" expanded="true" />
+                      <element signature="e#2472#2473#0" expanded="true" />
+                    </folding>
                   </state>
                 </provider>
               </entry>
@@ -69,21 +73,11 @@
       <file leaf-file-name="Queue_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="301">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
               <folding>
                 <element signature="e#117#126#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -320,7 +314,7 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Queue_Test.testDequeue">
+  <component name="RunManager" selected="JUnit.Queue_Test.testEnqueue">
     <configuration default="false" name="LinkedList_Test.testRemoveEnd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -657,9 +651,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Queue_Test.testDequeue" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Queue_Test.testTraverse" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Queue_Test.testDequeue" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testTraverse" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveAt" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.LinkedList_Test.testRemoveEnd" />
       </list>
@@ -682,23 +676,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 25m 27s.xml">
-      <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 25m 42s.xml">
-      <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 49m 17s.xml">
       <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Queue_Test_testEnqueue - 2016.11.08 at 18h 31m 42s.xml">
+    <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 51m 04s.xml">
+      <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 52m 47s.xml">
+      <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 52m 54s.xml">
+      <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 53m 01s.xml">
+      <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Queue_Test_testEnqueue - 2016.11.08 at 18h 54m 38s.xml">
       <configuration name="Queue_Test.testEnqueue" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Queue_Test_testTraverse - 2016.11.08 at 18h 36m 07s.xml">
-      <configuration name="Queue_Test.testTraverse" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Queue_Test_testTraverse - 2016.11.08 at 18h 36m 16s.xml">
-      <configuration name="Queue_Test.testTraverse" configurationId="JUnit" />
     </history-entry>
     <history-entry file="Queue_Test_testTraverse - 2016.11.08 at 18h 36m 46s.xml">
       <configuration name="Queue_Test.testTraverse" configurationId="JUnit" />
@@ -724,7 +718,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20572917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -782,7 +776,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="98" />
+      <option name="time" value="99" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1078,14 +1072,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -1112,6 +1098,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="821">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding>
+            <element signature="e#2444#2445#0" expanded="true" />
+            <element signature="e#2472#2473#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1120,18 +1125,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="56" column="30" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        <state relative-caret-position="301">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
           <folding>
             <element signature="e#117#126#0" expanded="true" />
           </folding>
