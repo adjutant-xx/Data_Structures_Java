@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList_Test.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Queue/Queue.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Queue/Queue.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Queue/Queue_Test.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Queue/Queue_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" afterPath="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,9 +75,11 @@
       <file leaf-file-name="Queue_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="675">
+              <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+              <folding>
+                <element signature="e#117#126#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1101,9 +1098,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding />
+        <state relative-caret-position="675">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding>
+            <element signature="e#117#126#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
