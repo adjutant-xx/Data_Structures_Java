@@ -33,12 +33,18 @@ public class Queue<T> {
     /*
     * SUMMARY:  Traverses the Queue.
     * */
-    public void traverse(){
-        LinkedListNode<T> tempTail = _rear;
-        if(tempTail != null){
-            while(tempTail != _front){
-                tempTail = tempTail.next;
+    public boolean traverse(){
+        try{
+            LinkedListNode<T> tempTail = _rear;
+            if(tempTail != null){
+                while(tempTail != _front){
+                    tempTail = tempTail.next;
+                }
             }
+            return true;
+        }
+        catch(Exception ex){
+            return false;
         }
     }
 
