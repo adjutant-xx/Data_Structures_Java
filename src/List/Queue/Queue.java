@@ -35,10 +35,10 @@ public class Queue<T> {
     * */
     public boolean traverse(){
         try{
-            LinkedListNode<T> tempTail = _rear;
-            if(tempTail != null){
-                while(tempTail != _front){
-                    tempTail = tempTail.next;
+            LinkedListNode<T> tempFront = _front;
+            if(tempFront != null){
+                while(tempFront != _rear){
+                    tempFront = tempFront.next;
                 }
             }
             return true;

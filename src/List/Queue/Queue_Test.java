@@ -15,4 +15,11 @@ public class Queue_Test {
         }
     }
 
+    @Test
+    public void testTraverse() throws Exception{
+        testEnqueue();
+        boolean isTraversed = _queue.traverse();
+        assert(isTraversed);
+    }
+
 }
