@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Stack/Stack.java" afterPath="$PROJECT_DIR$/src/List/Stack/Stack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Stack/Stack_Test.java" afterPath="$PROJECT_DIR$/src/List/Stack/Stack_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,11 +22,11 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="Stack_Test.java" pinned="false" current-in-tab="false">
+            <file leaf-file-name="Stack_Test.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack_Test.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="275">
-                    <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+                  <state relative-caret-position="700">
+                    <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
                     <folding>
                       <element signature="e#117#126#0" expanded="true" />
                     </folding>
@@ -34,10 +34,10 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="Stack.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1412">
+                  <state relative-caret-position="1537">
                     <caret line="89" column="60" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
                     <folding>
                       <element signature="e#990#991#0" expanded="true" />
@@ -58,7 +58,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Queue_Test.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Queue_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="836">
@@ -80,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="186">
@@ -154,8 +154,8 @@
         <option value="$PROJECT_DIR$/src/List/Queue/Queue.java" />
         <option value="$PROJECT_DIR$/src/List/Queue/Queue_Test.java" />
         <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
-        <option value="$PROJECT_DIR$/src/List/Stack/Stack_Test.java" />
         <option value="$PROJECT_DIR$/src/List/Stack/Stack.java" />
+        <option value="$PROJECT_DIR$/src/List/Stack/Stack_Test.java" />
       </list>
     </option>
   </component>
@@ -325,7 +325,7 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Stack_Test.testStackPush">
+  <component name="RunManager" selected="JUnit.Stack_Test.testStackGetSize">
     <configuration default="false" name="Queue_Test.testEnqueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -339,32 +339,6 @@
       <option name="PACKAGE_NAME" value="List.Queue" />
       <option name="MAIN_CLASS_NAME" value="List.Queue.Queue_Test" />
       <option name="METHOD_NAME" value="testEnqueue" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="Queue_Test.testDequeue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="List.Queue.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Data_Structures_Java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="List.Queue" />
-      <option name="MAIN_CLASS_NAME" value="List.Queue.Queue_Test" />
-      <option name="METHOD_NAME" value="testDequeue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -443,6 +417,32 @@
       <option name="PACKAGE_NAME" value="List.Stack" />
       <option name="MAIN_CLASS_NAME" value="List.Stack.Stack_Test" />
       <option name="METHOD_NAME" value="testStackPush" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Stack_Test.testStackGetSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="List.Stack.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Data_Structures_Java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="List.Stack" />
+      <option name="MAIN_CLASS_NAME" value="List.Stack.Stack_Test" />
+      <option name="METHOD_NAME" value="testStackGetSize" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -702,18 +702,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Queue_Test.testDequeue" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testIsEmpty" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Queue_Test.testGetSize" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Stack_Test.testStackPush" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.Queue_Test.testIsEmpty" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testGetSize" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Stack_Test.testStackPush" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Stack_Test.testStackGetSize" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Stack_Test.testStackPush" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Queue_Test.testGetSize" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testIsEmpty" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Queue_Test.testDequeue" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Stack_Test.testStackGetSize" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Stack_Test.testStackPush" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Queue_Test.testGetSize" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Queue_Test.testIsEmpty" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Queue_Test.testEnqueue" />
       </list>
     </recent_temporary>
   </component>
@@ -734,9 +734,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 52m 54s.xml">
-      <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Queue_Test_testDequeue - 2016.11.08 at 18h 53m 01s.xml">
       <configuration name="Queue_Test.testDequeue" configurationId="JUnit" />
     </history-entry>
@@ -758,6 +755,9 @@
     <history-entry file="Queue_Test_testIsEmpty - 2016.11.08 at 19h 00m 50s.xml">
       <configuration name="Queue_Test.testIsEmpty" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Stack_Test_testStackGetSize - 2016.11.08 at 20h 20m 29s.xml">
+      <configuration name="Stack_Test.testStackGetSize" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="Stack_Test_testStackPush - 2016.11.08 at 19h 44m 34s.xml">
       <configuration name="Stack_Test.testStackPush" configurationId="JUnit" />
     </history-entry>
@@ -776,7 +776,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282636" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3282636" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1124,26 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#117#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding>
-            <element signature="e#117#126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1400">
@@ -1165,11 +1145,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1412">
+        <state relative-caret-position="1537">
           <caret line="89" column="60" selection-start-line="89" selection-start-column="60" selection-end-line="89" selection-end-column="60" />
           <folding>
             <element signature="e#990#991#0" expanded="true" />
             <element signature="e#1018#1019#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding>
+            <element signature="e#117#126#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+          <folding>
+            <element signature="e#117#126#0" expanded="true" />
           </folding>
         </state>
       </provider>

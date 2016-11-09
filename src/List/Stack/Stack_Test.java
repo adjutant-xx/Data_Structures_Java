@@ -15,6 +15,21 @@ public class Stack_Test {
         }
     }
 
-
-
+    @Test
+    public void testStackGetSize() throws Exception{
+        testStackPush();
+        assert(_stack.getSize() == _stackElements.length);
+        int removalCount = 0;
+        while(!_stack.isEmpty()){
+            _stack.pop();
+            removalCount++;
+            assert(_stack.getSize() == _stackElements.length - removalCount);
+        }
+        int insertionCount = 0;
+        for(Integer item : _stackElements){
+            _stack.push(item);
+            insertionCount++;
+            assert(_stack.getSize() == insertionCount);
+        }
+    }
 }
