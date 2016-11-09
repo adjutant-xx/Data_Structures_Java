@@ -86,4 +86,14 @@ public class Stack<T> {
         }
     }
 
+    /*
+    * SUMMARY: Determines whether or not the stack is empty.
+    * */
+    public boolean isEmpty(){
+        if(_size < 1){
+            return true;
+        }
+        return false;
+    }
+
 }
