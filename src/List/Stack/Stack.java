@@ -17,6 +17,7 @@ import List.LinkedList.LinkedListNode;
 public class Stack<T> {
 
     private LinkedListNode<T> root;
+    private int _size;
 
     /*
     * SUMMARY:  Default constructor, initializes the top of the stack to null.
@@ -39,19 +40,7 @@ public class Stack<T> {
     *               instead of using a method that requires iteration.
     * */
     public int getSize(){
-        LinkedListNode<T> temp = root;
-        int count = 0;
-        if(temp == null){
-            return count;
-        }
-        else{
-            while(temp.next != null){
-                count++;
-                temp = temp.next;
-            }
-            count++;
-            return count;
-        }
+        return _size;
     }
 
     /*
@@ -62,12 +51,14 @@ public class Stack<T> {
         try{
             if(root == null){
                 root = new LinkedListNode<T>(value);
+                _size++;
                 return true;
             }
             else{
                 LinkedListNode<T> newNode = new LinkedListNode<T>(value);
                 newNode.next = root;
                 root = newNode;
+                _size++;
                 return true;
             }
         }
@@ -85,6 +76,7 @@ public class Stack<T> {
             if(root != null){
                 LinkedListNode<T> temp = root;
                 root = root.next;
+                _size--;
                 return temp;
             }
             return null;
@@ -93,4 +85,5 @@ public class Stack<T> {
             return null;
         }
     }
+
 }
