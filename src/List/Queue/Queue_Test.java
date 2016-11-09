@@ -41,4 +41,14 @@ public class Queue_Test {
         assert(_queue.dequeue() == null);
     }
 
+    @Test
+    public void testIsEmpty() throws Exception{
+        testEnqueue();
+        assert(!_queue.isEmpty());
+        while(!_queue.isEmpty()){
+            assert(!_queue.isEmpty());
+            _queue.dequeue();
+        }
+        assert(_queue.isEmpty());
+    }
 }
