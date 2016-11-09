@@ -2,10 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/HashTable/HashEntry.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/HashTable/HashEntry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/HashTable/HashTable.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/HashTable/HashTable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/HashTable/Main.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/HashTable/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedListNode.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedListNode.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList_Test.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/LinkedList/LinkedList_Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Queue/Queue.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Queue/Queue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Stack/Stack.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/List/Stack/Stack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinarySearchTree.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinarySearchTree.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinaryTreeNode.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/BinaryTreeNode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/DirectedGraph.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/DirectedGraph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/GraphNode.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/GraphNode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/MinHeap.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/MinHeap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/TreeNode.class" afterPath="$PROJECT_DIR$/out/production/Data_Structures_Java/Tree/TreeNode.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" afterPath="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" afterPath="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -23,15 +35,15 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DockManager">
-    <window id="2">
+    <window id="1">
       <content type="file-editors">
         <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <leaf>
             <file leaf-file-name="LinkedList.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="841">
-                    <caret line="278" column="5" selection-start-line="278" selection-start-column="5" selection-end-line="278" selection-end-column="5" />
+                  <state relative-caret-position="500">
+                    <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
                     <folding />
                   </state>
                 </provider>
@@ -48,102 +60,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DirectedGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedListNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedListNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Queue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/List/Queue/Queue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="LinkedList_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FrameworkMethod.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReflectiveCallable.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1751">
-              <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BinaryTreeNode.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Tree/BinaryTreeNode.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="37" column="0" selection-start-line="36" selection-start-column="1" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HashTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1615">
-              <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
+              <folding>
+                <element signature="e#142#151#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -213,10 +137,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -243,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
@@ -363,7 +288,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -514,43 +438,6 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -778,26 +665,26 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 14h 20m 26s.xml">
+    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 17h 58m 11s.xml">
       <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 14h 22m 48s.xml">
+    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 21m 30s.xml">
       <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 14h 23m 49s.xml">
+    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 23m 56s.xml">
       <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testRemoveEnd - 2016.11.08 at 12h 39m 49s.xml">
-      <configuration name="LinkedList_Test.testRemoveEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 24m 19s.xml">
+      <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testRemoveEnd - 2016.11.08 at 12h 42m 01s.xml">
-      <configuration name="LinkedList_Test.testRemoveEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 24m 22s.xml">
+      <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testRemoveEnd - 2016.11.08 at 12h 43m 02s.xml">
-      <configuration name="LinkedList_Test.testRemoveEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 25m 27s.xml">
+      <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="LinkedList_Test_testRemoveEnd - 2016.11.08 at 12h 43m 38s.xml">
-      <configuration name="LinkedList_Test.testRemoveEnd" configurationId="JUnit" />
+    <history-entry file="LinkedList_Test_testRemoveAt - 2016.11.08 at 18h 25m 42s.xml">
+      <configuration name="LinkedList_Test.testRemoveAt" configurationId="JUnit" />
     </history-entry>
     <history-entry file="LinkedList_Test_testRemoveEnd - 2016.11.08 at 12h 43m 45s.xml">
       <configuration name="LinkedList_Test.testRemoveEnd" configurationId="JUnit" />
@@ -810,33 +697,33 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32810867" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20572917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4503171" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3291536" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953104" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45036572" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -878,7 +765,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="92" />
+      <option name="time" value="94" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1077,7 +964,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1615">
           <caret line="100" column="0" selection-start-line="100" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#3204#0" expanded="false" />
+            <marker date="1478651496271" expanded="true" signature="539:742" ph="{...}" />
+            <marker date="1478651496271" expanded="true" signature="1263:1500" ph="{...}" />
+            <marker date="1478651496271" expanded="true" signature="1667:1854" ph="{...}" />
+            <marker date="1478651496271" expanded="true" signature="1997:2218" ph="{...}" />
+            <marker date="1478651496271" expanded="true" signature="2515:2721" ph="{...}" />
+            <marker date="1478651496271" expanded="true" signature="3015:3202" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1100,7 +995,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="37" column="0" selection-start-line="36" selection-start-column="1" selection-end-line="37" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#691#0" expanded="false" />
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#446#447#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+            <element signature="e#630#631#0" expanded="false" />
+            <element signature="e#662#663#0" expanded="false" />
+            <element signature="e#687#688#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1108,7 +1011,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#422#0" expanded="false" />
+            <element signature="e#339#340#0" expanded="false" />
+            <element signature="e#364#365#0" expanded="false" />
+            <element signature="e#391#392#0" expanded="false" />
+            <element signature="e#419#420#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,7 +1025,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="e#0#2414#0" expanded="false" />
+            <element signature="e#501#502#0" expanded="false" />
+            <element signature="e#528#529#0" expanded="false" />
+            <element signature="e#641#642#0" expanded="false" />
+            <element signature="e#668#669#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1124,15 +1039,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#2194#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1141,6 +1051,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#5420#0" expanded="false" />
+            <element signature="e#503#504#0" expanded="false" />
+            <element signature="e#530#531#0" expanded="false" />
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#739#740#0" expanded="false" />
+            <element signature="e#777#778#0" expanded="false" />
+            <element signature="e#837#838#0" expanded="false" />
+            <element signature="e#1024#1025#0" expanded="false" />
+            <element signature="e#1061#1062#0" expanded="false" />
+            <element signature="e#1495#1496#0" expanded="false" />
+            <element signature="e#1533#1534#0" expanded="false" />
+            <element signature="e#1972#1973#0" expanded="false" />
+            <element signature="e#2011#2012#0" expanded="false" />
+            <element signature="e#2528#2529#0" expanded="false" />
+            <element signature="e#2572#2573#0" expanded="false" />
+            <element signature="e#3149#3150#0" expanded="false" />
+            <element signature="e#3191#3192#0" expanded="false" />
+            <element signature="e#3784#3785#0" expanded="false" />
+            <element signature="e#3826#3827#0" expanded="false" />
+            <element signature="e#4708#4709#0" expanded="false" />
+            <element signature="e#4744#4745#0" expanded="false" />
+            <element signature="e#5133#5134#0" expanded="false" />
+            <element signature="e#5169#5170#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tree/DirectedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1153,27 +1103,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="841">
-          <caret line="278" column="5" selection-start-line="278" selection-start-column="5" selection-end-line="278" selection-end-column="5" />
+        <state relative-caret-position="500">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="93" column="9" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
-          <folding />
+        <state relative-caret-position="374">
+          <caret line="118" column="33" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="33" />
+          <folding>
+            <element signature="e#142#151#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -126,4 +126,18 @@ public class LinkedList_Test {
             assert(postRemovalTailIndex == size - 1);
         }
     }
+
+    @Test
+    public void testRemoveAt() throws Exception{
+        testInsert();
+        int indexRemove = 5, indexReplace = 6, valueToRemove = _listElements[indexRemove], valueToReplace = _listElements[indexReplace], indexRemoveActual = _linkedList.find(valueToRemove), indexReplaceActual = _linkedList.find(valueToReplace);
+        assert(_linkedList.contains(valueToRemove));
+        assert(_linkedList.contains(valueToReplace));
+        assert(_linkedList.removeAt(indexRemoveActual));
+        if(_linkedList.removeAt(indexRemoveActual)){
+            assert(!_linkedList.contains(valueToRemove));
+            assert(_linkedList.contains(valueToReplace));
+            assert(indexReplaceActual == _linkedList.getSize() - indexReplace + 1);
+        }
+    }
 }
