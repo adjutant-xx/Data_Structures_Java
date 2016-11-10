@@ -20,12 +20,12 @@ public class HashTable_Test {
     }
 
     @Test
-    public void testHashTableContains() throws Exception{
+    public void testHashTableContainsEntry() throws Exception{
         testHashTableInsert();
         HashEntry<Integer, String> validTerm = _hashTableEntries[2];
         HashEntry<Integer, String> invalidTerm = new HashEntry<Integer, String>(4,"lizard");
-        boolean containsTrue = _hashTable.contains(validTerm);
-        boolean containsFalse = _hashTable.contains(invalidTerm);
+        boolean containsTrue = _hashTable.containsEntry(validTerm);
+        boolean containsFalse = _hashTable.containsEntry(invalidTerm);
         assert(containsTrue);
         assert(!containsFalse);
     }
