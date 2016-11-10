@@ -71,15 +71,15 @@ public class HashTable<T, V> {
     }
 
     /*
-    * SUMMARY:  A method that determines which bucket contains a given hash entry
+    * SUMMARY:  A method that determines which bucket contains the list which contains given hash entry, if it exists.
+    *           -1 is returned if the entry does not exist.
     * */
     public int find(HashEntry<T, V> entry){
-        int index = 0;
-        for(LinkedList<HashEntry<T, V>> list : _hashTable){
-            if(list.contains(entry)){
-                return index;
+        int hash = hashFunction(entry.getKey());
+        if(0 < hash && hash < _tableSize){
+            if(_hashTable[hash].contains(entry)){
+                return hash;
             }
-            index++;
         }
         return -1;
     }
