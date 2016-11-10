@@ -49,8 +49,9 @@ public class HashTable<T, V> {
     * SUMMARY:  A method that determines whether or not the HashTable contains a given entry.
     * */
     public boolean containsEntry(HashEntry<T, V> entry){
-        for(LinkedList<HashEntry<T, V>> list : _hashTable){
-            if(list.contains(entry) == true){
+        int hash = hashFunction(entry.getKey());
+        if(0 < hash && hash < _tableSize){
+            if(_hashTable[hash].contains(entry)){
                 return true;
             }
         }
@@ -77,13 +78,15 @@ public class HashTable<T, V> {
 *                   failed to insert.
     * */
     public boolean insert(HashEntry<T, V> entry){
-        if(!containsEntry(entry)){
+        try {
             int hashLocation = hashFunction(entry.getKey());
             _hashTable[hashLocation].insert(entry);
             _count++;
             return true;
         }
-        return false;
+        catch(Exception ex){
+            return false;
+        }
     }
 
     /*
