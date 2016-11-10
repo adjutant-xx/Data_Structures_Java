@@ -7,7 +7,6 @@
 
 package List.Stack;
 
-
 import List.LinkedList.LinkedListNode;
 
 /*
@@ -35,9 +34,6 @@ public class Stack<T> {
 
     /*
     * SUMMARY:  Returns the size, or number of elements, of the stack.
-    *
-    * NOTE:     Will refactor this at a later date to use a class variable to keep track of the stack size,
-    *               instead of using a method that requires iteration.
     * */
     public int getSize(){
         return _size;
@@ -95,5 +91,4 @@ public class Stack<T> {
         }
         return false;
     }
-
 }
