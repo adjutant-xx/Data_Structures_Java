@@ -18,15 +18,17 @@ public class HashTable<T, V> {
     * SUMMARY:  Constructor used for initializing the HashTable with a fixed size
     * */
     public HashTable(int size){
-        tableSize = size;
-        hashTable = new LinkedList[tableSize];
-        for(int i = 0; i < hashTable.length; i++){
-            hashTable[i] = new LinkedList<HashEntry<T, V>>();
+        _count = 0;
+        _tableSize = size;
+        _hashTable = new LinkedList[_tableSize];
+        for(int i = 0; i < _hashTable.length; i++){
+            _hashTable[i] = new LinkedList<HashEntry<T, V>>();
         }
     }
 
-    private int tableSize;
-    private LinkedList<HashEntry<T, V>>[] hashTable;
+    private int _count;
+    private int _tableSize;
+    private LinkedList<HashEntry<T, V>>[] _hashTable;
 
     /*
     * SUMMARY:  Hash function used to populate the LinkedList of HashEntry objects through a separate-chaining technique.
@@ -40,14 +42,14 @@ public class HashTable<T, V> {
         for(Character c : convertedKey.toCharArray()){
             hashValue = 37 * hashValue + c;
         }
-        return Math.abs(hashValue % tableSize);
+        return Math.abs(hashValue % _tableSize);
     }
 
     /*
     * SUMMARY:  A method to determine whether or not the HashTable contains a given value (entry).
     * */
     public boolean contains(HashEntry<T, V> entry){
-        for(LinkedList<HashEntry<T, V>> list : hashTable){
+        for(LinkedList<HashEntry<T, V>> list : _hashTable){
             if(list.contains(entry) == true){
                 return true;
             }
@@ -61,7 +63,7 @@ public class HashTable<T, V> {
     * */
     public int find(HashEntry<T, V> entry){
         int index = 0;
-        for(LinkedList<HashEntry<T, V>> list : hashTable){
+        for(LinkedList<HashEntry<T, V>> list : _hashTable){
             if(list.contains(entry)){
                 return index;
             }
@@ -78,7 +80,8 @@ public class HashTable<T, V> {
     public boolean insert(HashEntry<T, V> entry){
         if(!contains(entry)){
             int hashLocation = hashFunction(entry.getKey());
-            hashTable[hashLocation].insert(entry);
+            _hashTable[hashLocation].insert(entry);
+            _count++;
             return true;
         }
         return false;
@@ -92,10 +95,26 @@ public class HashTable<T, V> {
     public boolean remove(HashEntry<T, V> entry){
         int index = find(entry);
         if(index > -1){
-            if(hashTable[index].remove(entry)){
+            if(_hashTable[index].remove(entry)){
+                _count--;
                 return true;
             }
         }
         return false;
+    }
+
+    /*
+    * SUMMARY:  A method that returns the value of the size of the HashTable as an integer.
+    * */
+    public int getTableSize(){
+        return _tableSize;
+    }
+
+    /*
+    * SUMMARY:  A method that returns the value of the current number of elements within
+    *               the HashTable as an integer.
+    * */
+    public int getCount(){
+        return _count;
     }
 }
