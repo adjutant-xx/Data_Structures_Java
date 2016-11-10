@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashTable.java" afterPath="$PROJECT_DIR$/src/HashTable/HashTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashTable_Test.java" afterPath="$PROJECT_DIR$/src/HashTable/HashTable_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -36,8 +35,8 @@
             <file leaf-file-name="HashTable_Test.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable_Test.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="500">
-                    <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+                  <state relative-caret-position="575">
+                    <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
                     <folding>
                       <element signature="e#477#494#0" expanded="true" />
                     </folding>
@@ -1204,8 +1203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+        <state relative-caret-position="575">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
             <element signature="e#477#494#0" expanded="true" />
           </folding>

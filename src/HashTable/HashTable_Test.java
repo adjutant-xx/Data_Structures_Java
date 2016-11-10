@@ -20,5 +20,4 @@ public class HashTable_Test {
         }
         assert(_hashTable.getCount() == _hashTable.getTableSize());
     }
-
 }
