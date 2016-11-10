@@ -5,19 +5,28 @@ import org.junit.Test;
 public class HashTable_Test {
 
     private HashTable<Integer, String> _hashTable = new HashTable(8);
-    private String[] _hashTableValues = {"cat","dog","fish","mouse","bird","chicken","cow","fly"};
+    private HashEntry<Integer,String>[] _hashTableEntries = new HashEntry[]{new HashEntry(1,"cat"), new HashEntry(2,"dog"), new HashEntry(3,"fish"), new HashEntry(4,"mouse"), new HashEntry(5,"bird"), new HashEntry(6,"chicken"), new HashEntry(7,"cow"), new HashEntry(8,"fly")};
 
     @Test
     public void testHashTableInsert() throws Exception{
-        int insertionCount = 0, hashTableKeyIterator = 1;
-        for(String item : _hashTableValues){
-            HashEntry<Integer, String> newEntry = new HashEntry<Integer, String>(hashTableKeyIterator, item);
-            boolean isInserted = _hashTable.insert(newEntry);
+        int insertionCount = 0;
+        for(HashEntry entry : _hashTableEntries){
+            boolean isInserted = _hashTable.insert(entry);
             assert(isInserted);
             insertionCount++;
-            hashTableKeyIterator++;
             assert(_hashTable.getCount() == insertionCount);
         }
         assert(_hashTable.getCount() == _hashTable.getTableSize());
+    }
+
+    @Test
+    public void testHashTableContains() throws Exception{
+        testHashTableInsert();
+        HashEntry<Integer, String> validTerm = _hashTableEntries[2];
+        HashEntry<Integer, String> invalidTerm = new HashEntry<Integer, String>(4,"lizard");
+        boolean containsTrue = _hashTable.contains(validTerm);
+        boolean containsFalse = _hashTable.contains(invalidTerm);
+        assert(containsTrue);
+        assert(!containsFalse);
     }
 }
