@@ -277,4 +277,25 @@ public class LinkedList<T> {
             return false;
         }
     }
+
+    /*
+    * SUMMARY: Returns a LinkedListNode object at a specific index.
+    * */
+    public LinkedListNode<T> getNode(int index){
+        try{
+            LinkedListNode<T> temp = _root;
+            int iter = 0;
+            while(temp != null){
+                if(iter == index){
+                    return temp;
+                }
+                temp = temp.next;
+                iter++;
+            }
+            return null;
+        }
+        catch(Exception ex){
+            return null;
+        }
+    }
 }
