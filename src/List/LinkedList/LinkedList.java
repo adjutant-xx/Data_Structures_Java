@@ -285,7 +285,7 @@ public class LinkedList<T> {
         LinkedListNode<T> temp = _root;
         if(temp != null){
             int i = 0;
-            while(temp.next != null){
+            while(temp != null){
                 if(i == index){
                     return temp.getValue();
                 }

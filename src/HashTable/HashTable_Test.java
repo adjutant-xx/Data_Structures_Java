@@ -29,4 +29,12 @@ public class HashTable_Test {
         assert(containsTrue);
         assert(!containsFalse);
     }
+
+    @Test
+    public void testHashTableGet() throws Exception{
+        testHashTableInsert();
+        HashEntry<Integer, String> entry = _hashTableEntries[6];
+        HashEntry<Integer, String> retrieval = _hashTable.get(entry.getKey());
+        assert(retrieval.equals(entry));
+    }
 }
