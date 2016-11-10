@@ -58,6 +58,18 @@ public class HashTable<T, V> {
         return false;
     }
 
+        /*
+    * SUMMARY:  A method that returns a given key-value pair object given a specific key to search.
+    *           Returns the first result of a search within the specific hashed bucket.
+    * */
+    public HashEntry<T, V> get(T key){
+        int hash = hashFunction(key);
+        if(0 < hash && hash < _tableSize){
+            return _hashTable[hash].getElementAt(0);
+        }
+        return null;
+    }
+
     /*
     * SUMMARY:  A method that determines which bucket contains a given hash entry
     * */
