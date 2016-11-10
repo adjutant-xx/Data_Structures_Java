@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Stack/Stack.java" afterPath="$PROJECT_DIR$/src/List/Stack/Stack.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/List/Stack/Stack_Test.java" afterPath="$PROJECT_DIR$/src/List/Stack/Stack_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -26,8 +25,8 @@
             <file leaf-file-name="Stack_Test.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack_Test.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="800">
-                    <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+                  <state relative-caret-position="1025">
+                    <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
                     <folding />
                   </state>
                 </provider>
@@ -1159,8 +1158,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/List/Stack/Stack_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="32" column="36" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
+        <state relative-caret-position="1025">
+          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
           <folding />
         </state>
       </provider>
