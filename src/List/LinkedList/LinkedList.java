@@ -277,4 +277,22 @@ public class LinkedList<T> {
             return false;
         }
     }
+
+    /*
+    * SUMMARY: Returns an element at a specific index within the linked list.
+    * */
+    public T getElementAt(int index){
+        LinkedListNode<T> temp = _root;
+        if(temp != null){
+            int i = 0;
+            while(temp.next != null){
+                if(i == index){
+                    return temp.getValue();
+                }
+                temp = temp.next;
+                i++;
+            }
+        }
+        return null;
+    }
 }

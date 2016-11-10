@@ -140,4 +140,13 @@ public class LinkedList_Test {
             assert(indexReplaceActual == _linkedList.getSize() - indexReplace + 1);
         }
     }
+
+    @Test
+    public void testLinkedListGetElementAt() throws Exception{
+        testLinkedListInsert();
+        int searchIndex = 3, actualElementAtIndex = _listElements[_listElements.length - searchIndex - 1];
+        int element = _linkedList.getElementAt(searchIndex);
+        assert(element == actualElementAtIndex);
+    }
+
 }
