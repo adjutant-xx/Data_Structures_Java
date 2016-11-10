@@ -39,4 +39,15 @@ public class Stack_Test {
             assert(_stack.getSize() == insertionCount);
         }
     }
+
+    @Test
+    public void testStackIsEmpty() throws Exception{
+        testStackPush();
+        assert(!_stack.isEmpty());
+        while(!_stack.isEmpty()){
+            assert(!_stack.isEmpty());
+            _stack.pop();
+        }
+        assert(_stack.isEmpty());
+    }
 }
