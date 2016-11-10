@@ -33,8 +33,19 @@ public class HashTable_Test {
     @Test
     public void testHashTableGet() throws Exception{
         testHashTableInsert();
-        HashEntry<Integer, String> entry = _hashTableEntries[6];
-        HashEntry<Integer, String> retrieval = _hashTable.get(entry.getKey());
-        assert(retrieval.equals(entry));
+        HashEntry<Integer, String> searchEntry = _hashTableEntries[6];
+        HashEntry<Integer, String> retrieval = _hashTable.get(searchEntry.getKey());
+        assert(retrieval.equals(searchEntry));
+    }
+
+    @Test
+    public void testHashTableFind() throws Exception{
+        testHashTableInsert();
+        HashEntry<Integer, String> validEntry = _hashTableEntries[3];
+        HashEntry<Integer, String> invalidEntry = new HashEntry<Integer, String>(99,"octopus");
+        int validLocation = _hashTable.find(validEntry);
+        int invalidLocation = _hashTable.find(invalidEntry);
+        assert(0 < validLocation && validLocation < _hashTable.getTableSize());
+        assert(invalidLocation == -1);
     }
 }

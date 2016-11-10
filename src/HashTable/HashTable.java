@@ -34,7 +34,6 @@ public class HashTable<T, V> {
     * SUMMARY:  Hash function used to populate the LinkedList of HashEntry objects through a separate-chaining technique.
     *           This particular hash function determines a hash location through use of Horner's Rule, but creating a
     *               polynomial function of 37.
-    *           Here, keys are also assumed to be Characters...may be standardized at a later date.
     * */
     private int hashFunction(T key){
         int hashValue = 0;
@@ -58,7 +57,7 @@ public class HashTable<T, V> {
         return false;
     }
 
-        /*
+    /*
     * SUMMARY:  A method that returns a given key-value pair object given a specific key to search.
     *           Returns the first result of a search within the specific hashed bucket.
     * */
