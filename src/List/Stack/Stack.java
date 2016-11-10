@@ -71,13 +71,13 @@ public class Stack<T> {
     * SUMMARY:  Removes the top-most value from the stack and returns it.
     *           Returns null if the stack is empty, or otherwise failed to return top-most value.
     * */
-    public LinkedListNode<T> pop(){
+    public T pop(){
         try{
             if(root != null){
                 LinkedListNode<T> temp = root;
                 root = root.next;
                 _size--;
-                return temp;
+                return temp.getValue();
             }
             return null;
         }

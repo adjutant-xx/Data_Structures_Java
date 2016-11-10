@@ -16,6 +16,13 @@ public class Stack_Test {
     }
 
     @Test
+    public void testStackPop() throws Exception{
+        testStackPush();
+        int listPopValue = _stackElements[_stackElements.length - 1], actualPopValue = _stack.pop();
+        assert(listPopValue == actualPopValue);
+    }
+
+    @Test
     public void testStackGetSize() throws Exception{
         testStackPush();
         assert(_stack.getSize() == _stackElements.length);
