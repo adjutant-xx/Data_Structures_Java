@@ -46,11 +46,23 @@ public class HashTable<T, V> {
     }
 
     /*
-    * SUMMARY:  A method to determine whether or not the HashTable contains a given value (entry).
+    * SUMMARY:  A method that determines whether or not the HashTable contains a given entry.
     * */
     public boolean containsEntry(HashEntry<T, V> entry){
         for(LinkedList<HashEntry<T, V>> list : _hashTable){
             if(list.contains(entry) == true){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /*
+    * SUMMARY:  A method that determines whether or not the HashTable contains a given value.
+    * */
+    public boolean containsValue(V value){
+        for(int i = 0; i < _hashTable.length; i++){
+            if(_hashTable[i].getNode(i).getValue().equals(value)){
                 return true;
             }
         }
