@@ -48,4 +48,14 @@ public class HashTable_Test {
         assert(0 < validLocation && validLocation < _hashTable.getTableSize());
         assert(invalidLocation == -1);
     }
+
+    @Test
+    public void testHashTableRemove() throws Exception{
+        testHashTableInsert();
+        HashEntry<Integer, String> entryToRemove = _hashTableEntries[1];
+        boolean isRemoved = _hashTable.remove(entryToRemove);
+        boolean containsRemoved = _hashTable.containsEntry(entryToRemove);
+        assert(isRemoved);
+        assert(!containsRemoved);
+    }
 }
