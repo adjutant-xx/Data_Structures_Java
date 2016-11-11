@@ -63,4 +63,18 @@ public class HashTable_Test {
     public void testHashTableGetTableSize() throws Exception{
         assert(_hashTable.getTableSize() == _hashTableEntries.length);
     }
+
+    @Test
+    public void testHashTableGetCount() throws Exception{
+        testHashTableInsert();
+        int removalCount = 0, removalIterator = 0;
+        assert(_hashTable.getCount() == _hashTableEntries.length - removalCount);
+        while(!_hashTable.isEmpty()){
+            if(_hashTable.remove(_hashTableEntries[removalIterator])){
+                removalCount++;
+                removalIterator++;
+                assert(_hashTable.getCount() == _hashTableEntries.length - removalCount);
+            }
+        }
+    }
 }

@@ -49,7 +49,7 @@ public class HashTable<T, V> {
     * */
     public boolean containsEntry(HashEntry<T, V> entry){
         int hash = hashFunction(entry.getKey());
-        if(0 < hash && hash < _tableSize){
+        if(-1 < hash && hash < _tableSize){
             if(_hashTable[hash].contains(entry)){
                 return true;
             }
@@ -63,7 +63,7 @@ public class HashTable<T, V> {
     * */
     public HashEntry<T, V> get(T key){
         int hash = hashFunction(key);
-        if(0 < hash && hash < _tableSize){
+        if(-1 < hash && hash < _tableSize){
             return _hashTable[hash].getElementAt(0);
         }
         return null;
@@ -75,7 +75,7 @@ public class HashTable<T, V> {
     * */
     public int find(HashEntry<T, V> entry){
         int hash = hashFunction(entry.getKey());
-        if(0 < hash && hash < _tableSize){
+        if(-1 < hash && hash < _tableSize){
             if(_hashTable[hash].contains(entry)){
                 return hash;
             }
