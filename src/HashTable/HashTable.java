@@ -130,4 +130,14 @@ public class HashTable<T, V> {
     public int getCount(){
         return _count;
     }
+
+    /*
+    * SUMMARY:  A method that returns a boolean indicating whether or not the HashTable is empty.
+    * */
+    public boolean isEmpty(){
+        if(_count < 1){
+            return true;
+        }
+        return false;
+    }
 }
