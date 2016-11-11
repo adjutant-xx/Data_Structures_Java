@@ -77,4 +77,18 @@ public class HashTable_Test {
             }
         }
     }
+
+    @Test
+    public void testHashTableIsEmpty() throws Exception{
+        testHashTableInsert();
+        int removalIterator = 0;
+        assert(!_hashTable.isEmpty());
+        while(!_hashTable.isEmpty()){
+            assert(!_hashTable.isEmpty());
+            if(_hashTable.remove(_hashTableEntries[removalIterator])){
+                removalIterator++;
+            }
+        }
+        assert(_hashTable.isEmpty());
+    }
 }

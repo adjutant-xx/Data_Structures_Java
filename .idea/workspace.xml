@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashTable.java" afterPath="$PROJECT_DIR$/src/HashTable/HashTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HashTable/HashTable_Test.java" afterPath="$PROJECT_DIR$/src/HashTable/HashTable_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -135,8 +135,8 @@
       <file leaf-file-name="HashTable_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-390">
-              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+            <state relative-caret-position="910">
+              <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -224,8 +224,8 @@
         <option value="$PROJECT_DIR$/src/List/Stack/Stack.java" />
         <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList_Test.java" />
         <option value="$PROJECT_DIR$/src/List/LinkedList/LinkedList.java" />
-        <option value="$PROJECT_DIR$/src/HashTable/HashTable_Test.java" />
         <option value="$PROJECT_DIR$/src/HashTable/HashTable.java" />
+        <option value="$PROJECT_DIR$/src/HashTable/HashTable_Test.java" />
       </list>
     </option>
   </component>
@@ -398,7 +398,7 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HashTable_Test">
+  <component name="RunManager" selected="JUnit.HashTable_Test.testHashTableIsEmpty">
     <configuration default="false" name="HashTable_Test.testHashTableGet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -412,32 +412,6 @@
       <option name="PACKAGE_NAME" value="HashTable" />
       <option name="MAIN_CLASS_NAME" value="HashTable.HashTable_Test" />
       <option name="METHOD_NAME" value="testHashTableGet" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="HashTable_Test.testHashTableFind" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="HashTable.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Data_Structures_Java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="HashTable" />
-      <option name="MAIN_CLASS_NAME" value="HashTable.HashTable_Test" />
-      <option name="METHOD_NAME" value="testHashTableFind" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -517,6 +491,32 @@
       <option name="MAIN_CLASS_NAME" value="HashTable.HashTable_Test" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="HashTable_Test.testHashTableIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="HashTable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Data_Structures_Java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="HashTable" />
+      <option name="MAIN_CLASS_NAME" value="HashTable.HashTable_Test" />
+      <option name="METHOD_NAME" value="testHashTableIsEmpty" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -775,18 +775,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableGet" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableFind" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableContainsEntry" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableInsert" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.HashTable_Test" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableContainsEntry" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableInsert" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.HashTable_Test" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableIsEmpty" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.HashTable_Test" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableInsert" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableContainsEntry" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableGet" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableFind" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableIsEmpty" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.HashTable_Test" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableInsert" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableContainsEntry" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.HashTable_Test.testHashTableGet" />
       </list>
     </recent_temporary>
   </component>
@@ -819,9 +819,6 @@
     <history-entry file="HashTable_Test_testHashTableGet - 2016.11.10 at 19h 19m 48s.xml">
       <configuration name="HashTable_Test.testHashTableGet" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="HashTable_Test_testHashTableGetCount - 2016.11.10 at 19h 16m 39s.xml">
-      <configuration name="HashTable_Test.testHashTableGetCount" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="HashTable_Test_testHashTableGetCount - 2016.11.10 at 19h 19m 27s.xml">
       <configuration name="HashTable_Test.testHashTableGetCount" configurationId="JUnit" />
     </history-entry>
@@ -833,6 +830,9 @@
     </history-entry>
     <history-entry file="HashTable_Test_testHashTableInsert - 2016.11.10 at 19h 19m 53s.xml">
       <configuration name="HashTable_Test.testHashTableInsert" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="HashTable_Test_testHashTableIsEmpty - 2016.11.10 at 19h 24m 34s.xml">
+      <configuration name="HashTable_Test.testHashTableIsEmpty" configurationId="JUnit" />
     </history-entry>
     <history-entry file="HashTable_Test_testHashTableRemove - 2016.11.10 at 19h 19m 41s.xml">
       <configuration name="HashTable_Test.testHashTableRemove" configurationId="JUnit" />
@@ -1232,8 +1232,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HashTable/HashTable_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
+        <state relative-caret-position="910">
+          <caret line="82" column="26" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
           <folding />
         </state>
       </provider>
