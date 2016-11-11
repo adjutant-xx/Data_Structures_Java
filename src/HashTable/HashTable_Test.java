@@ -58,4 +58,9 @@ public class HashTable_Test {
         assert(isRemoved);
         assert(!containsRemoved);
     }
+
+    @Test
+    public void testHashTableGetTableSize() throws Exception{
+        assert(_hashTable.getTableSize() == _hashTableEntries.length);
+    }
 }
