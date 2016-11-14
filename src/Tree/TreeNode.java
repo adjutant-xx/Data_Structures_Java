@@ -1,7 +1,7 @@
 // Data_Structures_Java
 //
 // Author: Matt Paauw
-// GitHub: https://github.com/adjutant-xx
+// GitHub: https://github.com/mpaauw
 //
 // No license, free use
 
