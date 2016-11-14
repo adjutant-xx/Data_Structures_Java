@@ -108,20 +108,29 @@ public class BinarySearchTree<T> {
     /*
     * SUMMARY:  Inserts a value into the tree based on Binary Tree insertion rules.
     * */
-    public void insert(T value){
+    public boolean insert(T value){
         root = insert(value, root);
+        if(root != null){
+            return true;
+        }
+        return false;
     }
     private BinaryTreeNode<T> insert(T value, BinaryTreeNode<T> current){
-        if(current == null){
-            current = new BinaryTreeNode<T>(value);
+        try{
+            if(current == null){
+                current = new BinaryTreeNode<T>(value);
+            }
+            else if((Integer)value < (Integer)current.getValue()){
+                current.left = insert(value, current.left);
+            }
+            else if((Integer)value > (Integer)current.getValue()){
+                current.right = insert(value, current.right);
+            }
+            return current;
         }
-        else if((Integer)value < (Integer)current.getValue()){
-            current.left = insert(value, current.left);
+        catch(Exception ex){
+            return null;
         }
-        else if((Integer)value > (Integer)current.getValue()){
-            current.right = insert(value, current.right);
-        }
-        return current;
     }
 
     /*
