@@ -1,3 +1,10 @@
+// Data_Structures_Java
+//
+// Author: Matt Paauw
+// GitHub: https://github.com/mpaauw
+//
+// No license, free use
+
 package HashTable;
 
 import org.junit.Test;
