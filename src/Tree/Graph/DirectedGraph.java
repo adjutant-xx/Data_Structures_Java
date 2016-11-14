@@ -5,9 +5,10 @@
 //
 // No license, free use
 
-package Tree;
+package Tree.Graph;
 
 import List.Queue.Queue;
+
 import java.util.ArrayList;
 
 /*

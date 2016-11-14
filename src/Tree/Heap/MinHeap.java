@@ -5,7 +5,9 @@
 //
 // No license, free use
 
-package Tree;
+package Tree.Heap;
+
+import Tree.BinaryTree.BinaryTreeNode;
 
 /*
 * SUMMARY:  Represents a Min Heap data structure.
