@@ -7,7 +7,7 @@
 
 package Tree.Heap;
 
-import Tree.BinaryTree.BinaryTreeNode;
+import Tree.BinarySearchTree.BinaryTreeNode;
 
 /*
 * SUMMARY:  Represents a Min Heap data structure.

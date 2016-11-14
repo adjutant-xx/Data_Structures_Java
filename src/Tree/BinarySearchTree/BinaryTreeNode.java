@@ -5,7 +5,7 @@
 //
 // No license, free use
 
-package Tree.BinaryTree;
+package Tree.BinarySearchTree;
 
 /*
 * SUMMARY:  Represents a single node to be used within a BinarySearchTree data structure.
