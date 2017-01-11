@@ -15,18 +15,14 @@ import java.util.ArrayList;
 public class TreeNode<T> {
     private T _data;
     protected ArrayList<TreeNode<T>> _children;
-
     public TreeNode(){}
-
     public TreeNode(T d){
         _data = d;
         _children = new ArrayList<TreeNode<T>>();
     }
-
     public void setData(T d){
         _data = d;
     }
-
     public T getData(){
         return _data;
     }
