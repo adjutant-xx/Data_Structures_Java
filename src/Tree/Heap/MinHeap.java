@@ -79,7 +79,6 @@ public class MinHeap<T> {
                 return node;
             }
             else{
-                //check left subtree:
                 if(node.left.left == null || node.left.right == null){
                     node = node.left;
                 }
@@ -96,8 +95,6 @@ public class MinHeap<T> {
     *               rules of the min heap.
     * */
     private BinaryTreeNode<T> percolateUp(BinaryTreeNode<T> node){
-
-        //while((Integer)node.getValue() < (Integer)node.parent.getValue()){
         while(node.parent != null){
 
             if((Integer)node.getData() < (Integer)node.parent.getData()) {
