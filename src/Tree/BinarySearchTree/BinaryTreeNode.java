@@ -20,17 +20,7 @@ public class BinaryTreeNode<T> extends TreeNode<T> {
         right = null;
         parent = null;
     }
-
-    //private T value;
     public BinaryTreeNode<T> left;
     public BinaryTreeNode<T> right;
     public BinaryTreeNode<T> parent;
-
-//    public T getValue(){
-//        return value;
-//    }
-
-//    public void setValue(T v){
-//        value = v;
-//    }
 }
