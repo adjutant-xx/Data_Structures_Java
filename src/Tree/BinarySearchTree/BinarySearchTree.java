@@ -47,7 +47,7 @@ public class BinarySearchTree<T> {
             return;
         }
         traverseInOrder(current.left);
-        printValue(current.getValue());
+        printValue(current.getData());
         traverseInOrder(current.right);
     }
 
@@ -62,7 +62,7 @@ public class BinarySearchTree<T> {
         if(current == null){
             return;
         }
-        printValue(current.getValue());
+        printValue(current.getData());
         traversePreOrder(current.left);
         traversePreOrder(current.right);
     }
@@ -80,7 +80,7 @@ public class BinarySearchTree<T> {
         }
         traversePostOrder(current.left);
         traversePostOrder(current.right);
-        printValue(current.getValue());
+        printValue(current.getData());
     }
 
     /*
@@ -94,10 +94,10 @@ public class BinarySearchTree<T> {
         if(current == null) {
             return false;
         }
-        else if((Integer)value < (Integer)current.getValue()){
+        else if((Integer)value < (Integer)current.getData()){
                 return contains(value, current.left);
             }
-        else if((Integer)value > (Integer)current.getValue()){
+        else if((Integer)value > (Integer)current.getData()){
             return contains(value, current.right);
         }
         else {
@@ -120,10 +120,10 @@ public class BinarySearchTree<T> {
             if(current == null){
                 current = new BinaryTreeNode<T>(value);
             }
-            else if((Integer)value < (Integer)current.getValue()){
+            else if((Integer)value < (Integer)current.getData()){
                 current.left = insert(value, current.left);
             }
-            else if((Integer)value > (Integer)current.getValue()){
+            else if((Integer)value > (Integer)current.getData()){
                 current.right = insert(value, current.right);
             }
             return current;
@@ -143,15 +143,15 @@ public class BinarySearchTree<T> {
         if(current == null){
             return current;
         }
-        if((Integer)value < (Integer)current.getValue()){
+        if((Integer)value < (Integer)current.getData()){
             current.left = remove(value, current.left);
         }
-        else if((Integer) value > (Integer)current.getValue()){
+        else if((Integer) value > (Integer)current.getData()){
             current.right = remove(value, current.right);
         }
         else if(current.left != null && current.right != null){
-            current.setValue(findMin(current.right).getValue());
-            current.right = remove(current.getValue(), current.right);
+            current.setData(findMin(current.right).getData());
+            current.right = remove(current.getData(), current.right);
         }
         else{
             current = (current.left != null) ? current.left : current.right;

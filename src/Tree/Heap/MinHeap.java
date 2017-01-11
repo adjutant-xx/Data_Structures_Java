@@ -62,7 +62,7 @@ public class MinHeap<T> {
     *           Propagation algorithms are then used to preserve the rules of the min heap.
     * */
     public T downHeap(){
-        T minimumVal = root.getValue();
+        T minimumVal = root.getData();
 
         //percolate down, replacing the root with the next smallest child while recursively replacing:
 
@@ -100,10 +100,10 @@ public class MinHeap<T> {
         //while((Integer)node.getValue() < (Integer)node.parent.getValue()){
         while(node.parent != null){
 
-            if((Integer)node.getValue() < (Integer)node.parent.getValue()) {
-                T temp = node.getValue();
-                node.setValue(node.parent.getValue());
-                node.parent.setValue(temp);
+            if((Integer)node.getData() < (Integer)node.parent.getData()) {
+                T temp = node.getData();
+                node.setData(node.parent.getData());
+                node.parent.setData(temp);
             }
             node = node.parent;
         }
