@@ -10,6 +10,7 @@ package Tree.Graph;
 import List.Queue.Queue;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 /*
 * SUMMARY:  Represents a Directed Graph data structure.
@@ -193,8 +194,9 @@ public class DirectedGraph<T> {
     /*
     * SUMMARY:  Traverses the graph using a Depth First Search algorithm, prints each graph node to the console in the order they are visited.
     * */
-    public void depthFirstSearchTraversal(GraphNode<T> source){
-
+    public void depthFirstSearchTraversal(GraphNode<T> node){
+        GraphNode<T> tempNode = node;
+        Stack<GraphNode<T>> stack = new Stack();
     }
 
     /*
