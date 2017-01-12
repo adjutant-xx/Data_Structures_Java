@@ -21,6 +21,9 @@ public class DirectedGraph<T> {
 
     private ArrayList<GraphNode<T>> _graph;
     private int _size;
+    private enum _visitStatus {
+        Unvisited, Visited
+    }
 
     /*
     * SUMMARY:  Default constructor, initializes the graph to an empty HashMap.
@@ -191,7 +194,7 @@ public class DirectedGraph<T> {
     * SUMMARY:  Traverses the graph using a Depth First Search algorithm, prints each graph node to the console in the order they are visited.
     * */
     public void depthFirstSearchTraversal(GraphNode<T> source){
-        
+
     }
 
     /*
