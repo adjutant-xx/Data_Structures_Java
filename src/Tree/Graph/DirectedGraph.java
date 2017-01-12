@@ -19,12 +19,11 @@ import java.util.ArrayList;
 * NOTE:     This class is currently under construction, as of 10-18-2016.
 * */
 public class DirectedGraph<T> {
-
-    private ArrayList<GraphNode<T>> _graph;
-    private int _size;
-    private enum _visitStatus { // BFS utilizes all three statuses, whereas DFS is only concerned with whether or not a node is either 'visited' or 'unvisited'.
+    public enum VisitStatus {
         Unvisited, Visiting, Visited
     }
+    private ArrayList<GraphNode<T>> _graph;
+    private int _size;
 
     /*
     * SUMMARY:  Default constructor, initializes the graph to an empty HashMap.
@@ -173,7 +172,7 @@ public class DirectedGraph<T> {
             return true;
         }
 
-        source.setVisitState(true);
+        source.setVisitState(VisitStatus.Visited);
         for(GraphNode<T> node : source.getChildren()){
             if(node == null){
                 return false;
@@ -181,9 +180,9 @@ public class DirectedGraph<T> {
             if(node == destination){
                 return true;
             }
-            node.setVisitState(true);
+            node.setVisitState(VisitStatus.Visited);
             for(GraphNode<T> child : node.getChildren()){
-                if(child.getVisitState() == false){
+                if(child.getVisitState() == VisitStatus.Unvisited){
                     return depthFirstSearchPath(child, destination, graph);
                 }
             }
@@ -194,9 +193,20 @@ public class DirectedGraph<T> {
     /*
     * SUMMARY:  Traverses the graph using a Depth First Search algorithm, prints each graph node to the console in the order they are visited.
     * */
-    public void depthFirstSearchTraversal(GraphNode<T> node){
-        GraphNode<T> tempNode = node;
+    public void depthFirstSearchTraversal(){
+        ArrayList<GraphNode<T>> tempGraph = _graph;
         Stack<GraphNode<T>> stack = new Stack();
+        for(int i = 0; i < tempGraph.size(); i++){
+            GraphNode<T> currentNode = tempGraph.get(i);
+            if(tempGraph.get(i).getVisitState == VisitStatus.Unvisited){
+                depthFirstSearchTraversal(currentNode);
+            }
+        }
+    }
+    public void depthFirstSearchTraversal(GraphNode<T> node, Stack<GraphNode<T> stack){
+        if(node.getVisitState() == VisitStatus.Visited){
+            return;
+        }
     }
 
     /*

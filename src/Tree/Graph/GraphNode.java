@@ -16,12 +16,12 @@ import java.util.ArrayList;
 * */
 public class GraphNode<T> extends TreeNode<T> {
     private ArrayList<GraphNode<T>> _children;
-    private boolean _visited;
+    private DirectedGraph.VisitStatus _status;
 
     public GraphNode(T d){
         this.setData(d);
         _children = new ArrayList<GraphNode<T>>();
-        _visited = false;
+        _status = DirectedGraph.VisitStatus.Unvisited;
     }
 
     public ArrayList<GraphNode<T>> getChildren(){
@@ -32,11 +32,11 @@ public class GraphNode<T> extends TreeNode<T> {
         _children.add(newChild);
     }
 
-    public boolean getVisitState(){
-        return _visited;
+    public DirectedGraph.VisitStatus getVisitState(){
+        return _status;
     }
 
-    public void setVisitState(boolean state){
-        _visited = state;
+    public void setVisitState(DirectedGraph.VisitStatus state){
+        _status = state;
     }
 }
