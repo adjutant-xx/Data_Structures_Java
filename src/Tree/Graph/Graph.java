@@ -11,6 +11,8 @@ import List.Queue.Queue;
 import List.Stack.Stack;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 /*
 * SUMMARY:  Represents a Directed Graph data structure.
@@ -22,14 +24,14 @@ public class Graph<T> {
     public enum VisitState {
         Unvisited, Visiting, Visited
     }
-    private ArrayList<GraphNode<T>> _graph;
+    private HashMap<T, GraphNode<T>> _graph;
     private int _size;
 
     /*
     * SUMMARY:  Default constructor, initializes the graph to an empty HashMap.
     * */
     public Graph(){
-        _graph = new ArrayList<GraphNode<T>>();
+        _graph = new HashMap<T, GraphNode<T>>();
         _size = 0;
     }
 
@@ -41,8 +43,7 @@ public class Graph<T> {
     }
 
     /*
-    * SUMMARY:  Returns a vertex of the graph given a specific index
-    *           The 'index' parameter is zero-based.
+    * SUMMARY:  Returns a vertex of the graph given a specific value.
     * */
     public GraphNode<T> getVertex(int index){
         if(index < 0 || index >= _size){
@@ -54,7 +55,7 @@ public class Graph<T> {
     /*
     * SUMMARY:  Returns an ArrayList object containing each vertex present in the graph.
     * */
-    public ArrayList<GraphNode<T>> getVertices(){
+    public HashMap<T, GraphNode<T>> getVertices(){
         return _graph;
     }
 
@@ -64,9 +65,9 @@ public class Graph<T> {
     public void addVertex(T value){
         _graph = addVertex(value, _graph);
     }
-    private ArrayList<GraphNode<T>> addVertex(T value, ArrayList<GraphNode<T>> graph){
+    private HashMap<T, GraphNode<T>> addVertex(T value, HashMap<T, GraphNode<T>> graph){
         GraphNode<T> newNode = new GraphNode<T>(value);
-        graph.add(newNode);
+        graph.put(value, newNode);
         _size++;
         return graph;
     }
@@ -75,18 +76,17 @@ public class Graph<T> {
     * SUMMARY:  Adds an edge to the graph, provided two vertices.
     *           Edge is only added to the graph if the parent vertex can be found (edges are single-directional).
     * */
-    public void addEdge(GraphNode<T> p, GraphNode<T> c){
-        _graph = addEdge(p, c, _graph);
+    public void addEdge(T parentValue, T childValue){
+        _graph = addEdge(parentValue, childValue, _graph);
     }
-    private ArrayList<GraphNode<T>> addEdge(GraphNode<T> parent, GraphNode<T> child, ArrayList<GraphNode<T>> graph){
-        if(graph.contains(parent)){
-            int index = graph.lastIndexOf(parent);
-            GraphNode<T> parentObject = graph.get(index);
+    private HashMap<T, GraphNode<T>> addEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
+        if(graph.containsValue(parentValue)){
+            GraphNode<T> parentObject = graph.get(parentValue);
 
             // Add edge only if parent node is either empty or does not already contain an edge to the child node
-            if(parentObject.getChildren().size() < 1 || !parentObject.getChildren().contains(child)){
-                parentObject.addChild(child);
-                graph.set(index, parentObject);
+            if(parentObject.getChildren().size() < 1 || !parentObject.getChildren().contains(childValue)){
+                GraphNode<T> newChild = _graph.get(childValue);
+                parentObject.addChild(newChild);
             }
         }
         return graph;
@@ -95,19 +95,20 @@ public class Graph<T> {
     /*
     * SUMMARY:  Removes a vertex from the graph, if it can be found within the graph.
     * */
-    public void removeVertex(GraphNode<T> vertex){
-        _graph = removeVertex(vertex, _graph);
+    public void removeVertex(T vertexValue){
+        _graph = removeVertex(vertexValue, _graph);
     }
-    private ArrayList<GraphNode<T>> removeVertex(GraphNode<T> vertexDelete, ArrayList<GraphNode<T>> graph){
+    private HashMap<T, GraphNode<T>> removeVertex(T vertexValue, HashMap<T, GraphNode<T>> graph){
         // If graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
-        if(graph.contains(vertexDelete)){
-            for(GraphNode<T> node : graph){
-                if(node.getChildren().contains(vertexDelete)){
-                    node.getChildren().remove(vertexDelete);
+        if(graph.containsKey(vertexValue)){
+            for(Map.Entry<T, GraphNode<T>> node : graph.entrySet()){
+                GraphNode<T> data = node.getValue();
+                if(data.getChildren().contains(vertexValue)){
+                    data.getChildren().remove(vertexValue);
                 }
             }
             _size--;
-            graph.remove(vertexDelete);
+            graph.remove(vertexValue);
         }
         return graph;
     }
@@ -115,27 +116,30 @@ public class Graph<T> {
     /*
     * SUMMARY:  Removes an edge from the graph, if the graph contains both parent and child vertices.
     * */
-    public void removeEdge(GraphNode<T> p, GraphNode<T> c){
-        _graph = removeEdge(p,c, _graph);
+    public void removeEdge(T parentValue, T childValue){
+        _graph = removeEdge(parentValue, childValue, _graph);
     }
-    private ArrayList<GraphNode<T>> removeEdge(GraphNode<T> parent, GraphNode<T> child, ArrayList<GraphNode<T>> graph){
-        if(graph.contains(parent)){
-            if(parent.getChildren().contains(child)){
-                parent.getChildren().remove(child);
+    private HashMap<T, GraphNode<T>> removeEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
+        if(graph.containsKey(parentValue)){
+            GraphNode<T> parentObject = graph.get(parentValue);
+            if(parentObject.getChildren().contains(childValue)){
+            parentObject.getChildren().remove(childValue);
             }
         }
         return graph;
     }
 
     /*
-    * SUMMARY:  Determines if two vertices are adjacent to each other, via either an upstream or downstream edge.
+    * SUMMARY:  Determines if two vertices are adjacent to each other, via either a directed or undirected edge.
     *           Returns true if the vertices are neighbors, false if they are not or cannot be found within the graph.
     * */
-    public boolean isAdjacent(GraphNode<T> x, GraphNode<T> y){ // checks to see whether a single edge exists between the two nodes, in either direction
-        if(!_graph.contains(x) || !_graph.contains(y)){
+    public boolean isAdjacent(T x, T y){ // checks to see whether a single edge exists between the two nodes, in either direction
+        if(!_graph.containsKey(x) || !_graph.containsKey(y)){
             return false;
         }
-        if(x.getChildren().contains(y) || y.getChildren().contains(x)){
+        GraphNode<T> xNode = _graph.get(x);
+        GraphNode<T> yNode = _graph.get(y);
+        if(xNode.getChildren().contains(y) || yNode.getChildren().contains(x)){
             return true;
         }
         return false;
@@ -146,12 +150,13 @@ public class Graph<T> {
     *           A vertex is considered a neighbor if it has an upstream or downstream edge connected to the other
     *               vertex in question.
     * */
-    public ArrayList<GraphNode<T>> getNeighbors(GraphNode<T> vertex){ // gets a list of all neighbors of a given vertex, defined as having an edge that connects the vertex to/from another neighbor
+    public ArrayList<GraphNode<T>> getNeighbors(T vertexValue){ // gets a list of all neighbors of a given vertex, defined as having an edge that connects the vertex to/from another neighbor
         ArrayList<GraphNode<T>> neighbors = new ArrayList<GraphNode<T>>();
+        GraphNode<T> vertex = _graph.get(vertexValue);
         for(GraphNode<T> node : vertex.getChildren()){ // first, add all direct neighbors from list of target vertex's children
             neighbors.add(node);
         }
-        for(GraphNode<T> node : _graph){ // next, check all other vertices within the graph to see if they have any connection to the target vertex
+        for(GraphNode<T> node : _graph.values()){ // next, check all other vertices within the graph to see if they have any connection to the target vertex
             if(node.getChildren().contains(vertex)){
                 neighbors.add(node);
             }
@@ -163,16 +168,14 @@ public class Graph<T> {
     * SUMMARY:  Traverses the graph using a Depth First Search algorithm, determines if a path exists between
     *               two nodes.
     * */
-    public boolean depthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination){
-
-        // Use temp variables to preserve the state of the graph, since we are only conducting a search:
-        ArrayList<GraphNode<T>> tempGraph = _graph;
-        GraphNode<T> tempSource = source;
-        GraphNode<T> tempDestination = destination;
-        return depthFirstSearchPath(tempSource, tempDestination, tempGraph);
+    public boolean depthFirstSearchPath(T sourceValue, T destinationValue){
+        HashMap<T, GraphNode<T>> tempGraph = _graph;
+        GraphNode<T> sourceNode = _graph.get(sourceValue);
+        GraphNode<T> destinationNode = _graph.get(destinationValue);
+        return depthFirstSearchPath(sourceNode, destinationNode, tempGraph);
     }
-    private boolean depthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination, ArrayList<GraphNode<T>> graph){
-        if(!graph.contains(source) || !graph.contains(destination)){
+    private boolean depthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination, HashMap<T, GraphNode<T>> graph){
+        if(!graph.containsValue(source) || !graph.containsValue(destination)){
             return false;
         }
         if(source == destination){
@@ -201,7 +204,7 @@ public class Graph<T> {
     * SUMMARY:  Traverses the graph using a Depth First Search algorithm, returns an ArrayList of graph nodes ordered by their appearance during traversal.
     * */
     public ArrayList<GraphNode<T>> depthFirstSearchTraversal(){
-        ArrayList<GraphNode<T>> tempGraph = _graph;
+        HashMap<T, GraphNode<T>> tempGraph = _graph;
         Stack<GraphNode<T>> stack = new Stack();
         ArrayList<GraphNode<T>> nodes = new ArrayList<>();
         for(int i = 0; i < tempGraph.size(); i++){
@@ -233,11 +236,14 @@ public class Graph<T> {
     * SUMMARY:  Traverses the graph using a Breadth First Search algorithm, determines if a path exists between
     *               two nodes.
     * */
-    public boolean breadthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination){
-        return breadthFirstSearchPath(source, destination, _graph);
+    public boolean breadthFirstSearchPath(T sourceValue, T destinationValue){
+        HashMap<T, GraphNode<T>> tempGraph = _graph;
+        GraphNode<T> sourceNode = _graph.get(sourceValue);
+        GraphNode<T> destinationNode = _graph.get(destinationValue);
+        return breadthFirstSearchPath(sourceNode, destinationNode, _graph);
     }
-    private boolean breadthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination, ArrayList<GraphNode<T>> graph){
-        if(!graph.contains(source) || !graph.contains(destination)){
+    private boolean breadthFirstSearchPath(GraphNode<T> source, GraphNode<T> destination, HashMap<T, GraphNode<T>> graph){
+        if(!graph.containsValue(source) || !graph.containsValue(destination)){
             return false;
         }
         if(source == destination){
