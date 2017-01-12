@@ -52,6 +52,13 @@ public class Graph<T> {
     }
 
     /*
+    * SUMMARY:  Returns an ArrayList object containing each vertex present in the graph.
+    * */
+    public ArrayList<GraphNode<T>> getVertices(){
+        return _graph;
+    }
+
+    /*
     * SUMMARY:  Inserts a new vertex and it's associated value into the graph.
     * */
     public void addVertex(T value){
