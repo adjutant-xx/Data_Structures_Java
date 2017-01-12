@@ -22,8 +22,8 @@ public class DirectedGraph<T> {
 
     private ArrayList<GraphNode<T>> _graph;
     private int _size;
-    private enum _visitStatus {
-        Unvisited, Visited
+    private enum _visitStatus { // BFS utilizes all three statuses, whereas DFS is only concerned with whether or not a node is either 'visited' or 'unvisited'.
+        Unvisited, Visiting, Visited
     }
 
     /*
