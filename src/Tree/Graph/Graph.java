@@ -82,8 +82,6 @@ public class Graph<T> {
     private HashMap<T, GraphNode<T>> addEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
         if(graph.containsValue(parentValue)){
             GraphNode<T> parentObject = graph.get(parentValue);
-
-            // Add edge only if parent node is either empty or does not already contain an edge to the child node
             if(parentObject.getChildren().size() < 1 || !parentObject.getChildren().contains(childValue)){
                 GraphNode<T> newChild = _graph.get(childValue);
                 parentObject.addChild(newChild);
@@ -99,7 +97,6 @@ public class Graph<T> {
         _graph = removeVertex(vertexValue, _graph);
     }
     private HashMap<T, GraphNode<T>> removeVertex(T vertexValue, HashMap<T, GraphNode<T>> graph){
-        // If graph does contain the vertex in question, remove it's references from all edges upon removal of the vertex itself:
         if(graph.containsKey(vertexValue)){
             for(Map.Entry<T, GraphNode<T>> node : graph.entrySet()){
                 GraphNode<T> data = node.getValue();
@@ -249,7 +246,6 @@ public class Graph<T> {
         if(source == destination){
             return true;
         }
-
         Queue<GraphNode<T>> queue = new Queue<GraphNode<T>>();
         queue.enqueue(source);
         while(!queue.isEmpty()) {

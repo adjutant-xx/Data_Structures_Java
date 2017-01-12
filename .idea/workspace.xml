@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Graph/Graph.java" afterPath="$PROJECT_DIR$/src/Tree/Graph/Graph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" afterPath="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,8 +99,8 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
-              <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
+            <state relative-caret-position="640">
+              <caret line="266" column="21" selection-start-line="266" selection-start-column="21" selection-end-line="266" selection-end-column="21" />
               <folding>
                 <element signature="e#1401#1402#0" expanded="true" />
                 <element signature="e#1430#1431#0" expanded="true" />
@@ -216,8 +215,8 @@
         <option value="$PROJECT_DIR$/src/Tree/Graph/VisitStatus.java" />
         <option value="$PROJECT_DIR$/src/Tree/Graph/GraphNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/Graph/DirectedGraph.java" />
-        <option value="$PROJECT_DIR$/src/Tree/Graph/Graph.java" />
         <option value="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" />
+        <option value="$PROJECT_DIR$/src/Tree/Graph/Graph.java" />
       </list>
     </option>
   </component>
@@ -1251,23 +1250,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
-          <caret line="86" column="77" selection-start-line="86" selection-start-column="77" selection-end-line="86" selection-end-column="77" />
-          <folding>
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="266" column="21" selection-start-line="266" selection-start-column="21" selection-end-line="266" selection-end-column="21" />
+          <folding>
+            <element signature="e#1401#1402#0" expanded="true" />
+            <element signature="e#1430#1431#0" expanded="true" />
           </folding>
         </state>
       </provider>
