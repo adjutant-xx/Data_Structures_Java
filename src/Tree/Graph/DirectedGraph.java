@@ -239,6 +239,7 @@ public class DirectedGraph<T> {
     * SUMMARY:  Traverses the graph using a Breadth First Search algorithm, prints each graph node to the console in the order they are visited.
     * */
     public void breadthFirstSearchTraversal(GraphNode<T> node){
-
+        GraphNode<T> tempNode = node;
+        Queue<GraphNode<T>> queue = new Queue();
     }
 }
