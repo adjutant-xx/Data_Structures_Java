@@ -191,32 +191,35 @@ public class Graph<T> {
     }
 
     /*
-    * SUMMARY:  Traverses the graph using a Depth First Search algorithm, prints each graph node to the console in the order they are visited.
+    * SUMMARY:  Traverses the graph using a Depth First Search algorithm, returns an ArrayList of graph nodes ordered by their appearance during traversal.
     * */
-    public void depthFirstSearchTraversal(){
+    public ArrayList<GraphNode<T>> depthFirstSearchTraversal(){
         ArrayList<GraphNode<T>> tempGraph = _graph;
         Stack<GraphNode<T>> stack = new Stack();
+        ArrayList<GraphNode<T>> nodes = new ArrayList<>();
         for(int i = 0; i < tempGraph.size(); i++){
             GraphNode<T> currentNode = tempGraph.get(i);
             if(tempGraph.get(i).getVisitState() == VisitState.Unvisited){
                 stack.push(currentNode);
-                depthFirstSearchTraversal(stack);
+                depthFirstSearchTraversal(stack, nodes);
             }
         }
+        return nodes;
     }
-    public void depthFirstSearchTraversal(Stack<GraphNode<T>> stack){
+    public ArrayList<GraphNode<T>> depthFirstSearchTraversal(Stack<GraphNode<T>> stack, ArrayList<GraphNode<T>> nodes){
         while(!stack.isEmpty()){
             GraphNode<T> currentNode = stack.pop();
             if(currentNode.getVisitState() == VisitState.Visited){
-                return;
+                return nodes;
             }
-            System.out.println(currentNode.getData());
+            nodes.add(currentNode);
             currentNode.setVisitState(VisitState.Visited);
             for(GraphNode<T> child : currentNode.getChildren()){
                 stack.push(child);
-                depthFirstSearchTraversal(stack);
+                return depthFirstSearchTraversal(stack, nodes);
             }
         }
+        return nodes;
     }
 
     /*
