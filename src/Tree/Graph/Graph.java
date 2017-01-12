@@ -14,11 +14,11 @@ import java.util.ArrayList;
 
 /*
 * SUMMARY:  Represents a Directed Graph data structure.
-*           Utilizes a native Java HashMap to contain a list of all vertices within the graph.
+*           Utilizes a native Java ArrayList to contain a list of all vertices within the graph.
 *
 * NOTE:     This class is currently under construction, as of 10-18-2016.
 * */
-public class DirectedGraph<T> {
+public class Graph<T> {
     public enum VisitState {
         Unvisited, Visiting, Visited
     }
@@ -28,7 +28,7 @@ public class DirectedGraph<T> {
     /*
     * SUMMARY:  Default constructor, initializes the graph to an empty HashMap.
     * */
-    public DirectedGraph(){
+    public Graph(){
         _graph = new ArrayList<GraphNode<T>>();
         _size = 0;
     }
