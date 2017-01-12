@@ -19,7 +19,7 @@ import java.util.ArrayList;
 * NOTE:     This class is currently under construction, as of 10-18-2016.
 * */
 public class DirectedGraph<T> {
-    public enum VisitStatus {
+    public enum VisitState {
         Unvisited, Visiting, Visited
     }
     private ArrayList<GraphNode<T>> _graph;
@@ -172,7 +172,7 @@ public class DirectedGraph<T> {
             return true;
         }
 
-        source.setVisitState(VisitStatus.Visited);
+        source.setVisitState(VisitState.Visited);
         for(GraphNode<T> node : source.getChildren()){
             if(node == null){
                 return false;
@@ -180,9 +180,9 @@ public class DirectedGraph<T> {
             if(node == destination){
                 return true;
             }
-            node.setVisitState(VisitStatus.Visited);
+            node.setVisitState(VisitState.Visited);
             for(GraphNode<T> child : node.getChildren()){
-                if(child.getVisitState() == VisitStatus.Unvisited){
+                if(child.getVisitState() == VisitState.Unvisited){
                     return depthFirstSearchPath(child, destination, graph);
                 }
             }
@@ -198,14 +198,24 @@ public class DirectedGraph<T> {
         Stack<GraphNode<T>> stack = new Stack();
         for(int i = 0; i < tempGraph.size(); i++){
             GraphNode<T> currentNode = tempGraph.get(i);
-            if(tempGraph.get(i).getVisitState == VisitStatus.Unvisited){
-                depthFirstSearchTraversal(currentNode);
+            if(tempGraph.get(i).getVisitState() == VisitState.Unvisited){
+                stack.push(currentNode);
+                depthFirstSearchTraversal(stack);
             }
         }
     }
-    public void depthFirstSearchTraversal(GraphNode<T> node, Stack<GraphNode<T> stack){
-        if(node.getVisitState() == VisitStatus.Visited){
-            return;
+    public void depthFirstSearchTraversal(Stack<GraphNode<T>> stack){
+        while(!stack.isEmpty()){
+            GraphNode<T> currentNode = stack.pop();
+            if(currentNode.getVisitState() == VisitState.Visited){
+                return;
+            }
+            System.out.println(currentNode.getData());
+            currentNode.setVisitState(VisitState.Visited);
+            for(GraphNode<T> child : currentNode.getChildren()){
+                stack.push(child);
+                depthFirstSearchTraversal(stack);
+            }
         }
     }
 
@@ -230,16 +240,16 @@ public class DirectedGraph<T> {
             GraphNode<T> temp = queue.dequeue();
             if (temp != null) {
                 for (GraphNode<T> child : temp.getChildren()) {
-                    if (child.getVisitState() == false) {
+                    if (child.getVisitState() == VisitState.Unvisited) {
                         if (child == destination) {
                             return true;
                         } else {
-                            child.setVisitState(true);
+                            child.setVisitState(VisitState.Visited);
                             queue.enqueue(child);
                         }
                     }
                 }
-                temp.setVisitState(true);
+                temp.setVisitState(VisitState.Visited);
             }
         }
         return false;
