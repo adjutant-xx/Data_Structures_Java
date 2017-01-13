@@ -45,11 +45,8 @@ public class Graph<T> {
     /*
     * SUMMARY:  Returns a vertex of the graph given a specific value.
     * */
-    public GraphNode<T> getVertex(int index){
-        if(index < 0 || index >= _size){
-            return null;
-        }
-        return _graph.get(index);
+    public GraphNode<T> getVertex(int value){
+        return _graph.get(value);
     }
 
     /*
