@@ -24,6 +24,12 @@ public class Graph_Test {
     }
 
     @Test
+    public void testGraphSize() throws Exception{
+        testGraphVerticesInsertion();
+        assert(_graph.getSize() == _graphVertices.length);
+    }
+
+    @Test
     public void testGraphEdgeInsertion() throws Exception{
         for(char[] item : _graphEdges){
             char parent = item[0], child = item[1];
@@ -32,7 +38,6 @@ public class Graph_Test {
         for(char[] item : _graphEdges){
             GraphNode<Character> parent = new GraphNode(item[0]);
             GraphNode<Character> child = new GraphNode(item[1]);
-
         }
     }
 }
