@@ -87,7 +87,7 @@ public class Graph<T> {
     }
     private boolean addEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
         try{
-            if(graph.containsValue(parentValue)){
+            if(graph.containsValue(_graph.get(parentValue))){
                 GraphNode<T> parentObject = graph.get(parentValue);
                 if(parentObject.getChildren().size() < 1 || !parentObject.getChildren().contains(childValue)){
                     GraphNode<T> newChild = _graph.get(childValue);

@@ -32,13 +32,10 @@ public class Graph_Test {
 
     @Test
     public void testGraphEdgeInsertion() throws Exception{
+        testGraphVerticesInsertion();
         for(char[] item : _graphEdges){
-            char parent = item[0], child = item[1];
-            _graph.addEdge(parent, child);
-        }
-        for(char[] item : _graphEdges){
-            GraphNode<Character> parent = new GraphNode(item[0]);
-            GraphNode<Character> child = new GraphNode(item[1]);
+            boolean isInserted = _graph.addEdge(item[0], item[1]);
+            assert(isInserted);
         }
     }
 }
