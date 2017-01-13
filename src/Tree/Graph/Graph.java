@@ -43,10 +43,13 @@ public class Graph<T> {
     }
 
     /*
-    * SUMMARY:  Returns a vertex of the graph given a specific value.
+    * SUMMARY:  Returns a vertex of the graph given a specific key.
     * */
-    public GraphNode<T> getVertex(int value){
-        return _graph.get(value);
+    public GraphNode<T> getVertex(T key){
+        if(_graph.containsKey(key)){
+            return _graph.get(key);
+        }
+        return null;
     }
 
     /*

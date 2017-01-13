@@ -2,6 +2,7 @@ package Tree.Graph;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,6 +22,25 @@ public class Graph_Test {
         for(Map.Entry<Character, GraphNode<Character>> vertex : vertices.entrySet()){
             assert(vertex.getValue().getData() == _graphVertices[i]);
             i++;
+        }
+    }
+
+    @Test
+    public void testGraphGetVertex() throws Exception{
+        testGraphVerticesInsertion();
+        testGraphEdgeInsertion();
+        Character key = _graphVertices[1]; // set key to 'B'
+        ArrayList<Character> keyChildren = new ArrayList(); // create an array containing all of B's child node keys
+        keyChildren.add('C');
+        keyChildren.add('E');
+        GraphNode<Character> returnedNode = _graph.getVertex(key);
+
+        //  Since you can't pull actual nodes from the Graph object's internal HashMap directly, assert that the proper
+        //  node has been returned by checking against the intended vertex value and children
+        assert(returnedNode.getData() == key);
+        ArrayList<GraphNode<Character>> actualChildren = returnedNode.getChildren();
+        for(GraphNode<Character> item : actualChildren){
+            assert(keyChildren.contains(item.getData()));
         }
     }
 
