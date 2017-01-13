@@ -105,21 +105,27 @@ public class Graph<T> {
     /*
     * SUMMARY:  Removes a vertex from the graph, if it can be found within the graph.
     * */
-    public void removeVertex(T vertexValue){
-        _graph = removeVertex(vertexValue, _graph);
+    public boolean removeVertex(T vertexValue){
+        return removeVertex(vertexValue, _graph);
     }
-    private HashMap<T, GraphNode<T>> removeVertex(T vertexValue, HashMap<T, GraphNode<T>> graph){
-        if(graph.containsKey(vertexValue)){
-            for(Map.Entry<T, GraphNode<T>> node : graph.entrySet()){
-                GraphNode<T> data = node.getValue();
-                if(data.getChildren().contains(vertexValue)){
-                    data.getChildren().remove(vertexValue);
+    private boolean removeVertex(T vertexValue, HashMap<T, GraphNode<T>> graph){
+        try{
+            if(graph.containsKey(vertexValue)){
+                for(Map.Entry<T, GraphNode<T>> node : graph.entrySet()){
+                    GraphNode<T> data = node.getValue();
+                    if(data.getChildren().contains(vertexValue)){
+                        data.getChildren().remove(vertexValue);
+                    }
                 }
+                _size--;
+                graph.remove(vertexValue);
+                return true;
             }
-            _size--;
-            graph.remove(vertexValue);
+            return false;
         }
-        return graph;
+        catch(Exception ex){
+            return false;
+        }
     }
 
     /*
