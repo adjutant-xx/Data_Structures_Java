@@ -82,18 +82,24 @@ public class Graph<T> {
     * SUMMARY:  Adds an edge to the graph, provided two vertices.
     *           Edge is only added to the graph if the parent vertex can be found (edges are single-directional).
     * */
-    public void addEdge(T parentValue, T childValue){
-        _graph = addEdge(parentValue, childValue, _graph);
+    public boolean addEdge(T parentValue, T childValue){
+        return addEdge(parentValue, childValue, _graph);
     }
-    private HashMap<T, GraphNode<T>> addEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
-        if(graph.containsValue(parentValue)){
-            GraphNode<T> parentObject = graph.get(parentValue);
-            if(parentObject.getChildren().size() < 1 || !parentObject.getChildren().contains(childValue)){
-                GraphNode<T> newChild = _graph.get(childValue);
-                parentObject.addChild(newChild);
+    private boolean addEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
+        try{
+            if(graph.containsValue(parentValue)){
+                GraphNode<T> parentObject = graph.get(parentValue);
+                if(parentObject.getChildren().size() < 1 || !parentObject.getChildren().contains(childValue)){
+                    GraphNode<T> newChild = _graph.get(childValue);
+                    parentObject.addChild(newChild);
+                    return true;
+                }
             }
+            return false;
         }
-        return graph;
+        catch(Exception ex){
+            return false;
+        }
     }
 
     /*
