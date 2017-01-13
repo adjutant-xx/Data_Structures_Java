@@ -61,6 +61,10 @@ public class Graph_Test {
 
     @Test
     public void testGraphVertexRemoval() throws Exception{
-        
+        testGraphEdgeInsertion();
+        Character removalKey = _graphVertices[5];
+        boolean isRemoved = _graph.removeVertex(removalKey);
+        assert(isRemoved);
+        assert(_graph.getVertex(removalKey) == null);
     }
 }

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Graph/Graph.java" afterPath="$PROJECT_DIR$/src/Tree/Graph/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" afterPath="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,8 +26,8 @@
             <file leaf-file-name="Graph_Test.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="787">
-                    <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+                  <state relative-caret-position="702">
+                    <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -49,8 +49,8 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="631">
-              <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
+            <state relative-caret-position="442">
+              <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
               <folding>
                 <element signature="e#3095#3096#0" expanded="true" />
                 <element signature="e#3151#3152#0" expanded="true" />
@@ -180,8 +180,8 @@
         <option value="$PROJECT_DIR$/src/Tree/Graph/VisitStatus.java" />
         <option value="$PROJECT_DIR$/src/Tree/Graph/GraphNode.java" />
         <option value="$PROJECT_DIR$/src/Tree/Graph/DirectedGraph.java" />
-        <option value="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" />
         <option value="$PROJECT_DIR$/src/Tree/Graph/Graph.java" />
+        <option value="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" />
       </list>
     </option>
   </component>
@@ -422,7 +422,7 @@
       <recent name="LinkedList" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Graph_Test.testGraphGetVertex">
+  <component name="RunManager" selected="JUnit.Graph_Test.testGraphVertexRemoval">
     <configuration default="false" name="Graph_Test.testGraphVerticesInsertion" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -436,32 +436,6 @@
       <option name="PACKAGE_NAME" value="Tree.Graph" />
       <option name="MAIN_CLASS_NAME" value="Tree.Graph.Graph_Test" />
       <option name="METHOD_NAME" value="testGraphVerticesInsertion" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="Graph_Test.testGraphSize" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="Tree.Graph.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Data_Structures_Java" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="Tree.Graph" />
-      <option name="MAIN_CLASS_NAME" value="Tree.Graph.Graph_Test" />
-      <option name="METHOD_NAME" value="testGraphSize" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -540,6 +514,32 @@
       <option name="PACKAGE_NAME" value="Tree.Graph" />
       <option name="MAIN_CLASS_NAME" value="Tree.Graph.Graph_Test" />
       <option name="METHOD_NAME" value="testGraphGetVertex" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="Graph_Test.testGraphVertexRemoval" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Tree.Graph.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Data_Structures_Java" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="Tree.Graph" />
+      <option name="MAIN_CLASS_NAME" value="Tree.Graph.Graph_Test" />
+      <option name="METHOD_NAME" value="testGraphVertexRemoval" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -752,18 +752,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphVerticesInsertion" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphSize" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphEdgeInsertion" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.Graph_Test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphGetVertex" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphEdgeInsertion" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.Graph_Test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphGetVertex" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphVertexRemoval" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphGetVertex" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphEdgeInsertion" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.Graph_Test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphVerticesInsertion" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphSize" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphVertexRemoval" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphGetVertex" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphEdgeInsertion" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.Graph_Test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.Graph_Test.testGraphVerticesInsertion" />
       </list>
     </recent_temporary>
   </component>
@@ -784,9 +784,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Graph_Test_testGraphGetVertex - 2017.01.13 at 08h 38m 05s.xml">
-      <configuration name="Graph_Test.testGraphGetVertex" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Graph_Test_testGraphGetVertex - 2017.01.13 at 08h 40m 47s.xml">
       <configuration name="Graph_Test.testGraphGetVertex" configurationId="JUnit" />
     </history-entry>
@@ -814,6 +811,9 @@
     <history-entry file="Graph_Test_testGraphGetVertex - 2017.01.13 at 08h 54m 20s.xml">
       <configuration name="Graph_Test.testGraphGetVertex" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Graph_Test_testGraphVertexRemoval - 2017.01.13 at 14h 40m 42s.xml">
+      <configuration name="Graph_Test.testGraphVertexRemoval" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -826,6 +826,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34249473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16770834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -833,16 +834,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31078225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34249473" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31078225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1157,8 +1157,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
+        <state relative-caret-position="702">
+          <caret line="61" column="9" selection-start-line="61" selection-start-column="9" selection-end-line="61" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1167,8 +1167,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="133" column="53" selection-start-line="133" selection-start-column="53" selection-end-line="133" selection-end-column="53" />
+        <state relative-caret-position="442">
+          <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
           <folding>
             <element signature="e#3095#3096#0" expanded="true" />
             <element signature="e#3151#3152#0" expanded="true" />
