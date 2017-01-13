@@ -58,4 +58,9 @@ public class Graph_Test {
             assert(isInserted);
         }
     }
+
+    @Test
+    public void testGraphVertexRemoval() throws Exception{
+        
+    }
 }
