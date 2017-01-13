@@ -61,15 +61,21 @@ public class Graph<T> {
 
     /*
     * SUMMARY:  Inserts a new vertex and it's associated value into the graph.
+    *           Returns true if insertion was successful, false if otherwise.
     * */
-    public void addVertex(T value){
-        _graph = addVertex(value, _graph);
+    public boolean addVertex(T value){
+        return addVertex(value, _graph);
     }
-    private HashMap<T, GraphNode<T>> addVertex(T value, HashMap<T, GraphNode<T>> graph){
-        GraphNode<T> newNode = new GraphNode<T>(value);
-        graph.put(value, newNode);
-        _size++;
-        return graph;
+    private boolean addVertex(T value, HashMap<T, GraphNode<T>> graph){
+        try{
+            GraphNode<T> newNode = new GraphNode<T>(value);
+            graph.put(value, newNode);
+            _size++;
+            return true;
+        }
+        catch(Exception ex) {
+            return false;
+        }
     }
 
     /*

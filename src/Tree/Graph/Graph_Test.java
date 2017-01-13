@@ -13,7 +13,8 @@ public class Graph_Test {
     @Test
     public void testGraphVerticesInsertion() throws Exception{
         for(Character item : _graphVertices){
-            _graph.addVertex(item);
+            boolean isInserted = _graph.addVertex(item);
+            assert(isInserted);
         }
         HashMap<Character, GraphNode<Character>> vertices = _graph.getVertices();
         int i = 0;
