@@ -67,4 +67,9 @@ public class Graph_Test {
         assert(isRemoved);
         assert(_graph.getVertex(removalKey) == null);
     }
+
+    @Test
+    public void testGraphIsAdjacent() throws Exception{
+        
+    }
 }
