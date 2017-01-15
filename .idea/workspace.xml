@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Graph/Graph.java" afterPath="$PROJECT_DIR$/src/Tree/Graph/Graph.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" afterPath="$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -26,8 +25,8 @@
             <file leaf-file-name="Graph_Test.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1187">
-                    <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+                  <state relative-caret-position="1487">
+                    <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -59,7 +58,7 @@
       <file leaf-file-name="Graph.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="138">
               <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
               <folding />
             </state>
@@ -1166,7 +1165,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="138">
           <caret line="157" column="0" selection-start-line="157" selection-start-column="0" selection-end-line="157" selection-end-column="0" />
           <folding />
         </state>
@@ -1174,8 +1173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/Graph/Graph_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1187">
-          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        <state relative-caret-position="1487">
+          <caret line="82" column="1" selection-start-line="82" selection-start-column="1" selection-end-line="82" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
