@@ -154,7 +154,7 @@ public class Graph<T> {
         }
         GraphNode<T> xNode = _graph.get(x);
         GraphNode<T> yNode = _graph.get(y);
-        if(xNode.getChildren().contains(y) || yNode.getChildren().contains(x)){
+        if(xNode.getChildren().contains(yNode) || yNode.getChildren().contains(xNode)){
             return true;
         }
         return false;

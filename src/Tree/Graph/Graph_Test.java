@@ -70,6 +70,9 @@ public class Graph_Test {
 
     @Test
     public void testGraphIsAdjacent() throws Exception{
-        
+        testGraphVerticesInsertion();
+        testGraphEdgeInsertion();
+        assert(_graph.isAdjacent(_graphVertices[1], _graphVertices[2]));
+        assert(!_graph.isAdjacent(_graphVertices[0], _graphVertices[4]));
     }
 }
