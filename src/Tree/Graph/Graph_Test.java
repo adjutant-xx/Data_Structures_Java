@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collector;
 
 public class Graph_Test {
     private Graph<Character> _graph = new Graph();
@@ -78,6 +79,15 @@ public class Graph_Test {
 
     @Test
     public void testGraphGetNeighbors() throws Exception{
-
+        testGraphVerticesInsertion();
+        testGraphEdgeInsertion();
+        Character primaryValue = _graphVertices[0];
+        ArrayList<Character> neighborValues = new ArrayList<>();
+        neighborValues.add(_graphVertices[1]);
+        neighborValues.add((_graphVertices[5]));
+        ArrayList<GraphNode<Character>> neighborNodes = _graph.getNeighbors(primaryValue);
+        for(GraphNode<Character> item : neighborNodes){
+            assert(neighborValues.contains(item.getData()));
+        }
     }
 }
