@@ -53,7 +53,7 @@ public class Graph<T> {
     }
 
     /*
-    * SUMMARY:  Returns an ArrayList object containing each vertex present in the graph.
+    * SUMMARY:  Returns a HashMap object containing each vertex present in the graph.
     * */
     public HashMap<T, GraphNode<T>> getVertices(){
         return _graph;
