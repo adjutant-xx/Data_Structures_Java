@@ -126,7 +126,7 @@ public class BinarySearchTree<T> {
             else if((Integer)value > (Integer)current.getData()){
                 current.right = insert(value, current.right);
             }
-            return current;
+            return balanceTree(current);
         }
         catch(Exception ex){
             return null;
@@ -156,7 +156,7 @@ public class BinarySearchTree<T> {
         else{
             current = (current.left != null) ? current.left : current.right;
         }
-        return current;
+        return balanceTree(current);
     }
 
     /*

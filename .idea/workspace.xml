@@ -37,16 +37,15 @@
       <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="206" column="13" selection-start-line="206" selection-start-column="13" selection-end-line="206" selection-end-column="13" />
+            <state relative-caret-position="381">
+              <caret line="118" column="12" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
               <folding>
                 <element signature="method#traverseInOrder#0;class#BinarySearchTree#0" expanded="false" />
                 <element signature="method#traversePreOrder#0;class#BinarySearchTree#0" expanded="false" />
                 <element signature="method#traversePostOrder#0;class#BinarySearchTree#0" expanded="false" />
                 <element signature="method#contains#1;class#BinarySearchTree#0" expanded="false" />
-                <element signature="method#insert#0;class#BinarySearchTree#0" expanded="false" />
-                <element signature="method#insert#1;class#BinarySearchTree#0" expanded="false" />
-                <element signature="method#remove#1;class#BinarySearchTree#0" expanded="false" />
+                <element signature="e#4015#4016#0" expanded="true" />
+                <element signature="e#4057#4058#0" expanded="true" />
                 <element signature="method#findMin#1;class#BinarySearchTree#0" expanded="false" />
                 <element signature="method#findMax#1;class#BinarySearchTree#0" expanded="false" />
               </folding>
@@ -1109,16 +1108,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="206" column="13" selection-start-line="206" selection-start-column="13" selection-end-line="206" selection-end-column="13" />
+        <state relative-caret-position="381">
+          <caret line="118" column="12" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="12" />
           <folding>
             <element signature="method#traverseInOrder#0;class#BinarySearchTree#0" expanded="false" />
             <element signature="method#traversePreOrder#0;class#BinarySearchTree#0" expanded="false" />
             <element signature="method#traversePostOrder#0;class#BinarySearchTree#0" expanded="false" />
             <element signature="method#contains#1;class#BinarySearchTree#0" expanded="false" />
-            <element signature="method#insert#0;class#BinarySearchTree#0" expanded="false" />
-            <element signature="method#insert#1;class#BinarySearchTree#0" expanded="false" />
-            <element signature="method#remove#1;class#BinarySearchTree#0" expanded="false" />
+            <element signature="e#4015#4016#0" expanded="true" />
+            <element signature="e#4057#4058#0" expanded="true" />
             <element signature="method#findMin#1;class#BinarySearchTree#0" expanded="false" />
             <element signature="method#findMax#1;class#BinarySearchTree#0" expanded="false" />
           </folding>
