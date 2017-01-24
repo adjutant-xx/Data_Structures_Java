@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df753c88-ed5d-434d-9fa0-b3b0c9af4014" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tree/BinarySearchTree/BinarySearchTree.java" afterPath="$PROJECT_DIR$/src/Tree/BinarySearchTree/BinarySearchTree.java" />
     </list>
     <ignored path="Data_Structures_Java.iws" />
@@ -38,8 +37,8 @@
       <file leaf-file-name="BinarySearchTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree/BinarySearchTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+            <state relative-caret-position="680">
+              <caret line="194" column="59" selection-start-line="194" selection-start-column="59" selection-end-line="194" selection-end-column="59" />
               <folding>
                 <element signature="method#traverseInOrder#0;class#BinarySearchTree#0" expanded="false" />
                 <element signature="method#traversePreOrder#0;class#BinarySearchTree#0" expanded="false" />
@@ -50,7 +49,6 @@
                 <element signature="method#remove#1;class#BinarySearchTree#0" expanded="false" />
                 <element signature="method#findMin#1;class#BinarySearchTree#0" expanded="false" />
                 <element signature="method#findMax#1;class#BinarySearchTree#0" expanded="false" />
-                <element signature="method#checkHeight#0;class#BinarySearchTree#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1111,8 +1109,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Tree/BinarySearchTree/BinarySearchTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+        <state relative-caret-position="680">
+          <caret line="194" column="59" selection-start-line="194" selection-start-column="59" selection-end-line="194" selection-end-column="59" />
           <folding>
             <element signature="method#traverseInOrder#0;class#BinarySearchTree#0" expanded="false" />
             <element signature="method#traversePreOrder#0;class#BinarySearchTree#0" expanded="false" />
@@ -1123,7 +1121,6 @@
             <element signature="method#remove#1;class#BinarySearchTree#0" expanded="false" />
             <element signature="method#findMin#1;class#BinarySearchTree#0" expanded="false" />
             <element signature="method#findMax#1;class#BinarySearchTree#0" expanded="false" />
-            <element signature="method#checkHeight#0;class#BinarySearchTree#0" expanded="false" />
           </folding>
         </state>
       </provider>

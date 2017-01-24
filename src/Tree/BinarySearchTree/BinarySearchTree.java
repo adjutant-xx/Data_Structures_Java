@@ -191,6 +191,9 @@ public class BinarySearchTree<T> {
         return findMax(current.right);
     }
 
+    /*
+    * SUMMARY:  Returns the maximum height of a given node.
+    * */
     private int checkHeight(BinaryTreeNode<T> node, int height){
         if(node == null){
             return height;
