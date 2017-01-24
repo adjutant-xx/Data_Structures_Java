@@ -192,6 +192,34 @@ public class BinarySearchTree<T> {
     }
 
     /*
+    * SUMMARY:  Recursively balances the subtree of a given node by searching for discrepancies between each of the node's subtrees.
+    * */
+    private BinaryTreeNode<T> balanceTree(BinaryTreeNode<T> node){
+        int leftHeight = checkHeight(node.left, 0);
+        int rightHeight = checkHeight(node.right, 0);
+        if(Math.abs(leftHeight - rightHeight)> 1){
+            if(leftHeight < rightHeight){
+                BinaryTreeNode<T> oldRoot = root;
+                root = root.right;
+                BinaryTreeNode<T> oldChild = root.left;
+                root.left = oldRoot;
+                root.left.right = oldChild;
+            }
+            else if(leftHeight > rightHeight){
+                BinaryTreeNode<T> oldRoot = root;
+                root = root.left;
+                BinaryTreeNode<T> oldChild = root.right;
+                root.right = oldRoot;
+                root.right.left = oldChild;
+            }
+        }
+        else{
+            return node;
+        }
+        return balanceTree(node);
+    }
+
+    /*
     * SUMMARY:  Returns the maximum height of a given node.
     * */
     private int checkHeight(BinaryTreeNode<T> node, int height){
