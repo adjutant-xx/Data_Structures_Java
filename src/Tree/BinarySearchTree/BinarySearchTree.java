@@ -190,4 +190,14 @@ public class BinarySearchTree<T> {
         }
         return findMax(current.right);
     }
+
+    private int checkHeight(BinaryTreeNode<T> node, int height){
+        if(node == null){
+            return height;
+        }
+        height++;
+        int leftHeight = checkHeight(node.left, height);
+        int rightHeight = checkHeight(node.right, height);
+        return Math.max(leftHeight, rightHeight);
+    }
 }
