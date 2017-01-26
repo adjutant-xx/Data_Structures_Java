@@ -90,4 +90,12 @@ public class Graph_Test {
             assert(neighborValues.contains(item.getData()));
         }
     }
+
+    @Test
+    public void testGraphRemoveEdge() throws Exception{
+        testGraphVerticesInsertion();
+        testGraphEdgeInsertion();
+        char[] edgeToRemove = _graphEdges[2];
+
+    }
 }
