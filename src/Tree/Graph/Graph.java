@@ -131,17 +131,24 @@ public class Graph<T> {
     /*
     * SUMMARY:  Removes an edge from the graph, if the graph contains both parent and child vertices.
     * */
-    public void removeEdge(T parentValue, T childValue){
-        _graph = removeEdge(parentValue, childValue, _graph);
+    public boolean removeEdge(T parentValue, T childValue){
+        return removeEdge(parentValue, childValue, _graph);
     }
-    private HashMap<T, GraphNode<T>> removeEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
-        if(graph.containsKey(parentValue)){
-            GraphNode<T> parentObject = graph.get(parentValue);
-            if(parentObject.getChildren().contains(childValue)){
-            parentObject.getChildren().remove(childValue);
+    private boolean removeEdge(T parentValue, T childValue, HashMap<T, GraphNode<T>> graph){
+        try{
+            if(!graph.containsKey(parentValue) || !graph.containsKey(childValue)){
+                return false;
             }
+            GraphNode<T> parent = graph.get(parentValue);
+            GraphNode<T> child = graph.get(childValue);
+            ArrayList<GraphNode<T>> children = parent.getChildren();
+            children.remove(child);
+            parent.setChildren(children);
+            return true;
         }
-        return graph;
+        catch(Exception ex){
+            return false;
+        }
     }
 
     /*

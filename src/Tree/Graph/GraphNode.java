@@ -28,6 +28,10 @@ public class GraphNode<T> extends TreeNode<T> {
         return _children;
     }
 
+    public void setChildren(ArrayList<GraphNode<T>> c){
+        _children = c;
+    }
+
     public void addChild(GraphNode<T> newChild){
         _children.add(newChild);
     }

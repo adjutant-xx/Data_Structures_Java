@@ -96,6 +96,8 @@ public class Graph_Test {
         testGraphVerticesInsertion();
         testGraphEdgeInsertion();
         char[] edgeToRemove = _graphEdges[2];
-
+        boolean isRemoved = _graph.removeEdge(edgeToRemove[0], edgeToRemove[1]);
+        assert(isRemoved);
+        assert(!_graph.isAdjacent(edgeToRemove[0], edgeToRemove[1]));
     }
 }
