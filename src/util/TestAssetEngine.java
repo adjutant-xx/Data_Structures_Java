@@ -37,11 +37,23 @@ public class TestAssetEngine {
     }
 
     /**
+     * Generates a random integer greater than or equal to 0 given a specified upper bound.
+     * @param bound the upper bound to use during integer generation.
+     * @return the randomly generated integer.
+     */
+    public int generateRandomPositiveIntegerWithBound(int bound) {
+        return this.rand.nextInt(bound);
+    }
+
+    /**
      * Generates an array of randomly-generated unordered integers.
      * @return the generated array.
      */
     public int[] generateUnorderedIntegerArray() {
-        int arraySize = this.rand.nextInt(this.upperBoundSize);
+        int arraySize = 0;
+        do {
+            arraySize = this.rand.nextInt(this.upperBoundSize);
+        } while(arraySize <= 0);
         int[] unorderedArr = new int[arraySize];
         for(int i = 0; i < unorderedArr.length; i++) {
             unorderedArr[i] = generateRandomInteger();
@@ -54,7 +66,10 @@ public class TestAssetEngine {
      * @return the generated array.
      */
     public int[] generateOrderedIntegerArray() {
-        int arraySize = this.rand.nextInt(this.upperBoundSize);
+        int arraySize = 0;
+        do {
+            arraySize = this.rand.nextInt(this.upperBoundSize);
+        } while(arraySize <= 0);
         int[] orderedArr = new int[arraySize];
         for(int i = 0; i < orderedArr.length; i++) {
             orderedArr[i] = generateRandomInteger();
