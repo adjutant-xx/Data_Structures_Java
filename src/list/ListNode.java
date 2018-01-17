@@ -30,7 +30,7 @@ public class ListNode<T> {
         this.next = next;
     }
 
-    static class Builder<T> {
+    public static class Builder<T> {
         private T data;
         private ListNode<T> next;
 
