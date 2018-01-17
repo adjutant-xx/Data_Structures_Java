@@ -4,7 +4,7 @@ import com.sun.javaws.exceptions.InvalidArgumentException;
 import org.omg.CORBA.DynAnyPackage.Invalid;
 
 /**
- * Contains operation implementations for the Singly-Linked List data structure.
+ * Contains operational implementations for the Singly-Linked List data structure.
  */
 public class SinglyLinkedList<T> {
 
@@ -16,6 +16,10 @@ public class SinglyLinkedList<T> {
         this.size = 0;
     }
 
+    /**
+     * Inserts element at the front of the list.
+     * @param data data to insert.
+     */
     public void insertFront(T data) {
         ListNode<T> newNode = new ListNode(new ListNode.Builder().data(data));
         if(isEmpty()) {
@@ -27,6 +31,10 @@ public class SinglyLinkedList<T> {
         this.size++;
     }
 
+    /**
+     * Inserts element at the end of the list.
+     * @param data data to insert.
+     */
     public void insertEnd(T data) {
         ListNode<T> newNode = new ListNode(new ListNode.Builder().data(data));
         if(isEmpty()) {
@@ -41,6 +49,11 @@ public class SinglyLinkedList<T> {
         this.size++;
     }
 
+    /**
+     * Inserts element at a specific index within the list.
+     * @param index position at which to insert.
+     * @param data element to insert.
+     */
     public void insertAt(int index, T data) {
         if(index >= 0) {
             ListNode<T> newNode = new ListNode(new ListNode.Builder().data(data));
@@ -60,6 +73,9 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    /**
+     * Removes front-most element from list.
+     */
     public void removeFront() {
         if(!isEmpty()) {
             if (this.head.getNext() != null) {
@@ -71,6 +87,9 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    /**
+     * Removes last element from list.
+     */
     public void removeEnd() {
         if(!isEmpty()) {
             ListNode<T> temp = this.head;
@@ -85,6 +104,10 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    /**
+     * Removes element at a specific index from list.
+     * @param index position at which to remove element.
+     */
     public void removeAt(int index) {
         if(index >= 0) {
             if(!isEmpty()) {
@@ -109,10 +132,18 @@ public class SinglyLinkedList<T> {
         }
     }
 
+    /**
+     * Returns the front-most element of the list.
+     * @return the element at the front of the list.
+     */
     public T getElementAtFront() {
         return this.head.getData();
     }
 
+    /**
+     * Returns the last element in the list.
+     * @return the element at the end of the list.
+     */
     public T getElementAtEnd() {
         ListNode<T> temp = this.head;
         while(temp.getNext() != null) {
@@ -121,6 +152,11 @@ public class SinglyLinkedList<T> {
         return temp.getData();
     }
 
+    /**
+     * Returns an element at a specific index within the list.
+     * @param index position at which to search for / return element.
+     * @return the element located at the given index.
+     */
     public T getElementAt(int index) {
         if(index >= 0) {
             ListNode<T> temp = this.head;
@@ -134,6 +170,11 @@ public class SinglyLinkedList<T> {
         return null;
     }
 
+    /**
+     * Finds the index of a specific element within the list, if it exists.
+     * @param data the element to search for within the list.
+     * @return the index of the queried element, -1 if element does not exist within list.
+     */
     public int find(T data) {
         if(!isEmpty()) {
             ListNode<T> temp = this.head;
@@ -149,10 +190,18 @@ public class SinglyLinkedList<T> {
         return -1;
     }
 
+    /**
+     * Determines whether the underlying list structure is empty or not.
+     * @return true if list is empty, false if otherwise.
+     */
     public boolean isEmpty() {
         return this.size == 0;
     }
 
+    /**
+     * Returns the current size of the list.
+     * @return integer representing current list size.
+     */
     public int getSize() {
         return this.size;
     }
