@@ -10,6 +10,10 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         this.size = 0;
     }
 
+    /**
+     * Inserts data element at the front of the list.
+     * @param data data to insert.
+     */
     @Override
     public void insertFront(T data) {
         ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
@@ -24,6 +28,10 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         this.size++;
     }
 
+    /**
+     * Inserts data element at the end of the list.
+     * @param data data to insert.
+     */
     @Override
     public void insertEnd(T data) {
         ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
@@ -39,6 +47,11 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         this.size++;
     }
 
+    /**
+     * Inserts element at a specific index within the list.
+     * @param index position at which to insert.
+     * @param data element to insert.
+     */
     @Override
     public void insertAt(int index, T data) {
         ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
@@ -59,6 +72,9 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         this.size++;
     }
 
+    /**
+     * Removes head element of list.
+     */
     @Override
     public void removeFront() {
         if(!isEmpty()) {
