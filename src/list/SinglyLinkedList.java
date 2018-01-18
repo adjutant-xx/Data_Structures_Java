@@ -14,7 +14,7 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * Inserts element at the front of the list.
+     * Inserts data element at the front of the list.
      * @param data data to insert.
      */
     public void insertFront(T data) {
@@ -70,7 +70,7 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * Removes front-most element from list.
+     * Removes head element from list.
      */
     public void removeFront() {
         if(!isEmpty()) {
