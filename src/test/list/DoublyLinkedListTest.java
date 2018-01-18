@@ -1,7 +1,6 @@
 package test.list;
 
 import list.DoublyLinkedList;
-import list.SinglyLinkedList;
 import org.junit.Before;
 
 /**
