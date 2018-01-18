@@ -1,8 +1,5 @@
 package list;
 
-import com.sun.javaws.exceptions.InvalidArgumentException;
-import org.omg.CORBA.DynAnyPackage.Invalid;
-
 /**
  * Contains operational implementations for the Singly-Linked List data structure.
  */
@@ -42,10 +39,7 @@ public class SinglyLinkedList<T> {
             this.head = newNode;
             this.tail = this.head;
         } else {
-            ListNode<T> temp = this.head;
-            while(temp.getNext() != null) {
-                temp = temp.getNext();
-            }
+            ListNode<T> temp = this.tail;
             temp.setNext(newNode);
             this.tail = temp.getNext();
         }
@@ -84,6 +78,7 @@ public class SinglyLinkedList<T> {
                 this.head = this.head.getNext();
             } else {
                 this.head = null;
+                this.tail = null;
             }
             this.size--;
         }
@@ -136,28 +131,6 @@ public class SinglyLinkedList<T> {
                 this.size--;
             }
         }
-//        if(index >= 0) {
-//            if(!isEmpty()) {
-//                if(index == 0) {
-//                    removeFront();
-//                } else if(index == this.size - 1) {
-//                    removeEnd();
-//                } else {
-//                    ListNode<T> temp = this.head;
-//                    ListNode<T> prev = null;
-//                    int i = 1;
-//                    while (i != index && temp.getNext() != null) {
-//                        prev = temp;
-//                        temp = temp.getNext();
-//                        i++;
-//                    }
-//                    ListNode oldNext = temp.getNext();
-//                    temp = prev;
-//                    temp.setNext(oldNext);
-//                    this.size--;
-//                }
-//            }
-//        }
     }
 
     /**
@@ -176,11 +149,6 @@ public class SinglyLinkedList<T> {
      * @return the element at the end of the list.
      */
     public T getElementAtEnd() {
-//        ListNode<T> temp = this.head;
-//        while(temp.getNext() != null) {
-//            temp = temp.getNext();
-//        }
-//        return temp.getData();
         if(!isEmpty()) {
             return this.tail.getData();
         }
@@ -218,7 +186,7 @@ public class SinglyLinkedList<T> {
             ListNode<T> temp = this.head;
             int i = 0;
             while (temp != null) {
-                if (temp.getData() == data) {
+                if (temp.getData().equals(data)) {
                     return i;
                 }
                 temp = temp.getNext();
