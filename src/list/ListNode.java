@@ -6,12 +6,14 @@ package list;
 public class ListNode<T> {
     private T data;
     private ListNode<T> next;
+    private ListNode<T> prev;
 
     public ListNode() {}
 
-    public ListNode(Builder<T> builder) {
+    public ListNode(ListNodeBuilder<T> builder) {
         this.data = builder.data;
         this.next = builder.next;
+        this.prev = builder.prev;
     }
 
     public T getData() {
@@ -30,17 +32,31 @@ public class ListNode<T> {
         this.next = next;
     }
 
-    public static class Builder<T> {
+    public ListNode<T> getPrev() {
+        return prev;
+    }
+
+    public void setPrev(ListNode<T> prev) {
+        this.prev = prev;
+    }
+
+    public static class ListNodeBuilder<T> {
         private T data;
         private ListNode<T> next;
+        private ListNode<T> prev;
 
-        public Builder data(T data) {
+        public ListNodeBuilder data(T data) {
             this.data = data;
             return this;
         }
 
-        public Builder next(ListNode<T> next) {
+        public ListNodeBuilder next(ListNode<T> next) {
             this.next = next;
+            return this;
+        }
+
+        public ListNodeBuilder prev(ListNode<T> prev) {
+            this.prev = prev;
             return this;
         }
     }
