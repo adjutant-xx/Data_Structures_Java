@@ -134,8 +134,8 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * Returns the front-most element of the list.
-     * @return the element at the front of the list.
+     * Returns the head element of the list.
+     * @return the element at the head of the list.
      */
     public T getElementAtFront() {
         if(!isEmpty()) {
@@ -145,8 +145,8 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * Returns the last element in the list.
-     * @return the element at the end of the list.
+     * Returns the tail element in the list.
+     * @return the tail element of the list.
      */
     public T getElementAtEnd() {
         if(!isEmpty()) {
@@ -156,24 +156,25 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * Returns an element at a specific index within the list.
+     * Returns the element at a specific index within the list.
      * @param index position at which to search for / return element.
      * @return the element located at the given index.
      */
     public T getElementAt(int index) {
-        if(index == 0) {
-            return getElementAtFront();
-        } else if(index == this.size - 1) {
-            return getElementAtEnd();
-        } else {
-            ListNode<T> temp = this.head;
-            int i = 0;
-            while(i < index) {
-                temp = temp.getNext();
-                i++;
+        if(!isEmpty()) {
+            if(index == 0) {
+                return getElementAtFront();
+            } else if(index == this.size - 1) {
+                return getElementAtEnd();
+            } else {
+                ListNode<T> temp = this.head;
+                for(int i = 0; i < index; i++) {
+                    temp = temp.getNext();
+                }
+                return temp.getData();
             }
-            return temp.getData();
         }
+        return null;
     }
 
     /**
