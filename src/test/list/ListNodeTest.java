@@ -57,20 +57,26 @@ public class ListNodeTest {
     }
 
     @Test
-    public void listNodeConstructorBuilderTest() {
-        int expected1 = this.engine.generateRandomInteger();
-        int expected2 = this.engine.generateRandomInteger();
-        ListNode<Integer> node2 = new ListNode<>(new ListNode.ListNodeBuilder().data(expected2));
-        ListNode<Integer> node1 = new ListNode<>(new ListNode.ListNodeBuilder().data(expected1).next(node2));
-        ListNode<Integer> expected3 = node2;
-        ListNode<Integer> expected4 = null;
-        int actual1 = node1.getData();
-        int actual2 = node2.getData();
-        ListNode<Integer> actual3 = node1.getNext();
-        ListNode<Integer> actual4 = node2.getNext();
-        Assert.assertEquals(expected1, actual1);
-        Assert.assertEquals(expected2, actual2);
-        Assert.assertEquals(expected3, actual3);
-        Assert.assertEquals(expected4, actual4);
+    public void listNodeGetPrevTest() {
+        int val1 = this.engine.generateRandomInteger();
+        int val2 = this.engine.generateRandomInteger();
+        ListNode<Integer> node1 = new ListNode<>(new ListNode.ListNodeBuilder().data(val1));
+        ListNode<Integer> node2 = new ListNode<>(new ListNode.ListNodeBuilder().data(val2).prev(node1));
+        ListNode<Integer> expected = node1;
+        ListNode<Integer> actual = node2.getPrev();
+        Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void listNodeSetPrevTest() {
+        int val1 = this.engine.generateRandomInteger();
+        int val2 = this.engine.generateRandomInteger();
+        ListNode<Integer> node2 = new ListNode<>(new ListNode.ListNodeBuilder().data(val2));
+        ListNode<Integer> node1 = new ListNode<>(new ListNode.ListNodeBuilder().data(val1));
+        node2.setPrev(node1);
+        ListNode<Integer> expected = node1;
+        ListNode<Integer> actual = node2.getPrev();
+        Assert.assertEquals(expected, actual);
+    }
+    
 }
