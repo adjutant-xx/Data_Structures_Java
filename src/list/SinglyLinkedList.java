@@ -7,12 +7,12 @@ import org.omg.CORBA.DynAnyPackage.Invalid;
  * Contains operational implementations for the Singly-Linked List data structure.
  */
 public class SinglyLinkedList<T> {
-
-    private ListNode<T> head;
-    private int size;
+    protected ListNode<T> head;
+    protected ListNode<T> tail;
+    protected int size;
 
     public SinglyLinkedList() {
-        this.head = new ListNode<T>();
+        this.head = new ListNode<>();
         this.size = 0;
     }
 
@@ -21,9 +21,10 @@ public class SinglyLinkedList<T> {
      * @param data data to insert.
      */
     public void insertFront(T data) {
-        ListNode<T> newNode = new ListNode(new ListNode.Builder().data(data));
+        ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
         if(isEmpty()) {
             this.head = newNode;
+            this.tail = this.head;
         } else {
             newNode.setNext(this.head);
             this.head = newNode;
@@ -36,15 +37,17 @@ public class SinglyLinkedList<T> {
      * @param data data to insert.
      */
     public void insertEnd(T data) {
-        ListNode<T> newNode = new ListNode(new ListNode.Builder().data(data));
+        ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
         if(isEmpty()) {
             this.head = newNode;
+            this.tail = this.head;
         } else {
             ListNode<T> temp = this.head;
             while(temp.getNext() != null) {
                 temp = temp.getNext();
             }
             temp.setNext(newNode);
+            this.tail = temp.getNext();
         }
         this.size++;
     }
@@ -55,22 +58,21 @@ public class SinglyLinkedList<T> {
      * @param data element to insert.
      */
     public void insertAt(int index, T data) {
-        if(index >= 0) {
-            ListNode<T> newNode = new ListNode(new ListNode.Builder().data(data));
-            if(isEmpty()) {
-                this.head = newNode;
-            } else if(index == 0) {
-                insertFront(data);
-            } else {
-                ListNode<T> temp = this.head;
-                for(int i = 1; i < index; i++) {
-                    temp = temp.getNext();
-                }
-                newNode.setNext(temp.getNext());
-                temp.setNext(newNode);
+        ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
+        if(isEmpty()) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else if(index == 0) {
+            insertFront(data);
+        } else {
+            ListNode<T> temp = this.head;
+            for(int i = 1; i < index; i++) {
+                temp = temp.getNext();
             }
-            this.size++;
+            newNode.setNext(temp.getNext());
+            temp.setNext(newNode);
         }
+        this.size++;
     }
 
     /**
@@ -100,6 +102,7 @@ public class SinglyLinkedList<T> {
             }
             temp = prev;
             prev.setNext(null);
+            this.tail = prev;
             this.size--;
         }
     }
@@ -109,27 +112,52 @@ public class SinglyLinkedList<T> {
      * @param index position at which to remove element.
      */
     public void removeAt(int index) {
-        if(index >= 0) {
-            if(!isEmpty()) {
-                if(index == 0) {
-                    removeFront();
+        if(!isEmpty()) {
+            if(index == 0) {
+                removeFront();
+            } else if(index == this.size - 1) {
+                removeEnd();
+            } else {
+                ListNode<T> temp = this.head;
+                ListNode<T> prev = null;
+                int i = 1;
+                while(i <= index) {
+                    prev = temp;
+                    temp = temp.getNext();
+                    i++;
                 }
-                else {
-                    ListNode<T> temp = this.head;
-                    ListNode<T> prev = null;
-                    int i = 1;
-                    while (i != index && temp.getNext() != null) {
-                        prev = temp;
-                        temp = temp.getNext();
-                        i++;
-                    }
-                    ListNode oldNext = temp.getNext();
+                ListNode<T> oldNext = temp.getNext();
+                if(prev != null) {
                     temp = prev;
-                    temp.setNext(oldNext);
-                    this.size--;
                 }
+                if(oldNext != null) {
+                    temp.setNext(oldNext);
+                }
+                this.size--;
             }
         }
+//        if(index >= 0) {
+//            if(!isEmpty()) {
+//                if(index == 0) {
+//                    removeFront();
+//                } else if(index == this.size - 1) {
+//                    removeEnd();
+//                } else {
+//                    ListNode<T> temp = this.head;
+//                    ListNode<T> prev = null;
+//                    int i = 1;
+//                    while (i != index && temp.getNext() != null) {
+//                        prev = temp;
+//                        temp = temp.getNext();
+//                        i++;
+//                    }
+//                    ListNode oldNext = temp.getNext();
+//                    temp = prev;
+//                    temp.setNext(oldNext);
+//                    this.size--;
+//                }
+//            }
+//        }
     }
 
     /**
@@ -137,7 +165,10 @@ public class SinglyLinkedList<T> {
      * @return the element at the front of the list.
      */
     public T getElementAtFront() {
-        return this.head.getData();
+        if(!isEmpty()) {
+            return this.head.getData();
+        }
+        return null;
     }
 
     /**
@@ -145,11 +176,15 @@ public class SinglyLinkedList<T> {
      * @return the element at the end of the list.
      */
     public T getElementAtEnd() {
-        ListNode<T> temp = this.head;
-        while(temp.getNext() != null) {
-            temp = temp.getNext();
+//        ListNode<T> temp = this.head;
+//        while(temp.getNext() != null) {
+//            temp = temp.getNext();
+//        }
+//        return temp.getData();
+        if(!isEmpty()) {
+            return this.tail.getData();
         }
-        return temp.getData();
+        return null;
     }
 
     /**
@@ -158,7 +193,11 @@ public class SinglyLinkedList<T> {
      * @return the element located at the given index.
      */
     public T getElementAt(int index) {
-        if(index >= 0) {
+        if(index == 0) {
+            return getElementAtFront();
+        } else if(index == this.size - 1) {
+            return getElementAtEnd();
+        } else {
             ListNode<T> temp = this.head;
             int i = 0;
             while(i < index) {
@@ -167,7 +206,6 @@ public class SinglyLinkedList<T> {
             }
             return temp.getData();
         }
-        return null;
     }
 
     /**
