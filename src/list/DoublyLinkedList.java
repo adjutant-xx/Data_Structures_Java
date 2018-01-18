@@ -5,10 +5,7 @@ package list;
  */
 public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
 
-//    private ListNode<T> head;
-//    private int size;
-
-    DoublyLinkedList() {
+    public DoublyLinkedList() {
         this.head = new ListNode<>();
         this.size = 0;
     }
@@ -18,6 +15,7 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
         if(isEmpty()) {
             this.head = newNode;
+            this.tail = this.head;
         } else {
             this.head.setPrev(newNode);
             newNode.setNext(this.head);
@@ -31,29 +29,77 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
         if(isEmpty()) {
             this.head = newNode;
+            this.tail = this.head;
         } else {
-
+            ListNode<T> temp = this.tail;
+            newNode.setPrev(temp);
+            temp.setNext(newNode);
+            this.tail = temp.getNext();
         }
+        this.size++;
     }
 
     @Override
     public void insertAt(int index, T data) {
-        super.insertAt(index, data);
+        ListNode<T> newNode = new ListNode(new ListNode.ListNodeBuilder().data(data));
+        if(isEmpty()) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else if(index == 0) {
+            insertFront(data);
+        } else {
+            ListNode<T> temp = this.head;
+            for(int i = 1; i < index; i++) {
+                temp = temp.getNext();
+            }
+            newNode.setPrev(temp);
+            newNode.setNext(temp.getNext());
+            temp.setNext(newNode);
+        }
+        this.size++;
     }
 
     @Override
     public void removeFront() {
-        super.removeFront();
+        if(!isEmpty()) {
+            if(this.head.getNext() != null) {
+                this.head = this.head.getNext();
+            } else {
+                this.head = null;
+                this.tail = null;
+            }
+            this.size--;
+        }
     }
 
     @Override
     public void removeEnd() {
-        super.removeEnd();
+        if(!isEmpty()) {
+            if(this.tail.getPrev() != null) {
+                this.tail = this.tail.getPrev();
+            } else {
+                this.tail = null;
+                this.head = null;
+            }
+            this.size--;
+        }
     }
 
     @Override
     public void removeAt(int index) {
-        super.removeAt(index);
+        if(!isEmpty()) {
+            if(index == 0) {
+                removeFront();
+            } else {
+                ListNode<T> temp = this.head;
+                for(int i = 0; i < index; i++) {
+                    temp = temp.getNext();
+                }
+                temp.getPrev().setNext(temp.getNext());
+                temp = temp.getPrev();
+            }
+            this.size--;
+        }
     }
 
     @Override
@@ -68,7 +114,20 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
 
     @Override
     public T getElementAt(int index) {
-        return super.getElementAt(index);
+        if(!isEmpty()) {
+            if(index == 0) {
+                return getElementAtFront();
+            } else if(index == this.size - 1) {
+                return getElementAtEnd();
+            } else {
+                ListNode<T> temp = this.head;
+                for(int i = 0; i < index; i++) {
+                    temp = temp.getNext();
+                }
+                return temp.getData();
+            }
+        }
+        return null;
     }
 
     @Override
