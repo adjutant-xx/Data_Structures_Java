@@ -62,6 +62,27 @@ public class TestAssetEngine {
     }
 
     /**
+     * Generates an array of randomly-generated, unique, unordered integers.
+     * @return the generated array.
+     */
+    public int[] generateUnorderedUniqueIntegerArray() {
+        int arraySize = 0;
+        do {
+            arraySize = this.rand.nextInt(this.upperBoundSize);
+        } while(arraySize <= 0);
+        int[] unorderedArr = new int[arraySize];
+        for(int i = 0; i < unorderedArr.length; i++) {
+            int val = generateRandomInteger();
+            while(containsInteger(unorderedArr, val)) {
+                val = generateRandomInteger();
+            }
+            unorderedArr[i] = val;
+        }
+        return unorderedArr;
+    }
+
+
+    /**
      * Generates an array of randomly-generated ordered integers.
      * @return the generated array.
      */
@@ -107,6 +128,21 @@ public class TestAssetEngine {
      */
     public boolean generateSign() {
         return this.rand.nextInt(2) == 0 ? true : false;
+    }
+
+    /**
+     * Determines whether or not an array contains a given integer.
+     * @param arr the array to search.
+     * @param val the integer value to search for
+     * @return true if the array contains the integer, false if otherwise.
+     */
+    private boolean containsInteger(int[] arr, int val) {
+        for(Integer item : arr) {
+            if(item == val) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**
