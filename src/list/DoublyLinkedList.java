@@ -88,6 +88,9 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         }
     }
 
+    /**
+     * Removes tail element of list.
+     */
     @Override
     public void removeEnd() {
         if(!isEmpty()) {
@@ -101,6 +104,10 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         }
     }
 
+    /**
+     * Removes element at a specific index from list.
+     * @param index position at which to remove element.
+     */
     @Override
     public void removeAt(int index) {
         if(!isEmpty()) {
@@ -118,16 +125,29 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         }
     }
 
+    /**
+     * Returns the head element of the list.
+     * @return the element at the head of the list
+     */
     @Override
     public T getElementAtFront() {
         return super.getElementAtFront();
     }
 
+    /**
+     * Returns the tail element of the list.
+     * @return the tail element of the list.
+     */
     @Override
     public T getElementAtEnd() {
         return super.getElementAtEnd();
     }
 
+    /**
+     * Returns the element at a specific index within the list.
+     * @param index position at which to search for / return element.
+     * @return the element located at the given index.
+     */
     @Override
     public T getElementAt(int index) {
         if(!isEmpty()) {
@@ -146,16 +166,29 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         return null;
     }
 
+    /**
+     * Finds the index of a specific element within the list, if it exists.
+     * @param data the element to search for within the list.
+     * @return the index of the queried element, -1 if element does not exist within list.
+     */
     @Override
     public int find(T data) {
         return super.find(data);
     }
 
+    /**
+     * Determines whether the underlying list structure is empty or not.
+     * @return true if list is empty, false if otherwise.
+     */
     @Override
     public boolean isEmpty() {
         return super.isEmpty();
     }
 
+    /**
+     * Returns the current size of the list.
+     * @return integer representing current list size.
+     */
     @Override
     public int getSize() {
         return super.getSize();
