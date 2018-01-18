@@ -14,7 +14,7 @@ public class SinglyLinkedListTest {
     private TestAssetEngine engine;
 
     public SinglyLinkedListTest() {
-        this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(20).upperBoundSize(20));
+        this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(20).upperBoundSize(5));
     }
 
     @Test
@@ -48,7 +48,7 @@ public class SinglyLinkedListTest {
         int val = this.engine.generateRandomInteger();
         int index = this.engine.generateRandomPositiveIntegerWithBound(arr.length);
         for(Integer item : arr) {
-            list.insertFront(item);
+            list.insertEnd(item);
         }
         list.insertAt(index, val);
         int expected = val;
@@ -96,6 +96,7 @@ public class SinglyLinkedListTest {
 
     @Test
     public void singlyLinkedListRemoveAtTest() {
+
         SinglyLinkedList<Integer> list = new SinglyLinkedList<>();
         int[] arr = null;
         do {
@@ -110,7 +111,11 @@ public class SinglyLinkedListTest {
         }
         int expected1 = arr[index];
         int actual1 = list.getElementAt(index);
-        list.removeAt(index);
+        try {
+            list.removeAt(index);
+        } catch(Exception e) {
+            String lol = "";
+        }
         int expected2 = arr[index + 1];
         int actual2 = list.getElementAt(index);
         Assert.assertEquals(expected1, actual1);
