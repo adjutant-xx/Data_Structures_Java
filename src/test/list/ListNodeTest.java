@@ -78,5 +78,5 @@ public class ListNodeTest {
         ListNode<Integer> actual = node2.getPrev();
         Assert.assertEquals(expected, actual);
     }
-    
+
 }
