@@ -13,7 +13,7 @@ public class BinaryTreeNode<T> extends TreeNode<T>{
     public BinaryTreeNode(T data) {
         super(data);
     }
-    
+
     public BinaryTreeNode<T> getLeft() {
         return left;
     }
