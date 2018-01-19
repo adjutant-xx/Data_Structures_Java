@@ -1,5 +1,6 @@
 package tree;
 
+import jdk.nashorn.api.tree.BinaryTree;
 import list.DoublyLinkedList;
 
 import java.lang.reflect.Array;
@@ -14,18 +15,23 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     // insert
     public void insert(T value) {
-        BinaryTreeNode<T> newNode = new BinaryTreeNode<>(value);
-        if(isEmpty()) {
-            this.root = newNode;
-        } else {
-            BinaryTreeNode<T> temp = this.root;
-            while(temp != null) {
-                calculateFork(temp, value);
-            }
-            temp = newNode;
-        }
-        // balance tree here...
+        this.root = insert(this.root, value);
+//        balance();
         this.size++;
+    }
+    private BinaryTreeNode<T> insert(BinaryTreeNode<T> node, T value) {
+        if(node == null) {
+            return new BinaryTreeNode<>(value);
+        }
+        int result = value.compareTo(node.getData());
+        if(result <= 0) {
+            node.setLeft(insert(node.getLeft(), value));
+        } else {
+            node.setRight(insert(node.getRight(), value));
+        }
+
+        // balance here...
+        return node;
     }
 
     // remove
@@ -44,6 +50,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
                         temp = (temp.getLeft() != null) ? temp.getLeft() : temp.getRight();
                     }
                     // balance tree here...
+//                    balance();
                     this.size--;
                 } else if (result < 0) {
                     // traverse left
@@ -130,28 +137,37 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // balance
-    public void balance(BinaryTreeNode<T> node) {
+    public void balance() {
+        this.root = balance(this.root, 0);
+    }
+    private BinaryTreeNode<T> balance(BinaryTreeNode<T> node, int height) {
         if(node == null) {
-            return;
+            return node;
         }
-        int leftHeight = getHeight(node.getLeft(), 0);
-        int rightHeight = getHeight(node.getRight(), 0);
-        if(Math.abs(leftHeight - rightHeight) > 1) {
+        int leftHeight = getHeight(node.getLeft(), height);
+        int rightHeight = getHeight(node.getRight(), height);
+        while(Math.abs(leftHeight - rightHeight) > 1) {
             if(leftHeight < rightHeight) {
                 // take root => old root, assign old root's right child to root's right child's left child, assign root's right child to root, assign new root's left child to old root
-                BinaryTreeNode<T> oldNode  = node;
-                oldNode.setRight(node.getRight().getLeft());
+                BinaryTreeNode<T> oldNode = node;
+                if(node.getRight().getLeft() != null) {
+                    oldNode.setRight(node.getRight().getLeft());
+                }
                 node = node.getRight();
                 node.setLeft(oldNode);
             } else if(leftHeight > rightHeight) {
                 BinaryTreeNode<T> oldNode = node;
-                oldNode.setLeft(node.getLeft().getRight());
+                if(node.getLeft().getRight() != null) {
+                    oldNode.setLeft(node.getLeft().getRight());
+                }
                 node = node.getLeft();
                 node.setRight(oldNode);
             }
+            balance(node.getLeft(), height++);
+            balance(node.getRight(), height++);
         }
-        balance(node.getLeft());
-        balance(node.getRight());
+
+        return node;
     }
 
     // getHeight
@@ -159,32 +175,38 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if(node == null) {
             return height;
         }
-        return Math.max(getHeight(node.getLeft(), height++), getHeight(node.getRight(), height));
+        return Math.max(getHeight(node.getLeft(), height++), getHeight(node.getRight(), height++));
     }
 
     // calculateFork
-    private void calculateFork(BinaryTreeNode<T> node, T value) {
-        int result = node.getData().compareTo(value);
+    private BinaryTreeNode<T> calculateFork(BinaryTreeNode<T> node, T value) {
+        int result = value.compareTo(node.getData());
         if(result <= 0) {
-            node = node.getLeft();
+            return node.getLeft();
         } else {
-            node = node.getRight();
+            return node.getRight();
         }
     }
 
     // to array:
     public T[] toArray(Class<T> clazz) {
-        BinaryTreeNode<T> temp = this.root;
-        return toArray((T[])Array.newInstance(clazz, this.size), 0, temp);
+        return toArray((T[])Array.newInstance(clazz, this.size), 0, this.root);
     }
     private T[] toArray(T[] arr, int i, BinaryTreeNode<T> node) {
         if(node == null) {
             return arr;
         }
-        arr[i++] = node.getData();
-        toArray(arr, i, node.getLeft());
-        toArray(arr, i, node.getRight());
+        arr[i] = node.getData();
+        arr = (node.getLeft() != null) ? toArray(arr, (2 * i) + 1, node.getLeft()) : arr;
+        arr = (node.getRight() != null) ? toArray(arr, (2 * i) + 2, node.getRight()) : arr;
         return arr;
+    }
+
+    // to tree:
+    public void toTree(T[] arr) {
+        for(int i = 0; i < arr.length; i++) {
+            insert(arr[i]);
+        }
     }
 
     // isEmpty
