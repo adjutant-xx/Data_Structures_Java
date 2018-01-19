@@ -4,7 +4,7 @@ package tree;
  * Contains implementations for a TreeNode object, to be used with Tree-based data structures.
  */
 public class TreeNode<T> {
-    private T data;
+    protected T data;
 
     public TreeNode() {}
 
