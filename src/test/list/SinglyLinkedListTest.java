@@ -1,5 +1,4 @@
 package test.list;
-git 
 import list.SinglyLinkedList;
 import org.junit.Assert;
 import org.junit.Before;
