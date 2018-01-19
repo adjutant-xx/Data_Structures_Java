@@ -1,4 +1,5 @@
 package test.list;
+import list.ListNode;
 import list.SinglyLinkedList;
 import org.junit.Assert;
 import org.junit.Before;
@@ -126,6 +127,23 @@ public class SinglyLinkedListTest {
         int expected = index;
         int actual = this.list.find(arr[index]);
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void singlyLinkedListToArrayTest() {
+        int[] arr = this.engine.generateUnorderedIntegerArray();
+        for(Integer item : arr) {
+            this.list.insertEnd(item);
+        }
+        Integer[] listArr = this.list.toArray(Integer.class);
+        int expected1 = arr.length;
+        int actual1 = listArr.length;
+        Assert.assertEquals(expected1, actual1);
+        for(int i = 0; i < listArr.length; i++) {
+            int expected2 = arr[i];
+            int actual2 = listArr[i];
+            Assert.assertEquals(expected2, actual2);
+        }
     }
 
     @Test

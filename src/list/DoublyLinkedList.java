@@ -177,6 +177,16 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
     }
 
     /**
+     * Returns contents of list in an array format.
+     * @param clazz class of underlying generic type.
+     * @return the array containing all list elements.
+     */
+    @Override
+    public T[] toArray(Class<T> clazz) {
+        return super.toArray(clazz);
+    }
+
+    /**
      * Determines whether the underlying list structure is empty or not.
      * @return true if list is empty, false if otherwise.
      */

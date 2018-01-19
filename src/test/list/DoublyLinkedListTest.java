@@ -53,6 +53,11 @@ public class DoublyLinkedListTest extends SinglyLinkedListTest {
     }
 
     @Override
+    public void singlyLinkedListToArrayTest() {
+        super.singlyLinkedListToArrayTest();
+    }
+
+    @Override
     public void singlyLinkedListIsEmptyTest() {
         super.singlyLinkedListIsEmptyTest();
     }
