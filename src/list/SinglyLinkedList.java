@@ -1,5 +1,9 @@
 package list;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Contains operational implementations for the Singly-Linked List data structure.
  */
@@ -195,6 +199,21 @@ public class SinglyLinkedList<T> {
             }
         }
         return -1;
+    }
+
+    /**
+     * Returns contents of list in an array format.
+     * @param clazz class of underlying generic type.
+     * @return the array containing all list elements.
+     */
+    public T[] toArray(Class<T> clazz) {
+        T[] arr = (T[])Array.newInstance(clazz, this.size);
+        ListNode<T> temp = this.head;
+        for(int i = 0; i < arr.length; i++) {
+            arr[i] = temp.getData();
+            temp = temp.getNext();
+        }
+        return arr;
     }
 
     /**
