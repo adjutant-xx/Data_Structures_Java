@@ -2,6 +2,8 @@ package tree;
 
 import list.DoublyLinkedList;
 
+import java.lang.reflect.Array;
+
 /**
  * Contains operational implementations for the Binary Search Tree data structure.
  */
@@ -168,6 +170,21 @@ public class BinarySearchTree<T extends Comparable<T>> {
         } else {
             node = node.getRight();
         }
+    }
+
+    // to array:
+    public T[] toArray(Class<T> clazz) {
+        BinaryTreeNode<T> temp = this.root;
+        return toArray((T[])Array.newInstance(clazz, this.size), 0, temp);
+    }
+    private T[] toArray(T[] arr, int i, BinaryTreeNode<T> node) {
+        if(node == null) {
+            return arr;
+        }
+        arr[i++] = node.getData();
+        toArray(arr, i, node.getLeft());
+        toArray(arr, i, node.getRight());
+        return arr;
     }
 
     // isEmpty
