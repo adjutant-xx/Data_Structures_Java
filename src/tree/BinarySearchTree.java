@@ -1,5 +1,7 @@
 package tree;
 
+import list.DoublyLinkedList;
+
 /**
  * Contains operational implementations for the Binary Search Tree data structure.
  */
@@ -87,6 +89,44 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return null;
     }
 
+    // traverse in order
+    public DoublyLinkedList<BinaryTreeNode<T>> traverseInOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
+        if(node == null) {
+            return order;
+        }
+        traverseInOrder(node.getLeft(), order);
+        order.insertEnd(node);
+        traverseInOrder(node.getRight(), order);
+        return order;
+    }
+
+    // traverse pre order
+    public DoublyLinkedList<BinaryTreeNode<T>> traversePreOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
+        if(node == null) {
+            return order;
+        }
+        order.insertEnd(node);
+        traversePreOrder(node.getLeft(), order);
+        traversePreOrder(node.getRight(), order);
+        return order;
+    }
+
+    // traverse post order:
+    public DoublyLinkedList<BinaryTreeNode<T>> traversePostOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
+        if(node == null) {
+            return order;
+        }
+        traversePostOrder(node.getLeft(), order);
+        traversePostOrder(node.getRight(), order);
+        order.insertEnd(node);
+        return order;
+    }
+
+    //getRoot
+    public BinaryTreeNode<T> getRoot() {
+        return this.root;
+    }
+
     // balance
     public void balance(BinaryTreeNode<T> node) {
         if(node == null) {
@@ -96,9 +136,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
         int rightHeight = getHeight(node.getRight(), 0);
         if(Math.abs(leftHeight - rightHeight) > 1) {
             if(leftHeight < rightHeight) {
-                // take 
+                // take root => old root, assign old root's right child to root's right child's left child, assign root's right child to root, assign new root's left child to old root
+                BinaryTreeNode<T> oldNode  = node;
+                oldNode.setRight(node.getRight().getLeft());
+                node = node.getRight();
+                node.setLeft(oldNode);
+            } else if(leftHeight > rightHeight) {
+                BinaryTreeNode<T> oldNode = node;
+                oldNode.setLeft(node.getLeft().getRight());
+                node = node.getLeft();
+                node.setRight(oldNode);
             }
         }
+        balance(node.getLeft());
+        balance(node.getRight());
     }
 
     // getHeight
