@@ -27,21 +27,13 @@ public class BinarySearchTreeTest {
         int[] arr = this.engine.generateUnorderedIntegerArray();
         int count = 0;
         for(Integer item : arr) {
-            this.bst.insert(item);
+            boolean expected1 = true;
+            boolean actual1 = this.bst.insert(item);
             count++;
-            int expected1 = count;
-            int actual1 = this.bst.getSize();
             Assert.assertEquals(expected1, actual1);
-        }
-        Integer[] bstArr = this.bst.toArray(Integer.class);
-        int expected2 = arr.length;
-        int actual2 = bstArr.length;
-        Assert.assertEquals(expected2, actual2);
-        Arrays.sort(bstArr);
-        for(int i = 0; i < bstArr.length; i++) {
-            int expected3 = arr[i];
-            int actual3 = bstArr[i];
-            Assert.assertEquals(expected3, actual3);
+            int expected2 = count;
+            int actual2 = this.bst.getSize();
+            Assert.assertEquals(expected2, actual2);
         }
     }
 
