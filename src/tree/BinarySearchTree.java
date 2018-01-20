@@ -14,11 +14,17 @@ public class BinarySearchTree<T extends Comparable<T>> {
     private int size;
 
     // insert
-    public void insert(T value) {
-        this.root = insert(this.root, value);
+    public boolean insert(T value) {
+        try {
+            this.root = insert(this.root, value);
 //        balance();
-        this.size++;
+            this.size++;
+            return true;
+        } catch(Exception e) {
+            return false;
+        }
     }
+
     private BinaryTreeNode<T> insert(BinaryTreeNode<T> node, T value) {
         if(node == null) {
             return new BinaryTreeNode<>(value);
@@ -138,15 +144,15 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     // balance
     public void balance() {
-        this.root = balance(this.root, 0);
+        this.root = balance(this.root);
     }
-    private BinaryTreeNode<T> balance(BinaryTreeNode<T> node, int height) {
+    private BinaryTreeNode<T> balance(BinaryTreeNode<T> node) {
         if(node == null) {
             return node;
         }
-        int leftHeight = getHeight(node.getLeft(), height);
-        int rightHeight = getHeight(node.getRight(), height);
-        while(Math.abs(leftHeight - rightHeight) > 1) {
+        int leftHeight = getHeight(node.getLeft(), 0);
+        int rightHeight = getHeight(node.getRight(), 0);
+        if(Math.abs(leftHeight - rightHeight) > 1) {
             if(leftHeight < rightHeight) {
                 // take root => old root, assign old root's right child to root's right child's left child, assign root's right child to root, assign new root's left child to old root
                 BinaryTreeNode<T> oldNode = node;
@@ -163,9 +169,35 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 node = node.getLeft();
                 node.setRight(oldNode);
             }
-            balance(node.getLeft(), height++);
-            balance(node.getRight(), height++);
+            node.setLeft(balance(node.getLeft()));
+            node.setRight(balance(node.getRight()));
+            return node;
         }
+//        if(node == null) {
+//            return node;
+//        }
+//        int leftHeight = getHeight(node.getLeft(), height);
+//        int rightHeight = getHeight(node.getRight(), height);
+//        while(Math.abs(leftHeight - rightHeight) > 1) {
+//            if(leftHeight < rightHeight) {
+//                // take root => old root, assign old root's right child to root's right child's left child, assign root's right child to root, assign new root's left child to old root
+//                BinaryTreeNode<T> oldNode = node;
+//                if(node.getRight().getLeft() != null) {
+//                    oldNode.setRight(node.getRight().getLeft());
+//                }
+//                node = node.getRight();
+//                node.setLeft(oldNode);
+//            } else if(leftHeight > rightHeight) {
+//                BinaryTreeNode<T> oldNode = node;
+//                if(node.getLeft().getRight() != null) {
+//                    oldNode.setLeft(node.getLeft().getRight());
+//                }
+//                node = node.getLeft();
+//                node.setRight(oldNode);
+//            }
+//            balance(node.getLeft(), height++);
+//            balance(node.getRight(), height++);
+//        }
 
         return node;
     }
@@ -175,7 +207,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if(node == null) {
             return height;
         }
-        return Math.max(getHeight(node.getLeft(), height++), getHeight(node.getRight(), height++));
+        height++;
+        return Math.max(getHeight(node.getLeft(), height), getHeight(node.getRight(), height));
     }
 
     // calculateFork
@@ -193,7 +226,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return toArray((T[])Array.newInstance(clazz, this.size), 0, this.root);
     }
     private T[] toArray(T[] arr, int i, BinaryTreeNode<T> node) {
-        if(node == null) {
+        if(node == null || i > this.size - 1) {
             return arr;
         }
         arr[i] = node.getData();
