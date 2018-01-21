@@ -17,7 +17,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public boolean insert(T value) {
         try {
             this.root = insert(this.root, value);
-//        balance();
             this.size++;
             return true;
         } catch(Exception e) {
@@ -35,8 +34,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
         } else {
             node.setRight(insert(node.getRight(), value));
         }
-
-        // balance here...
         return node;
     }
 
@@ -47,22 +44,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
             while(temp != null) {
                 int result = temp.getData().compareTo(value);
                 if (result == 0) {
-                    // remove
                     if (temp.getLeft() != null && temp.getRight() != null) {
-                        // pull smallest value in temp's right subtree, swap with temp and then remove that value from the right subtree
                         temp = findMin(temp.getRight());
                         remove(temp.getRight(), temp.getData());
                     } else {
                         temp = (temp.getLeft() != null) ? temp.getLeft() : temp.getRight();
                     }
-                    // balance tree here...
-//                    balance();
                     this.size--;
                 } else if (result < 0) {
-                    // traverse left
                     temp = temp.getLeft();
                 } else {
-                    // traverse right
                     temp = temp.getRight();
                 }
             }
@@ -140,75 +131,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     //getRoot
     public BinaryTreeNode<T> getRoot() {
         return this.root;
-    }
-
-    // balance
-    public void balance() {
-        this.root = balance(this.root);
-    }
-    private BinaryTreeNode<T> balance(BinaryTreeNode<T> node) {
-        if(node == null) {
-            return node;
-        }
-        int leftHeight = getHeight(node.getLeft(), 0);
-        int rightHeight = getHeight(node.getRight(), 0);
-        if(Math.abs(leftHeight - rightHeight) > 1) {
-            if(leftHeight < rightHeight) {
-                // take root => old root, assign old root's right child to root's right child's left child, assign root's right child to root, assign new root's left child to old root
-                BinaryTreeNode<T> oldNode = node;
-                if(node.getRight().getLeft() != null) {
-                    oldNode.setRight(node.getRight().getLeft());
-                }
-                node = node.getRight();
-                node.setLeft(oldNode);
-            } else if(leftHeight > rightHeight) {
-                BinaryTreeNode<T> oldNode = node;
-                if(node.getLeft().getRight() != null) {
-                    oldNode.setLeft(node.getLeft().getRight());
-                }
-                node = node.getLeft();
-                node.setRight(oldNode);
-            }
-            node.setLeft(balance(node.getLeft()));
-            node.setRight(balance(node.getRight()));
-            return node;
-        }
-//        if(node == null) {
-//            return node;
-//        }
-//        int leftHeight = getHeight(node.getLeft(), height);
-//        int rightHeight = getHeight(node.getRight(), height);
-//        while(Math.abs(leftHeight - rightHeight) > 1) {
-//            if(leftHeight < rightHeight) {
-//                // take root => old root, assign old root's right child to root's right child's left child, assign root's right child to root, assign new root's left child to old root
-//                BinaryTreeNode<T> oldNode = node;
-//                if(node.getRight().getLeft() != null) {
-//                    oldNode.setRight(node.getRight().getLeft());
-//                }
-//                node = node.getRight();
-//                node.setLeft(oldNode);
-//            } else if(leftHeight > rightHeight) {
-//                BinaryTreeNode<T> oldNode = node;
-//                if(node.getLeft().getRight() != null) {
-//                    oldNode.setLeft(node.getLeft().getRight());
-//                }
-//                node = node.getLeft();
-//                node.setRight(oldNode);
-//            }
-//            balance(node.getLeft(), height++);
-//            balance(node.getRight(), height++);
-//        }
-
-        return node;
-    }
-
-    // getHeight
-    public int getHeight(BinaryTreeNode<T> node, int height) {
-        if(node == null) {
-            return height;
-        }
-        height++;
-        return Math.max(getHeight(node.getLeft(), height), getHeight(node.getRight(), height));
     }
 
     // calculateFork

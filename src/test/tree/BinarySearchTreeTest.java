@@ -36,8 +36,7 @@ public class BinarySearchTreeTest {
             Assert.assertEquals(expected2, actual2);
         }
     }
-
-
+    
     @Test
     public void binarySearchTreeToTreeToArrayTest() {
         Integer[] arr = {30, 25, 49, 10, 28, 37, 102};
