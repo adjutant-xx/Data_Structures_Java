@@ -38,65 +38,87 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // remove
-    public void remove(BinaryTreeNode<T> node, T value) {
+    public boolean remove(T value) {
+        try {
+            this.root = remove(this.root, value);
+            this.size--;
+            return true;
+        } catch(Exception e) {
+            return false;
+        }
+    }
+    private BinaryTreeNode<T> remove(BinaryTreeNode<T> node, T value) {
         if(!isEmpty()) {
-            BinaryTreeNode<T> temp = node;
-            while(temp != null) {
-                int result = temp.getData().compareTo(value);
+            while(node != null) {
+                int result = value.compareTo(node.getData());
                 if (result == 0) {
-                    if (temp.getLeft() != null && temp.getRight() != null) {
-                        temp = findMin(temp.getRight());
-                        remove(temp.getRight(), temp.getData());
+                    if (node.getLeft() != null && node.getRight() != null) {
+                        node = findMin(node.getRight());
+                        remove(node.getRight(), node.getData());
                     } else {
-                        temp = (temp.getLeft() != null) ? temp.getLeft() : temp.getRight();
+                        node = (node.getLeft() != null) ? node.getLeft() : node.getRight();
                     }
-                    this.size--;
                 } else if (result < 0) {
-                    temp = temp.getLeft();
+                    node = node.getLeft();
                 } else {
-                    temp = temp.getRight();
+                    node = node.getRight();
                 }
             }
         }
+        return node;
     }
 
     // find
-    public BinaryTreeNode<T> find(BinaryTreeNode<T> node, T value) {
-        if(!isEmpty()) {
-            BinaryTreeNode<T> temp = node;
-            while(temp != null) {
-                calculateFork(temp, value);
-            }
+    public BinaryTreeNode<T> find(T value) {
+        return find(this.root, value);
+    }
+    private BinaryTreeNode<T> find(BinaryTreeNode<T> node, T value) {
+        if(node == null) {
+            return node;
         }
-        return null;
+        int result = value.compareTo(node.getData());
+        if(result == 0) {
+            return node;
+        } else if(result < 0) {
+            return find(node.getLeft(), value);
+        } else {
+            return find(node.getRight(), value);
+        }
     }
 
     // findMin
-    public BinaryTreeNode<T> findMin(BinaryTreeNode<T> node) {
+    public BinaryTreeNode<T> findMin() {
+        return findMin(this.root);
+    }
+    private BinaryTreeNode<T> findMin(BinaryTreeNode<T> node) {
         if(!isEmpty()) {
-            BinaryTreeNode<T> temp = node;
-            while(temp.getLeft() != null) {
-                temp = temp.getLeft();
+            while(node.getLeft() != null) {
+                node = node.getLeft();
             }
-            return temp;
+            return node;
         }
         return null;
     }
 
     // findMax
-    public BinaryTreeNode<T> findMax(BinaryTreeNode<T> node) {
+    public BinaryTreeNode<T> findMax() {
+        return findMax(this.root);
+    }
+    private BinaryTreeNode<T> findMax(BinaryTreeNode<T> node) {
         if(!isEmpty()) {
-            BinaryTreeNode<T> temp = node;
-            while(temp.getRight() != null) {
-                temp = temp.getRight();
+            while(node.getRight() != null) {
+                node = node.getRight();
             }
-            return temp;
+            return node;
         }
         return null;
     }
 
     // traverse in order
-    public DoublyLinkedList<BinaryTreeNode<T>> traverseInOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
+    public DoublyLinkedList<BinaryTreeNode<T>> traverseInOrder() {
+        return traverseInOrder(this.root, new DoublyLinkedList<>());
+    }
+    private DoublyLinkedList<BinaryTreeNode<T>> traverseInOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
         if(node == null) {
             return order;
         }
@@ -107,7 +129,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // traverse pre order
-    public DoublyLinkedList<BinaryTreeNode<T>> traversePreOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
+    public DoublyLinkedList<BinaryTreeNode<T>> traversePreOrder() {
+        return traversePreOrder(this.root, new DoublyLinkedList<>());
+    }
+    private DoublyLinkedList<BinaryTreeNode<T>> traversePreOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
         if(node == null) {
             return order;
         }
@@ -118,7 +143,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     // traverse post order:
-    public DoublyLinkedList<BinaryTreeNode<T>> traversePostOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
+    public DoublyLinkedList<BinaryTreeNode<T>> traversePostOrder() {
+        return traversePostOrder(this.root, new DoublyLinkedList<>());
+    }
+    private DoublyLinkedList<BinaryTreeNode<T>> traversePostOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
         if(node == null) {
             return order;
         }
@@ -131,16 +159,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     //getRoot
     public BinaryTreeNode<T> getRoot() {
         return this.root;
-    }
-
-    // calculateFork
-    private BinaryTreeNode<T> calculateFork(BinaryTreeNode<T> node, T value) {
-        int result = value.compareTo(node.getData());
-        if(result <= 0) {
-            return node.getLeft();
-        } else {
-            return node.getRight();
-        }
     }
 
     // to array:
