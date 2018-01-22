@@ -155,7 +155,7 @@ public class SinglyLinkedListTest {
         for(Integer item : arr) {
             this.list.insertEnd(item);
             boolean expected2 = false;
-            boolean actual2 = list.isEmpty();
+            boolean actual2 = this.list.isEmpty();
             Assert.assertEquals(expected2, actual2);
         }
         while(!this.list.isEmpty()) {
