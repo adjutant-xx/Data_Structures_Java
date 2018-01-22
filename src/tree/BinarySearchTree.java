@@ -13,7 +13,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
     private BinaryTreeNode<T> root;
     private int size;
 
-    // insert
+    /**
+     * Recursively inserts an element into the tree.
+     * @param value value to insert.
+     * @return true if insertion was successful, false if otherwise.
+     */
     public boolean insert(T value) {
         try {
             this.root = insert(this.root, value);
@@ -23,7 +27,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
             return false;
         }
     }
-
     private BinaryTreeNode<T> insert(BinaryTreeNode<T> node, T value) {
         if(node == null) {
             return new BinaryTreeNode<>(value);
@@ -37,7 +40,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return node;
     }
 
-    // remove
+    /**
+     * Recursively removes a specified element from the tree.
+     * @param value value to remove.
+     * @return true if removal was successful, false if otherwise.
+     */
     public boolean remove(T value) {
         try {
             this.root = remove(this.root, value);
@@ -68,7 +75,11 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return node;
     }
 
-    // find
+    /**
+     * Recursively finds a specified value within the tree, if it exists.
+     * @param value value to find.
+     * @return node containing the search value, null if value cannot be found.
+     */
     public BinaryTreeNode<T> find(T value) {
         return find(this.root, value);
     }
@@ -86,7 +97,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         }
     }
 
-    // findMin
+    /**
+     * Returns a node containing the minimum value within tree, if it exists.
+     * @return value containing minimum-value node, null if value cannot be found.
+     */
     public BinaryTreeNode<T> findMin() {
         return findMin(this.root);
     }
@@ -100,7 +114,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return null;
     }
 
-    // findMax
+    /**
+     * Returns a node containing the maximum value within the tree, if it exists.
+     * @return value containing the maximum-value node, null if value cannot be found.
+     */
     public BinaryTreeNode<T> findMax() {
         return findMax(this.root);
     }
@@ -114,7 +131,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return null;
     }
 
-    // traverse in order
+    /**
+     * Recursively traverses the tree using In-Order Traversal.
+     * @return a Doubly-Linked List representing the traversal order.
+     */
     public DoublyLinkedList<BinaryTreeNode<T>> traverseInOrder() {
         return traverseInOrder(this.root, new DoublyLinkedList<>());
     }
@@ -128,7 +148,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return order;
     }
 
-    // traverse pre order
+    /**
+     * Recursively traverses the tree using Pre-Order traversal.
+     * @return a Doubly-Linked List representing the traversal order.
+     */
     public DoublyLinkedList<BinaryTreeNode<T>> traversePreOrder() {
         return traversePreOrder(this.root, new DoublyLinkedList<>());
     }
@@ -142,7 +165,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return order;
     }
 
-    // traverse post order:
+    /**
+     * Recursively traverses the tree using Post-Order traversal.
+     * @return a Doubly-Linked List representing the traversal order.
+     */
     public DoublyLinkedList<BinaryTreeNode<T>> traversePostOrder() {
         return traversePostOrder(this.root, new DoublyLinkedList<>());
     }
@@ -156,12 +182,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return order;
     }
 
-    //getRoot
+    /**
+     * Gets and returns the root of the tree.
+     * @return a node representing the root of the tree.
+     */
     public BinaryTreeNode<T> getRoot() {
         return this.root;
     }
 
-    // to array:
+    /**
+     * Returns an array representing the current tree.
+     * @param clazz underlying tree data type.
+     * @return an array containing properly-ordered tree values.
+     */
     public T[] toArray(Class<T> clazz) {
         return toArray((T[])Array.newInstance(clazz, this.size), 0, this.root);
     }
@@ -175,14 +208,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return arr;
     }
 
-    // to tree:
+    /**
+     * Builds a tree from a specified array.
+     * @param arr array of source values.
+     */
     public void toTree(T[] arr) {
         for(int i = 0; i < arr.length; i++) {
             insert(arr[i]);
         }
     }
 
-    // isEmpty
+    /**
+     * Determines whether or not the tree is empty.
+     * @return true if tree is empty, false if otherwise.
+     */
     public boolean isEmpty() {
         if(this.root == null) {
             return true;
@@ -190,7 +229,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return false;
     }
 
-    // getSize
+    /**
+     * Returns the current size of the tree.
+     * @return an integer representing the size of the tree.
+     */
     public int getSize() {
         return this.size;
     }
