@@ -1,10 +1,12 @@
-package tree;
+package tree.bst;
+
+import tree.TreeNode;
 
 /**
  * Contains implementations for a BinaryTreeNode object, to be used with Tree-based data structures.
  * Extends the TreeNode class.
  */
-public class BinaryTreeNode<T> extends TreeNode<T>{
+public class BinaryTreeNode<T> extends TreeNode<T> {
 
     private BinaryTreeNode<T> left;
     private BinaryTreeNode<T> right;

@@ -1,4 +1,6 @@
-package tree;
+package tree.graph;
+
+import tree.TreeNode;
 
 /**
  * Contains implementations for a GraphNode object, to be used with Graph-based data structures.
