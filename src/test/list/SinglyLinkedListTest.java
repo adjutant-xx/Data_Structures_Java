@@ -1,10 +1,9 @@
 package test.list;
-import list.ListNode;
+
 import list.SinglyLinkedList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import util.ItemIndex;
 import util.TestAssetEngine;
 
 /**

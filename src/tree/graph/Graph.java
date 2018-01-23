@@ -1,6 +1,5 @@
 package tree.graph;
 
-import tree.graph.GraphNode;
 import util.Constants;
 
 import java.util.HashMap;

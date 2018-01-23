@@ -1,8 +1,6 @@
 package list;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Contains operational implementations for the Singly-Linked List data structure.
