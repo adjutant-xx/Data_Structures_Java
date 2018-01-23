@@ -4,8 +4,8 @@ import list.DoublyLinkedList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import tree.BinarySearchTree;
-import tree.BinaryTreeNode;
+import tree.bst.BinarySearchTree;
+import tree.bst.BinaryTreeNode;
 import util.TestAssetEngine;
 
 import java.util.Arrays;

@@ -3,8 +3,7 @@ package test.tree.bst;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import tree.BinaryTreeNode;
-import tree.TreeNode;
+import tree.bst.BinaryTreeNode;
 import util.TestAssetEngine;
 
 /**

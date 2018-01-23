@@ -3,7 +3,7 @@ package test.tree.graph;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import tree.GraphNode;
+import tree.graph.GraphNode;
 import util.TestAssetEngine;
 
 /**
