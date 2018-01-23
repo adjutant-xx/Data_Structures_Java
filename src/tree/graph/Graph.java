@@ -22,30 +22,6 @@ public class Graph<T> {
         this.adjacencyMap = new HashMap<>();
     }
 
-    // is adjacent?
-    public boolean isAdjacent(GraphNode<T> x, GraphNode<T> y) throws Exception {
-        try {
-            HashSet<GraphNode<T>> adjacencySet = this.adjacencyMap.get(x);
-            if(adjacencySet != null) {
-                if(adjacencySet.contains(y)) {
-                    return true;
-                }
-            }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
-    }
-
-    // get neighbors
-    public HashSet<GraphNode<T>> getNeighbors(GraphNode<T> node) throws Exception {
-        try {
-            return this.adjacencyMap.get(node);
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
-    }
-
     // add vertex:
     public boolean addVertex(GraphNode<T> node) throws Exception {
         try {
@@ -68,10 +44,10 @@ public class Graph<T> {
                 for(Map.Entry<GraphNode<T>, HashSet<GraphNode<T>>> entry : this.adjacencyMap.entrySet()) {
                     if(entry.getValue().contains(node)) {
                         this.adjacencyMap.get(entry.getKey()).remove(node);
-                        this.numVertices--;
-                        return true;
                     }
                 }
+                this.numVertices--;
+                return true;
             }
             return false;
         } catch(Exception e) {
@@ -106,6 +82,42 @@ public class Graph<T> {
                 }
             }
             return false;
+        } catch(Exception e) {
+            throw new Exception(e);
+        }
+    }
+
+    // is adjacent?
+    public boolean isAdjacent(GraphNode<T> x, GraphNode<T> y) throws Exception {
+        try {
+            HashSet<GraphNode<T>> adjacencySet = this.adjacencyMap.get(x);
+            if(adjacencySet != null) {
+                if(adjacencySet.contains(y)) {
+                    return true;
+                }
+            }
+            return false;
+        } catch(Exception e) {
+            throw new Exception(e);
+        }
+    }
+
+    // contains vertex:
+    public boolean containsVertex(GraphNode<T> node) throws Exception {
+        try {
+            if(this.adjacencyMap.containsKey(node)) {
+                return true;
+            }
+            return false;
+        } catch(Exception e) {
+            throw new Exception(e);
+        }
+    }
+
+    // get neighbors
+    public HashSet<GraphNode<T>> getNeighbors(GraphNode<T> node) throws Exception {
+        try {
+            return this.adjacencyMap.get(node);
         } catch(Exception e) {
             throw new Exception(e);
         }
