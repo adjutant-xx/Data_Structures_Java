@@ -10,4 +10,17 @@ public class GraphNode<T> extends TreeNode<T> {
     public GraphNode(T data) {
         super(data);
     }
+
+    public GraphNode(GraphNodeBuilder<T> builder) {
+        this.data = builder.data;
+    }
+
+    public static class GraphNodeBuilder<T> {
+        private T data;
+
+        public GraphNodeBuilder<T> data(T data) {
+            this.data = data;
+            return this;
+        }
+    }
 }
