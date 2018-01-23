@@ -2,6 +2,7 @@ package tree;
 
 /**
  * Contains implementations for a BinaryTreeNode object, to be used with Tree-based data structures.
+ * Extends the TreeNode class.
  */
 public class BinaryTreeNode<T> extends TreeNode<T>{
 
