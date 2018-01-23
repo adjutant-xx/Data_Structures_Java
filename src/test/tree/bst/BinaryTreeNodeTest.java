@@ -1,4 +1,4 @@
-package test.tree;
+package test.tree.bst;
 
 import org.junit.Assert;
 import org.junit.Before;

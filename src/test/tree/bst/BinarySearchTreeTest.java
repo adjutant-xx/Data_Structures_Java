@@ -1,4 +1,4 @@
-package test.tree;
+package test.tree.bst;
 
 import list.DoublyLinkedList;
 import org.junit.Assert;
