@@ -1,6 +1,5 @@
 package test.tree;
 
-import jdk.nashorn.api.tree.BinaryTree;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
