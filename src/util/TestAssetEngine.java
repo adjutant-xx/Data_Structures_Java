@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * Contains tools used to automate the creation of test assets.
  */
-public class TestAssetEngine {
+public class TestAssetEngine<T> {
 
     private Random rand = new Random();
     public int upperBoundValue = Integer.MAX_VALUE;
@@ -104,7 +104,7 @@ public class TestAssetEngine {
      * @param arr the array to choose from.
      * @return the randomly chosen ItemIndex value.
      */
-    public ItemIndex chooseRandomIntegerIndexFromArray(int[] arr) {
+    public ItemIndex chooseRandomItemIndexFromArray(T[] arr) {
         int index = this.rand.nextInt(arr.length);
         return new ItemIndex(arr[index], index);
     }
