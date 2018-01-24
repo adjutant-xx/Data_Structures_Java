@@ -164,9 +164,10 @@ public class Graph<T> {
     }
 
     /**
-     * Determines whether or not a path exists between two nodes, using Depth-First Traversal
-     * @param source source node to be used in traversal.
-     * @param destination destination node to be used in traversal.
+     * Determines whether or not a path exists between two nodes, using Depth-First Search.
+     * Uses a wrapper method to initialize objects required for search traversal.
+     * @param source source node to be used in search.
+     * @param destination destination node to be used in search.
      * @return true if a path exists between source and destination nodes, false if otherwise.
      * @throws Exception
      */
@@ -196,6 +197,14 @@ public class Graph<T> {
         }
     }
 
+    /**
+     * Determines whether or not a path exists between two nodes, using Breadth-First Search.
+     * Uses a wrapper method to initialize objects required for search traversal.
+     * @param source source node to be used in search.
+     * @param destination destination node to be used in search.
+     * @return true if a path exists between source and destination nodes, false if otherwise.
+     * @throws Exception
+     */
     public boolean breadthFirstSearch(GraphNode<T> source, GraphNode<T> destination) throws Exception {
         Queue<GraphNode<T>> queue = new Queue<>();
         queue.enqueue(source);
