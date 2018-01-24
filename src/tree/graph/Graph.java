@@ -1,10 +1,13 @@
 package tree.graph;
 
+import list.queue.Queue;
+import list.stack.Stack;
 import util.Constants;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Contains operational implementations for the Graph data structure.
@@ -155,6 +158,65 @@ public class Graph<T> {
     public HashSet<GraphNode<T>> getNeighbors(GraphNode<T> vertex) throws Exception {
         try {
             return this.adjacencyMap.get(vertex);
+        } catch(Exception e) {
+            throw new Exception(e);
+        }
+    }
+
+    /**
+     * Determines whether or not a path exists between two nodes, using Depth-First Traversal
+     * @param source source node to be used in traversal.
+     * @param destination destination node to be used in traversal.
+     * @return true if a path exists between source and destination nodes, false if otherwise.
+     * @throws Exception
+     */
+    public boolean depthFirstSearch(GraphNode<T> source, GraphNode<T> destination) throws Exception {
+        Stack<GraphNode<T>> stack = new Stack<>();
+        stack.push(source);
+        return depthFirstSearch(stack, destination);
+    }
+    private boolean depthFirstSearch(Stack<GraphNode<T>> stack, GraphNode<T> destination) throws Exception {
+        try {
+            while(!stack.isEmpty()) {
+                GraphNode<T> current = stack.pop();
+                current.setStatus(VisitStatus.Visiting);
+                if(current.equals(destination)) {
+                    return true;
+                }
+                for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
+                    if(neighbor.getStatus().equals(VisitStatus.Unvisited)) {
+                        stack.push(neighbor);
+                    }
+                }
+                current.setStatus(VisitStatus.Visited);
+            }
+            return false;
+        } catch(Exception e) {
+            throw new Exception(e);
+        }
+    }
+
+    public boolean breadthFirstSearch(GraphNode<T> source, GraphNode<T> destination) throws Exception {
+        Queue<GraphNode<T>> queue = new Queue<>();
+        queue.enqueue(source);
+        return breadthFirstSearch(queue, destination);
+    }
+    private boolean breadthFirstSearch(Queue<GraphNode<T>> queue, GraphNode<T> destination) throws Exception {
+        try {
+            while(!queue.isEmpty()) {
+                GraphNode<T> current = queue.dequeue();
+                current.setStatus(VisitStatus.Visiting);
+                if(current.equals(destination)) {
+                    return true;
+                }
+                for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
+                    if(neighbor.getStatus().equals(VisitStatus.Unvisited)) {
+                        queue.enqueue(neighbor);
+                    }
+                }
+                current.setStatus(VisitStatus.Visited);
+            }
+            return false;
         } catch(Exception e) {
             throw new Exception(e);
         }
