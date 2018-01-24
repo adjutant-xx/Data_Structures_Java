@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import tree.graph.Graph;
 import tree.graph.GraphNode;
+import util.ItemIndex;
 import util.TestAssetEngine;
 
 import java.util.HashSet;
@@ -151,6 +152,68 @@ public class GraphTest {
             HashSet<GraphNode<Integer>> actual = this.graph.getNeighbors(w);
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void graphDepthFirstSearchTest() throws Exception {
+        GraphNode<Integer> a = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(a);
+        GraphNode<Integer> b = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(b);
+        GraphNode<Integer> c = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(c);
+        GraphNode<Integer> d = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(d);
+        GraphNode<Integer> e = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(e);
+        GraphNode<Integer> f = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(f);
+        GraphNode<Integer> g = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(g);
+        this.graph.addEdge(a, b);
+        this.graph.addEdge(a, c);
+        this.graph.addEdge(a, d);
+        this.graph.addEdge(b, c);
+        this.graph.addEdge(d, g);
+        this.graph.addEdge(e, d);
+        this.graph.addEdge(g, f);
+        boolean expected1 = true;
+        boolean actual1 = this.graph.depthFirstSearch(a, f);
+        Assert.assertEquals(expected1, actual1);
+        boolean expected2 = false;
+        boolean actual2 = this.graph.depthFirstSearch(a, e);
+        Assert.assertEquals(expected2, actual2);
+    }
+
+    @Test
+    public void graphBreadthFirstSearchTest() throws Exception {
+        GraphNode<Integer> a = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(a);
+        GraphNode<Integer> b = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(b);
+        GraphNode<Integer> c = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(c);
+        GraphNode<Integer> d = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(d);
+        GraphNode<Integer> e = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(e);
+        GraphNode<Integer> f = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(f);
+        GraphNode<Integer> g = new GraphNode<>(this.engine.generateRandomInteger());
+        this.graph.addVertex(g);
+        this.graph.addEdge(a, b);
+        this.graph.addEdge(a, c);
+        this.graph.addEdge(a, d);
+        this.graph.addEdge(b, c);
+        this.graph.addEdge(d, g);
+        this.graph.addEdge(e, d);
+        this.graph.addEdge(g, f);
+        boolean expected1 = true;
+        boolean actual1 = this.graph.breadthFirstSearch(a, f);
+        Assert.assertEquals(expected1, actual1);
+        boolean expected2 = false;
+        boolean actual2 = this.graph.breadthFirstSearch(a, e);
+        Assert.assertEquals(expected2, actual2);
     }
 
     @Test
