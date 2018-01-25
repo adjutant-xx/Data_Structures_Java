@@ -42,7 +42,6 @@ public class HashTable<K, V> {
     public boolean put(K key, V value) throws Exception {
         try {
             if(put(new Entry<>(key, value))) {
-                this.size++;
                 resize();
                 return true;
             }
@@ -56,9 +55,11 @@ public class HashTable<K, V> {
             // if bucket's data at hash index is empty, add entry
             if(this.table[hashFunction(entry.getKey())] == null) { // if bucket is null
                 this.table[hashFunction(entry.getKey())] = new ListNode<>(entry);
+                this.size++;
                 return true;
             } else if(this.table[hashFunction(entry.getKey())].getData() == null) { // if bucket holds no entry data
                 this.table[hashFunction(entry.getKey())].setData(entry);
+                this.size++;
                 return true;
             } else { // if bucket contains data:
                 // iterate through bucket until a. bucket with data containing key is found, b. bucket with no entry data is found, or c. null bucket is found
@@ -77,6 +78,7 @@ public class HashTable<K, V> {
                 }
                 // null bucket has been found, add new entry data:
                 tempBucket.setNext(new ListNode<>(entry));
+                this.size++;
                 return true;
             }
         } catch(Exception e) {
@@ -88,8 +90,10 @@ public class HashTable<K, V> {
         try {
             ListNode<Entry<K, V>> bucket = getBucket(key);
             while(bucket != null) {
-                if(bucket.getData().getKey().equals(key)) {
-                    return true;
+                if(bucket.getData() != null) {
+                    if(bucket.getData().getKey().equals(key)) {
+                        return true;
+                    }
                 }
                 bucket = bucket.getNext();
             }
@@ -99,24 +103,27 @@ public class HashTable<K, V> {
         }
     }
 
-    public boolean remove(K key, V value) throws Exception {
+    public boolean remove(K key) throws Exception {
         try {
             ListNode<Entry<K, V>> bucket = getBucket(key);
             ListNode<Entry<K, V>> prev = null;
             while(bucket != null) {
                 if(bucket.getData().getKey().equals(key)) {
-                    if(prev != null) {
-                        ListNode<Entry<K, V>> temp = bucket;
-                        bucket = prev;
-                        bucket.setNext(temp.getNext());
-                        this.size--;
-                        return true;
-                    }
+                    break;
                 }
                 prev = bucket;
                 bucket = bucket.getNext();
             }
-            return false;
+            if(bucket == null) {
+                return false;
+            }
+            if(prev != null) {
+                prev.setNext(bucket.getNext());
+            } else {
+                this.table[hashFunction(key)] = bucket.getNext();
+            }
+            this.size--;
+            return true;
         } catch(Exception e) {
             throw new Exception(e);
         }
@@ -157,11 +164,19 @@ public class HashTable<K, V> {
                     ListNode<Entry<K, V>> oldEntry = oldEntries.getElementAt(i);
                     while(oldEntry != null) {
                         put(oldEntry.getData().getKey(), oldEntry.getData().getValue());
-                        this.size--; // ensure that size isn't being artificially inflated.
+                        this.size--; // ensure that size isn't being artificially inflated during rehash
                         oldEntry = oldEntry.getNext();
                     }
                 }
             }
+        } catch(Exception e) {
+            throw new Exception(e);
+        }
+    }
+
+    public int getSize() throws Exception {
+        try {
+            return this.size;
         } catch(Exception e) {
             throw new Exception(e);
         }
