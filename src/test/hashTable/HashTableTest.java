@@ -33,4 +33,21 @@ public class HashTableTest {
         }
     }
 
+    @Test
+    public void hashTableGetTest() throws Exception {
+        String[] keyArr = {"Matthew", "Mark", "Luke", "John", "Dolan"};
+        Integer[] valueArr = new Integer[keyArr.length];
+        for(int i = 0; i < keyArr.length; i++) {
+            int val = this.engine.generateRandomInteger();
+            valueArr[i] = val;
+            this.hashTable.put(keyArr[i], valueArr[i]);
+        }
+        for(int i = 0; i < keyArr.length; i++) {
+            int expected = valueArr[i];
+            int actual = this.hashTable.get(keyArr[i]);
+            Assert.assertEquals(expected, actual);
+        }
+
+    }
+
 }
