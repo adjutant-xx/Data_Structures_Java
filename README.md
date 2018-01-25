@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mpaauw/data-structures-java.svg?branch=master)](https://travis-ci.org/mpaauw/data-structures-java)
+
 # Data_Structures_Java
 A collection of common data structures and algorithms written in Java.
 
