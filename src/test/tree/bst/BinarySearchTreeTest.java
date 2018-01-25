@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import tree.bst.BinarySearchTree;
 import tree.bst.BinaryTreeNode;
+import util.ItemIndex;
 import util.TestAssetEngine;
 
 import java.util.Arrays;
@@ -19,7 +20,7 @@ public class BinarySearchTreeTest {
     private BinarySearchTree<Integer> bst;
 
     public BinarySearchTreeTest() {
-        this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(200).upperBoundSize(200));
+        this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(20000).upperBoundSize(200));
     }
 
     @Before
@@ -140,6 +141,38 @@ public class BinarySearchTreeTest {
             int actual = postOrderList.getElementAt(i).getData();
             Assert.assertEquals(expected, actual);
         }
+    }
+
+    @Test
+    public void binarySearchTreeDepthFirstSearchTest() {
+        int[] arr = this.engine.generateUnorderedIntegerArray();
+        for(Integer item : arr) {
+            this.bst.insert(item);
+        }
+        ItemIndex<Integer> validVal = this.engine.chooseRandomItemIndexFromArray((Arrays.stream(arr).boxed().toArray(Integer[]::new)));
+        boolean expected1 = true;
+        boolean actual1 = this.bst.depthFirstSearch(validVal.getValue());
+        Assert.assertEquals(expected1, actual1);
+        int invalidVal = this.engine.generateRandomIntegerNotInArray(arr);
+        boolean expected2 = false;
+        boolean actual2 = this.bst.depthFirstSearch(invalidVal);
+        Assert.assertEquals(expected2, actual2);
+    }
+
+    @Test
+    public void binarySearchTreeBreadthFirstSearchTest() {
+        int[] arr = this.engine.generateUnorderedIntegerArray();
+        for(Integer item : arr) {
+            this.bst.insert(item);
+        }
+        ItemIndex<Integer> validVal = this.engine.chooseRandomItemIndexFromArray((Arrays.stream(arr).boxed().toArray(Integer[]::new)));
+        boolean expected1 = true;
+        boolean actual1 = this.bst.breadthFirstSearch(validVal.getValue());
+        Assert.assertEquals(expected1, actual1);
+        int invalidVal = this.engine.generateRandomIntegerNotInArray(arr);
+        boolean expected2 = false;
+        boolean actual2 = this.bst.breadthFirstSearch(invalidVal);
+        Assert.assertEquals(expected2, actual2);
     }
 
     @Test
