@@ -16,23 +16,23 @@ Several list-based implementations have been included in this project, outlined 
 > #### Singly-Linked List
 >> A simple linked-list-based structure that includes a list of nodes with only one-dimensional links.
 
-#### Doubly-Linked List
-Iterating on the singly-linked list implementation, this structure includes a list of bidirectionally-linked nodes in order to improve operational efficiencies at certain locations within the list.
+> #### Doubly-Linked List
+>> Iterating on the singly-linked list implementation, this structure includes a list of bidirectionally-linked nodes in order to improve operational efficiencies at certain locations within the list.
 
-#### Queue
-Basic FIFO structure built upon the Doubly-Linked List mechanism described above.
+> #### Queue
+>> Basic FIFO structure built upon the Doubly-Linked List mechanism described above.
 
-#### Stack
-A LIFO data structure that also utilizes the project's Doubly-Linked List logic.
+> #### Stack
+>> A LIFO data structure that also utilizes the project's Doubly-Linked List logic.
 
 ### Tree
 A few tree-based, node-focused structures have been added to the project, notably supporting well-known search and traversal algorithms within their implementations.
 
-#### Binary Search Tree
-Probably the most popular tree-based implementation, this container includes common implementations for many algorithms, including ordered traversals, depth-first search, and breadth-first search.
+> #### Binary Search Tree
+>> Probably the most popular tree-based implementation, this container includes common implementations for many algorithms, >> including ordered traversals, depth-first search, and breadth-first search.
 
-#### Graph
-This rudimentary tree-based implementation includes a basic, directed graph structure utilizing an adjacency-list-inspired 'Adjacency Map' implementation built upon an internal HashMap mechanism to track routes between nodes.
+> #### Graph
+>> This rudimentary tree-based implementation includes a basic, directed graph structure utilizing an adjacency-list-inspired >> 'Adjacency Map' implementation built upon an internal HashMap mechanism to track routes between nodes.
 
 ### Hash Table
 Though there are many methods to implementing the specifics of a hash map, table, set, etc...I have chosen to build my structure with support for generic key-value entries, separate-chaining hash collision avoidance, and prime number dynamic resizing mechanisms.
