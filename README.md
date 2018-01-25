@@ -5,14 +5,16 @@ A collection of common data structures and algorithms written in Java.
 
 ## Synopsis
 This repository includes common data structures written in Java. Current build is embedded within a Maven project in order to accommodate automated build delivery via CI every time a commit is pushed to the master branch.
+
 ---
+
 ## Implementations
 
 ### List
 Several list-based implementations have been included in this project, outlined below.
 
-#### Singly-Linked List
-A simple linked-list-based structure that includes a list of nodes with only one-dimensional links.
+> #### Singly-Linked List
+>> A simple linked-list-based structure that includes a list of nodes with only one-dimensional links.
 
 #### Doubly-Linked List
 Iterating on the singly-linked list implementation, this structure includes a list of bidirectionally-linked nodes in order to improve operational efficiencies at certain locations within the list.
