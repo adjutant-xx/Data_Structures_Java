@@ -128,7 +128,8 @@ public class HashTable<K, V> {
 
     // handle negative hashes:
     private int hashFunction(K key) {
-        return key.hashCode() % this.table.length;
+        int hash = key.hashCode() % this.table.length;
+        return (hash < 0) ? hash * -1 : hash;
     }
 
     // rehash every element into new array:
