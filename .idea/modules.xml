@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Data_Structures_Java.iml" filepath="$PROJECT_DIR$/Data_Structures_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/data-structures-java.iml" filepath="$PROJECT_DIR$/data-structures-java.iml" />
     </modules>
   </component>
 </project>
