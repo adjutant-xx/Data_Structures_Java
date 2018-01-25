@@ -3,8 +3,6 @@ package hashTable;
 import list.ListNode;
 import list.SinglyLinkedList;
 
-import java.util.Arrays;
-
 /**
  * Contains operational implementations for the HashTable data structure.
  * Utilizes separate chaining hash collision and prime number dynamic resizing mechanics.

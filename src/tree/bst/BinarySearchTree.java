@@ -7,7 +7,6 @@ import tree.VisitStatus;
 
 import java.lang.reflect.Array;
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * Contains operational implementations for the Binary Search Tree data structure.

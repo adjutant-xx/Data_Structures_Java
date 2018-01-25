@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import tree.graph.Graph;
 import tree.graph.GraphNode;
-import util.ItemIndex;
 import util.TestAssetEngine;
 
 import java.util.HashSet;
