@@ -25,7 +25,7 @@ public class HashTableTest {
 
     @Test
     public void hashTablePutTest() throws Exception {
-        String[] arr = {"John", "Jane", "Matt", "Chief", "Foobar"};
+        String[] arr = {"John", "Jane", "Matt", "Chief", "Matt", "Foobar"};
         for(String s : arr) {
             boolean expected1 = true;
             boolean actual1 = this.hashTable.put(s, this.engine.generateRandomInteger());

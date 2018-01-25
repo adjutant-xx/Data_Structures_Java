@@ -10,6 +10,10 @@ public class ListNode<T> {
 
     public ListNode() {}
 
+    public ListNode(T data) {
+        this.data = data;
+    }
+
     public ListNode(ListNodeBuilder<T> builder) {
         this.data = builder.data;
         this.next = builder.next;
