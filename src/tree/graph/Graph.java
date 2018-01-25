@@ -178,18 +178,23 @@ public class Graph<T> {
     }
     private boolean depthFirstSearch(Stack<GraphNode<T>> stack, GraphNode<T> destination) throws Exception {
         try {
+            HashMap<GraphNode<T>, VisitStatus> visited = new HashMap<>();
             while(!stack.isEmpty()) {
                 GraphNode<T> current = stack.pop();
-                current.setStatus(VisitStatus.Visiting);
+                visited.put(current, VisitStatus.Visiting);
                 if(current.equals(destination)) {
                     return true;
                 }
                 for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
-                    if(neighbor.getStatus().equals(VisitStatus.Unvisited)) {
+                    if(visited.containsKey(neighbor)) {
+                        if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
+                            stack.push(neighbor);
+                        }
+                    } else {
                         stack.push(neighbor);
                     }
                 }
-                current.setStatus(VisitStatus.Visited);
+                visited.put(current, VisitStatus.Visited);
             }
             return false;
         } catch(Exception e) {
@@ -212,18 +217,23 @@ public class Graph<T> {
     }
     private boolean breadthFirstSearch(Queue<GraphNode<T>> queue, GraphNode<T> destination) throws Exception {
         try {
+            HashMap<GraphNode<T>, VisitStatus> visited = new HashMap<>();
             while(!queue.isEmpty()) {
                 GraphNode<T> current = queue.dequeue();
-                current.setStatus(VisitStatus.Visiting);
+                visited.put(current, VisitStatus.Visiting);
                 if(current.equals(destination)) {
                     return true;
                 }
                 for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
-                    if(neighbor.getStatus().equals(VisitStatus.Unvisited)) {
+                    if(visited.containsKey(neighbor)) {
+                        if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
+                            queue.enqueue(neighbor);
+                        }
+                    } else {
                         queue.enqueue(neighbor);
                     }
                 }
-                current.setStatus(VisitStatus.Visited);
+                visited.put(current, VisitStatus.Visited);
             }
             return false;
         } catch(Exception e) {

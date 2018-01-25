@@ -8,8 +8,6 @@ import tree.TreeNode;
  */
 public class GraphNode<T> extends TreeNode<T> {
 
-    private VisitStatus status = VisitStatus.Unvisited;
-
     public GraphNode() {}
 
     public GraphNode(T data) {
@@ -18,14 +16,6 @@ public class GraphNode<T> extends TreeNode<T> {
 
     public GraphNode(GraphNodeBuilder<T> builder) {
         this.data = builder.data;
-    }
-
-    public VisitStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(VisitStatus status) {
-        this.status = status;
     }
 
     public static class GraphNodeBuilder<T> {
