@@ -29,10 +29,10 @@ Several list-based implementations have been included in this project, outlined 
 A few tree-based, node-focused structures have been added to the project, notably supporting well-known search and traversal algorithms within their implementations.
 
 > #### Binary Search Tree
->> Probably the most popular tree-based implementation, this container includes common implementations for many algorithms, >> including ordered traversals, depth-first search, and breadth-first search.
+>> Probably the most popular tree-based implementation, this container includes common implementations for many algorithms, including ordered traversals, depth-first search, and breadth-first search.
 
 > #### Graph
->> This rudimentary tree-based implementation includes a basic, directed graph structure utilizing an adjacency-list-inspired >> 'Adjacency Map' implementation built upon an internal HashMap mechanism to track routes between nodes.
+>> This rudimentary tree-based implementation includes a basic, directed graph structure utilizing an adjacency-list-inspired 'Adjacency Map' implementation built upon an internal HashMap mechanism to track routes between nodes.
 
 ### Hash Table
 Though there are many methods to implementing the specifics of a hash map, table, set, etc...I have chosen to build my structure with support for generic key-value entries, separate-chaining hash collision avoidance, and prime number dynamic resizing mechanisms.
