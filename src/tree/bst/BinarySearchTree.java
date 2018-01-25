@@ -1,7 +1,13 @@
 package tree.bst;
 
 import list.DoublyLinkedList;
+import list.queue.Queue;
+import list.stack.Stack;
+import tree.VisitStatus;
+
 import java.lang.reflect.Array;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Contains operational implementations for the Binary Search Tree data structure.
@@ -178,6 +184,96 @@ public class BinarySearchTree<T extends Comparable<T>> {
         traversePostOrder(node.getRight(), order);
         order.insertEnd(node);
         return order;
+    }
+
+    /**
+     * Determines whether or not a value exists within the tree, using Depth-First Search.
+     * Uses a wrapper method to initialize objects required for search traversal.
+     * @param data value to search for.
+     * @return true if the value exists within the tree, false if otherwise.
+     */
+    public boolean depthFirstSearch(T data) {
+        if(getSize() <= 0) {
+            return false;
+        }
+        Stack<BinaryTreeNode<T>> stack = new Stack<>();
+        stack.push(this.root);
+        return depthFirstSearch(stack, data);
+    }
+    private boolean depthFirstSearch(Stack<BinaryTreeNode<T>> stack, T data) {
+        HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap<>();
+        while(!stack.isEmpty()) {
+            BinaryTreeNode<T> current = stack.pop();
+            visited.put(current, VisitStatus.Visiting);
+            if(current.getData().equals(data)) {
+                return true;
+            }
+            if(current.getRight() != null) {
+                if(visited.containsKey(current.getRight())) {
+                    if(visited.get(current.getRight()).equals(VisitStatus.Unvisited)) {
+                        stack.push(current.getRight());
+                    }
+                } else {
+                    stack.push(current.getRight());
+                }
+            }
+            if(current.getLeft() != null) {
+                if(visited.containsKey(current.getLeft())) {
+                    if(visited.get(current.getLeft()).equals(VisitStatus.Unvisited)) {
+                        stack.push(current.getLeft());
+                    }
+                } else {
+                    stack.push(current.getLeft());
+                }
+
+            }
+            visited.put(current, VisitStatus.Visited);
+        }
+        return false;
+    }
+
+    /**
+     * Determines whether or not a value exists within the tree, using Breadth-First Search.
+     * Uses a wrapper method to initialize objects required for search traversal.
+     * @param data value to search for.
+     * @return true if the value exists within the tree, false if otherwise.
+     */
+    public boolean breadthFirstSearch(T data) {
+        if(getSize() <= 0) {
+            return false;
+        }
+        Queue<BinaryTreeNode<T>> queue = new Queue<>();
+        queue.enqueue(this.root);
+        return breadthFirstSearch(queue, data);
+    }
+    public boolean breadthFirstSearch(Queue<BinaryTreeNode<T>> queue, T data) {
+        HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap<>();
+        while(!queue.isEmpty()) {
+            BinaryTreeNode<T> current = queue.dequeue();
+            visited.put(current, VisitStatus.Visiting);
+            if(current.getData().equals(data)) {
+                return true;
+            }
+            if(current.getLeft() != null) {
+                if(visited.containsKey(current.getLeft())) {
+                    if(visited.get(current.getLeft()).equals(VisitStatus.Unvisited)) {
+                        queue.enqueue(current.getLeft());
+                    }
+                } else {
+                    queue.enqueue(current.getLeft());
+                }
+            }
+            if(current.getRight() != null) {
+                if(visited.containsKey(current.getRight())) {
+                    if(visited.get(current.getRight()).equals(VisitStatus.Unvisited)) {
+                        queue.enqueue(current.getRight());
+                    }
+                } else {
+                    queue.enqueue(current.getRight());
+                }
+            }
+        }
+        return false;
     }
 
     /**
