@@ -5,7 +5,7 @@ A collection of common data structures and algorithms written in Java.
 
 ## Synopsis
 This repository includes common data structures written in Java. Current build is embedded within a Maven project in order to accommodate automated build delivery via CI every time a commit is pushed to the master branch.
-
+---
 ## Implementations
 
 ### List
