@@ -2,12 +2,12 @@ package tree.graph;
 
 import list.queue.Queue;
 import list.stack.Stack;
+import tree.VisitStatus;
 import util.Constants;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Contains operational implementations for the Graph data structure.
