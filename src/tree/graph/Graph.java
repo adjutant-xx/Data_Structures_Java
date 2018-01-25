@@ -172,6 +172,9 @@ public class Graph<T> {
      * @throws Exception
      */
     public boolean depthFirstSearch(GraphNode<T> source, GraphNode<T> destination) throws Exception {
+        if(!this.adjacencyMap.containsKey(source) || !this.adjacencyMap.containsKey(destination)) {
+            return false;
+        }
         Stack<GraphNode<T>> stack = new Stack<>();
         stack.push(source);
         return depthFirstSearch(stack, destination);
@@ -211,6 +214,9 @@ public class Graph<T> {
      * @throws Exception
      */
     public boolean breadthFirstSearch(GraphNode<T> source, GraphNode<T> destination) throws Exception {
+        if(!this.adjacencyMap.containsKey(source) || !this.adjacencyMap.containsKey(destination)) {
+            return false;
+        }
         Queue<GraphNode<T>> queue = new Queue<>();
         queue.enqueue(source);
         return breadthFirstSearch(queue, destination);
