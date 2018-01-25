@@ -17,7 +17,6 @@ public class HashTable<K, V> {
     private final double loadFactor = 0.70;
     private final int resizeFactor = 2;
 
-    // note: choose prime # for table size
     public HashTable() {
         this.table = new ListNode[this.initSize];
         for(int i = 0; i < this.table.length; i++) {
@@ -25,6 +24,12 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Returns the value associated with a specified key.
+     * @param key key to use during indexing.
+     * @return value paired to key.
+     * @throws Exception
+     */
     public V get(K key) throws Exception {
         try {
             ListNode<Entry<K, V>> bucket = getBucket(key);
@@ -39,6 +44,15 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Adds a new key-value pair to the table.
+     * If key already exists, the existing value at the key index is replaced with the supplied value object.
+     * Uses a wrapper method to initialize / handle logic required during insertion process.
+     * @param key key to use during indexing.
+     * @param value value to pair with key.
+     * @return true if the insertion was successful, false if otherwise.
+     * @throws Exception
+     */
     public boolean put(K key, V value) throws Exception {
         try {
             if(put(new Entry<>(key, value))) {
@@ -86,6 +100,12 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Determines whether or not table contains a specified key.
+     * @param key key to search for.
+     * @return true if the table contains the key index, false if otherwise.
+     * @throws Exception
+     */
     public boolean containsKey(K key) throws Exception {
         try {
             ListNode<Entry<K, V>> bucket = getBucket(key);
@@ -103,6 +123,12 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Removes a key-value pair from the table, referenced using a specified key index.
+     * @param key key index of entry to remove.
+     * @return true if the removal was successful, false if otherwise
+     * @throws Exception
+     */
     public boolean remove(K key) throws Exception {
         try {
             ListNode<Entry<K, V>> bucket = getBucket(key);
@@ -129,17 +155,31 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Quickly obtains a 'bucket' of entries from a given index in the table.
+     * @param key key index to use during retrieval.
+     * @return a ListNode object containing the entry corresponding to the key's hashed index.
+     */
     private ListNode<Entry<K, V>> getBucket(K key) {
         return this.table[hashFunction(key)];
     }
 
-    // handle negative hashes:
+    /**
+     * Produces a random index within the table for a given key.
+     * Does not allow negative indexes to form.
+     * @param key key object to be used in hash formula.
+     * @return an index value relative to the underlying table array.
+     */
     private int hashFunction(K key) {
         int hash = key.hashCode() % this.table.length;
         return (hash < 0) ? hash * -1 : hash;
     }
 
-    // rehash every element into new array:
+    /**
+     * Dynamically resizes the underlying table array using specified load and resize factors.
+     * Once table is resized, all of the previous table's elements are rehashed into spots within the newly-allocated array, in order to ensure reliable future hashes.
+     * @throws Exception
+     */
     private void resize() throws Exception {
         try {
             if(this.size / (double)this.table.length > this.loadFactor) {
@@ -148,7 +188,7 @@ public class HashTable<K, V> {
                     newSize++;
                 }
                 SinglyLinkedList<ListNode<Entry<K, V>>> oldEntries = new SinglyLinkedList(); // store current data to be rehashed later.
-                for(int i = 0, iter = 0; i < this.table.length; i++) {
+                for(int i = 0; i < this.table.length; i++) {
                     if(this.table[i].getData() != null) {
                         oldEntries.insertEnd(this.table[i]);
                     }
@@ -157,9 +197,6 @@ public class HashTable<K, V> {
                 for(int i = 0; i < this.table.length; i++) {
                     this.table[i] = new ListNode<>();
                 }
-//                for(int i = 0; i < oldEntries.length; i++) { // rehash all old values into new array
-//                    put(oldEntries[i].getData().getKey(), oldEntries[i].getData().getValue());
-//                }
                 for(int i = 0; i < oldEntries.getSize(); i++) { // rehash old values into newly-allocated array.
                     ListNode<Entry<K, V>> oldEntry = oldEntries.getElementAt(i);
                     while(oldEntry != null) {
@@ -174,6 +211,11 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Gets the current number of elements within the table.
+     * @return an integer representing the number of table elements.
+     * @throws Exception
+     */
     public int getSize() throws Exception {
         try {
             return this.size;
@@ -182,6 +224,11 @@ public class HashTable<K, V> {
         }
     }
 
+    /**
+     * Determines whether or not any elements exist within the table.
+     * @return true if any elements exist, false if otherwise.
+     * @throws Exception
+     */
     public boolean isEmpty() throws Exception {
         try {
             return this.size <= 0;
