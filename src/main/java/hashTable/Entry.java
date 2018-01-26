@@ -14,11 +14,6 @@ public class Entry<K, V> {
         this.value = value;
     }
 
-    public Entry(EntryBuilder<K, V> builder) {
-        this.key = builder.key;
-        this.value = builder.value;
-    }
-
     public K getKey() {
         return key;
     }
@@ -33,20 +28,5 @@ public class Entry<K, V> {
 
     public void setValue(V value) {
         this.value = value;
-    }
-
-    public static class EntryBuilder<K, V> {
-        private K key;
-        private V value;
-
-        public EntryBuilder key(K key) {
-            this.key = key;
-            return this;
-        }
-
-        public EntryBuilder value(V value) {
-            this.value = value;
-            return this;
-        }
     }
 }
