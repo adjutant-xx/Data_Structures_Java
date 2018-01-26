@@ -13,7 +13,7 @@ public class QueueTest {
     private TestAssetEngine engine;
     private Queue<Integer> queue;
 
-    public QueueTest() {
+    public QueueTest() throws Exception {
         this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(200).upperBoundSize(100));
     }
 

@@ -1,9 +1,10 @@
-package tree.bst;
+package tree.binaryTree.bst;
 
 import list.DoublyLinkedList;
 import list.queue.Queue;
 import list.stack.Stack;
 import tree.VisitStatus;
+import tree.binaryTree.BinaryTreeNode;
 
 import java.lang.reflect.Array;
 import java.util.HashMap;

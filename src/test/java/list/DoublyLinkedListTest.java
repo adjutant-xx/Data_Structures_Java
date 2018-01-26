@@ -8,7 +8,7 @@ import org.junit.Before;
  */
 public class DoublyLinkedListTest extends SinglyLinkedListTest {
 
-    public DoublyLinkedListTest() {
+    public DoublyLinkedListTest() throws Exception {
         super();
     }
 

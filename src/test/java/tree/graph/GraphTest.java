@@ -17,7 +17,7 @@ public class GraphTest {
     private TestAssetEngine engine;
     private Graph<Integer> graph;
 
-    public GraphTest() {
+    public GraphTest() throws Exception {
         this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(200).upperBoundSize(200));
     }
 

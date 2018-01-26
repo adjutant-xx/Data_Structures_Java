@@ -1,12 +1,10 @@
-package tree.bst;
+package tree.binaryTree.bst;
 
 import list.DoublyLinkedList;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import tree.bst.BinarySearchTree;
-import tree.bst.BinaryTreeNode;
-import util.ItemIndex;
+import tree.binaryTree.BinaryTreeNode;
 import util.TestAssetEngine;
 
 import java.util.Arrays;
@@ -19,7 +17,7 @@ public class BinarySearchTreeTest {
     private TestAssetEngine engine;
     private BinarySearchTree<Integer> bst;
 
-    public BinarySearchTreeTest() {
+    public BinarySearchTreeTest() throws Exception {
         this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(20000).upperBoundSize(200));
     }
 

@@ -14,7 +14,18 @@ public class TestAssetEngine<T> {
 
     public TestAssetEngine() {}
 
-    public TestAssetEngine(TestAssetEngineBuilder builder) {
+    public TestAssetEngine(int upperBoundValue, int upperBoundSize) throws Exception {
+        if(upperBoundValue == upperBoundSize) {
+            throw new Exception("Upper bound values and size should not be equivalent.");
+        }
+        this.upperBoundValue = upperBoundValue;
+        this.upperBoundSize = upperBoundSize;
+    }
+
+    public TestAssetEngine(TestAssetEngineBuilder builder) throws Exception {
+        if(builder.upperBoundValue == builder.upperBoundSize) {
+            throw new Exception("Upper bound values and size should not be equivalent.");
+        }
         this.upperBoundValue = builder.upperBoundValue;
         this.upperBoundSize = builder.upperBoundSize;
     }

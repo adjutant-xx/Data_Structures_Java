@@ -13,7 +13,7 @@ public class SinglyLinkedListTest {
     protected TestAssetEngine engine;
     protected SinglyLinkedList<Integer> list;
 
-    public SinglyLinkedListTest() {
+    public SinglyLinkedListTest() throws Exception {
         this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(200).upperBoundSize(100));
     }
 

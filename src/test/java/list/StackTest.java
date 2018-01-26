@@ -13,7 +13,7 @@ public class StackTest {
     private TestAssetEngine engine;
     private Stack<Integer> stack;
 
-    public StackTest() {
+    public StackTest() throws Exception {
         this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(200).upperBoundSize(100));
     }
 

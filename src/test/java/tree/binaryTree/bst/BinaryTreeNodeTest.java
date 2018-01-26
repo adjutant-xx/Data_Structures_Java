@@ -1,9 +1,9 @@
-package tree.bst;
+package tree.binaryTree.bst;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import tree.bst.BinaryTreeNode;
+import tree.binaryTree.BinaryTreeNode;
 import util.TestAssetEngine;
 
 /**
