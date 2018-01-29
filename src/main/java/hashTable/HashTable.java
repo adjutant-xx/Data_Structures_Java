@@ -26,20 +26,16 @@ public class HashTable<K, V> {
      * Returns the value associated with a specified key.
      * @param key key to use during indexing.
      * @return value paired to key.
-     * @throws Exception
+     * @
      */
-    public V get(K key) throws Exception {
-        try {
-            ListNode<Entry<K, V>> bucket = getBucket(key);
-            while(bucket != null) {
-                if(bucket.getData().getKey().equals(key)) {
-                    return bucket.getData().getValue();
-                }
+    public V get(K key) {
+        ListNode<Entry<K, V>> bucket = getBucket(key);
+        while(bucket != null) {
+            if(bucket.getData().getKey().equals(key)) {
+                return bucket.getData().getValue();
             }
-            return null;
-        } catch(Exception e) {
-            throw new Exception(e);
         }
+        return null;
     }
 
     /**
@@ -49,52 +45,44 @@ public class HashTable<K, V> {
      * @param key key to use during indexing.
      * @param value value to pair with key.
      * @return true if the insertion was successful, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean put(K key, V value) throws Exception {
-        try {
-            if(put(new Entry(key, value))) {
-                resize();
+    public boolean put(K key, V value)  {
+        if(put(new Entry(key, value))) {
+            resize();
+            return true;
+        }
+        return false;
+    }
+    private boolean put(Entry<K, V> entry)  {
+        // if bucket's data at hash index is empty, add entry
+        if(this.table[hashFunction(entry.getKey())] == null) { // if bucket is null
+            this.table[hashFunction(entry.getKey())] = new ListNode(entry);
+            this.size++;
+            return true;
+        } else if(this.table[hashFunction(entry.getKey())].getData() == null) { // if bucket holds no entry data
+            this.table[hashFunction(entry.getKey())].setData(entry);
+            this.size++;
+            return true;
+        } else { // if bucket contains data:
+            // iterate through bucket until a. bucket with data containing key is found, b. bucket with no entry data is found, or c. null bucket is found
+            ListNode<Entry<K, V>> tempBucket = this.table[hashFunction(entry.getKey())];
+            if(tempBucket.getData().getKey().equals(entry.getKey())) { // if bucket contains correct entry key data
+                tempBucket.getData().setValue(entry.getValue());
                 return true;
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
-    }
-    private boolean put(Entry<K, V> entry) throws Exception {
-        try {
-            // if bucket's data at hash index is empty, add entry
-            if(this.table[hashFunction(entry.getKey())] == null) { // if bucket is null
-                this.table[hashFunction(entry.getKey())] = new ListNode(entry);
-                this.size++;
-                return true;
-            } else if(this.table[hashFunction(entry.getKey())].getData() == null) { // if bucket holds no entry data
-                this.table[hashFunction(entry.getKey())].setData(entry);
-                this.size++;
-                return true;
-            } else { // if bucket contains data:
-                // iterate through bucket until a. bucket with data containing key is found, b. bucket with no entry data is found, or c. null bucket is found
-                ListNode<Entry<K, V>> tempBucket = this.table[hashFunction(entry.getKey())];
+            while(tempBucket.getNext() != null) {
                 if(tempBucket.getData().getKey().equals(entry.getKey())) { // if bucket contains correct entry key data
                     tempBucket.getData().setValue(entry.getValue());
                     return true;
+                } else { // check next bucket in list
+                    tempBucket = tempBucket.getNext();
                 }
-                while(tempBucket.getNext() != null) {
-                    if(tempBucket.getData().getKey().equals(entry.getKey())) { // if bucket contains correct entry key data
-                        tempBucket.getData().setValue(entry.getValue());
-                        return true;
-                    } else { // check next bucket in list
-                        tempBucket = tempBucket.getNext();
-                    }
-                }
-                // null bucket has been found, add new entry data:
-                tempBucket.setNext(new ListNode(entry));
-                this.size++;
-                return true;
             }
-        } catch(Exception e) {
-            throw new Exception(e);
+            // null bucket has been found, add new entry data:
+            tempBucket.setNext(new ListNode(entry));
+            this.size++;
+            return true;
         }
     }
 
@@ -102,55 +90,47 @@ public class HashTable<K, V> {
      * Determines whether or not table contains a specified key.
      * @param key key to search for.
      * @return true if the table contains the key index, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean containsKey(K key) throws Exception {
-        try {
-            ListNode<Entry<K, V>> bucket = getBucket(key);
-            while(bucket != null) {
-                if(bucket.getData() != null) {
-                    if(bucket.getData().getKey().equals(key)) {
-                        return true;
-                    }
+    public boolean containsKey(K key)  {
+        ListNode<Entry<K, V>> bucket = getBucket(key);
+        while(bucket != null) {
+            if(bucket.getData() != null) {
+                if(bucket.getData().getKey().equals(key)) {
+                    return true;
                 }
-                bucket = bucket.getNext();
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
+            bucket = bucket.getNext();
         }
+        return false;
     }
 
     /**
      * Removes a key-value pair from the table, referenced using a specified key index.
      * @param key key index of entry to remove.
      * @return true if the removal was successful, false if otherwise
-     * @throws Exception
+     * @
      */
-    public boolean remove(K key) throws Exception {
-        try {
-            ListNode<Entry<K, V>> bucket = getBucket(key);
-            ListNode<Entry<K, V>> prev = null;
-            while(bucket != null) {
-                if(bucket.getData().getKey().equals(key)) {
-                    break;
-                }
-                prev = bucket;
-                bucket = bucket.getNext();
+    public boolean remove(K key)  {
+        ListNode<Entry<K, V>> bucket = getBucket(key);
+        ListNode<Entry<K, V>> prev = null;
+        while(bucket != null) {
+            if(bucket.getData().getKey().equals(key)) {
+                break;
             }
-            if(bucket == null) {
-                return false;
-            }
-            if(prev != null) {
-                prev.setNext(bucket.getNext());
-            } else {
-                this.table[hashFunction(key)] = bucket.getNext();
-            }
-            this.size--;
-            return true;
-        } catch(Exception e) {
-            throw new Exception(e);
+            prev = bucket;
+            bucket = bucket.getNext();
         }
+        if(bucket == null) {
+            return false;
+        }
+        if(prev != null) {
+            prev.setNext(bucket.getNext());
+        } else {
+            this.table[hashFunction(key)] = bucket.getNext();
+        }
+        this.size--;
+        return true;
     }
 
     /**
@@ -176,63 +156,51 @@ public class HashTable<K, V> {
     /**
      * Dynamically resizes the underlying table array using specified load and resize factors.
      * Once table is resized, all of the previous table's elements are rehashed into spots within the newly-allocated array, in order to ensure reliable future hashes.
-     * @throws Exception
+     * @
      */
-    private void resize() throws Exception {
-        try {
-            if(this.size / (double)this.table.length > this.loadFactor) {
-                int newSize = this.table.length * this.resizeFactor;
-                while(newSize % 2 == 0 || newSize % 3 == 0) { // find > double current size prime number for new table size.
-                    newSize++;
-                }
-                SinglyLinkedList<ListNode<Entry<K, V>>> oldEntries = new SinglyLinkedList(); // store current data to be rehashed later.
-                for(int i = 0; i < this.table.length; i++) {
-                    if(this.table[i].getData() != null) {
-                        oldEntries.insertEnd(this.table[i]);
-                    }
-                }
-                this.table = new ListNode[newSize];
-                for(int i = 0; i < this.table.length; i++) {
-                    this.table[i] = new ListNode();
-                }
-                for(int i = 0; i < oldEntries.getSize(); i++) { // rehash old values into newly-allocated array.
-                    ListNode<Entry<K, V>> oldEntry = oldEntries.getElementAt(i);
-                    while(oldEntry != null) {
-                        put(oldEntry.getData().getKey(), oldEntry.getData().getValue());
-                        this.size--; // ensure that size isn't being artificially inflated during rehash
-                        oldEntry = oldEntry.getNext();
-                    }
+    private void resize()  {
+        if(this.size / (double)this.table.length > this.loadFactor) {
+            int newSize = this.table.length * this.resizeFactor;
+            while(newSize % 2 == 0 || newSize % 3 == 0) { // find > double current size prime number for new table size.
+                newSize++;
+            }
+            SinglyLinkedList<ListNode<Entry<K, V>>> oldEntries = new SinglyLinkedList(); // store current data to be rehashed later.
+            for(int i = 0; i < this.table.length; i++) {
+                if(this.table[i].getData() != null) {
+                    oldEntries.insertEnd(this.table[i]);
                 }
             }
-        } catch(Exception e) {
-            throw new Exception(e);
+            this.table = new ListNode[newSize];
+            for(int i = 0; i < this.table.length; i++) {
+                this.table[i] = new ListNode();
+            }
+            for(int i = 0; i < oldEntries.getSize(); i++) { // rehash old values into newly-allocated array.
+                ListNode<Entry<K, V>> oldEntry = oldEntries.getElementAt(i);
+                while(oldEntry != null) {
+                    put(oldEntry.getData().getKey(), oldEntry.getData().getValue());
+                    this.size--; // ensure that size isn't being artificially inflated during rehash
+                    oldEntry = oldEntry.getNext();
+                }
+            }
         }
     }
 
     /**
      * Gets the current number of elements within the table.
      * @return an integer representing the number of table elements.
-     * @throws Exception
+     * @
      */
-    public int getSize() throws Exception {
-        try {
-            return this.size;
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
+    public int getSize()  {
+        return this.size;
     }
 
     /**
      * Determines whether or not any elements exist within the table.
      * @return true if any elements exist, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean isEmpty() throws Exception {
-        try {
-            return this.size <= 0;
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
+    public boolean isEmpty()  {
+        return this.size <= 0;
     }
 
 }

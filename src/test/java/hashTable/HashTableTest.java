@@ -24,7 +24,7 @@ public class HashTableTest {
     }
 
     @Test
-    public void hashTablePutTest() throws Exception {
+    public void hashTablePutTest()  {
         String[] arr = {"John", "Jane", "Matt", "Chief", "Matt", "Foobar"};
         for(String s : arr) {
             boolean expected = true;
@@ -34,7 +34,7 @@ public class HashTableTest {
     }
 
     @Test
-    public void hashTableGetTest() throws Exception {
+    public void hashTableGetTest()  {
         String[] keyArr = {"Matthew", "Mark", "Luke", "John", "Dolan"};
         Integer[] valueArr = new Integer[keyArr.length];
         for(int i = 0; i < keyArr.length; i++) {
@@ -50,7 +50,7 @@ public class HashTableTest {
     }
 
     @Test
-    public void hashTableContainsKeyTest() throws Exception {
+    public void hashTableContainsKeyTest()  {
         String[] validArr = {"Luke", "Leia", "Han", "Chewie", "C3P0", "R2", "Vader"};
         String[] invalidArr = {"Cat", "Dog", "Bird", "Fish"};
         for(String s : validArr) {
@@ -69,7 +69,7 @@ public class HashTableTest {
     }
 
     @Test
-    public void hashTableRemoveTest() throws Exception {
+    public void hashTableRemoveTest()  {
         String[] arr = {"Audi", "Beamer", "Benz", "Bentley"};
         for(String s : arr) {
             this.hashTable.put(s, this.engine.generateRandomInteger());
@@ -85,7 +85,7 @@ public class HashTableTest {
     }
 
     @Test
-    public void hashTableGetSizeTest() throws Exception {
+    public void hashTableGetSizeTest()  {
         String[] arr = {"Alpha", "Beta", "Charlie", "Delta", "Echo", "Gamma", "Foxtrot"};
         int count = 0;
         for(String s : arr) {
@@ -105,7 +105,7 @@ public class HashTableTest {
     }
 
     @Test
-    public void hashTableIsEmptyTest() throws Exception {
+    public void hashTableIsEmptyTest()  {
         String[] arr = {"Apple", "Banana", "Cranberry", "Dumpling"};
         boolean expected1 = true;
         boolean actual1 = this.hashTable.isEmpty();

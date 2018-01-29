@@ -28,43 +28,35 @@ public class Graph<T> {
      * Adds a vertex to the graph.
      * @param vertex vertex to add.
      * @return true if vertex was added successfully, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean addVertex(GraphNode<T> vertex) throws Exception {
-        try {
-            if(!this.adjacencyMap.containsKey(vertex)) {
-                this.adjacencyMap.put(vertex, new HashSet());
-                this.numVertices++;
-                return true;
-            }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
+    public boolean addVertex(GraphNode<T> vertex) {
+        if(!this.adjacencyMap.containsKey(vertex)) {
+            this.adjacencyMap.put(vertex, new HashSet());
+            this.numVertices++;
+            return true;
         }
+        return false;
     }
 
     /**
      * Removes a specified vertex from the graph.
      * @param vertex vertex to remove.
      * @return true if vertex was removed successfully, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean removeVertex(GraphNode<T> vertex) throws Exception {
-        try {
-            if(this.adjacencyMap.containsKey(vertex)) {
-                this.adjacencyMap.remove(vertex);
-                for(Map.Entry<GraphNode<T>, HashSet<GraphNode<T>>> entry : this.adjacencyMap.entrySet()) {
-                    if(entry.getValue().contains(vertex)) {
-                        this.adjacencyMap.get(entry.getKey()).remove(vertex);
-                    }
+    public boolean removeVertex(GraphNode<T> vertex) {
+        if(this.adjacencyMap.containsKey(vertex)) {
+            this.adjacencyMap.remove(vertex);
+            for(Map.Entry<GraphNode<T>, HashSet<GraphNode<T>>> entry : this.adjacencyMap.entrySet()) {
+                if(entry.getValue().contains(vertex)) {
+                    this.adjacencyMap.get(entry.getKey()).remove(vertex);
                 }
-                this.numVertices--;
-                return true;
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
+            this.numVertices--;
+            return true;
         }
+        return false;
     }
 
     /**
@@ -72,21 +64,17 @@ public class Graph<T> {
      * @param x source vertex of edge to add.
      * @param y destination vertex of edge to add.
      * @return true if the edge was added successfully, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean addEdge(GraphNode<T> x, GraphNode<T> y) throws Exception {
-        try {
-            if(this.adjacencyMap.containsKey(x)) {
-                if(!this.adjacencyMap.get(x).contains(y)) {
-                    this.adjacencyMap.get(x).add(y);
-                    this.numEdges++;
-                    return true;
-                }
+    public boolean addEdge(GraphNode<T> x, GraphNode<T> y) {
+        if(this.adjacencyMap.containsKey(x)) {
+            if(!this.adjacencyMap.get(x).contains(y)) {
+                this.adjacencyMap.get(x).add(y);
+                this.numEdges++;
+                return true;
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
         }
+        return false;
     }
 
     /**
@@ -94,21 +82,17 @@ public class Graph<T> {
      * @param x source vertex of edge to remove.
      * @param y destination vertex of edge to remove.
      * @return true if the edge was removed successfully, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean removeEdge(GraphNode<T> x, GraphNode<T> y) throws Exception {
-        try {
-            if(this.adjacencyMap.containsKey(x)) {
-                if(this.adjacencyMap.get(x).contains(y)) {
-                    this.adjacencyMap.get(x).remove(y);
-                    this.numEdges--;
-                    return true;
-                }
+    public boolean removeEdge(GraphNode<T> x, GraphNode<T> y) {
+        if(this.adjacencyMap.containsKey(x)) {
+            if(this.adjacencyMap.get(x).contains(y)) {
+                this.adjacencyMap.get(x).remove(y);
+                this.numEdges--;
+                return true;
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
         }
+        return false;
     }
 
     /**
@@ -116,51 +100,39 @@ public class Graph<T> {
      * @param x source vertex.
      * @param y destination vertex.
      * @return true if both vertices are adjacent, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean isAdjacent(GraphNode<T> x, GraphNode<T> y) throws Exception {
-        try {
-            HashSet<GraphNode<T>> adjacencySet = this.adjacencyMap.get(x);
-            if(adjacencySet != null) {
-                if(adjacencySet.contains(y)) {
-                    return true;
-                }
+    public boolean isAdjacent(GraphNode<T> x, GraphNode<T> y) {
+        HashSet<GraphNode<T>> adjacencySet = this.adjacencyMap.get(x);
+        if(adjacencySet != null) {
+            if(adjacencySet.contains(y)) {
+                return true;
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
         }
+        return false;
     }
 
     /**
      * Determines if graph contains a given vertex or not.
      * @param vertex vertex to search.
      * @return true if the graph contains the vertex, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean containsVertex(GraphNode<T> vertex) throws Exception {
-        try {
-            if(this.adjacencyMap.containsKey(vertex)) {
-                return true;
-            }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
+    public boolean containsVertex(GraphNode<T> vertex) {
+        if(this.adjacencyMap.containsKey(vertex)) {
+            return true;
         }
+        return false;
     }
 
     /**
      * Returns a HashSet containing all neighbors of a given vertex (or, all vertices with which the vertex shares an edge).
      * @param vertex vertex to search.
      * @return a HashSet containing all neighbors of the vertex.
-     * @throws Exception
+     * @
      */
-    public HashSet<GraphNode<T>> getNeighbors(GraphNode<T> vertex) throws Exception {
-        try {
-            return this.adjacencyMap.get(vertex);
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
+    public HashSet<GraphNode<T>> getNeighbors(GraphNode<T> vertex) {
+        return this.adjacencyMap.get(vertex);
     }
 
     /**
@@ -169,9 +141,9 @@ public class Graph<T> {
      * @param source source node to be used in search.
      * @param destination destination node to be used in search.
      * @return true if a path exists between source and destination nodes, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean depthFirstSearch(GraphNode<T> source, GraphNode<T> destination) throws Exception {
+    public boolean depthFirstSearch(GraphNode<T> source, GraphNode<T> destination) {
         if(!this.adjacencyMap.containsKey(source) || !this.adjacencyMap.containsKey(destination)) {
             return false;
         }
@@ -179,30 +151,26 @@ public class Graph<T> {
         stack.push(source);
         return depthFirstSearch(stack, destination);
     }
-    private boolean depthFirstSearch(Stack<GraphNode<T>> stack, GraphNode<T> destination) throws Exception {
-        try {
-            HashMap<GraphNode<T>, VisitStatus> visited = new HashMap();
-            while(!stack.isEmpty()) {
-                GraphNode<T> current = stack.pop();
-                visited.put(current, VisitStatus.Visiting);
-                if(current.equals(destination)) {
-                    return true;
-                }
-                for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
-                    if(visited.containsKey(neighbor)) {
-                        if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
-                            stack.push(neighbor);
-                        }
-                    } else {
+    private boolean depthFirstSearch(Stack<GraphNode<T>> stack, GraphNode<T> destination) {
+        HashMap<GraphNode<T>, VisitStatus> visited = new HashMap();
+        while(!stack.isEmpty()) {
+            GraphNode<T> current = stack.pop();
+            visited.put(current, VisitStatus.Visiting);
+            if(current.equals(destination)) {
+                return true;
+            }
+            for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
+                if(visited.containsKey(neighbor)) {
+                    if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
                         stack.push(neighbor);
                     }
+                } else {
+                    stack.push(neighbor);
                 }
-                visited.put(current, VisitStatus.Visited);
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
+            visited.put(current, VisitStatus.Visited);
         }
+        return false;
     }
 
     /**
@@ -211,9 +179,9 @@ public class Graph<T> {
      * @param source source node to be used in search.
      * @param destination destination node to be used in search.
      * @return true if a path exists between source and destination nodes, false if otherwise.
-     * @throws Exception
+     * @
      */
-    public boolean breadthFirstSearch(GraphNode<T> source, GraphNode<T> destination) throws Exception {
+    public boolean breadthFirstSearch(GraphNode<T> source, GraphNode<T> destination) {
         if(!this.adjacencyMap.containsKey(source) || !this.adjacencyMap.containsKey(destination)) {
             return false;
         }
@@ -221,56 +189,44 @@ public class Graph<T> {
         queue.enqueue(source);
         return breadthFirstSearch(queue, destination);
     }
-    private boolean breadthFirstSearch(Queue<GraphNode<T>> queue, GraphNode<T> destination) throws Exception {
-        try {
-            HashMap<GraphNode<T>, VisitStatus> visited = new HashMap();
-            while(!queue.isEmpty()) {
-                GraphNode<T> current = queue.dequeue();
-                visited.put(current, VisitStatus.Visiting);
-                if(current.equals(destination)) {
-                    return true;
-                }
-                for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
-                    if(visited.containsKey(neighbor)) {
-                        if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
-                            queue.enqueue(neighbor);
-                        }
-                    } else {
+    private boolean breadthFirstSearch(Queue<GraphNode<T>> queue, GraphNode<T> destination) {
+        HashMap<GraphNode<T>, VisitStatus> visited = new HashMap();
+        while(!queue.isEmpty()) {
+            GraphNode<T> current = queue.dequeue();
+            visited.put(current, VisitStatus.Visiting);
+            if(current.equals(destination)) {
+                return true;
+            }
+            for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
+                if(visited.containsKey(neighbor)) {
+                    if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
                         queue.enqueue(neighbor);
                     }
+                } else {
+                    queue.enqueue(neighbor);
                 }
-                visited.put(current, VisitStatus.Visited);
             }
-            return false;
-        } catch(Exception e) {
-            throw new Exception(e);
+            visited.put(current, VisitStatus.Visited);
         }
+        return false;
     }
 
     /**
      * Returns the number of vertices within the graph.
      * @return an integer representing number of vertices contained within the graph.
-     * @throws Exception
+     * @
      */
-    public int getNumVertices() throws Exception {
-        try {
-            return this.numVertices;
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
+    public int getNumVertices() {
+        return this.numVertices;
     }
 
     /**
      * Returns the number of edges within the graph.
      * @return an integer representing number of edges contained within the graph.
-     * @throws Exception
+     * @
      */
-    public int getNumEdges() throws Exception {
-        try {
-            return this.numEdges;
-        } catch(Exception e) {
-            throw new Exception(e);
-        }
+    public int getNumEdges() {
+        return this.numEdges;
     }
 
 }
