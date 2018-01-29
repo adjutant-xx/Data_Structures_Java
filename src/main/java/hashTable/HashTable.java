@@ -58,7 +58,7 @@ public class HashTable<K, V> {
         try {
             checkKey(key);
             if(put(new Entry(key, value))) {
-                resize();
+                tryResize();
                 return true;
             } else {
                 return false;
@@ -191,11 +191,11 @@ public class HashTable<K, V> {
     }
 
     /**
-     * Dynamically resizes the underlying table array using specified load and resize factors.
+     * Dynamically resizes the underlying table array using specified load and resize factors, under certain conditions.
      * Once table is resized, all of the previous table's elements are rehashed into spots within the newly-allocated array, in order to ensure reliable future hashes.
      * @
      */
-    private void resize() {
+    private void tryResize() {
         if(this.size / (double)this.table.length > this.loadFactor) {
             int newSize = this.table.length * this.resizeFactor;
             while(newSize % 2 == 0 || newSize % 3 == 0) { // find > double current size prime number for new table size.
