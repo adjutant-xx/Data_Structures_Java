@@ -2,6 +2,7 @@ package hashTable;
 
 import list.ListNode;
 import list.SinglyLinkedList;
+import util.Constants;
 
 /**
  * Contains operational implementations for the HashTable data structure.
@@ -29,13 +30,19 @@ public class HashTable<K, V> {
      * @
      */
     public V get(K key) {
-        ListNode<Entry<K, V>> bucket = getBucket(key);
-        while(bucket != null) {
-            if(bucket.getData().getKey().equals(key)) {
-                return bucket.getData().getValue();
+        try {
+            checkKey(key);
+            ListNode<Entry<K, V>> bucket = getBucket(key);
+            while(bucket != null) {
+                if(bucket.getData().getKey().equals(key)) {
+                    return bucket.getData().getValue();
+                }
             }
+            return null;
+        } catch(IllegalArgumentException e) {
+            System.out.println(e);
+            return null;
         }
-        return null;
     }
 
     /**
@@ -47,12 +54,19 @@ public class HashTable<K, V> {
      * @return true if the insertion was successful, false if otherwise.
      * @
      */
-    public boolean put(K key, V value)  {
-        if(put(new Entry(key, value))) {
-            resize();
-            return true;
+    public boolean put(K key, V value) {
+        try {
+            checkKey(key);
+            if(put(new Entry(key, value))) {
+                resize();
+                return true;
+            } else {
+                return false;
+            }
+        } catch(IllegalArgumentException e) {
+            System.out.println(e);
+            return false;
         }
-        return false;
     }
     private boolean put(Entry<K, V> entry)  {
         // if bucket's data at hash index is empty, add entry
@@ -92,17 +106,23 @@ public class HashTable<K, V> {
      * @return true if the table contains the key index, false if otherwise.
      * @
      */
-    public boolean containsKey(K key)  {
-        ListNode<Entry<K, V>> bucket = getBucket(key);
-        while(bucket != null) {
-            if(bucket.getData() != null) {
-                if(bucket.getData().getKey().equals(key)) {
-                    return true;
+    public boolean containsKey(K key) {
+        try {
+            checkKey(key);
+            ListNode<Entry<K, V>> bucket = getBucket(key);
+            while(bucket != null) {
+                if(bucket.getData() != null) {
+                    if(bucket.getData().getKey().equals(key)) {
+                        return true;
+                    }
                 }
+                bucket = bucket.getNext();
             }
-            bucket = bucket.getNext();
+            return false;
+        } catch(IllegalArgumentException e) {
+            System.out.println(e);
+            return false;
         }
-        return false;
     }
 
     /**
@@ -111,26 +131,32 @@ public class HashTable<K, V> {
      * @return true if the removal was successful, false if otherwise
      * @
      */
-    public boolean remove(K key)  {
-        ListNode<Entry<K, V>> bucket = getBucket(key);
-        ListNode<Entry<K, V>> prev = null;
-        while(bucket != null) {
-            if(bucket.getData().getKey().equals(key)) {
-                break;
+    public boolean remove(K key) {
+        try {
+            checkKey(key);
+            ListNode<Entry<K, V>> bucket = getBucket(key);
+            ListNode<Entry<K, V>> prev = null;
+            while(bucket != null) {
+                if(bucket.getData().getKey().equals(key)) {
+                    break;
+                }
+                prev = bucket;
+                bucket = bucket.getNext();
             }
-            prev = bucket;
-            bucket = bucket.getNext();
-        }
-        if(bucket == null) {
+            if(bucket == null) {
+                return false;
+            }
+            if(prev != null) {
+                prev.setNext(bucket.getNext());
+            } else {
+                this.table[hashFunction(key)] = bucket.getNext();
+            }
+            this.size--;
+            return true;
+        } catch(IllegalArgumentException e) {
+            System.out.println(e);
             return false;
         }
-        if(prev != null) {
-            prev.setNext(bucket.getNext());
-        } else {
-            this.table[hashFunction(key)] = bucket.getNext();
-        }
-        this.size--;
-        return true;
     }
 
     /**
@@ -139,7 +165,13 @@ public class HashTable<K, V> {
      * @return a ListNode object containing the entry corresponding to the key's hashed index.
      */
     private ListNode<Entry<K, V>> getBucket(K key) {
-        return this.table[hashFunction(key)];
+        try {
+            checkKey(key);
+            return this.table[hashFunction(key)];
+        } catch(IllegalArgumentException e) {
+            System.out.println(e);
+            return null;
+        }
     }
 
     /**
@@ -148,9 +180,14 @@ public class HashTable<K, V> {
      * @param key key object to be used in hash formula.
      * @return an index value relative to the underlying table array.
      */
-    private int hashFunction(K key) {
-        int hash = key.hashCode() % this.table.length;
-        return (hash < 0) ? hash * -1 : hash;
+    private int hashFunction(K key) throws IllegalArgumentException {
+        try {
+            checkKey(key);
+            int hash = key.hashCode() % this.table.length;
+            return (hash < 0) ? hash * -1 : hash;
+        } catch(IllegalArgumentException e) {
+            throw new IllegalArgumentException(e);
+        }
     }
 
     /**
@@ -158,7 +195,7 @@ public class HashTable<K, V> {
      * Once table is resized, all of the previous table's elements are rehashed into spots within the newly-allocated array, in order to ensure reliable future hashes.
      * @
      */
-    private void resize()  {
+    private void resize() {
         if(this.size / (double)this.table.length > this.loadFactor) {
             int newSize = this.table.length * this.resizeFactor;
             while(newSize % 2 == 0 || newSize % 3 == 0) { // find > double current size prime number for new table size.
@@ -190,7 +227,7 @@ public class HashTable<K, V> {
      * @return an integer representing the number of table elements.
      * @
      */
-    public int getSize()  {
+    public int getSize() {
         return this.size;
     }
 
@@ -199,8 +236,19 @@ public class HashTable<K, V> {
      * @return true if any elements exist, false if otherwise.
      * @
      */
-    public boolean isEmpty()  {
+    public boolean isEmpty() {
         return this.size <= 0;
+    }
+
+    /**
+     * Checks a given key for validity, throws an exception if null key is encountered.
+     * @param key key to check.
+     * @throws IllegalArgumentException
+     */
+    private void checkKey(K key) throws IllegalArgumentException {
+        if(key == null) {
+            throw new IllegalArgumentException(String.format(Constants.ILLEGAL_ARGUMENT_EXCEPTION_MESSAGE_INPUT_NULL, "key"));
+        }
     }
 
 }
