@@ -43,12 +43,12 @@ public class MinHeap<T extends Comparable<T>> {
     }
 
     // getMin
-    public T getMin() throws Exception {
+    public T getMin()  {
         return this.root.getData();
     }
 
 //    // removeMin
-//    public T removeMin() throws Exception {
+//    public T removeMin()  {
 //        T min = getMin();
 //        replaceRoot();
 //        heapify();
