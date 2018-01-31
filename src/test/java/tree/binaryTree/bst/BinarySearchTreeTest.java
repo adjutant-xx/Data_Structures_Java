@@ -127,7 +127,7 @@ public class BinarySearchTreeTest {
     }
 
     @Test
-    public void binarySearchTreeTraversePostOrder() {
+    public void binarySearchTreeTraversePostOrderTest() {
         int[] arr = {30, 25, 49, 10, 28, 37, 102};
         for(Integer item : arr) {
             this.bst.insert(item);
