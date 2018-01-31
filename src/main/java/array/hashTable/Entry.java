@@ -1,4 +1,4 @@
-package hashTable;
+package array.hashTable;
 
 /**
  * Contains implementations for an Entry object, to be used with Hashtable-based data structures.

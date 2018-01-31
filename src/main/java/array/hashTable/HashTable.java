@@ -1,4 +1,4 @@
-package hashTable;
+package array.hashTable;
 
 import list.ListNode;
 import list.SinglyLinkedList;

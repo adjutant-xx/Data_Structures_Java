@@ -1,6 +1,5 @@
-package hashTable;
+package array.hashTable;
 
-import hashTable.HashTable;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
