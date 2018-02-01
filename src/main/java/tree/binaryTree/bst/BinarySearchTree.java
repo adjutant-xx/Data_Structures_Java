@@ -22,14 +22,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param value value to insert.
      * @return true if insertion was successful, false if otherwise.
      */
-    public boolean insert(T value) {
-        try {
-            this.root = insert(this.root, value);
-            this.size++;
-            return true;
-        } catch(Exception e) {
-            return false;
-        }
+    public void insert(T value) {
+        this.root = insert(this.root, value);
+        this.size++;
     }
     private BinaryTreeNode<T> insert(BinaryTreeNode<T> node, T value) {
         if(node == null) {
@@ -49,14 +44,9 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @param value value to remove.
      * @return true if removal was successful, false if otherwise.
      */
-    public boolean remove(T value) {
-        try {
-            this.root = remove(this.root, value);
-            this.size--;
-            return true;
-        } catch(Exception e) {
-            return false;
-        }
+    public void remove(T value) {
+        this.root = remove(this.root, value);
+        this.size--;
     }
     private BinaryTreeNode<T> remove(BinaryTreeNode<T> node, T value) {
         if(!isEmpty()) {

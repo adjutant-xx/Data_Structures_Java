@@ -31,13 +31,12 @@ public class BinarySearchTreeTest {
         int[] arr = this.engine.generateUnorderedIntegerArray();
         int count = 0;
         for(Integer item : arr) {
-            boolean expected1 = true;
-            boolean actual1 = this.bst.insert(item);
+            this.bst.insert(item);
             count++;
-            Assert.assertEquals(expected1, actual1);
-            int expected2 = count;
-            int actual2 = this.bst.getSize();
-            Assert.assertEquals(expected2, actual2);
+            Assert.assertNotNull(this.bst.find(item));
+            int expected = count;
+            int actual = this.bst.getSize();
+            Assert.assertEquals(expected, actual);
         }
     }
 
@@ -49,12 +48,12 @@ public class BinarySearchTreeTest {
         }
         int count = this.bst.getSize();
         for(Integer item : arr) {
-            boolean expected1 = true;
-            boolean actual1 = this.bst.remove(item);
-            Assert.assertEquals(expected1, actual1);
+            this.bst.remove(item);
+            Assert.assertNull(this.bst.find(item));
             count--;
-            int expected2 = count;
-            int actual2 = this.bst.getSize();
+            int expected = count;
+            int actual = this.bst.getSize();
+            Assert.assertEquals(expected, actual);
         }
     }
 
