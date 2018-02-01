@@ -54,7 +54,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 int result = value.compareTo(node.getData());
                 if (result == 0) {
                     if (node.getLeft() != null && node.getRight() != null) {
-//                        node = findMin(node.getRight());
                         node = findExtreme(node, BinaryTreeNode::getRight);
                         remove(node.getRight(), node.getData());
                     } else {
@@ -129,7 +128,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @return a Doubly-Linked List representing the traversal order.
      */
     public DoublyLinkedList<BinaryTreeNode<T>> traverseInOrder() {
-        return traverseInOrder(this.root, new DoublyLinkedList());
+        return traverseInOrder(this.root, new DoublyLinkedList<>());
     }
     private DoublyLinkedList<BinaryTreeNode<T>> traverseInOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
         if(node == null) {
@@ -146,7 +145,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @return a Doubly-Linked List representing the traversal order.
      */
     public DoublyLinkedList<BinaryTreeNode<T>> traversePreOrder() {
-        return traversePreOrder(this.root, new DoublyLinkedList());
+        return traversePreOrder(this.root, new DoublyLinkedList<>());
     }
     private DoublyLinkedList<BinaryTreeNode<T>> traversePreOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
         if(node == null) {
@@ -163,7 +162,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @return a Doubly-Linked List representing the traversal order.
      */
     public DoublyLinkedList<BinaryTreeNode<T>> traversePostOrder() {
-        return traversePostOrder(this.root, new DoublyLinkedList());
+        return traversePostOrder(this.root, new DoublyLinkedList<>());
     }
     private DoublyLinkedList<BinaryTreeNode<T>> traversePostOrder(BinaryTreeNode<T> node, DoublyLinkedList<BinaryTreeNode<T>> order) {
         if(node == null) {
@@ -190,7 +189,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return depthFirstSearch(stack, data);
     }
     private boolean depthFirstSearch(Stack<BinaryTreeNode<T>> stack, T data) {
-        HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap();
+        HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap<>();
         while(!stack.isEmpty()) {
             BinaryTreeNode<T> current = stack.pop();
             visited.put(current, VisitStatus.VISITING);
@@ -236,7 +235,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return breadthFirstSearch(queue, data);
     }
     public boolean breadthFirstSearch(Queue<BinaryTreeNode<T>> queue, T data) {
-        HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap();
+        HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap<>();
         while(!queue.isEmpty()) {
             BinaryTreeNode<T> current = queue.dequeue();
             visited.put(current, VisitStatus.VISITING);
