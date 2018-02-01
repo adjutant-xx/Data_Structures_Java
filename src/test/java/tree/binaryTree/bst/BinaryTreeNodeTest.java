@@ -46,7 +46,8 @@ public class BinaryTreeNodeTest {
         int data1 = this.engine.generateRandomInteger();
         int data2 = this.engine.generateRandomInteger();
         BinaryTreeNode<Integer> newNode = new BinaryTreeNode(data2);
-        this.node = new BinaryTreeNode(new BinaryTreeNode.BinaryTreeNodeBuilder<Integer>().data(data1).left(newNode));
+        this.node = new BinaryTreeNode<Integer>(data1);
+        this.node.setLeft(newNode);
         BinaryTreeNode<Integer> expected = newNode;
         BinaryTreeNode<Integer> actual = this.node.getLeft();
         Assert.assertEquals(expected, actual);
@@ -69,7 +70,8 @@ public class BinaryTreeNodeTest {
         int data1 = this.engine.generateRandomInteger();
         int data2 = this.engine.generateRandomInteger();
         BinaryTreeNode<Integer> newNode = new BinaryTreeNode(data2);
-        this.node = new BinaryTreeNode(new BinaryTreeNode.BinaryTreeNodeBuilder<Integer>().data(data1).right(newNode));
+        this.node = new BinaryTreeNode<Integer>(data1);
+        this.node.setRight(newNode);
         BinaryTreeNode<Integer> expected = newNode;
         BinaryTreeNode<Integer> actual = this.node.getRight();
         Assert.assertEquals(expected, actual);

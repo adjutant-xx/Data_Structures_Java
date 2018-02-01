@@ -1,29 +1,24 @@
 package tree.graph;
 
-import tree.TreeNode;
-
 /**
  * Contains implementations for a GraphNode object, to be used with Graph-based data structures.
  * Extends the TreeNode class.
  */
-public class GraphNode<T> extends TreeNode<T> {
+public class GraphNode<T> {
+
+    private T data;
 
     public GraphNode() {}
 
     public GraphNode(T data) {
-        super(data);
+        this.data = data;
     }
 
-    public GraphNode(GraphNodeBuilder<T> builder) {
-        this.data = builder.data;
+    public T getData() {
+        return data;
     }
 
-    public static class GraphNodeBuilder<T> {
-        private T data;
-
-        public GraphNodeBuilder<T> data(T data) {
-            this.data = data;
-            return this;
-        }
+    public void setData(T data) {
+        this.data = data;
     }
 }
