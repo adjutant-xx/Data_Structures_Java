@@ -48,19 +48,19 @@ public class MinHeapTest {
     }
 
     @Test
-    public void minHeapGetMinTest() throws HeapException {
+    public void minHeapGetExtremeTest() throws HeapException {
         int[] arr = this.engine.generateUnorderedIntegerArrayOfSize(this.UPPER_BOUND_SIZE);
         for(Integer item : arr) {
             this.heap.insert(item);
         }
         Arrays.sort(arr);
         int expected = arr[0];
-        int actual = this.heap.getMin();
+        int actual = this.heap.getExtreme();
         Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void minHeapRemoveMinTest() throws HeapException {
+    public void minHeapRemoveExtremeTest() throws HeapException {
         int[] arr = this.engine.generateUnorderedIntegerArrayOfSize(this.UPPER_BOUND_SIZE);
         for(Integer item : arr) {
             this.heap.insert(item);
@@ -68,7 +68,7 @@ public class MinHeapTest {
         Arrays.sort(arr);
         for(int i = 0; i < arr.length; i++) {
             int expected = arr[i];
-            int actual = this.heap.removeMin();
+            int actual = this.heap.removeExtreme();
             Assert.assertEquals(expected, actual);
         }
     }
@@ -107,7 +107,7 @@ public class MinHeapTest {
             Assert.assertEquals(expected1, actual1);
         }
         while(this.heap.getSize() > 0) {
-            this.heap.removeMin();
+            this.heap.removeExtreme();
             count--;
             int expected2 = count;
             int actual2 = this.heap.getSize();
@@ -128,7 +128,7 @@ public class MinHeapTest {
             Assert.assertEquals(expected2, actual2);
         }
         while(!this.heap.isEmpty()) {
-            this.heap.removeMin();
+            this.heap.removeExtreme();
         }
         boolean expected3 = true;
         boolean actual3 = this.heap.isEmpty();
