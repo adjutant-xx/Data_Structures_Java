@@ -155,20 +155,20 @@ public class Graph<T> {
         HashMap<GraphNode<T>, VisitStatus> visited = new HashMap();
         while(!stack.isEmpty()) {
             GraphNode<T> current = stack.pop();
-            visited.put(current, VisitStatus.Visiting);
+            visited.put(current, VisitStatus.VISITING);
             if(current.equals(destination)) {
                 return true;
             }
             for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
                 if(visited.containsKey(neighbor)) {
-                    if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
+                    if(visited.get(neighbor).equals(VisitStatus.UNVISITED)) {
                         stack.push(neighbor);
                     }
                 } else {
                     stack.push(neighbor);
                 }
             }
-            visited.put(current, VisitStatus.Visited);
+            visited.put(current, VisitStatus.VISITED);
         }
         return false;
     }
@@ -193,20 +193,20 @@ public class Graph<T> {
         HashMap<GraphNode<T>, VisitStatus> visited = new HashMap();
         while(!queue.isEmpty()) {
             GraphNode<T> current = queue.dequeue();
-            visited.put(current, VisitStatus.Visiting);
+            visited.put(current, VisitStatus.VISITING);
             if(current.equals(destination)) {
                 return true;
             }
             for(GraphNode<T> neighbor : this.adjacencyMap.get(current)) {
                 if(visited.containsKey(neighbor)) {
-                    if(visited.get(neighbor).equals(VisitStatus.Unvisited)) {
+                    if(visited.get(neighbor).equals(VisitStatus.UNVISITED)) {
                         queue.enqueue(neighbor);
                     }
                 } else {
                     queue.enqueue(neighbor);
                 }
             }
-            visited.put(current, VisitStatus.Visited);
+            visited.put(current, VisitStatus.VISITED);
         }
         return false;
     }

@@ -204,13 +204,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
         HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap();
         while(!stack.isEmpty()) {
             BinaryTreeNode<T> current = stack.pop();
-            visited.put(current, VisitStatus.Visiting);
+            visited.put(current, VisitStatus.VISITING);
             if(current.getData().equals(data)) {
                 return true;
             }
             if(current.getRight() != null) {
                 if(visited.containsKey(current.getRight())) {
-                    if(visited.get(current.getRight()).equals(VisitStatus.Unvisited)) {
+                    if(visited.get(current.getRight()).equals(VisitStatus.UNVISITED)) {
                         stack.push(current.getRight());
                     }
                 } else {
@@ -219,7 +219,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             }
             if(current.getLeft() != null) {
                 if(visited.containsKey(current.getLeft())) {
-                    if(visited.get(current.getLeft()).equals(VisitStatus.Unvisited)) {
+                    if(visited.get(current.getLeft()).equals(VisitStatus.UNVISITED)) {
                         stack.push(current.getLeft());
                     }
                 } else {
@@ -227,7 +227,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 }
 
             }
-            visited.put(current, VisitStatus.Visited);
+            visited.put(current, VisitStatus.VISITED);
         }
         return false;
     }
@@ -250,13 +250,13 @@ public class BinarySearchTree<T extends Comparable<T>> {
         HashMap<BinaryTreeNode<T>, VisitStatus> visited = new HashMap();
         while(!queue.isEmpty()) {
             BinaryTreeNode<T> current = queue.dequeue();
-            visited.put(current, VisitStatus.Visiting);
+            visited.put(current, VisitStatus.VISITING);
             if(current.getData().equals(data)) {
                 return true;
             }
             if(current.getLeft() != null) {
                 if(visited.containsKey(current.getLeft())) {
-                    if(visited.get(current.getLeft()).equals(VisitStatus.Unvisited)) {
+                    if(visited.get(current.getLeft()).equals(VisitStatus.UNVISITED)) {
                         queue.enqueue(current.getLeft());
                     }
                 } else {
@@ -265,7 +265,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
             }
             if(current.getRight() != null) {
                 if(visited.containsKey(current.getRight())) {
-                    if(visited.get(current.getRight()).equals(VisitStatus.Unvisited)) {
+                    if(visited.get(current.getRight()).equals(VisitStatus.UNVISITED)) {
                         queue.enqueue(current.getRight());
                     }
                 } else {
