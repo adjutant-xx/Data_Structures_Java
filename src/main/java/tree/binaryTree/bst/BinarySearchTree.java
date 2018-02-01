@@ -1,5 +1,6 @@
 package tree.binaryTree.bst;
 
+import com.sun.org.apache.xpath.internal.FoundIndex;
 import list.DoublyLinkedList;
 import list.queue.Queue;
 import list.stack.Stack;
@@ -8,6 +9,7 @@ import tree.binaryTree.BinaryTreeNode;
 
 import java.lang.reflect.Array;
 import java.util.HashMap;
+import java.util.function.Function;
 
 /**
  * Contains operational implementations for the Binary Search Tree data structure.
@@ -52,7 +54,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 int result = value.compareTo(node.getData());
                 if (result == 0) {
                     if (node.getLeft() != null && node.getRight() != null) {
-                        node = findMin(node.getRight());
+//                        node = findMin(node.getRight());
+                        node = findExtreme(node, BinaryTreeNode::getRight);
                         remove(node.getRight(), node.getData());
                     } else {
                         node = (node.getLeft() != null) ? node.getLeft() : node.getRight();
@@ -94,16 +97,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @return value containing minimum-value node, null if value cannot be found.
      */
     public BinaryTreeNode<T> findMin() {
-        return findMin(this.root);
-    }
-    private BinaryTreeNode<T> findMin(BinaryTreeNode<T> node) {
-        if(!isEmpty()) {
-            while(node.getLeft() != null) {
-                node = node.getLeft();
-            }
-            return node;
-        }
-        return null;
+        return findExtreme(this.root, BinaryTreeNode::getLeft);
     }
 
     /**
@@ -111,12 +105,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @return value containing the maximum-value node, null if value cannot be found.
      */
     public BinaryTreeNode<T> findMax() {
-        return findMax(this.root);
+        return findExtreme(this.root, BinaryTreeNode::getRight);
     }
-    private BinaryTreeNode<T> findMax(BinaryTreeNode<T> node) {
+
+    /**
+     * Uses a method reference to find an extreme value within a nested node structure (minimum or maximum in most cases).
+     * @param node node to traverse.
+     * @param getter function to apply to node traversal.
+     * @return final node value, or extreme.
+     */
+    private BinaryTreeNode<T> findExtreme(BinaryTreeNode<T> node, Function<BinaryTreeNode<T>, BinaryTreeNode<T>> getter) {
         if(!isEmpty()) {
-            while(node.getRight() != null) {
-                node = node.getRight();
+            while(getter.apply(node) != null) {
+                node = getter.apply(node);
             }
             return node;
         }
