@@ -73,6 +73,19 @@ public class TestAssetEngine<T> {
     }
 
     /**
+     * Generates an array of a given size of randomly-generated unordered integers.
+     * @param size the size of the array.
+     * @return the generated array.
+     */
+    public int[] generateUnorderedIntegerArrayOfSize(int size) {
+        int[] unorderedArr = new int[size];
+        for(int i = 0; i < unorderedArr.length; i++) {
+            unorderedArr[i] = generateRandomInteger();
+        }
+        return unorderedArr;
+    }
+
+    /**
      * Generates an array of randomly-generated, unique, unordered integers.
      * @return the generated array.
      */
