@@ -35,7 +35,7 @@ A few tree-based, node-focused structures have been added to the project, notabl
 >> This rudimentary tree-based implementation includes a basic, directed graph structure utilizing an adjacency-list-inspired 'Adjacency Map' implementation built upon an internal HashMap mechanism to track routes between nodes.
 
 > #### Heap
->> Min-heap implementation / testing currently under construction.
+>> Min / Max Heap fixed-size, array-based implementations have been built utilizing a common underlying abstract Heap class, which contains many methods and properties common to both types of heaps.
 
 ### Hash Table
 Though there are many methods to implementing the specifics of a hash map, table, set, etc...I have chosen to build my structure with support for generic key-value entries, separate-chaining hash collision avoidance, and prime number dynamic resizing mechanisms.
