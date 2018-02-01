@@ -11,6 +11,7 @@ public class MinHeap<T extends Comparable<T>> extends Heap<T> {
         super(clazz, maxSize);
     }
 
+    @Override
     protected void upHeap() {
         int currentIndex = this.size;
         while(currentIndex > 0) {
@@ -23,6 +24,7 @@ public class MinHeap<T extends Comparable<T>> extends Heap<T> {
         }
     }
 
+    @Override
     protected void downHeap() {
         int currentIndex = 0;
         while(true) {
