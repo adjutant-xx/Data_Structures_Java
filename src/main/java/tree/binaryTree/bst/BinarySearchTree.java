@@ -306,10 +306,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
      * @return true if tree is empty, false if otherwise.
      */
     public boolean isEmpty() {
-        if(this.root == null) {
-            return true;
-        }
-        return false;
+        return this.root == null;
     }
 
     /**
