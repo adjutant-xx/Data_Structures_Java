@@ -20,7 +20,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     /**
      * Recursively inserts an element into the tree.
      * @param value value to insert.
-     * @return true if insertion was successful, false if otherwise.
      */
     public void insert(T value) {
         this.root = insert(this.root, value);
@@ -42,7 +41,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
     /**
      * Recursively removes a specified element from the tree.
      * @param value value to remove.
-     * @return true if removal was successful, false if otherwise.
      */
     public void remove(T value) {
         this.root = remove(this.root, value);
