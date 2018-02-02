@@ -8,18 +8,17 @@ import util.TestAssetEngine;
 import java.util.Arrays;
 
 /**
- * Contains unit tests for methods contained within the MinHeap class.
+ * Contains unit tests for methods contained within the MaxHeap class.
  */
-public class MinHeapTest extends HeapTest {
+public class MaxHeapTest extends HeapTest {
 
-    public MinHeapTest() throws Exception {
+    public MaxHeapTest() throws Exception {
         this.engine = new TestAssetEngine(new TestAssetEngine.TestAssetEngineBuilder().upperBoundValue(200).upperBoundSize(this.UPPER_BOUND_SIZE));
     }
 
-    @Override
     @Before
     public void initialize() {
-        this.heap = new MinHeap<>(Integer.class, this.UPPER_BOUND_SIZE);
+        this.heap = new MaxHeap<>(Integer.class, this.UPPER_BOUND_SIZE);
     }
 
     @Override
@@ -30,7 +29,7 @@ public class MinHeapTest extends HeapTest {
             this.heap.insert(item);
         }
         Arrays.sort(arr);
-        int expected = arr[0];
+        int expected = arr[arr.length - 1];
         int actual = this.heap.getExtreme();
         Assert.assertEquals(expected, actual);
     }
@@ -43,7 +42,7 @@ public class MinHeapTest extends HeapTest {
             this.heap.insert(item);
         }
         Arrays.sort(arr);
-        for(int i = 0; i < arr.length; i++) {
+        for(int i = arr.length - 1; i >= 0; i--) {
             int expected = arr[i];
             int actual = this.heap.removeExtreme();
             Assert.assertEquals(expected, actual);
@@ -57,7 +56,7 @@ public class MinHeapTest extends HeapTest {
         for(Integer item : arr) {
             this.heap.insert(item);
         }
-        int[] arrHeapOrder = {-149, -135, -18, -135, -77, -8, 190, 184, 20, 138};
+        int[] arrHeapOrder = {190, 138, 184, 20, -77, -149, -8, -18, -135, -135};
         Integer[] heapArr = this.heap.getHeap();
         for(int i = 0; i < arrHeapOrder.length; i++) {
             int expected = arrHeapOrder[i];
