@@ -11,7 +11,6 @@ public class SinglyLinkedList<T> {
     protected int size;
 
     public SinglyLinkedList() {
-        this.head = new ListNode();
         this.size = 0;
     }
 

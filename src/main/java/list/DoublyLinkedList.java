@@ -6,7 +6,6 @@ package list;
 public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
 
     public DoublyLinkedList() {
-        this.head = new ListNode();
         this.size = 0;
     }
 
@@ -39,10 +38,10 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
             this.head = newNode;
             this.tail = this.head;
         } else {
-            ListNode<T> temp = this.tail;
-            newNode.setPrev(temp);
-            temp.setNext(newNode);
-            this.tail = temp.getNext();
+//            ListNode<T> temp = this.tail;
+            newNode.setPrev(this.tail);
+            this.tail.setNext(newNode);
+            this.tail = this.tail.getNext();
         }
         this.size++;
     }
@@ -58,6 +57,10 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
         if(isEmpty()) {
             this.head = newNode;
             this.tail = this.head;
+        } else if(index >= this.size) {
+            return;
+        } else if(index == this.size - 1) {
+            insertEnd(data);
         } else if(index == 0) {
             insertFront(data);
         } else {
@@ -110,19 +113,22 @@ public class DoublyLinkedList<T> extends SinglyLinkedList<T>{
      */
     @Override
     public void removeAt(int index) {
-        if(!isEmpty()) {
-            if(index == 0) {
-                removeFront();
-            } else {
-                ListNode<T> temp = this.head;
-                for(int i = 0; i < index; i++) {
-                    temp = temp.getNext();
-                }
-                temp.getPrev().setNext(temp.getNext());
-                temp = temp.getPrev();
+        if(isEmpty() || index >= this.size) {
+            return;
+        } else if(index == this.size - 1) {
+            removeEnd();
+        } else if(index == 0) {
+            removeFront();
+
+        } else {
+            ListNode<T> temp = this.head;
+            for(int i = 0; i < index; i++) {
+                temp = temp.getNext();
             }
-            this.size--;
+            temp.getPrev().setNext(temp.getNext());
+            temp = temp.getPrev();
         }
+        this.size--;
     }
 
     /**
