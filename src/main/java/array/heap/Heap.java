@@ -65,12 +65,86 @@ public abstract class Heap<T extends Comparable<T>> {
     /**
      * 'Bubbles-up' an item from the bottom of the heap (tail of the array) into it's appropriate spot, following the rules of a Min Heap.
      */
-    protected abstract void upHeap();
+    protected void upHeap() {
+        int currentIndex = this.size;
+        while(currentIndex > 0) {
+            int parentIndex = (currentIndex % 2 == 0) ? (currentIndex / 2) - 1 : currentIndex / 2;
+            if(upHeapComparator(currentIndex, parentIndex)) {
+                break;
+            }
+            swap(currentIndex, parentIndex);
+            currentIndex = parentIndex;
+        }
+    }
 
     /**
-     * Percolates an item from the top of the heap (head of the array) into it's appropriate spot, following the rules of a Min Heap.
+     * Percolates-down an item from the top of the heap (head of the array) into it's appropriate spot, following the rules of the underlying heap class.
      */
-    protected abstract void downHeap();
+    protected void downHeap() {
+        int currentIndex = 0;
+        while(true) {
+            int leftChildIndex = (2 * currentIndex) + 1;
+            int rightChildIndex = (2 * currentIndex) + 2;
+            if(leftChildIndex < this.size && rightChildIndex < this.size) {
+                int extremeIndex = findExtremeIndex(leftChildIndex, rightChildIndex);
+                if(downHeapComparator(currentIndex, extremeIndex)){
+                    swap(currentIndex, extremeIndex);
+                    currentIndex = extremeIndex;
+                } else {
+                    break;
+                }
+            }
+            else if(leftChildIndex < this.size) {
+                if(downHeapComparator(currentIndex, leftChildIndex)) {
+                    swap(currentIndex, leftChildIndex);
+                    currentIndex = leftChildIndex;
+                } else {
+                    break;
+                }
+            }
+            else {
+                break;
+            }
+        }
+    }
+
+    /**
+     * Comparison method used with up-heap operations, to be overridden within inheriting class.
+     * @param xIndex first index to use within comparison.
+     * @param yIndex second index to use within comparison.
+     * @return true or false based on the inheriting class' implementation.
+     */
+    protected abstract boolean upHeapComparator(int xIndex, int yIndex);
+
+    /**
+     * Comparison method used with down-heap operations, to be overridden within inheriting class.
+     * @param xIndex first index to use within comparison.
+     * @param yIndex second index to use within comparison.
+     * @return true or false based on the inheriting class' implementation.
+     */
+    protected abstract boolean downHeapComparator(int xIndex, int yIndex);
+
+    /**
+     * Comparison method used when finding an extreme value, to be overridden within inheriting class.
+     * @param xIndex first index to use within comparison.
+     * @param yIndex second index to use within comparison.
+     * @return true or false based on the inheriting class' implementation.
+     */
+    protected abstract boolean extremeComparator(int xIndex, int yIndex);
+
+    /**
+     * Compares two values within the underlying heap array and returns the index of the maximum.
+     * @param xIndex index of first item to use in comparison.
+     * @param yIndex index of second item to use in comparison.
+     * @return integer representing index of the maximum value from the comparison.
+     * @throws IndexOutOfBoundsException
+     */
+    protected int findExtremeIndex(int xIndex, int yIndex) throws IndexOutOfBoundsException {
+        if(xIndex >= this.size || yIndex >= this.size) {
+            throw new IndexOutOfBoundsException(Constants.INDEX_OUT_OF_BOUNDS_EXCEPTION_INDEX_INVALID);
+        }
+        return (extremeComparator(xIndex, yIndex)) ? xIndex : yIndex;
+    }
 
     /**
      * Quick method used to swap two items within the underlying heap array.
