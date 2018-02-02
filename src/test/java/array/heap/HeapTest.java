@@ -24,10 +24,10 @@ public abstract class HeapTest {
     public abstract void initialize();
 
     @Test
-    public void heapInsertTest() throws HeapException {
+    public void heapPushTest() throws HeapException {
         int[] arr = this.engine.generateUnorderedIntegerArrayOfSize(this.UPPER_BOUND_SIZE);
         for(Integer item : arr) {
-            this.heap.insert(item);
+            this.heap.push(item);
         }
         int expected1 = arr.length;
         int actual1 = this.heap.getSize();
@@ -66,14 +66,14 @@ public abstract class HeapTest {
         int[] arr = this.engine.generateUnorderedIntegerArrayOfSize(this.UPPER_BOUND_SIZE);
         int count = 0;
         for(Integer item : arr) {
-            this.heap.insert(item);
+            this.heap.push(item);
             count++;
             int expected1 = count;
             int actual1 = this.heap.getSize();
             Assert.assertEquals(expected1, actual1);
         }
         while(this.heap.getSize() > 0) {
-            this.heap.removeExtreme();
+            this.heap.pop();
             count--;
             int expected2 = count;
             int actual2 = this.heap.getSize();
@@ -88,13 +88,13 @@ public abstract class HeapTest {
         boolean actual1 = this.heap.isEmpty();
         Assert.assertEquals(expected1, actual1);
         for(Integer item : arr) {
-            this.heap.insert(item);
+            this.heap.push(item);
             boolean expected2 = false;
             boolean actual2 = this.heap.isEmpty();
             Assert.assertEquals(expected2, actual2);
         }
         while(!this.heap.isEmpty()) {
-            this.heap.removeExtreme();
+            this.heap.pop();
         }
         boolean expected3 = true;
         boolean actual3 = this.heap.isEmpty();

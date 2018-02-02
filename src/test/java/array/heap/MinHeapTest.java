@@ -27,11 +27,11 @@ public class MinHeapTest extends HeapTest {
     public void heapGetExtremeTest() throws HeapException {
         int[] arr = this.engine.generateUnorderedIntegerArrayOfSize(this.UPPER_BOUND_SIZE);
         for(Integer item : arr) {
-            this.heap.insert(item);
+            this.heap.push(item);
         }
         Arrays.sort(arr);
         int expected = arr[0];
-        int actual = this.heap.getExtreme();
+        int actual = this.heap.peek();
         Assert.assertEquals(expected, actual);
     }
 
@@ -40,12 +40,12 @@ public class MinHeapTest extends HeapTest {
     public void heapRemoveExtremeTest() throws HeapException {
         int[] arr = this.engine.generateUnorderedIntegerArrayOfSize(this.UPPER_BOUND_SIZE);
         for(Integer item : arr) {
-            this.heap.insert(item);
+            this.heap.push(item);
         }
         Arrays.sort(arr);
         for(int i = 0; i < arr.length; i++) {
             int expected = arr[i];
-            int actual = this.heap.removeExtreme();
+            int actual = this.heap.pop();
             Assert.assertEquals(expected, actual);
         }
     }
@@ -55,7 +55,7 @@ public class MinHeapTest extends HeapTest {
     public void heapGetHeapTest() throws HeapException {
         int[] arr = {-18, 138, -149, 184, -135, -8, 190, 20, -135, -77};
         for(Integer item : arr) {
-            this.heap.insert(item);
+            this.heap.push(item);
         }
         int[] arrHeapOrder = {-149, -135, -18, -135, -77, -8, 190, 184, 20, 138};
         Integer[] heapArr = this.heap.getHeap();
