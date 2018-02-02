@@ -1,9 +1,5 @@
 package array.heap;
 
-import util.Constants;
-
-import java.lang.reflect.Array;
-
 /**
  * Contains operational implementations for the array-based Max Heap data structure.
  */

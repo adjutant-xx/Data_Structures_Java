@@ -24,7 +24,7 @@ public abstract class Heap<T extends Comparable<T>> {
      * @param data item to insert.
      * @throws HeapException
      */
-    public void insert(T data) throws HeapException {
+    public void push(T data) throws HeapException {
         if(this.size >= this.maxSize) {
             throw new HeapException(String.format(Constants.EXCEPTION_MESSAGE_STRUCTURE_FULL, "Heap"));
         }
@@ -38,7 +38,7 @@ public abstract class Heap<T extends Comparable<T>> {
      * @return object representing current extreme value.
      * @throws HeapException
      */
-    public T getExtreme() throws HeapException {
+    public T peek() throws HeapException {
         if(isEmpty()) {
             throw new HeapException(String.format(Constants.EXCEPTION_MESSAGE_STRUCTURE_EMPTY, "Heap"));
         }
@@ -50,7 +50,7 @@ public abstract class Heap<T extends Comparable<T>> {
      * @return object representing extreme value.
      * @throws HeapException
      */
-    public T removeExtreme() throws HeapException {
+    public T pop() throws HeapException {
         if(isEmpty()) {
             throw new HeapException(String.format(Constants.EXCEPTION_MESSAGE_STRUCTURE_EMPTY, "Heap"));
         }

@@ -1,7 +1,5 @@
 package array.heap;
 
-import util.Constants;
-
 /**
  * Contains operational implementations for the array-based Min Heap data structure.
  */
